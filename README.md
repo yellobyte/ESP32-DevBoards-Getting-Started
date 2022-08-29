@@ -39,7 +39,10 @@ VSCode/PlatformIO provides some major advantages over the ArduinoIDE:
 build_flags = `-D__GNU_VISIBLE, -DUSE_ETHERNET`
 ```
 
-### :info: Software Upload
+### :information_source: Software Upload
 
+tbw
 
-### :info: Debugging your Software 
+### :information_source: Debugging your Software 
+
+tbw
