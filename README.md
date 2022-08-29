@@ -13,6 +13,7 @@ To get accustomed with a certain board it's best (in my opinion) to write small 
 ## :file_folder: Examples
 
 In folder [**boards**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/blob/main/boards) you will find  a collection of software examples I used over the last couple of years for playing with the various boards.  
+
 Required on your PC/Laptop is only an installation of **VSCode** with extension **PlatformIO**. Make sure you have installed the latest **Arduino ESP32 development package** (V5.1.1 at the time of this writing).
 
 For loading an example start VSCode/PlatformIO go to "File"-->"Open Folder" and select an example directory (the ones that contain a platformio.ini file).
