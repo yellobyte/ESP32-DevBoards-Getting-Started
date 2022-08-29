@@ -1,6 +1,6 @@
 # ESP32 Development Boards - Getting started
 
-A big variety of **ESP32** development boards were flooding the market since the first ESP32 chip was released by Espressif. Most boards contain the original **ESP32**, some an **ESP32-S2** and newer ones the most recent flavor **ESP-S3**. For differences between those chips look [**here**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/doc/Comparison_Espressif-ESP32-S2-C3-S3.pdf).
+A big variety of **ESP32** development boards has flooded the market since the first ESP32 chip was released in 2016 by Espressif. Most boards contain the original **ESP32**, some an **ESP32-S2** and newer ones the most recent flavor **ESP-S3**. For differences between those chips look [**here**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/doc/Comparison_Espressif-ESP32-S2-C3-S3.pdf).
 
 The ESP32 chip family is loaded with lots of features, like WiFi/Bluetooth, dual core (up to 240MHz clock frequency), integrated Flash memory, lots of GPIO (peripheral input/output) pins, ADC/DAC, UART, I2S, SPI, low power states, JTAG debugging option, etc. Have a look at the many documents in folder [**doc**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/blob/main/doc) for more infos.
 
