@@ -1,12 +1,12 @@
 # ESP32 Development Boards - Getting started
 
-A big variety of **ESP32** development boards has flooded the market since the first ESP32 chip was released in 2016 by Espressif. Most boards contain the original **ESP32**, some an **ESP32-S2** and newer ones the most recent flavor **ESP-S3**. For differences between those chips look [**here**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/doc/Comparison_Espressif-ESP32-S2-C3-S3.pdf).
+A big variety of **ESP32** development boards has flooded the market since the first ESP32 chip was released in 2016 by Espressif. Most boards contain the original **ESP32**, some an **ESP32-S2** and newer ones the most recent flavor **ESP32-S3**. For differences between those chips look [**here**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/doc/Comparison_Espressif-ESP32-S2-C3-S3.pdf).
 
-The ESP32 chip family is loaded with lots of features, like WiFi/Bluetooth, dual core (up to 240MHz clock frequency), integrated Flash memory, lots of GPIO (peripheral input/output) pins, ADC/DAC, UART, I2S, SPI, low power states, JTAG debugging option, etc. Have a look at the many documents in folder [**doc**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/blob/main/doc) for more infos.
+The ESP32 chip family is loaded with features, e.g. WiFi/Bluetooth, dual core (up to 240MHz clock frequency), integrated Flash memory, lots of GPIO pins (peripheral input/output), ADC/DAC, UART, I2S, SPI, low power states, JTAG debugging option, etc. Have a look at the many documents in folder [**doc**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/blob/main/doc) for more infos.
 
-Almost all development boards feature lots of GPIO pins, a combination of WLAN antenna and/or IPX antenna connector, USB-Port, LDO voltage regulator and some LEDs (Power/RX/TX). Some boards have additional features, like camera, RGB-LED, battery connector, more Flash memory and/or PSRAM, etc.
+Almost all development boards feature a greater number of GPIO pins, a combination of WLAN antenna and/or IPX antenna connector, USB-Port, LDO voltage regulator and some LEDs (Power/RX/TX). Some boards have additional features, like camera, RGB-LED, battery connector, more Flash memory and/or PSRAM, etc.
 
-Probably the best way to get familiar with a certain board is to write small software samples for trying out the different features available, e.g. letting the onboard LED blink or change color (RGB-LED), generate serial output, connect to a WLAN, read the status of a connected push button, etc.
+Probably the best way to get familiar with a certain board is to write small software samples for trying out the different features, e.g. letting the onboard LED blink or change color (RGB-LED), generate serial output, connect to a WLAN, read the status of a connected push button, etc.
 
 ## :file_folder: Examples
 
@@ -19,7 +19,7 @@ For loading an example start VSCode/PlatformIO, go to "File"-->"Open Folder" and
 Examples are provided for the following boards:
 
 - ESP32-DevKitC-1 (Manufacturer: Espressif)  
-![github](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/ESP32-DevKitC-1_(Espressif)/doc/ESP32-Devkit-V1.jpg)
+![github](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/ESP32-DevKitC-1_(Espressif)/doc/ESP32-Devkit-V1.jpg =50x)
 - ESP32-CAM (Manufacturer: AI-THINKER)
 - Lilygo ESP32-1.14-Display DevBoard (Manufacturer: TTGO)
 - YD-ESP32-S3 Development board (Manufacturer: VCC-GND.COM)  
