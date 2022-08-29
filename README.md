@@ -4,24 +4,25 @@ A big variety of **ESP32** development boards has flooded the market since the f
 
 The ESP32 chip family is loaded with lots of features, like WiFi/Bluetooth, dual core (up to 240MHz clock frequency), integrated Flash memory, lots of GPIO (peripheral input/output) pins, ADC/DAC, UART, I2S, SPI, low power states, JTAG debugging option, etc. Have a look at the many documents in folder [**doc**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/blob/main/doc) for more infos.
 
-Almost all development boards feature lots of GPIO pins, a combination of WLAN antenna and/or IPX antenna connector, USB-Port, LDO voltage regulator and some LEDs (Power/RX/TX).
+Almost all development boards feature lots of GPIO pins, a combination of WLAN antenna and/or IPX antenna connector, USB-Port, LDO voltage regulator and some LEDs (Power/RX/TX). Some boards have additional features, like camera, RGB-LED, battery connector, more Flash memory and/or PSRAM, etc.
 
-Depending on the targeted usage a board is additionally equipped with camera, RGB-LED, battery connector, more Flash memory and/or PSRAM, etc.
-
-To get accustomed with a certain board it's best (in my opinion) to write small software samples for trying out the different features available, e.g. letting the onboard LED blink or change color (in case of an RGB-LED), generate serial output, connect to a WLAN, read status of a connected push button, etc.
+Probably the best way to get familiar with a certain board is to write small software samples for trying out the different features available, e.g. letting the onboard LED blink or change color (RGB-LED), generate serial output, connect to a WLAN, read the status of a connected push button, etc.
 
 ## :file_folder: Examples
 
 In folder [**boards**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/blob/main/boards) you will find  a collection of software examples I used over the last couple of years for playing with the various boards.  
 
-Required on your PC/Laptop is only an installation of **VSCode** with extension **PlatformIO**. Make sure you have installed the latest **Arduino ESP32 development package** (V5.1.1 at the time of this writing).
+All examples were created and build with **VSCode/PlatformIO**. Make sure you have the latest **Arduino ESP32 development package** installed (V5.1.1 at the time of this writing).
 
-For loading an example start VSCode/PlatformIO go to "File"-->"Open Folder" and select an example directory (the ones that contain a platformio.ini file).
+For loading an example start VSCode/PlatformIO, go to "File"-->"Open Folder" and select an example directory (the ones that contain a platformio.ini file).
 
 Examples are provided for the following boards:
 
-
-
+- YD-ESP32-S3 Development board (Manufactorer: VCC-GND.COM)
+![github](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/ESP32-DevKitC-1_(Espressif)/doc/ESP32-Devkit-V1.jpg)
+- ESP32-DevKitC-1 (Manufactorer: Espressif)
+- ESP32-CAM (Manufactorer: AI-THINKER)
+- Lilygo ESP32-1.14-Display DevBoard (Manufactorer: TTGO)
 
 ## :hammer_and_wrench: Development platform VSCode/PlatformIO
 
