@@ -1,0 +1,38 @@
+17:06:58.881 > ESP-ROM:esp32s3-20210327
+17:06:58.887 > Build:Mar 27 2021
+17:06:58.887 > rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+17:06:58.892 > SPIWP:0xee
+17:06:58.892 > mode:DIO, clock div:1
+17:06:58.892 > load:0x3fce3808,len:0x39c
+17:06:58.898 > load:0x403c9700,len:0x9bc
+17:06:58.898 > load:0x403cc700,len:0x28dc
+17:06:58.898 > SHA-256 comparison failed:
+17:06:58.903 > Calculated: 5830b36eadda2ccdc73ac0028cd665f9a0ae0dcfc1ccf372c71f9cc6bad2ccc4
+17:06:58.909 > Expected: ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff
+17:06:58.915 > Attempting to boot anyway...
+17:06:58.920 > entry 0x403c98c0
+17:06:59.284 > [   399][I][esp32-hal-psram.c:96] psramInit(): PSRAM enabled
+17:06:59.294 >
+17:07:01.295 > scan start
+17:07:01.308 > [  2426][D][WiFiGeneric.cpp:929] _eventCallback(): Arduino Event: 0 - WIFI_READY
+17:07:01.345 > [  2464][D][WiFiGeneric.cpp:929] _eventCallback(): Arduino Event: 2 - STA_START
+17:07:06.252 > [  7370][D][WiFiGeneric.cpp:929] _eventCallback(): Arduino Event: 1 - SCAN_DONE
+17:07:06.257 > scan done, 1 networks found:
+17:07:06.257 >   1: xxxxxxxxx (-47dBm), Channel: 7, WIFI_AUTH_WPA2_PSK
+17:07:06.313 > 
+17:07:06.313 > Connecting to WiFi network "xxxxxxxxx"
+17:07:06.417 > .E (14934) wifi:Association refused temporarily, comeback time 1024 mSec
+17:07:06.918 > ....[  9581][D][WiFiGeneric.cpp:929] _eventCallback(): Arduino Event: 5 - STA_DISCONNECTED
+17:07:08.468 > [  9582][W][WiFiGeneric.cpp:950] _eventCallback(): Reason: 203 - ASSOC_FAIL
+17:07:08.474 > [  9585][D][WiFiGeneric.cpp:966] _eventCallback(): WiFi Reconnect Running
+17:07:08.515 > [  9633][D][WiFiGeneric.cpp:929] _eventCallback(): Arduino Event: 4 - STA_CONNECTED
+17:07:08.547 > [  9666][D][WiFiGeneric.cpp:929] _eventCallback(): Arduino Event: 7 - STA_GOT_IP
+17:07:08.553 > [  9666][D][WiFiGeneric.cpp:991] _eventCallback(): STA IP: 192.168.1.38, MASK: 255.255.255.0, GW: 192.168.1.1
+17:07:08.909 > Connected successfully to "xxxxxxxxx". IP address: 192.168.1.38
+17:07:08.926 >
+17:07:08.926 > Some ESP32 memory stats after running this sketch:
+17:07:08.926 >  1) minimum ever free memory of all regions [in bytes]: 294308
+17:07:08.931 >  2) minimum ever free heap size [in bytes]:             2379279
+17:07:08.937 >  3) minimum ever stack size of this task [in bytes]:    5852
+17:07:08.942 >
+17:07:08.942 > Sketch finished.

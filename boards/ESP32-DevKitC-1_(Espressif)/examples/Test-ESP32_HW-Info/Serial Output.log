@@ -1,0 +1,48 @@
+23:30:44.723 > ESP32 SDK: v4.4.1-1-gb8050b365e
+23:30:44.723 > ESP32 CPU FREQ: 240 MHz
+23:30:44.723 > ESP32 APB FREQ: 80.0 MHz (Advanced Peripheral Bus)
+23:30:44.723 > ESP32 FLASH SIZE: 4194304 Byte
+23:30:44.723 >
+23:30:44.723 > ESP32 RAM Size: 370156 Byte, Used: 25188 Byte, Free: 344968, max alloc: 118772 Byte (largest free block)
+23:30:44.723 > ESP32 PSRAM not found !
+23:30:44.723 >
+23:30:44.723 > -> malloc(5120000), error !
+23:30:44.723 > -> malloc(122880), error !
+23:30:44.723 >
+23:30:44.723 > ESP32 RAM Size: 370156 Byte, Used: 25188 Byte, Free: 344968, max alloc: 118772 Byte (largest free block)
+23:30:44.723 > ESP32 PSRAM not found !
+23:30:44.723 >
+23:30:44.723 >
+23:30:44.723 > ESP32 RAM Size: 370156 Byte, Used: 25188 Byte, Free: 344968, max alloc: 118772 Byte (largest free block)
+23:30:44.723 > ESP32 PSRAM not found !
+23:30:44.723 >
+23:30:44.723 > -> malloc(112640), success, buf = 3ffc29ac (RAM starts from 0x3FF00000, PSRAM starts from 0x3F800000)
+23:30:44.723 >
+23:30:44.723 > ESP32 RAM Size: 370144 Byte, Used: 137828 Byte, Free: 232316, max alloc: 110580 Byte (largest free block)
+23:30:44.723 > ESP32 PSRAM not found !
+23:30:44.723 >
+23:30:44.723 > -> free(buf=3ffc29ac)
+23:30:44.723 >
+23:30:44.723 > ESP32 RAM Size: 370156 Byte, Used: 25188 Byte, Free: 344968, max alloc: 118772 Byte (largest free block)
+23:30:44.723 > ESP32 PSRAM not found !
+23:30:44.723 >
+23:30:44.723 > -> malloc(102400), success, buf = 3ffc29ac (RAM starts from 0x3FF00000, PSRAM starts from 0x3F800000)
+23:30:44.723 >
+23:30:44.723 > ESP32 RAM Size: 370144 Byte, Used: 127588 Byte, Free: 242556, max alloc: 110580 Byte (largest free block)
+23:30:44.723 > ESP32 PSRAM not found !
+23:30:44.723 >
+23:30:44.723 > -> free(buf=3ffc29ac)
+23:30:44.723 >
+23:30:44.723 > ESP32 RAM Size: 370156 Byte, Used: 25188 Byte, Free: 344968, max alloc: 118772 Byte (largest free block)
+23:30:44.723 > ESP32 PSRAM not found !
+23:30:44.723 >
+23:30:44.723 > -> malloc(1024), success, buf = 3ffb9114 (RAM starts from 0x3FF00000, PSRAM starts from 0x3F800000)
+23:30:44.723 >
+23:30:44.723 > ESP32 RAM Size: 370144 Byte, Used: 26212 Byte, Free: 343932, max alloc: 118772 Byte (largest free block)
+23:30:44.723 > ESP32 PSRAM not found !
+23:30:44.723 >
+23:30:44.723 > -> free(buf=3ffb9114)
+23:30:44.723 >
+23:30:44.723 > ESP32 RAM Size: 370156 Byte, Used: 25188 Byte, Free: 344968, max alloc: 118772 Byte (largest free block)
+23:30:44.723 > ESP32 PSRAM not found !
+23:30:44.723 >
