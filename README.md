@@ -18,11 +18,11 @@ For loading an example start VSCode/PlatformIO, go to "File"-->"Open Folder" and
 
 Examples are provided for the following boards:
 
-- YD-ESP32-S3 Development board (Manufactorer: VCC-GND.COM)
+- ESP32-DevKitC-1 (Manufacturer: Espressif)  
 ![github](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/ESP32-DevKitC-1_(Espressif)/doc/ESP32-Devkit-V1.jpg)
-- ESP32-DevKitC-1 (Manufactorer: Espressif)
-- ESP32-CAM (Manufactorer: AI-THINKER)
-- Lilygo ESP32-1.14-Display DevBoard (Manufactorer: TTGO)
+- ESP32-CAM (Manufacturer: AI-THINKER)
+- Lilygo ESP32-1.14-Display DevBoard (Manufacturer: TTGO)
+- YD-ESP32-S3 Development board (Manufacturer: VCC-GND.COM)  
 
 ## :hammer_and_wrench: Development platform VSCode/PlatformIO
 
