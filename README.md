@@ -10,7 +10,7 @@ Probably the best way to get familiar with a certain board is to write small sof
 
 ## :file_folder: Examples
 
-In folder [**boards**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/blob/main/boards) you will find  a collection of software examples I used over the last couple of years for playing with various boards.  
+Subfolders in [**boards**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/blob/main/boards) contain a collection of software examples I used over the last couple of years for playing with various boards.  
 
 All examples were created and build with **VSCode/PlatformIO**. Make sure you have the latest **Arduino ESP32 development package** installed (V5.1.1 at the time of this writing).
 
@@ -28,7 +28,7 @@ Examples are provided for the following boards:
 <p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/ESP32-1.14-Display-DevBoard_(TTGO)/doc/LILYGO-ESP32-1.14-Display.jpg" height="180"/></p>
 
 - YD-ESP32-S3 Development board (Manufacturer: VCC-GND.COM)  
-<p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YD-ESP32-S3_(VCC-GND.COM)/doc/ESP32-CAM.jpg" height="180"/></p>
+<p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YD-ESP32-S3_(VCC-GND.COM)/doc/YD-ESP32-S3_DevBoard.JPG" height="180"/></p>
 
 ## :hammer_and_wrench: Development platform VSCode/PlatformIO
 
