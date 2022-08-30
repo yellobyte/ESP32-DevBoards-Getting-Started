@@ -21,7 +21,7 @@ Examples are provided for the following boards:
 - ESP32-DevKitC-1 (Manufacturer: Espressif)  
 <img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/ESP32-DevKitC-1_(Espressif)/doc/ESP32-Devkit-V1.jpg" width="50"/>  
 
-2[<img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/ESP32-DevKitC-1_(Espressif)/doc/ESP32-Devkit-V1.jpg" width="70"/>]()  
+2[<img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/ESP32-DevKitC-1_(Espressif)/doc/ESP32-Devkit-V1.jpg" width="70"/>](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/ESP32-DevKitC-1_(Espressif)/doc/ESP32-Devkit-V1.jpg)  
 
 3![github](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/ESP32-DevKitC-1_(Espressif)/doc/ESP32-Devkit-V1.jpg)  
 
