@@ -10,7 +10,7 @@ Probably the best way to get familiar with a certain board is to write small sof
 
 ## :file_folder: Examples
 
-In folder [**boards**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/blob/main/boards) you will find  a collection of software examples I used over the last couple of years for playing with the various boards.  
+In folder [**boards**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/blob/main/boards) you will find  a collection of software examples I used over the last couple of years for playing with various boards.  
 
 All examples were created and build with **VSCode/PlatformIO**. Make sure you have the latest **Arduino ESP32 development package** installed (V5.1.1 at the time of this writing).
 
@@ -22,6 +22,8 @@ Examples are provided for the following boards:
 <p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/ESP32-DevKitC-1_(Espressif)/doc/ESP32-Devkit-V1.jpg" width="350"/></p>  
 
 - ESP32-CAM (Manufacturer: AI-THINKER)
+<p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/ESP32-CAM_(AI-THINKER)/doc/ESP32-CAM.jpg" width="350"/></p>
+
 - Lilygo ESP32-1.14-Display DevBoard (Manufacturer: TTGO)
 - YD-ESP32-S3 Development board (Manufacturer: VCC-GND.COM)  
 
@@ -30,9 +32,9 @@ Examples are provided for the following boards:
 VSCode/PlatformIO provides some major advantages over the ArduinoIDE:
   - very comfortable code Editor with lots of shortcuts that make writing code a breeze
   - usage of project file *platformio.ini* for controlling builds, adjusting serial monitor behaviour, enabling debugging, setting port parameters for software uploads (port, speed, RTS/CTS), etc.
-  - easy integration of additional libraries
+  - easy search for/integration of additional libraries
   - integrated debugging functionality (additional external hardware required)
-  - integration of git functionality
+  - integrated git functionality
   - etc.
 
 ### :zap: Useful settings in platformio.ini
