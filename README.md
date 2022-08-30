@@ -19,13 +19,7 @@ For loading an example start VSCode/PlatformIO, go to "File"-->"Open Folder" and
 Examples are provided for the following boards:
 
 - ESP32-DevKitC-1 (Manufacturer: Espressif)  
-<img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/ESP32-DevKitC-1_(Espressif)/doc/ESP32-Devkit-V1.jpg" width="50"/>  
-
-2[<img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/ESP32-DevKitC-1_(Espressif)/doc/ESP32-Devkit-V1.jpg" width="70"/>](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/ESP32-DevKitC-1_(Espressif)/doc/ESP32-Devkit-V1.jpg)  
-
-3![github](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/ESP32-DevKitC-1_(Espressif)/doc/ESP32-Devkit-V1.jpg)  
-
-4![](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/ESP32-DevKitC-1_(Espressif)/doc/ESP32-Devkit-V1.jpg=90x50)   
+<img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/ESP32-DevKitC-1_(Espressif)/doc/ESP32-Devkit-V1.jpg" width="350"/>  
 
 - ESP32-CAM (Manufacturer: AI-THINKER)
 - Lilygo ESP32-1.14-Display DevBoard (Manufacturer: TTGO)
