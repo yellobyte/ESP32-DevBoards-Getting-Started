@@ -4,7 +4,7 @@ A big variety of **ESP32** development boards have flooded the market since the 
 
 The ESP32 chip family is loaded with features, e.g. WiFi/Bluetooth, dual core (up to 240MHz clock frequency), integrated Flash memory, lots of GPIO pins (peripheral input/output), ADC/DAC, UART, I2S, SPI, low power states, JTAG debugging option, etc. Have a look at the many documents in folder [**doc**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/blob/main/doc) for more infos.
 
-Almost all development boards feature a greater number of GPIO pins, a combination of WLAN antenna and/or IPX antenna connector, USB-Port, LDO voltage regulator and some LEDs (Power/RX/TX). Some boards have additional features, like camera (e.g. OV2640), RGB-LED (e.g. WS2812B), battery connector, more Flash memory (up to 16MB) and/or PSRAM (up to 8MB), etc.
+Almost all development boards feature a greater number of GPIO pins, a combination of WLAN antenna and/or IPX antenna connector, USB-Port, LDO voltage regulator and some LEDs (Power/RX/TX). Some boards have additional features, like a camera (e.g. OV2640), RGB-LED (e.g. WS2812B), battery connector, more Flash memory (up to 16MB) and/or PSRAM (up to 8MB), etc.
 
 Probably the best way to get familiar with a certain board is to start with writing tiny software programs (examples) for trying out the different board features, e.g. letting the onboard LED blink or change color (RGB-LED), generate serial output, connect to your local WLAN, read the status of a connected push button, put the ESP32 into sleep mode and so on.  
 
@@ -16,7 +16,7 @@ Under [**boards**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/
 
 All examples were created and build with **VSCode/PlatformIO**. Each example is represented by a PlatformIO project directory (one that contains a platformio.ini file). Make sure you have the latest **Arduino ESP32 development package** installed (V5.1.1 at the time of this writing).
 
-For loading an example start VSCode/PlatformIO, go to "File"-->"Open Folder" and select an example directory).
+For loading an example start VSCode/PlatformIO, go to "File"-->"Open Folder" and select it's project directory).
 
 Examples are provided for the following boards:
 
