@@ -34,8 +34,10 @@ Examples are provided for the following boards:
 
 ## :hammer_and_wrench: Development platform VSCode/PlatformIO
 
-VSCode/PlatformIO provides some major advantages over the ArduinoIDE:
-  - very comfortable code Editor with lots of shortcuts that make writing code a breeze
+Arduino IDE is easy for beginners, simple but somewhat limited in functionality. In contrast PlatformIO is a much more powerful and versatile alternative which makes every task a breeze after getting familiar with it. Then you won't look for another IDE anymore.
+
+VSCode/PlatformIO provides some major advantages over the Arduino IDE:
+  - very comfortable and mighty code Editor with lots of shortcuts & integrated Intellisense features that make writing code a breeze
   - usage of project file *platformio.ini* for controlling builds, adjusting serial monitor behaviour, enabling debugging, setting port parameters for software uploads (port, speed, RTS/CTS), etc.
   - easy search for/integration of additional libraries
   - integrated debugging functionality (additional external hardware required)
