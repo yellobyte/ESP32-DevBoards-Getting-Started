@@ -16,7 +16,7 @@ Under [**boards**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/
 
 All examples were created and build with **VSCode/PlatformIO**. Each example is represented by a PlatformIO project directory (one that contains a platformio.ini file). Make sure you have the latest **Arduino ESP32 development package** installed (V5.1.1 at the time of this writing).
 
-For loading an example start VSCode/PlatformIO, go to "File"-->"Open Folder" and select it's project directory).
+For editing (and later uploading) an example you need to start VSCode/PlatformIO, go to "File"-->"Open Folder" and select it's project directory).
 
 Examples are provided for the following boards:
 
