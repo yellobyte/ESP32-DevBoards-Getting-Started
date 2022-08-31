@@ -6,15 +6,17 @@ The ESP32 chip family is loaded with features, e.g. WiFi/Bluetooth, dual core (u
 
 Almost all development boards feature a greater number of GPIO pins, a combination of WLAN antenna and/or IPX antenna connector, USB-Port, LDO voltage regulator and some LEDs (Power/RX/TX). Some boards have additional features, like camera (e.g. OV2640), RGB-LED (e.g. WS2812B), battery connector, more Flash memory (up to 16MB) and/or PSRAM (up to 8MB), etc.
 
-Probably the best way to get familiar with a certain board is to write small software samples for trying out the different features, e.g. letting the onboard LED blink or change color (RGB-LED), generate serial output, connect to your local WLAN, read the status of a connected push button, put the ESP32 into sleep mode and so on.
+Probably the best way to get familiar with a certain board is to start with writing tiny software programs (examples) for trying out the different board features, e.g. letting the onboard LED blink or change color (RGB-LED), generate serial output, connect to your local WLAN, read the status of a connected push button, put the ESP32 into sleep mode and so on.  
 
-## :file_folder: Examples
+BTW: Arduino uses the name sketch (file extension *.ino) for a program. 
 
-Subfolders in [**boards**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/blob/main/boards) contain a collection of software examples I used over the last couple of years for playing with various boards.  
+## :file_folder: Software Examples
 
-All examples were created and build with **VSCode/PlatformIO**. Make sure you have the latest **Arduino ESP32 development package** installed (V5.1.1 at the time of this writing).
+Under [**boards**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/blob/main/boards) you find software examples (programs) I used over the last couple of years for playing with various boards.  
 
-For loading an example start VSCode/PlatformIO, go to "File"-->"Open Folder" and select an example directory (one that contains a platformio.ini file).
+All examples were created and build with **VSCode/PlatformIO**. Each example is represented by a PlatformIO project directory (one that contains a platformio.ini file). Make sure you have the latest **Arduino ESP32 development package** installed (V5.1.1 at the time of this writing).
+
+For loading an example start VSCode/PlatformIO, go to "File"-->"Open Folder" and select an example directory).
 
 Examples are provided for the following boards:
 
