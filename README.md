@@ -34,7 +34,7 @@ Examples are provided for the following boards:
 
 ## :hammer_and_wrench: Development platform VSCode/PlatformIO
 
-Arduino IDE is easy for beginners, simple but somewhat limited in functionality. In contrast PlatformIO is a much more powerful and versatile alternative which makes every task a breeze after getting familiar with it. Then you won't look for another IDE anymore.
+Arduino IDE is easy for beginners, simple but somewhat limited in functionality. In contrast PlatformIO is a much more powerful and versatile alternative which makes every task a breeze after getting familiar with it. 
 
 VSCode/PlatformIO provides some major advantages over the Arduino IDE:
   - very comfortable and mighty code Editor with lots of shortcuts & integrated Intellisense features that make writing code a breeze
@@ -46,10 +46,10 @@ VSCode/PlatformIO provides some major advantages over the Arduino IDE:
 
 ### :zap: Useful settings in platformio.ini
 
-The project configuration file has sections (each denoted by a [header]) and one or multiple key/value pairs within the sections. Lines beginning with ";" are ignored and may be used to provide comments. The file platformio.ini is explained in detail [here](https://docs.platformio.org/en/stable/projectconf/index.html). 
+The project configuration file has sections (each denoted by a [header]) and one or multiple key/value pairs within the sections. Lines beginning with ";" are ignored and may be used to provide comments. The file platformio.ini is explained in more detail [here](https://docs.platformio.org/en/stable/projectconf/index.html). 
 
 Some very useful settings (for more experienced programmers) deserve to be mentioned here. 
-1) Forces builds to use older frameworks and platform packages instead of the newest one.
+1) Forces builds to use older platform packages and/or frameworks instead of the newest one.
 ```c 
 ;platform = espressif32
 platform = espressif32 @ 4.2.0
@@ -76,12 +76,12 @@ debug_init_break = tbreak setup
 ; 0 no debug output, 1 errors, 2 warnings, 3 infos, 4 debug info, 5 verbose 
 build_flags = -DCORE_DEBUG_LEVEL=4
 ```
-7) Disables any activity on COM signals RTS and/or DTR. Required by some ESP32 dev boards to enable serial output (e.g. ESP32-CAM-MB board). However, this will prevent a reboot triggered by the Development IDE.
+7) Disables any activity on COM signals RTS and/or DTR. Required by some ESP32 dev boards to enable serial output (e.g. ESP32-CAM-MB board). However, this setting prevents the Development IDE from [selecting boot modes](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/doc/ESP32_DevBoard_Boot_Mode_Selection.jpg) and therefore perform automatic software uploads to the board. In this case you must press "flash" button for uploads.
 ```c
 monitor_rts = 0
 monitor_dtr = 0
 ```
-8) Switch between various built-in tables. A big collection of predefined ones can be found [here](https://github.com/espressif/arduino-esp32/tree/master/tools/partitions).
+8) Switch between various built-in tables. A big collection of predefined tables can be found [here](https://github.com/espressif/arduino-esp32/tree/master/tools/partitions).
 ```c
 ;board_build.partitions = min_spiffs.csv
 board_build.partitions = no_ota.csv
