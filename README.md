@@ -23,7 +23,7 @@ Examples are provided for the following boards:
 - ESP32-DevKitC-1 (Manufacturer: Espressif)  
 <p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/ESP32-DevKitC-V1_(Espressif)/doc/ESP32-Devkit-V1.jpg" height="160"/></p>  
 
-- ESP32-CAM, ESP32-CAM-CH340, ESP32-CAM-MB (Manufacturer: AI-THINKER)
+- ESP32-CAM, ESP32-CAM-CH340 and ESP32-CAM-MB (Manufacturer: AI-THINKER)
 <p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/ESP32-CAM_(AI-THINKER)/doc/ESP32-CAM.jpg" height="160"/><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/ESP32-CAM_(AI-THINKER)/doc/ESP32-CAM-CH340.jpg" height="150"/><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/ESP32-CAM_(AI-THINKER)/doc/ESP32-CAM-MB.jpg" height="160"/></p>
 
 - Lilygo ESP32-1.14-Display DevBoard (Manufacturer: TTGO)
@@ -48,14 +48,14 @@ VSCode/PlatformIO provides some major advantages over the Arduino IDE:
 
 The project configuration file has sections (each denoted by a [header]) and one or multiple key/value pairs within the sections. Lines beginning with ";" are ignored and may be used to provide comments. The file platformio.ini is explained in detail [here](https://docs.platformio.org/en/stable/projectconf/index.html). 
 
-Some very useful settings deserve to be mentioned here. 
+Some very useful settings (for more experienced programmers) deserve to be mentioned here. 
 1) Forces builds to use older frameworks and platform packages instead of the newest one.
 ```c 
 ;platform = espressif32
 platform = espressif32 @ 4.2.0
 platform_packages = framework-arduinoespressif32 @ https://github.com/espressif/arduino-esp32/releases/download/2.0.3/esp32-2.0.3.zip
 ```
-2) Serial output lines carry time stamps, exceptions get decoded with function backtrace and output gets logged to a file:
+2) Serial output lines carry time stamps, exceptions get decoded with function backtrace and serial output gets logged to a file:
 ```c
 monitor_filters = time, esp32_exception_decoder, log2file
 ```
@@ -63,7 +63,7 @@ monitor_filters = time, esp32_exception_decoder, log2file
 ```c
 build_type = debug
 ```
-4) Needed for usage of ESP32 JTAG Debug board "[ESP32-Prog](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/doc/ESP-Prog.jpg)".
+4) Enables usage of ESP32 JTAG Debug board "[ESP32-Prog](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/doc/ESP-Prog.jpg)" for debugging.
 ```c
 debug_tool = esp-prog
 ```
@@ -99,6 +99,6 @@ extra_scripts = add_tasks.py
 
 tbw
 
-### :information_source: Debugging your Software 
+### :information_source: Debugging your Program 
 
 tbw
