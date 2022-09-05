@@ -63,7 +63,7 @@ monitor_filters = time, esp32_exception_decoder, log2file
 ```c
 build_type = debug
 ```
-4) Enables usage of ESP32 JTAG Debug adapter "[ESP32-Prog](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/doc/ESP-Prog.jpg)" for debugging.
+4) Enables usage of ESP32 JTAG debug adapter "[ESP32-Prog](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/doc/ESP-Prog.jpg)" for debugging.
 ```c
 debug_tool = esp-prog
 ```
