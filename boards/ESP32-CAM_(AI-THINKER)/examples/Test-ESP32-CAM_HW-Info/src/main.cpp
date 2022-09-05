@@ -1,3 +1,11 @@
+/*
+  Test-ESP32-CAM_HW-Info
+
+  Shows available RAM/PSRAM on ESP32-CAM board.
+
+  Last updated 2022-08-28, ThJ <yellobyte@bluewin.ch>
+*/
+
 #include <Arduino.h>
 #include "soc/efuse_reg.h"
 

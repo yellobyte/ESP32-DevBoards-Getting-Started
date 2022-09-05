@@ -41,7 +41,7 @@ VSCode/PlatformIO provides some major advantages over the Arduino IDE:
   - usage of project file *platformio.ini* for controlling builds, adjusting serial monitor behaviour, enabling debugging, setting port parameters for software uploads (port, speed, RTS/CTS), etc.
   - easy search for/integration of additional libraries
   - integrated debugging functionality (additional external hardware required)
-  - integrated git functionality
+  - integrated source control (github)
   - etc.
 
 ### :zap: Useful settings in platformio.ini
