@@ -1,7 +1,7 @@
 /*
   Test-ESP32-CAM_Camera
 
-  Some simple functionality tests of the onboard camera OV2640.
+  Functionality test of onboard camera OV2640.
 
   Last updated 2022-08-28, ThJ <yellobyte@bluewin.ch>
 */
@@ -15,6 +15,9 @@
 //            Ensure ESP32 Wrover Module or other board with PSRAM is selected
 //            Partial images will be transmitted if image exceeds buffer size
 //
+
+// uncomment in case you want to know
+#define SHOW_ESP32_MEMORY_STATISTICS
 
 // Select camera model
 //#define CAMERA_MODEL_WROVER_KIT // Has PSRAM
@@ -114,6 +117,16 @@ void setup() {
   Serial.print("Camera Ready! Use 'http://");
   Serial.print(WiFi.localIP());
   Serial.println("' to connect");  
+
+#ifdef SHOW_ESP32_MEMORY_STATISTICS
+  Serial.println("Some ESP32 memory stats after running this sketch:");
+  Serial.print(" 1) minimum ever free memory of all regions [in bytes]: ");
+  Serial.println(ESP.getMinFreeHeap());
+  Serial.print(" 2) minimum ever free heap size [in bytes]:             ");
+  Serial.println(xPortGetMinimumEverFreeHeapSize());
+  Serial.print(" 3) minimum ever stack size of this task [in bytes]:    ");
+  Serial.println(uxTaskGetStackHighWaterMark(NULL)); 
+#endif  
 }
 
 void loop() {
