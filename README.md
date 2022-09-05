@@ -6,7 +6,7 @@ The ESP32 chip family is loaded with features, e.g. WiFi/Bluetooth, dual core (u
 
 Almost all development boards feature a greater number of GPIO pins, a combination of WLAN antenna and/or IPX antenna connector, USB-Port, LDO voltage regulator and some LEDs (Power/RX/TX). Some boards have additional features, like a camera (e.g. OV2640), RGB-LED (e.g. WS2812B), battery connector, more Flash memory (up to 16MB) and/or PSRAM (up to 8MB), etc.
 
-Probably the best way to get familiar with a certain board is to start with writing tiny software programs (examples) for trying out the different board features, e.g. letting the onboard LED blink or change color (RGB-LED), generate serial output, connect to your local WLAN, read the status of a connected push button, put the ESP32 into sleep mode, create a file on an attached SD-Card, etc. You get the idea.  
+ Writing a few tiny software programs (examples) is probably the best way to get familiar with a certain board. A good start would be to let the onboard LED blink or change color (RGB-LED), generate a few lines serial output, connect to the local WLAN, read the status of a connected push button, put the ESP32 into sleep mode, create a single file on an attached SD-Card or some other simple task. You get the idea.  
 
 BTW: Arduino uses the name sketch (file extension *.ino) for a program. 
 
