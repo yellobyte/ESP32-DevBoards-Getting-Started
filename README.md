@@ -23,8 +23,8 @@ Examples are provided for the following boards:
 - ESP32-DevKitC-1 (Manufacturer: Espressif)  
 <p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/ESP32-DevKitC-V1_(Espressif)/doc/ESP32-Devkit-V1.jpg" height="180"/></p>  
 
-- ESP32-CAM (Manufacturer: AI-THINKER)
-<p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/ESP32-CAM_(AI-THINKER)/doc/ESP32-CAM.jpg" height="180"/><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/ESP32-CAM_(AI-THINKER)/doc/ESP32-CAM-CH340.jpg" height="180"/></p>
+- ESP32-CAM, ESP32-CAM-CH340, ESP32-CAM-MB (Manufacturer: AI-THINKER)
+<p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/ESP32-CAM_(AI-THINKER)/doc/ESP32-CAM.jpg" height="180"/><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/ESP32-CAM_(AI-THINKER)/doc/ESP32-CAM-CH340.jpg" height="180"/><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/ESP32-CAM_(AI-THINKER)/doc/ESP32-CAM-MB.jpg" height="180"/></p>
 
 - Lilygo ESP32-1.14-Display DevBoard (Manufacturer: TTGO)
 <p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/ESP32-1.14-Display-DevBoard_(TTGO)/doc/LILYGO-ESP32-1.14-Display.jpg" height="180"/></p>
@@ -76,7 +76,7 @@ debug_init_break = tbreak setup
 ; 0 no debug output, 1 errors, 2 warnings, 3 infos, 4 debug info, 5 verbose 
 build_flags = -DCORE_DEBUG_LEVEL=4
 ```
-7) Disables any activity on COM signals RTS and/or DTR. Required by some ESP32 dev boards to enable serial output (e.g. various exotic ESP32-CAM boards)
+7) Disables any activity on COM signals RTS and/or DTR. Required by some ESP32 dev boards to enable serial output (e.g. ESP32-CAM-MB board). However, this will prevent a reboot triggered by the Development IDE.
 ```c
 monitor_rts = 0
 monitor_dtr = 0
@@ -90,7 +90,7 @@ board_build.partitions = no_ota.csv
 ```c
 board_build.partitions = partitions_custom.csv
 ```
-10) Collection of personal tasks, to be found under PlatformIO -> PROJECT TASKS -> Custom. Expects the *.py file in the root of the project directory.
+10) Collection of personal tasks, to be found under PlatformIO -> PROJECT TASKS -> Custom. Eventual paths are relative to the project folder.
 ```c
 extra_scripts = add_tasks.py
 ```
