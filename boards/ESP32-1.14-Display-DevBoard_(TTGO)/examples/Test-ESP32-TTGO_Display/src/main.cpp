@@ -83,19 +83,15 @@ void wifi_scan()
   int16_t n = WiFi.scanNetworks();
   tft.fillScreen(TFT_BLACK);
   if (n == 0) {
-      tft.drawString("no networks found", tft.width() / 2, tft.height() / 2);
+    tft.drawString("no networks found", tft.width() / 2, tft.height() / 2);
   } else {
-      tft.setTextDatum(TL_DATUM);
-      tft.setCursor(0, 0);
-      Serial.printf("Found %d net\n", n);
-      for (int i = 0; i < n; ++i) {
-          sprintf(buff,
-                  "[%d]:%s(%d)",
-                  i + 1,
-                  WiFi.SSID(i).c_str(),
-                  WiFi.RSSI(i));
-          tft.println(buff);
-      }
+    tft.setTextDatum(TL_DATUM);
+    tft.setCursor(0, 0);
+    Serial.printf("Found %d net\n", n);
+    for (int i = 0; i < n; ++i) {
+      sprintf(buff, "[%d]:%s(%d)", i + 1, WiFi.SSID(i).c_str(), WiFi.RSSI(i));
+      tft.println(buff);
+    }
   }
   WiFi.mode(WIFI_OFF);
 }
@@ -103,33 +99,33 @@ void wifi_scan()
 void button_init()
 {
   btn1.setLongClickHandler([](Button2 & b) {
-      btnCick = false;
-      int r = digitalRead(TFT_BL);
-      tft.fillScreen(TFT_BLACK);
-      tft.setTextColor(TFT_GREEN, TFT_BLACK);
-      tft.setTextDatum(MC_DATUM);
-      tft.drawString("Press again to wake up",  tft.width() / 2, tft.height() / 2 );
-      espDelay(6000);
-      digitalWrite(TFT_BL, !r);
+    btnCick = false;
+    int r = digitalRead(TFT_BL);
+    tft.fillScreen(TFT_BLACK);
+    tft.setTextColor(TFT_GREEN, TFT_BLACK);
+    tft.setTextDatum(MC_DATUM);
+    tft.drawString("Press again to wake up",  tft.width() / 2, tft.height() / 2 );
+    espDelay(6000);
+    digitalWrite(TFT_BL, !r);
 
-      tft.writecommand(TFT_DISPOFF);
-      tft.writecommand(TFT_SLPIN);
-      //After using light sleep, you need to disable timer wake, because here use external IO port to wake up
-      esp_sleep_disable_wakeup_source(ESP_SLEEP_WAKEUP_TIMER);
-      // esp_sleep_enable_ext1_wakeup(GPIO_SEL_35, ESP_EXT1_WAKEUP_ALL_LOW);
-      esp_sleep_enable_ext0_wakeup(GPIO_NUM_35, 0);
-      delay(200);
-      esp_deep_sleep_start();
+    tft.writecommand(TFT_DISPOFF);
+    tft.writecommand(TFT_SLPIN);
+    //After using light sleep, you need to disable timer wake, because here use external IO port to wake up
+    esp_sleep_disable_wakeup_source(ESP_SLEEP_WAKEUP_TIMER);
+    // esp_sleep_enable_ext1_wakeup(GPIO_SEL_35, ESP_EXT1_WAKEUP_ALL_LOW);
+    esp_sleep_enable_ext0_wakeup(GPIO_NUM_35, 0);
+    delay(200);
+    esp_deep_sleep_start();
   });
   btn1.setPressedHandler([](Button2 & b) {
-      Serial.println("Detect Voltage..");
-      btnCick = true;
+    Serial.println("Detect Voltage..");
+    btnCick = true;
   });
 
   btn2.setPressedHandler([](Button2 & b) {
-      btnCick = false;
-      Serial.println("btn press wifi scan");
-      wifi_scan();
+    btnCick = false;
+    Serial.println("btn press wifi scan");
+    wifi_scan();
   });
 }
 
@@ -162,8 +158,8 @@ void setup()
   tft.setTextSize(1);
 
   if (TFT_BL > 0) { // TFT_BL has been set in the TFT_eSPI library in the User Setup file TTGO_T_Display.h
-      pinMode(TFT_BL, OUTPUT); // Set backlight pin to output mode
-      digitalWrite(TFT_BL, TFT_BACKLIGHT_ON); // Turn backlight on. TFT_BACKLIGHT_ON has been set in the TFT_eSPI library in the User Setup file TTGO_T_Display.h
+    pinMode(TFT_BL, OUTPUT); // Set backlight pin to output mode
+    digitalWrite(TFT_BL, TFT_BACKLIGHT_ON); // Turn backlight on. TFT_BACKLIGHT_ON has been set in the TFT_eSPI library in the User Setup file TTGO_T_Display.h
   }
 
   tft.setSwapBytes(true);
@@ -184,12 +180,12 @@ void setup()
   esp_adc_cal_value_t val_type = esp_adc_cal_characterize((adc_unit_t)ADC_UNIT_1, (adc_atten_t)ADC1_CHANNEL_6, (adc_bits_width_t)ADC_WIDTH_BIT_12, 1100, &adc_chars);
   //Check type of calibration value used to characterize ADC
   if (val_type == ESP_ADC_CAL_VAL_EFUSE_VREF) {
-      Serial.printf("eFuse Vref:%u mV", adc_chars.vref);
-      vref = adc_chars.vref;
+    Serial.printf("eFuse Vref:%u mV", adc_chars.vref);
+    vref = adc_chars.vref;
   } else if (val_type == ESP_ADC_CAL_VAL_EFUSE_TP) {
-      Serial.printf("Two Point --> coeff_a:%umV coeff_b:%umV\n", adc_chars.coeff_a, adc_chars.coeff_b);
+    Serial.printf("Two Point --> coeff_a:%umV coeff_b:%umV\n", adc_chars.coeff_a, adc_chars.coeff_b);
   } else {
-      Serial.println("Default Vref: 1100mV");
+    Serial.println("Default Vref: 1100mV");
   }
 
   tft.fillScreen(TFT_BLACK);
@@ -206,7 +202,7 @@ void setup()
 void loop()
 {
   if (btnCick) {
-      showVoltage();
+    showVoltage();
   }
   button_loop();
 }
