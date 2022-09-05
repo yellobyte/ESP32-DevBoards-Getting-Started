@@ -1,3 +1,12 @@
+/*
+  Test-ESP32-TTGO_Display
+
+  Some simple functionality tests of the onboard display.
+	Uses libraries "TFT_eSPI" and "Button2" located in subfolder lib.
+
+  Last updated 2022-08-28, ThJ <yellobyte@bluewin.ch>
+*/
+
 #include <Arduino.h>
 #include <TFT_eSPI.h>
 #include <SPI.h>

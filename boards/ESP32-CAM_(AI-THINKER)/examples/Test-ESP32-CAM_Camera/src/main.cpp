@@ -1,3 +1,11 @@
+/*
+  Test-ESP32-CAM_Camera
+
+  Some simple functionality tests of the onboard camera OV2640.
+
+  Last updated 2022-08-28, ThJ <yellobyte@bluewin.ch>
+*/
+
 #include <Arduino.h>
 #include "esp_camera.h"
 #include <WiFi.h>
@@ -20,8 +28,8 @@
 
 #include "camera_pins.h"
 
-const char* ssid = "Moudi-Net2";
-const char* password = "katzeklo20112";
+const char* ssid = "MySSID";
+const char* password = "MyPassword";
 
 void startCameraServer();
 
