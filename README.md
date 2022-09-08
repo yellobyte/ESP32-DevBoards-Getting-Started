@@ -20,7 +20,7 @@ For editing (and later uploading) an example you need to start VSCode/PlatformIO
 
 Examples are provided for the following boards:
 
-- ESP32-DevKitC-1 (Manufacturer: Espressif)  
+- ESP32-DevKitC-1 (orig Manufacturer: Espressif)  
 <p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/ESP32-DevKitC-V1_(Espressif)/doc/ESP32-Devkit-V1.jpg" height="160"/></p>  
 
 - ESP32-CAM, ESP32-CAM-USB and ESP32-CAM-MB (orig. Manufacturer: AI-THINKER)
