@@ -29,6 +29,12 @@ Examples are provided for the following boards:
 - Lilygo ESP32-1.14-Display DevBoard (Manufacturer: TTGO)
 <p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/ESP32-1.14-Display-DevBoard_(TTGO)/doc/LILYGO-ESP32-1.14-Display.jpg" height="160"/></p>
 
+- Lilygo ESP32-S3-0.85-Display DevBoard (Manufacturer: TTGO)
+<p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/ESP32-S3-0.85-Display-DevBoard_(TTGO)/doc/LILYGO-ESP32-0.85-Display.jpg" height="160"/></p>
+
+- Lilygo ESP32-S3-1.9-Display DevBoard (Manufacturer: TTGO)
+<p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/ESP32-S3-1.9-Display-DevBoard_(TTGO)/doc/LILYGO-ESP32-S3-1.9-Display.jpg" height="160"/></p>
+
 - YD-ESP32-S3 DevBoard with big Flash and external PSRAM (Manufacturer: VCC-GND.COM)  
 <p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YD-ESP32-S3_(VCC-GND.COM)/doc/YD-ESP32-S3_DevBoard.JPG" height="160"/></p>
 
