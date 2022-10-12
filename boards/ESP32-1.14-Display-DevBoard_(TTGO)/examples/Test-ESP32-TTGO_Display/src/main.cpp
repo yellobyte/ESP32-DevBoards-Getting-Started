@@ -1,5 +1,5 @@
 /*
-  Test-ESP32-TTGO_Display
+  Test-ESP32-1.14inch_Display_TTGO
 
   Simple functionality test of the onboard display. Scans for Wifi networks and prints them on the display.
   Uses libraries "TFT_eSPI" and "Button2" located in subfolder lib.

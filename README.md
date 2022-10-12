@@ -54,7 +54,9 @@ VSCode/PlatformIO provides some major advantages over the Arduino IDE:
 
 The project configuration file has sections (each denoted by a [header]) and one or multiple key/value pairs within the sections. Lines beginning with ";" are ignored and may be used to provide comments. The file platformio.ini is explained in more detail [here](https://docs.platformio.org/en/stable/projectconf/index.html). 
 
-Some very useful settings (for more experienced programmers) deserve to be mentioned here. 
+Different examples might require different build options, so always have a look at the platformio.ini file for relevant infos.
+
+Some very useful general settings (for more experienced programmers) deserve to be mentioned here. 
 1) Forces builds to use older platform packages and/or frameworks instead of the newest one.
 ```c 
 ;platform = espressif32

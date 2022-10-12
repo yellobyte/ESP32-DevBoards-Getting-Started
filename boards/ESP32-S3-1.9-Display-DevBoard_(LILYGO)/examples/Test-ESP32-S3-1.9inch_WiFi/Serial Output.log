@@ -1,0 +1,26 @@
+--- Terminal on COM3 | 115200 8-N-1
+--- Available filters and text transformations: colorize, debug, default, direct, esp32_exception_decoder, hexlify, log2file, nocontrol, printable, send_on_enter, time
+--- More details at https://bit.ly/pio-monitor-filters
+--- Quit: Ctrl+C | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H
+23:57:47.057 >
+23:57:47.057 > scan start
+23:57:47.057 > [  2175][D][WiFiGeneric.cpp:929] _eventCallback(): Arduino Event: 0 - WIFI_READY
+23:57:47.057 > [  2213][D][WiFiGeneric.cpp:929] _eventCallback(): Arduino Event: 2 - STA_START
+23:57:52.973 > [  9024][D][WiFiGeneric.cpp:929] _eventCallback(): Arduino Event: 1 - SCAN_DONE
+23:57:52.973 > scan done, 4 networks found:
+23:57:52.974 >   1: Mibs (-68dBm), Channel: 7, WIFI_AUTH_WPA2_PSK
+23:57:52.983 >   2: OOP WiFi (-74dBm), Channel: 6, WIFI_AUTH_WPA2_ENTERPRISE
+23:57:52.993 >   3: OMB-28449 (-81dBm), Channel: 3, WIFI_AUTH_WPA2_PSK
+23:57:53.003 >   4: 86-HP ENVY 5540 series (-84dBm), Channel: 6, WIFI_AUTH_WPA2_PSK
+23:57:53.043 >
+23:57:53.043 > Connecting to WiFi network "Mibs"
+23:57:53.093 > .E (9172) wifi:Association refused temporarily, comeback time 1024 mSec
+23:57:53.594 > ....[ 11199][D][WiFiGeneric.cpp:929] _eventCallback(): Arduino Event: 5 - STA_DISCONNECTED
+23:57:55.149 > [ 11200][W][WiFiGeneric.cpp:950] _eventCallback(): Reason: 203 - ASSOC_FAIL
+23:57:55.157 > [ 11203][D][WiFiGeneric.cpp:966] _eventCallback(): WiFi Reconnect Running
+23:57:55.206 > [ 11256][D][WiFiGeneric.cpp:929] _eventCallback(): Arduino Event: 4 - STA_CONNECTED
+23:57:55.235 > [ 11286][D][WiFiGeneric.cpp:929] _eventCallback(): Arduino Event: 7 - STA_GOT_IP
+23:57:55.241 > [ 11288][D][WiFiGeneric.cpp:991] _eventCallback(): STA IP: 192.168.1.43, MASK: 255.255.255.0, GW: 192.168.1.1
+23:57:55.594 > Connected successfully to "Mibs". IP address: 192.168.1.43
+23:57:55.594 >
+23:57:55.594 > Sketch finished.
