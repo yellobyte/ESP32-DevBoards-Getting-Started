@@ -1,0 +1,1 @@
+More infos under:  https://github.com/Xinyuan-LilyGO/T-Display-S3

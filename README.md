@@ -8,7 +8,7 @@ Almost all development boards feature a greater number of GPIO pins, a combinati
 
  Writing a few tiny software programs (examples) is probably the best way to get familiar with a certain board. A good start would be to let the onboard LED blink or change color (RGB-LED), generate a few lines serial output, connect to the local WLAN, read the status of a connected push button, put the ESP32 into sleep mode, create a single file on an attached SD-Card or some other simple task. You get the idea.  
 
-BTW: Arduino uses the name sketch (file extension *.ino) for a program. 
+BTW: Arduino uses the name **sketch** (file extension *.ino) for a program. 
 
 ## :file_folder: Software Examples
 
@@ -20,7 +20,7 @@ For editing (and later uploading) an example you need to start VSCode/PlatformIO
 
 Examples are provided for the following boards:
 
-- ESP32-DevKitC-1 (orig Manufacturer: Espressif)  
+- ESP32-DevKitC-1 (orig. Manufacturer: Espressif)  
 <p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/ESP32-DevKitC-V1_(Espressif)/doc/ESP32-Devkit-V1.jpg" height="160"/></p>  
 
 - ESP32-CAM, ESP32-CAM-USB and ESP32-CAM-MB (orig. Manufacturer: AI-THINKER)
@@ -29,13 +29,13 @@ Examples are provided for the following boards:
 - Lilygo ESP32-1.14-Display DevBoard (orig. Manufacturer: TTGO)
 <p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/ESP32-1.14-Display-DevBoard_(TTGO)/doc/LILYGO-ESP32-1.14-Display.jpg" height="160"/></p>
 
-- Lilygo ESP32-S3-0.85-Display DevBoard (orig. Manufacturer: TTGO)
-<p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/ESP32-S3-0.85-Display-DevBoard_(TTGO)/doc/LILYGO-ESP32-S3-0.85-Display.jpg" height="160"/></p>
+- Lilygo ESP32-S3-0.85-Display DevBoard (orig. Manufacturer: LILYGO)
+<p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/ESP32-S3-0.85-Display-DevBoard_(LILYGO)/doc/LILYGO-ESP32-S3-0.85-Display.jpg" height="160"/></p>
 
-- Lilygo ESP32-S3-1.9-Display DevBoard (orig. Manufacturer: TTGO)
-<p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/ESP32-S3-1.9-Display-DevBoard_(TTGO)/doc/LILYGO-ESP32-S3-1.9-Display.jpg" height="160"/></p>
+- Lilygo ESP32-S3-1.9-Display DevBoard (orig. Manufacturer: LILYGO)
+<p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/ESP32-S3-1.9-Display-DevBoard_(LILYGO)/doc/LILYGO-ESP32-S3-1.9-Display.jpg" height="160"/></p>
 
-- YD-ESP32-S3 DevBoard with big Flash and external PSRAM (orig Manufacturer: VCC-GND.COM)  
+- YD-ESP32-S3 DevBoard with big Flash and external PSRAM (orig. Manufacturer: VCC-GND.COM)  
 <p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YD-ESP32-S3_(VCC-GND.COM)/doc/YD-ESP32-S3_DevBoard.JPG" height="160"/></p>
 
 ## :hammer_and_wrench: Development platform VSCode/PlatformIO
