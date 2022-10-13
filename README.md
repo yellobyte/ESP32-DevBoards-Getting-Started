@@ -56,7 +56,7 @@ VSCode/PlatformIO provides some major advantages over the Arduino IDE:
 
  Just as an example:  
  At the time of this writing Lilygo's new ESP32-S3-1.9inch-Display-DevBoard with 16MB Flash & 8MB PSRAM has not yet been added to the ESP32-framework's (v2.0.5) boardlist.  
- Setting _board = esp32-s3-devkitc-1_ in platformio.ini will allow you to start developing though. However, in this case you might not be able to access all Flash or other features and (very annoyingly) build logs report incorrect Flash/PSRAM sizes when in fact the board has 16MB Flash & 8MB PSRAM. For this exact case the example [Test-ESP32-S3-1.9inch_RAM-PSRAM](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/ESP32-S3-1.9-Display-DevBoard_(LILYGO)/examples/Test-ESP32-S3-1.9inch_RAM-PSRAM) will tell you the true sizes. Have a look at files _Build.log_ & _Serial_Output.log_ in the examples project directory to see the above mentioned discrepancies.
+ Setting _board = esp32-s3-devkitc-1_ in platformio.ini will allow you to start developing though. However, in this case you might not be able to access all Flash or other features and (very annoyingly) build logs report incorrect Flash/PSRAM sizes when in fact the board has 16MB Flash & 8MB PSRAM. For this case examples like [Test-ESP32-S3-1.9inch_RAM-PSRAM](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/ESP32-S3-1.9-Display-DevBoard_(LILYGO)/examples/Test-ESP32-S3-1.9inch_RAM-PSRAM) will tell you the true sizes. Have a look at files _Build.log_ & _Serial_Output.log_ in the examples project directory to see the above mentioned discrepancies.
 
 ### :zap: Useful settings in platformio.ini
 
