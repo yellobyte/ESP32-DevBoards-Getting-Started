@@ -52,7 +52,7 @@ VSCode/PlatformIO provides some major advantages over the Arduino IDE:
 
 ### :heavy_exclamation_mark: Application notes  
 
- Freshly released boards with special features are only fully supported by the ESP32 development framework after being added to the official ESP32 board list. Sometimes this takes weeks/month or (rarely) does not happen at all. If you want to use such board you will have to wait for a new release of the ESP32 development platform & framework or select another, already known board from the list, which is similar in funktion & to your new board.  
+ Freshly released boards with special features are only fully supported by the ESP32 development framework after being added to the official ESP32 board list. Sometimes this takes weeks/month or (rarely) does not happen at all. If you want to use such board you will have to wait for a new release of the ESP32 development platform & framework or select another, already known board from the list which is similar in features to your new board.  
 
  Just as an example:  
  At the time of this writing Lilygo's new ESP32-S3-1.9inch-Display-DevBoard with 16MB Flash & 8MB PSRAM has not been added to the ESP32-framework's (v2.0.5) boardlist.  
