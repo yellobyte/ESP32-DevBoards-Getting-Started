@@ -50,6 +50,14 @@ VSCode/PlatformIO provides some major advantages over the Arduino IDE:
   - integrated source control (github)
   - etc.
 
+### :heavy_exclamation_mark: Application notes  
+
+ Freshly released boards with special features are only fully supported by the ESP32 development framework after being added to the official ESP32 board list. Sometimes this takes weeks/month or (rarely) does not happen at all. If you want to use such board you will have to wait for a new release of the ESP32 development platform & framework or select another, already known board from the list, which is similar in funktion & to your new board.  
+
+ Just as an example:  
+ At the time of this writing Lilygo's new ESP32-S3-1.9inch-Display-DevBoard with 16MB Flash & 8MB PSRAM has not been added to the ESP32-framework's (v2.0.5) boardlist.  
+ Setting _board = esp32-s3-devkitc-1_ in platformio.ini will allow you to start developing though. However, in this case you might not be able to access all Flash or other features and build logs state 4MB Flash/no PSRAM when in fact the board has 16MB Flash & 8MB PSRAM. For this exact case the example [Test-ESP32-S3-1.9inch_RAM-PSRAM](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/ESP32-S3-1.9-Display-DevBoard_(LILYGO)/examples) will tell you the true sizes. Have a look at file _Serial_Output.log_ in the examples project directory.
+
 ### :zap: Useful settings in platformio.ini
 
 The project configuration file has sections (each denoted by a [header]) and one or multiple key/value pairs within the sections. Lines beginning with ";" are ignored and may be used to provide comments. The file platformio.ini is explained in more detail [here](https://docs.platformio.org/en/stable/projectconf/index.html). 
