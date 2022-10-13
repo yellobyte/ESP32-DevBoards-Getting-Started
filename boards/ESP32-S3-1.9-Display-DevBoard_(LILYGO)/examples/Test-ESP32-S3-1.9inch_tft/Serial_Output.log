@@ -1,0 +1,23 @@
+--- Terminal on COM3 | 115200 8-N-1
+--- Available filters and text transformations: colorize, debug, default, direct, esp32_exception_decoder, hexlify, log2file, nocontrol, printable, send_on_enter, time
+--- More details at https://bit.ly/pio-monitor-filters
+--- Quit: Ctrl+C | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H
+00:11:21.139 > loop() finished.
+00:11:21.139 > loop() started. 
+--- DTR active ---
+--- DTR inactive ---
+00:11:23.004 > ESP-ROM:esp32s3-20210327
+00:11:23.004 > Build:Mar 27 2021
+00:11:23.005 > rst:0x15 (USB_UART_CHIP_RESET),boot:0x8 (SPI_FAST_FLASH_BOOT)
+00:11:23.005 > Saved PC:0x420238fe
+00:11:23.006 > SPIWP:0xee
+00:11:23.007 > mode:DIO, clock div:1
+00:11:23.009 > load:0x3fce3808,len:0x43c
+00:11:23.011 > load:0x403c9700,len:0xbec
+00:11:23.014 > load:0x403cc700,len:0x2a3c
+00:11:23.020 > entry 0x403c98d8
+00:11:26.115 > Hello T-Display-S3
+00:11:31.692 > setup() finished.
+00:11:31.692 > loop() started.
+00:11:59.231 > loop() finished.
+00:11:59.231 > loop() started.

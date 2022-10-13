@@ -1,0 +1,173 @@
+Executing task: C:\Users\tj\.platformio\penv\Scripts\platformio.exe run 
+
+Processing ESP32-S3-DevKitC-1 (platform: espressif32; board: esp32-s3-devkitc-1; framework: arduino)
+----------------------------------------------------------------------------------------------------------------------------------------------Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/esp32-s3-devkitc-1.html
+PLATFORM: Espressif 32 (5.2.0) > Espressif ESP32-S3-DevKitC-1-N8 (8 MB QD, No PSRAM)
+HARDWARE: ESP32S3 240MHz, 320KB RAM, 8MB Flash
+DEBUG: Current (esp-builtin) On-board (esp-builtin) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES:
+ - framework-arduinoespressif32 @ 3.20005.220925 (2.0.5)
+ - tool-esptoolpy @ 1.40201.0 (4.2.1)
+ - toolchain-riscv32-esp @ 8.4.0+2021r2-patch3
+ - toolchain-xtensa-esp32s3 @ 8.4.0+2021r2-patch3
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 62 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- TFT_eSPI @ 2.4.71   
+|   |-- SPI @ 2.0.0     
+|   |-- SPIFFS @ 2.0.0  
+|   |   |-- FS @ 2.0.0  
+|   |-- FS @ 2.0.0      
+|   |-- LittleFS @ 2.0.0
+|   |   |-- FS @ 2.0.0  
+Building in release mode
+Compiling .pio\build\ESP32-S3-DevKitC-1\src\main.cpp.o
+Building .pio\build\ESP32-S3-DevKitC-1\bootloader.bin
+Generating partitions .pio\build\ESP32-S3-DevKitC-1\partitions.bin
+esptool.py v4.2.1
+Creating esp32s3 image...
+Merged 1 ELF section
+Successfully created esp32s3 image.
+Compiling .pio\build\ESP32-S3-DevKitC-1\libc43\SPI\SPI.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libf4f\FS\FS.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libf4f\FS\vfs_api.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libd46\SPIFFS\SPIFFS.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\lib6b6\LittleFS\LittleFS.cpp.o
+In file included from lib/TFT_eSPI/TFT_eSPI.h:68,
+                 from src/main.cpp:11:
+lib/TFT_eSPI/Processors/TFT_eSPI_ESP32_S3.h:11:3: warning: #warning >>>>------>> DMA is not supported on the ESP32 S3 (possible future update) [-Wcpp]
+  #warning >>>>------>> DMA is not supported on the ESP32 S3 (possible future update)
+   ^~~~~~~
+In file included from src/main.cpp:11:
+lib/TFT_eSPI/TFT_eSPI.h:882:8: warning: #warning >>>>------>> TOUCH_CS pin not defined, TFT_eSPI touch functions will not be available! [-Wcpp]
+       #warning >>>>------>> TOUCH_CS pin not defined, TFT_eSPI touch functions will not be available!
+        ^~~~~~~
+Compiling .pio\build\ESP32-S3-DevKitC-1\lib3fc\TFT_eSPI\TFT_eSPI.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\Esp.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\FirmwareMSC.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\FunctionalInterrupt.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\HWCDC.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\HardwareSerial.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\IPAddress.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\IPv6Address.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\MD5Builder.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\Print.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\Stream.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\StreamString.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\Tone.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\USB.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\USBCDC.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\USBMSC.cpp.o
+Archiving .pio\build\ESP32-S3-DevKitC-1\libf4f\libFS.a
+Archiving .pio\build\ESP32-S3-DevKitC-1\libc43\libSPI.a
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\WMath.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\WString.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\base64.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\cbuf.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\esp32-hal-adc.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\esp32-hal-bt.c.o
+Archiving .pio\build\ESP32-S3-DevKitC-1\libd46\libSPIFFS.a
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\esp32-hal-cpu.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\esp32-hal-dac.c.o
+Archiving .pio\build\ESP32-S3-DevKitC-1\lib6b6\libLittleFS.a
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\esp32-hal-gpio.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\esp32-hal-i2c-slave.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\esp32-hal-i2c.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\esp32-hal-ledc.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\esp32-hal-matrix.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\esp32-hal-misc.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\esp32-hal-psram.c.o
+In file included from lib/TFT_eSPI/TFT_eSPI.h:68,
+                 from lib/TFT_eSPI/TFT_eSPI.cpp:17:
+lib/TFT_eSPI/Processors/TFT_eSPI_ESP32_S3.h:11:3: warning: #warning >>>>------>> DMA is noCompiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\esp32-hal-rgb-led.c.o
+t supported on the ESP32 S3 (possible future update) [-Wcpp]
+  #warning >>>>------>> DMA is not supported on the ESP32 S3 (possible future update)
+   ^~~~~~~
+In file included from lib/TFT_eSPI/TFT_eSPI.cpp:17:
+lib/TFT_eSPI/TFT_eSPI.h:882:8: warning: #warning >>>>------>> TOUCH_CS pin not defined, TFT_eSPI touch functions will not be available! [-Wcpp]
+       #warning >>>>------>> TOUCH_CS pin not defined, TFT_eSPI touch functions will not be available!
+        ^~~~~~~
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\esp32-hal-rmt.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\esp32-hal-sigmadelta.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\esp32-hal-spi.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\esp32-hal-time.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\esp32-hal-timer.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\esp32-hal-tinyusb.c.o
+In file included from lib/TFT_eSPI/User_Setup_Select.h:52,
+                 from lib/TFT_eSPI/TFT_eSPI.h:42,
+                 from lib/TFT_eSPI/TFT_eSPI.cpp:17:
+lib/TFT_eSPI/Processors/TFT_eSPI_ESP32_S3.c: In member function 'uint8_t TFT_eSPI::readByte()':
+lib/TFT_eSPI/User_Setups/Setup24_ST7789.h:32:16: warning: right shift count >= width of type [-Wshift-count-overflow]
+ #define TFT_D0 39 // Must use pins in the range 0-31 for the data bus
+                ^~
+lib/TFT_eSPI/Processors/TFT_eSPI_ESP32_S3.c:115:16: note: in expansion of macro 'TFT_D0'
+   b  = (((reg>>TFT_D0)&1) << 0);
+                ^~~~~~
+lib/TFT_eSPI/User_Setups/Setup24_ST7789.h:33:16: warning: right shift count >= width of type [-Wshift-count-overflow]
+ #define TFT_D1 40 // so a single register write sets/clears all bits.
+                ^~
+lib/TFT_eSPI/Processors/TFT_eSPI_ESP32_S3.c:116:16: note: in expansion of macro 'TFT_D1'
+   b |= (((reg>>TFT_D1)&1) << 1);
+                ^~~~~~
+lib/TFT_eSPI/User_Setups/Setup24_ST7789.h:34:16: warning: right shift count >= width of type [-Wshift-count-overflow]
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\esp32-hal-touch.c.o
+ #define TFT_D2 41 // Pins can be randomly assigned, this does not affect
+                ^~
+lib/TFT_eSPI/Processors/TFT_eSPI_ESP32_S3.c:117:16: note: in expansion of macro 'TFT_D2'
+   b |= (((reg>>TFT_D2)&1) << 2);
+                ^~~~~~
+lib/TFT_eSPI/User_Setups/Setup24_ST7789.h:35:16: warning: right shift count >= width of type [-Wshift-count-overflow]
+ #define TFT_D3 42 // TFT screen update performance.
+                ^~
+lib/TFT_eSPI/Processors/TFT_eSPI_ESP32_S3.c:118:16: note: in expansion of macro 'TFT_D3'
+   b |= (((reg>>TFT_D3)&1) << 3);
+                ^~~~~~
+lib/TFT_eSPI/User_Setups/Setup24_ST7789.h:36:16: warning: right shift count >= width of type [-Wshift-count-overflow]
+ #define TFT_D4 45
+                ^~
+lib/TFT_eSPI/Processors/TFT_eSPI_ESP32_S3.c:119:16: note: in expansion of macro 'TFT_D4'
+   b |= (((reg>>TFT_D4)&1) << 4);
+                ^~~~~~
+lib/TFT_eSPI/User_Setups/Setup24_ST7789.h:37:16: warning: right shift count >= width of type [-Wshift-count-overflow]
+ #define TFT_D5 46
+                ^~
+lib/TFT_eSPI/Processors/TFT_eSPI_ESP32_S3.c:120:16: note: in expansion of macro 'TFT_D5'
+   b |= (((reg>>TFT_D5)&1) << 5);
+                ^~~~~~
+lib/TFT_eSPI/User_Setups/Setup24_ST7789.h:38:16: warning: right shift count >= width of type [-Wshift-count-overflow]
+ #define TFT_D6 47
+                ^~
+lib/TFT_eSPI/Processors/TFT_eSPI_ESP32_S3.c:121:16: note: in expansion of macro 'TFT_D6'
+   b |= (((reg>>TFT_D6)&1) << 6);
+                ^~~~~~
+lib/TFT_eSPI/User_Setups/Setup24_ST7789.h:39:16: warning: right shift count >= width of type [-Wshift-count-overflow]
+ #define TFT_D7 48
+                ^~
+lib/TFT_eSPI/Processors/TFT_eSPI_ESP32_S3.c:122:16: note: in expansion of macro 'TFT_D7'
+   b |= (((reg>>TFT_D7)&1) << 7);
+                ^~~~~~
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\esp32-hal-uart.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\firmware_msc_fat.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\libb64\cdecode.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\libb64\cencode.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\main.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\stdlib_noniso.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\wiring_pulse.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\wiring_shift.c.o
+Archiving .pio\build\ESP32-S3-DevKitC-1\libFrameworkArduino.a
+Archiving .pio\build\ESP32-S3-DevKitC-1\lib3fc\libTFT_eSPI.a
+Linking .pio\build\ESP32-S3-DevKitC-1\firmware.elf
+Retrieving maximum program size .pio\build\ESP32-S3-DevKitC-1\firmware.elf
+Checking size .pio\build\ESP32-S3-DevKitC-1\firmware.elf
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+RAM:   [          ]   4.5% (used 14848 bytes from 327680 bytes)
+Flash: [=         ]  11.8% (used 392733 bytes from 3342336 bytes)
+Building .pio\build\ESP32-S3-DevKitC-1\firmware.bin
+esptool.py v4.2.1
+Creating esp32s3 image...
+Merged 2 ELF sections
+Successfully created esp32s3 image.
+======================================================== [SUCCESS] Took 10.45 seconds ========================================================
