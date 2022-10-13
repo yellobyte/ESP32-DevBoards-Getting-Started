@@ -1,0 +1,37 @@
+--- Terminal on COM3 | 115200 8-N-1
+--- Available filters and text transformations: colorize, debug, default, direct, esp32_exception_decoder, hexlify, log2file, nocontrol, printable, send_on_enter, time
+--- More details at https://bit.ly/pio-monitor-filters
+--- Quit: Ctrl+C | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H
+02:42:32.957 >
+02:42:32.957 > --> Sketch started: RAM/PSRAM-Test on ESP32-S3 DevBoard 1.9inch Display (Manufactorer LILYGO):
+02:42:32.957 >
+02:42:32.957 > ESP32 SDK: v4.4.2
+02:42:32.957 > ESP32 CPU FREQ: 240 MHz
+02:42:32.957 > ESP32 APB FREQ: 80.0 MHz (Advanced Peripheral Bus)
+02:42:32.957 > ESP32 FLASH SIZE: 16777216 Byte
+02:42:32.957 >
+02:42:32.957 > ESP32 RAM Size: 399228 Byte, Used: 24252 Byte, Free: 374976, max alloc: 303092 Byte (largest free block)
+02:42:32.957 > ESP32 PSRAM Size: 8386179 Byte, Used: 0 Byte, Free: 8386179 Byte
+02:42:32.957 >
+02:42:32.957 > -> malloc(8192000), success, buf = 3d80097c (RAM starts from 0x3FCxxxxx, PSRAM starts from 0x3D8xxxxx)  
+02:42:33.919 >
+02:42:33.919 > ESP32 RAM Size: 399228 Byte, Used: 24252 Byte, Free: 374976, max alloc: 303092 Byte (largest free block)
+02:42:33.922 > ESP32 PSRAM Size: 8386163 Byte, Used: 8192000 Byte, Free: 194163 Byte
+02:42:33.922 >
+02:42:33.922 > -> free(buf=3d80097c)
+02:42:33.922 >
+02:42:33.922 > ESP32 RAM Size: 399228 Byte, Used: 24252 Byte, Free: 374976, max alloc: 303092 Byte (largest free block)
+02:42:33.922 > ESP32 PSRAM Size: 8386179 Byte, Used: 0 Byte, Free: 8386179 Byte
+02:42:33.922 >
+02:42:33.922 > -> malloc(4096), success, buf = 3fce36f0 (RAM starts from 0x3FCxxxxx, PSRAM starts from 0x3D8xxxxx)     
+02:42:33.922 >
+02:42:33.922 > ESP32 RAM Size: 399212 Byte, Used: 28348 Byte, Free: 370864, max alloc: 303092 Byte (largest free block)
+02:42:33.922 > ESP32 PSRAM Size: 8386179 Byte, Used: 0 Byte, Free: 8386179 Byte
+02:42:33.922 >
+02:42:33.922 > -> free(buf=3fce36f0)
+02:42:33.922 >
+02:42:33.922 > ESP32 RAM Size: 399228 Byte, Used: 24252 Byte, Free: 374976, max alloc: 303092 Byte (largest free block)
+02:42:33.922 > ESP32 PSRAM Size: 8386179 Byte, Used: 0 Byte, Free: 8386179 Byte
+02:42:33.922 >
+02:42:33.922 >
+02:42:33.922 > Press 'r' to reboot the board.
