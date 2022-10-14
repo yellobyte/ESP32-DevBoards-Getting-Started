@@ -2,7 +2,7 @@
   Test_TFT
 
   Testing TFT functionality on ESP32-S3 DevBoard 1.9inch Display (Manufactorer LILYGO).
-  This example is based on the sketch "tft" from "https://github.com/Xinyuan-LilyGO/T-Display-S3".
+  This example is mainly based on the sketch "tft" from "https://github.com/Xinyuan-LilyGO/T-Display-S3".
 
   Last updated 2022-10-13, ThJ <yellobyte@bluewin.ch>
 */

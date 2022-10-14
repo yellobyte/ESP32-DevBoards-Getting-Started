@@ -114,8 +114,8 @@ extra_scripts = add_tasks.py
 
 ### :information_source: Software Upload
 
-tbw
+Under construction.
 
 ### :information_source: Debugging your Program 
 
-tbw
+Under construction.

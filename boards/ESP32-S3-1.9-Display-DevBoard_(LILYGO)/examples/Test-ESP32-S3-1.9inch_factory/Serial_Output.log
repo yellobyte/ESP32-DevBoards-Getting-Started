@@ -1,0 +1,18 @@
+--- Terminal on COM3 | 115200 8-N-1
+--- Available filters and text transformations: colorize, debug, default, direct, esp32_exception_decoder, hexlify, log2file, nocontrol, printable, send_on_enter, time
+--- More details at https://bit.ly/pio-monitor-filters
+--- Quit: Ctrl+C | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H
+01:50:38.610 > [  7502][D][WiFiGeneric.cpp:929] _eventCallback(): Arduino Event: 0 - WIFI_READY
+01:50:38.642 > [  7534][D][WiFiGeneric.cpp:929] _eventCallback(): Arduino Event: 2 - STA_START
+01:50:41.721 > [ 10619][D][WiFiGeneric.cpp:929] _eventCallback(): Arduino Event: 1 - SCAN_DONE
+01:50:41.721 > scan done
+01:50:41.798 > 2 networks found
+01:50:41.798 > 1: Mibs (-66)*
+01:50:41.798 > 2: OOP WiFi (-67)*
+01:50:41.798 >
+01:50:43.810 > Connecting to Mibs.[ 12758][D][WiFiGeneric.cpp:929] _eventCallback(): Arduino Event: 4 - STA_CONNECTED
+01:50:43.912 > [ 12805][D][WiFiGeneric.cpp:929] _eventCallback(): Arduino Event: 7 - STA_GOT_IP
+01:50:43.918 > [ 12805][D][WiFiGeneric.cpp:991] _eventCallback(): STA IP: 192.168.1.43, MASK: 255.255.255.0, GW: 192.168.1.1
+01:50:43.939 >
+01:50:43.939 >  CONNECTED
+01:50:43.939 > Takes 111 millseconds

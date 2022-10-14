@@ -1,0 +1,319 @@
+Executing task: C:\Users\tj\.platformio\penv\Scripts\platformio.exe run 
+
+Processing ESP32-S3-DevKitC-1 (platform: espressif32; board: esp32-s3-devkitc-1; framework: arduino)
+----------------------------------------------------------------------------------------------------------------------------------------------Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/esp32-s3-devkitc-1.html
+PLATFORM: Espressif 32 (5.2.0) > Espressif ESP32-S3-DevKitC-1-N8 (8 MB QD, No PSRAM)
+HARDWARE: ESP32S3 240MHz, 320KB RAM, 8MB Flash
+DEBUG: Current (esp-builtin) On-board (esp-builtin) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES:
+ - framework-arduinoespressif32 @ 3.20005.220925 (2.0.5)
+ - tool-esptoolpy @ 1.40201.0 (4.2.1)
+ - toolchain-riscv32-esp @ 8.4.0+2021r2-patch3
+ - toolchain-xtensa-esp32s3 @ 8.4.0+2021r2-patch3
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 63 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- lvgl @ 8.3.0-dev 
+|-- OneButton @ 2.0.3
+|-- WiFi @ 2.0.0     
+|-- Wire @ 2.0.0     
+Building in release mode
+Compiling .pio\build\ESP32-S3-DevKitC-1\src\cstxx.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\src\factory_gui.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\src\font_Alibaba.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\src\lilygo1_gif.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\src\lilygo2_gif.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\src\main.cpp.o
+Building .pio\build\ESP32-S3-DevKitC-1\bootloader.bin
+Generating partitions .pio\build\ESP32-S3-DevKitC-1\partitions.bin
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\core\lv_disp.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\core\lv_event.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\core\lv_group.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\core\lv_indev.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\core\lv_indev_scroll.c.o
+esptool.py v4.2.1
+Creating esp32s3 image...
+Merged 1 ELF section
+Successfully created esp32s3 image.
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\core\lv_obj.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\core\lv_obj_class.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\core\lv_obj_draw.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\core\lv_obj_pos.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\core\lv_obj_scroll.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\core\lv_obj_style.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\core\lv_obj_style_gen.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\core\lv_obj_tree.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\core\lv_refr.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\core\lv_theme.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\draw\arm2d\lv_gpu_arm2d.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\draw\lv_draw.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\draw\lv_draw_arc.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\draw\lv_draw_img.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\draw\lv_draw_label.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\draw\lv_draw_layer.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\draw\lv_draw_line.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\draw\lv_draw_mask.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\draw\lv_draw_rect.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\draw\lv_draw_transform.c.o
+lib/lvgl/src/core/lv_obj.c: In function 'lv_init':
+lib/lvgl/src/core/lv_obj.c:143:18: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]       
+     char * txt = "Á";
+                  ^~~~
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\draw\lv_draw_triangle.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\draw\lv_img_buf.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\draw\lv_img_cache.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\draw\lv_img_decoder.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\draw\nxp\lv_gpu_nxp.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\draw\nxp\pxp\lv_draw_pxp_blend.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\draw\nxp\pxp\lv_gpu_nxp_pxp.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\draw\nxp\pxp\lv_gpu_nxp_pxp_osa.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\draw\nxp\vglite\lv_draw_vglite_arc.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\draw\nxp\vglite\lv_draw_vglite_blend.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\draw\nxp\vglite\lv_draw_vglite_rect.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\draw\nxp\vglite\lv_gpu_nxp_vglite.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\draw\sdl\lv_draw_sdl.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\draw\sdl\lv_draw_sdl_arc.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\draw\sdl\lv_draw_sdl_bg.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\draw\sdl\lv_draw_sdl_composite.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\draw\sdl\lv_draw_sdl_img.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\draw\sdl\lv_draw_sdl_label.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\draw\sdl\lv_draw_sdl_layer.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\draw\sdl\lv_draw_sdl_line.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\draw\sdl\lv_draw_sdl_mask.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\draw\sdl\lv_draw_sdl_polygon.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\draw\sdl\lv_draw_sdl_rect.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\draw\sdl\lv_draw_sdl_stack_blur.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\draw\sdl\lv_draw_sdl_texture_cache.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\draw\sdl\lv_draw_sdl_utils.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\draw\stm32_dma2d\lv_gpu_stm32_dma2d.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\draw\sw\lv_draw_sw.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\draw\sw\lv_draw_sw_arc.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\draw\sw\lv_draw_sw_blend.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\draw\sw\lv_draw_sw_dither.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\draw\sw\lv_draw_sw_gradient.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\draw\sw\lv_draw_sw_img.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\draw\sw\lv_draw_sw_layer.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\draw\sw\lv_draw_sw_letter.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\draw\sw\lv_draw_sw_line.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\draw\sw\lv_draw_sw_polygon.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\draw\sw\lv_draw_sw_rect.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\draw\sw\lv_draw_sw_transform.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\draw\swm341_dma2d\lv_gpu_swm341_dma2d.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\extra\layouts\flex\lv_flex.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\extra\layouts\grid\lv_grid.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\extra\libs\bmp\lv_bmp.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\extra\libs\ffmpeg\lv_ffmpeg.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\extra\libs\freetype\lv_freetype.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\extra\libs\fsdrv\lv_fs_fatfs.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\extra\libs\fsdrv\lv_fs_posix.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\extra\libs\fsdrv\lv_fs_stdio.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\extra\libs\fsdrv\lv_fs_win32.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\extra\libs\gif\gifdec.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\extra\libs\gif\lv_gif.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\extra\libs\png\lodepng.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\extra\libs\png\lv_png.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\extra\libs\qrcode\lv_qrcode.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\extra\libs\qrcode\qrcodegen.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\extra\libs\rlottie\lv_rlottie.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\extra\libs\sjpg\lv_sjpg.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\extra\libs\sjpg\tjpgd.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\extra\lv_extra.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\extra\others\fragment\lv_fragment.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\extra\others\fragment\lv_fragment_manager.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\extra\others\gridnav\lv_gridnav.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\extra\others\ime\lv_ime_pinyin.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\extra\others\imgfont\lv_imgfont.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\extra\others\monkey\lv_monkey.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\extra\others\msg\lv_msg.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\extra\others\snapshot\lv_snapshot.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\extra\themes\basic\lv_theme_basic.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\extra\themes\default\lv_theme_default.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\extra\themes\mono\lv_theme_mono.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\extra\widgets\animimg\lv_animimg.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\extra\widgets\calendar\lv_calendar.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\extra\widgets\calendar\lv_calendar_header_arrow.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\extra\widgets\calendar\lv_calendar_header_dropdown.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\extra\widgets\chart\lv_chart.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\extra\widgets\colorwheel\lv_colorwheel.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\extra\widgets\imgbtn\lv_imgbtn.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\extra\widgets\keyboard\lv_keyboard.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\extra\widgets\led\lv_led.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\extra\widgets\list\lv_list.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\extra\widgets\menu\lv_menu.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\extra\widgets\meter\lv_meter.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\extra\widgets\msgbox\lv_msgbox.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\extra\widgets\span\lv_span.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\extra\widgets\spinbox\lv_spinbox.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\extra\widgets\spinner\lv_spinner.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\extra\widgets\tabview\lv_tabview.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\extra\widgets\tileview\lv_tileview.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\extra\widgets\win\lv_win.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\font\lv_font.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\font\lv_font_dejavu_16_persian_hebrew.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\font\lv_font_fmt_txt.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\font\lv_font_loader.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\font\lv_font_montserrat_10.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\font\lv_font_montserrat_12.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\font\lv_font_montserrat_12_subpx.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\font\lv_font_montserrat_14.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\font\lv_font_montserrat_16.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\font\lv_font_montserrat_18.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\font\lv_font_montserrat_20.c.o
+lib/lvgl/src/extra/widgets/tabview/lv_tabview.c: In function 'lv_tabview_add_tab':
+lib/lvgl/src/extra/widgets/tabview/lv_tabview.c:89:25: warning: assignment discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+         new_map[tab_id] = "";
+                         ^
+lib/lvgl/src/extra/widgets/tabview/lv_tabview.c:98:24: warning: assignment discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+             new_map[1] = "";
+                        ^
+lib/lvgl/src/extra/widgets/tabview/lv_tabview.c:101:37: warning: assignment discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+             new_map[tab_id * 2 - 3] = "\n";
+                                     ^
+lib/lvgl/src/extra/widgets/tabview/lv_tabview.c:103:37: warning: assignment discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+             new_map[tab_id * 2 - 1] = "";
+                                     ^
+lib/lvgl/src/extra/widgets/tabview/lv_tabview.c: In function 'lv_tabview_constructor':
+lib/lvgl/src/extra/widgets/tabview/lv_tabview.c:228:21: warning: assignment discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+     tabview->map[0] = "";
+                     ^
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\font\lv_font_montserrat_22.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\font\lv_font_montserrat_24.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\font\lv_font_montserrat_26.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\font\lv_font_montserrat_28.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\font\lv_font_montserrat_28_compressed.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\font\lv_font_montserrat_30.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\font\lv_font_montserrat_32.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\font\lv_font_montserrat_34.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\font\lv_font_montserrat_36.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\font\lv_font_montserrat_38.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\font\lv_font_montserrat_40.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\font\lv_font_montserrat_42.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\font\lv_font_montserrat_44.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\font\lv_font_montserrat_46.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\font\lv_font_montserrat_48.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\font\lv_font_montserrat_8.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\font\lv_font_simsun_16_cjk.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\font\lv_font_unscii_16.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\font\lv_font_unscii_8.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\hal\lv_hal_disp.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\hal\lv_hal_indev.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\hal\lv_hal_tick.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\misc\lv_anim.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\misc\lv_anim_timeline.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\misc\lv_area.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\misc\lv_async.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\misc\lv_bidi.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\misc\lv_color.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\misc\lv_fs.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\misc\lv_gc.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\misc\lv_ll.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\misc\lv_log.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\misc\lv_lru.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\misc\lv_math.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\misc\lv_mem.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\misc\lv_printf.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\misc\lv_style.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\misc\lv_style_gen.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\misc\lv_templ.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\misc\lv_timer.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\misc\lv_tlsf.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\misc\lv_txt.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\misc\lv_txt_ap.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\misc\lv_utils.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\widgets\lv_arc.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\widgets\lv_bar.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\widgets\lv_btn.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\widgets\lv_btnmatrix.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\widgets\lv_canvas.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\widgets\lv_checkbox.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\widgets\lv_dropdown.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\widgets\lv_img.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\widgets\lv_label.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\widgets\lv_line.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\widgets\lv_objx_templ.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\widgets\lv_roller.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\widgets\lv_slider.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\widgets\lv_switch.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\widgets\lv_table.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libdae\lvgl\widgets\lv_textarea.c.o
+lib/lvgl/src/widgets/lv_checkbox.c: In function 'lv_checkbox_constructor':
+lib/lvgl/src/widgets/lv_checkbox.c:125:13: warning: assignment discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+     cb->txt = "Check box";
+             ^
+Compiling .pio\build\ESP32-S3-DevKitC-1\libef7\OneButton\OneButton.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\lib520\WiFi\WiFi.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\lib520\WiFi\WiFiAP.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\lib520\WiFi\WiFiClient.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\lib520\WiFi\WiFiGeneric.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\lib520\WiFi\WiFiMulti.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\lib520\WiFi\WiFiSTA.cpp.o
+Archiving .pio\build\ESP32-S3-DevKitC-1\libdae\liblvgl.a
+Compiling .pio\build\ESP32-S3-DevKitC-1\lib520\WiFi\WiFiScan.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\lib520\WiFi\WiFiServer.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\lib520\WiFi\WiFiUdp.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\lib096\Wire\Wire.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\Esp.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\FirmwareMSC.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\FunctionalInterrupt.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\HWCDC.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\HardwareSerial.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\IPAddress.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\IPv6Address.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\MD5Builder.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\Print.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\Stream.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\StreamString.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\Tone.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\USB.cpp.o
+Archiving .pio\build\ESP32-S3-DevKitC-1\libef7\libOneButton.a
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\USBCDC.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\USBMSC.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\WMath.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\WString.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\base64.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\cbuf.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\esp32-hal-adc.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\esp32-hal-bt.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\esp32-hal-cpu.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\esp32-hal-dac.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\esp32-hal-gpio.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\esp32-hal-i2c-slave.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\esp32-hal-i2c.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\esp32-hal-ledc.c.o
+Archiving .pio\build\ESP32-S3-DevKitC-1\lib096\libWire.a
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\esp32-hal-matrix.c.o
+Archiving .pio\build\ESP32-S3-DevKitC-1\lib520\libWiFi.a
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\esp32-hal-misc.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\esp32-hal-psram.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\esp32-hal-rgb-led.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\esp32-hal-rmt.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\esp32-hal-sigmadelta.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\esp32-hal-spi.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\esp32-hal-time.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\esp32-hal-timer.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\esp32-hal-tinyusb.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\esp32-hal-touch.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\esp32-hal-uart.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\firmware_msc_fat.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\libb64\cdecode.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\libb64\cencode.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\main.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\stdlib_noniso.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\wiring_pulse.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\wiring_shift.c.o
+Archiving .pio\build\ESP32-S3-DevKitC-1\libFrameworkArduino.a
+Linking .pio\build\ESP32-S3-DevKitC-1\firmware.elf
+Retrieving maximum program size .pio\build\ESP32-S3-DevKitC-1\firmware.elf
+Checking size .pio\build\ESP32-S3-DevKitC-1\firmware.elf
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+RAM:   [=         ]  12.5% (used 41100 bytes from 327680 bytes)
+Flash: [====      ]  41.7% (used 1393633 bytes from 3342336 bytes)
+Building .pio\build\ESP32-S3-DevKitC-1\firmware.bin
+esptool.py v4.2.1
+Creating esp32s3 image...
+Merged 3 ELF sections
+Successfully created esp32s3 image.
+======================================================== [SUCCESS] Took 18.05 seconds ========================================================
