@@ -1,0 +1,13 @@
+--- Terminal on COM4 | 115200 8-N-1
+--- Available filters and text transformations: colorize, debug, default, direct, esp32_exception_decoder, hexlify, log2file, nocontrol, printable, send_on_enter, time
+--- More details at https://bit.ly/pio-monitor-filters
+--- Quit: Ctrl+C | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H
+22:35:49.819 > [     5][D][esp32-hal-cpu.c:244] setCpuFrequencyMhz(): PLL: 480 / 2 = 240 Mhz, APB: 80000000 Hz
+22:35:49.819 > Flash chip size: 4194304
+22:35:49.819 > Partition table:
+22:35:49.819 > App Partition table:
+22:35:49.819 > Type: 00 SubType 10 Address 0x010000 Size 0x300000 Encryption 0 Label app0
+22:35:49.819 > Data Partition table:
+22:35:49.819 > Type: 01 SubType 02 Address 0x009000 Size 0x005000 Encryption 0 Label nvs
+22:35:49.819 > Type: 01 SubType 00 Address 0x00E000 Size 0x002000 Encryption 0 Label otadata
+22:35:49.819 > Type: 01 SubType 82 Address 0x310000 Size 0x0F0000 Encryption 0 Label spiffs
