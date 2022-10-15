@@ -12,7 +12,7 @@ BTW: Arduino uses the name **sketch** (file extension *.ino) for a program.
 
 ## :file_folder: Software Examples
 
-Under [**boards**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/blob/main/boards) you find a (growing) collection of software examples (programs) I used over the last couple of years for playing with & exploring various old/new boards.  
+Under [**boards**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/blob/main/boards) you find a (growing) collection of software examples (programs) I used over the last couple of years for playing with & exploring various ESP32 development boards.  
 
 All examples were created and build with **VSCode/PlatformIO**. Each example has it's own project directory (one that contains a platformio.ini file). Make sure you have the latest **Arduino ESP32 development package** installed (V5.2.0 at the time of this writing).
 
@@ -56,7 +56,7 @@ Freshly released boards with special features (e.g. more Flash, additional PSRAM
 
 Sometimes this takes weeks/month or (rarely) does not happen at all. If you want to use such board you will have to wait for a new release of the ESP32 development platform & framework or select another, already known board from the list which is similar in features to your new board (e.g. set _board = esp32-s3-devkitc-1_ in platformio.ini for LILYGO's brand new ESP32-S3-1.9inch-Display-DevBoard).  
 
-However, in this case you might not be able to access all Flash or other features and build logs very annoyingly report incorrect Flash/PSRAM sizes. Examples like [Test-ESP32-S3-1.9inch_RAM-PSRAM](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/ESP32-S3-1.9-Display-DevBoard_(LILYGO)/examples/Test-ESP32-S3-1.9inch_RAM-PSRAM) will tell you the true sizes though. Have a look at files _Build.log_ & _Serial_Output.log_ in the examples project directory to see the above mentioned discrepancies.
+In this case you might not be able to access all Flash or other features and/or build logs very annoyingly report incorrect Flash/PSRAM sizes. Examples like [Test-ESP32-S3-1.9inch_RAM-PSRAM](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/ESP32-S3-1.9-Display-DevBoard_(LILYGO)/examples/Test-ESP32-S3-1.9inch_RAM-PSRAM) will tell you the true sizes though. Have a look at this example's files _Build.log_ & _Serial_Output.log_ to see above mentioned discrepancies.
 
 ### :zap: Useful settings in platformio.ini
 
