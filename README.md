@@ -4,7 +4,7 @@ A big variety of **ESP32** development boards have flooded the market since the 
 
 The ESP32 chip family is loaded with features, e.g. WiFi/Bluetooth, dual core (up to 240MHz clock frequency), integrated Flash memory, lots of GPIO pins (peripheral input/output), ADC/DAC, UART, I2S, SPI, low power states, JTAG debugging option, etc. Have a look at the many documents in folder [**doc**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/blob/main/doc) for ESP32 datasheets.
 
-Almost all development boards feature a greater number of GPIO pins, a combination of WLAN antenna and/or IPX antenna connector, USB-Port, LDO voltage regulator and some LEDs (Power/RX/TX). Some boards have additional features, like a camera (e.g. OV2640), RGB-LED (e.g. WS2812B), battery connector, more Flash memory (up to 16MB) and/or PSRAM (up to 8MB), etc.
+Almost all development boards feature a greater number of GPIO pins, a combination of WLAN antenna and/or IPX antenna connector, USB-Port, LDO voltage regulator and some LEDs (Power/RX/TX). Some boards have additional features, like TFT display, camera (e.g. OV2640), RGB-LED (e.g. WS2812B), battery connector, more Flash memory (up to 16MB) and/or PSRAM (up to 8MB), etc.
 
  Writing a few tiny software programs (examples) is probably the best way to get familiar with a certain board. A good start would be to let the onboard LED blink or change color (RGB-LED), generate a few lines serial output, connect to the local WLAN, read the status of a connected push button, put the ESP32 into sleep mode, create a single file on an attached SD-Card or some other simple task. You get the idea.  
 
@@ -20,7 +20,7 @@ For loading, editing and uploading an example just start VSCode/PlatformIO, go t
 
 Right now examples are provided for the following boards:
 
-- ESP32-DevKitC-1 (orig. Manufacturer: Espressif)  
+- ESP32-DevKitC-V1 (orig. Manufacturer: Espressif)  
 <p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/ESP32-DevKitC-V1_(Espressif)/doc/ESP32-Devkit-V1.jpg" height="160"/></p>  
 
 - ESP32-CAM, ESP32-CAM-USB and ESP32-CAM-MB (orig. Manufacturer: AI-THINKER)
@@ -52,12 +52,11 @@ VSCode/PlatformIO provides some major advantages over the Arduino IDE:
 
 ### :heavy_exclamation_mark: Application notes  
 
- Freshly released boards with special features are only fully supported by the ESP32 development framework after being added to the official ESP32 board list!  
- Sometimes this takes weeks/month or (rarely) does not happen at all. If you want to use such board you will have to wait for a new release of the ESP32 development platform & framework or select another, already known board from the list which is similar in features to your new board.  
+Freshly released boards with special features (e.g. more Flash, additional PSRAM, exotic display) are only fully supported by the ESP32 development framework after being added to the official ESP32 board list!  
 
- Just an example:  
- At the time of this writing Lilygo's new ESP32-S3-1.9inch-Display-DevBoard with 16MB Flash & 8MB PSRAM has not yet been added to the ESP32-framework's (v2.0.5) boardlist.  
- Setting _board = esp32-s3-devkitc-1_ in platformio.ini will allow you to start developing though. However, in this case you might not be able to access all Flash or other features and (very annoyingly) build logs report incorrect Flash/PSRAM sizes when in fact the board has 16MB Flash & 8MB PSRAM. For this case examples like [Test-ESP32-S3-1.9inch_RAM-PSRAM](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/ESP32-S3-1.9-Display-DevBoard_(LILYGO)/examples/Test-ESP32-S3-1.9inch_RAM-PSRAM) will tell you the true sizes. Have a look at files _Build.log_ & _Serial_Output.log_ in the examples project directory to see the above mentioned discrepancies.
+Sometimes this takes weeks/month or (rarely) does not happen at all. If you want to use such board you will have to wait for a new release of the ESP32 development platform & framework or select another, already known board from the list which is similar in features to your new board (e.g. set _board = esp32-s3-devkitc-1_ in platformio.ini for LILYGO's brand new ESP32-S3-1.9inch-Display-DevBoard).  
+
+However, in this case you might not be able to access all Flash or other features and build logs very annoyingly report incorrect Flash/PSRAM sizes. Examples like [Test-ESP32-S3-1.9inch_RAM-PSRAM](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/ESP32-S3-1.9-Display-DevBoard_(LILYGO)/examples/Test-ESP32-S3-1.9inch_RAM-PSRAM) will tell you the true sizes though. Have a look at files _Build.log_ & _Serial_Output.log_ in the examples project directory to see the above mentioned discrepancies.
 
 ### :zap: Useful settings in platformio.ini
 
