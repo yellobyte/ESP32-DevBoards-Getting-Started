@@ -21,7 +21,7 @@ env.AddCustomTarget(
     name="fuses-summary",
     dependencies=None,
     actions=[
-        "python.exe c:/Users/tj/.platformio/packages/tool-esptoolpy/espefuse.py --port COM6 summary",
+        "python.exe c:/Users/tj/.platformio/packages/tool-esptoolpy/espefuse.py --port COM4 summary",
     ],
     title="Fuses Summary",
     description="Fuses Summary"
