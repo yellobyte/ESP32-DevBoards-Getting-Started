@@ -1,7 +1,7 @@
 /*
   LED control
 
-  Controlling the LED connected to GPIO2 on ESP32-DevKit-V1 (Espressif).
+  Controlling the LED connected to GPIO2 on ESP32-DevKitC-V1 (Espressif/DOIT).
   GPIO2 Output: High...LED on, Low...LED off.
 
   Detailed infos about ESP32 LED control is provided here:
