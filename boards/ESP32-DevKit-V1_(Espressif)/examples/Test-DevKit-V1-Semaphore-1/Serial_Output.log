@@ -1,0 +1,21 @@
+--- Terminal on COM4 | 115200 8-N-1
+--- Available filters and text transformations: colorize, debug, default, direct, esp32_exception_decoder, hexlify, log2file, nocontrol, printable, send_on_enter, time
+--- More details at https://bit.ly/pio-monitor-filters
+--- Quit: Ctrl+C | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H
+23:00:35.337 >
+23:00:35.337 > Semaphore created, timer started. setup() has finished.
+23:00:37.540 > Semaphore was released. Loop count = 1
+23:00:40.540 > Semaphore was released. Loop count = 2
+23:00:43.540 > Semaphore was released. Loop count = 3
+23:00:46.540 > Semaphore was released. Loop count = 4
+23:00:49.539 > Semaphore was released. Loop count = 5
+23:00:52.540 > Semaphore was released. Loop count = 6
+23:00:55.540 > Semaphore was released. Loop count = 7
+23:00:58.539 > Semaphore was released. Loop count = 8
+23:01:01.539 > Semaphore was released. Loop count = 9
+23:01:04.539 > Semaphore was released. Loop count = 10
+23:01:07.539 > Semaphore was released. Loop count = 11
+23:01:10.539 > Semaphore was released. Loop count = 12
+23:01:13.538 > Semaphore was released. Loop count = 13
+23:01:16.539 > Semaphore was released. Loop count = 14
+23:01:19.538 > Semaphore was released. Loop count = 15
