@@ -12,6 +12,7 @@
 
   Last updated 2020-07-21, ThJ <yellobyte@bluewin.ch>
 */
+
 #include <Arduino.h>
 
 #define NUMBER_OF_TASKS 5
