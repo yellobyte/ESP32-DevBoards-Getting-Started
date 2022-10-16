@@ -6,13 +6,13 @@ The ESP32 chip family is loaded with features, e.g. WiFi/Bluetooth, dual core (u
 
 Almost all development boards feature a greater number of GPIO pins, a combination of WLAN antenna and/or IPX antenna connector, USB-Port, LDO voltage regulator and some LEDs (Power/RX/TX). Some boards have additional features, like TFT display, camera (e.g. OV2640), RGB-LED (e.g. WS2812B), battery connector, more Flash memory (up to 16MB) and/or PSRAM (up to 8MB), etc.
 
- Writing a few tiny software programs (examples) is probably the best way to get familiar with a certain board. A good start would be to let the onboard LED blink or change color (RGB-LED), generate a few lines serial output, connect to the local WLAN, read the status of a connected push button, put the ESP32 into sleep mode, create a single file on an attached SD-Card or some other simple task. You get the idea.  
+Probably the best way to get familiar with a certain board is writing a few tiny software programs (examples) for it. A good start would be to let the onboard LED blink or change color (RGB-LED), generate a few lines serial output, connect to the local WLAN, read the status of a connected push button, put the ESP32 into sleep mode, create a single file on an attached SD-Card or some other simple task. You get the idea.  
 
 BTW: Arduino uses the name **sketch** (file extension *.ino) for a program. 
 
 ## :file_folder: Software Examples
 
-Under [**boards**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/blob/main/boards) you find a (growing) collection of software examples (programs) I used over the last couple of years for playing with & exploring various ESP32 development boards.  
+Under [**boards**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/blob/main/boards) you find a (growing) collection of programs for each board listed below. They will help you explore the features of those boards.
 
 All examples were created and build with **VSCode/PlatformIO**. Each example has it's own project directory (one that contains a platformio.ini file). Make sure you have the latest **Arduino ESP32 development package** installed (V5.2.0 at the time of this writing).
 
@@ -20,7 +20,7 @@ For loading, editing and uploading an example just start VSCode/PlatformIO, go t
 
 Right now examples are provided for the following boards:
 
-- ESP32-DevKit-V1 (orig. Manufacturer: Espressif, DOIT)  
+- [ESP32-DevKit-V1](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/blob/main/boards/ESP32-DevKit-V1_(Espressif)) (orig. Manufacturer: Espressif, DOIT)  
 <p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/ESP32-DevKit-V1_(Espressif)/doc/ESP32-Devkit-V1.jpg" height="160"/></p>  
 
 - ESP32-CAM, ESP32-CAM-USB and ESP32-CAM-MB (orig. Manufacturer: AI-THINKER)
