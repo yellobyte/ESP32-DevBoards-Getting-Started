@@ -77,7 +77,7 @@ monitor_filters = time, esp32_exception_decoder, log2file
 ```c
 build_type = debug
 ```
-4) Enables usage of ESP32 JTAG debug adapter "[ESP32-Prog](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/doc/ESP-Prog.jpg)" for debugging.
+4) Enables usage of ESP32 JTAG debug adapter "[ESP32-Prog](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/ESP32 specs & sheets/ESP-Prog.jpg)" for debugging.
 ```c
 debug_tool = esp-prog
 ```
@@ -90,7 +90,7 @@ debug_init_break = tbreak setup
 ; 0 no debug output, 1 errors, 2 warnings, 3 infos, 4 debug info, 5 verbose 
 build_flags = -DCORE_DEBUG_LEVEL=4
 ```
-7) Disables any activity on COM signals RTS and/or DTR. Required by some ESP32 dev boards to enable serial output (e.g. ESP32-CAM-MB board). However, this setting prevents the Development IDE from [selecting boot modes](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/doc/ESP32_DevBoard_Boot_Mode_Selection.jpg) and therefore perform automatic software uploads to the board. In this case you must press "flash" button for uploads.
+7) Disables any activity on COM signals RTS and/or DTR. Required by some ESP32 dev boards to enable serial output (e.g. ESP32-CAM-MB board). However, this setting prevents the Development IDE from [selecting boot modes](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/ESP32 specs & sheets/ESP32_DevBoard_Boot_Mode_Selection.jpg) and therefore perform automatic software uploads to the board. In this case you must press "flash" button for uploads.
 ```c
 monitor_rts = 0
 monitor_dtr = 0
