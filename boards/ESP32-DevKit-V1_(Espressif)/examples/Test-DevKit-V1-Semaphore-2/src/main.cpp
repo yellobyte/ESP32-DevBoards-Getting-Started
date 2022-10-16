@@ -2,12 +2,12 @@
   Test Semaphore-2
 
   Semaphores are useful in many situations, especially for thread synchronisation and control.
-	This example demonstrates the usage of a counting semaphore.
-	
+  This example demonstrates the usage of a counting semaphore.
+  
   The setup function should only carry on when there are as many units in the semaphore as there are tasks/threads. 
   Since there will be the tasks incrementing the semaphore, we should guarantee that the setup function will
   only finish after all the tasks have finished.
-	
+  
   More infos about counting semaphores & their usage: "https://www.freertos.org/Real-time-embedded-RTOS-Counting-Semaphores.html".
 
   Last updated 2020-07-21, ThJ <yellobyte@bluewin.ch>
