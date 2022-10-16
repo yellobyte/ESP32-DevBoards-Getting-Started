@@ -1,50 +1,58 @@
 /*
-The setup function should only carry on when there are as many units in the semaphore as there are tasks. 
-Since there will be the tasks incrementing  the semaphore, we should guarantee that the Arduino setup function 
-will only finish after all the tasks finish.
-*/
+  Test Semaphore-2
 
+  Semaphores are useful in many situations, especially for thread synchronisation and control.
+	This example demonstrates the usage of a counting semaphore.
+	
+  The setup function should only carry on when there are as many units in the semaphore as there are tasks/threads. 
+  Since there will be the tasks incrementing the semaphore, we should guarantee that the setup function will
+  only finish after all the tasks have finished.
+	
+  More infos about counting semaphores & their usage: "https://www.freertos.org/Real-time-embedded-RTOS-Counting-Semaphores.html".
+
+  Last updated 2020-07-21, ThJ <yellobyte@bluewin.ch>
+*/
 #include <Arduino.h>
 
-int nTasks=5;
-SemaphoreHandle_t barrierSemaphore = xSemaphoreCreateCounting(nTasks, 0);
+#define NUMBER_OF_TASKS 5
+
+int numberOfTasks = NUMBER_OF_TASKS;
+SemaphoreHandle_t barrierSemaphore = xSemaphoreCreateCounting(numberOfTasks, 0);
  
-void genericTask (void *parameter ) {
- 
-    String taskMessage = "Task number:";
-    taskMessage = taskMessage + ((int)parameter);
-    Serial.println(taskMessage);
-    xSemaphoreGive(barrierSemaphore);   // Increment counting semaphore by 1
-    vTaskDelete(NULL);
+void simpleTask (void *parameter) {
+  Serial.printf("Task %d started.\n", (int)parameter + 1);
+  delay(1000 * (int)random(3,15));            // random delay from 3 to 15 seconds
+  Serial.printf("Task %d finished.\n", (int)parameter + 1);
+  xSemaphoreGive(barrierSemaphore);           // counting semaphore incremented by 1
+  vTaskDelete(NULL);                          // finishes the task/thread
 }
 
 void setup() {
   // put your setup code here, to run once:
   Serial.begin(115200);
-  //delay(1000);
-  Serial.print("\nStarting to launch tasks 1...");
-  Serial.println(nTasks);
+  Serial.println();
+  Serial.print("Launching tasks 1 to ");
+  Serial.println(numberOfTasks);
 
   int i;
-  for(i= 0; i< nTasks; i++ ){
-    xTaskCreatePinnedToCore(
-                    genericTask,    /* Function to implement the task */
-                    "genericTask",  /* Name of the task */
-                    10000,          /* Stack size in words */
-                    (void *)i,      /* Task input parameter */
-                    0,              /* Priority of the task */
-                    NULL,           /* Task handle. */
-                    1);             /* Core where the task should run */
+  for(i = 0; i < numberOfTasks; i++ ) {
+    xTaskCreatePinnedToCore(simpleTask,      // task function
+                            "simpleTask",    // name of task
+                            10000,           // stack size in words
+                            (void *)i,       // task input parameter
+                            0,               // priority of task
+                            NULL,            // task handle (not used)
+                            1);              // on which core the task should run
   }    
  
-  for(i= 0; i< nTasks; i++) {
-    xSemaphoreTake(barrierSemaphore, portMAX_DELAY);  // portMAX_DELAY makes sure we wait indefinitely if necessary
+  for(i = 0; i < numberOfTasks; i++) {
+    xSemaphoreTake(barrierSemaphore, portMAX_DELAY);    // portMAX_DELAY makes sure we wait indefinitely if necessary
   }
  
-  Serial.println("All Tasks launched and semaphore passed...");
+  Serial.println("All tasks have finished. Setup will finish.");
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
-  vTaskSuspend(NULL);
+  //
 }

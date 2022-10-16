@@ -1,0 +1,18 @@
+--- Terminal on COM4 | 115200 8-N-1
+--- Available filters and text transformations: colorize, debug, default, direct, esp32_exception_decoder, hexlify, log2file, nocontrol, printable, send_on_enter, time
+--- More details at https://bit.ly/pio-monitor-filters
+--- Quit: Ctrl+C | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H
+00:56:33.426 > [     5][D][esp32-hal-cpu.c:244] setCpuFrequencyMhz(): PLL: 480 / 2 = 240 Mhz, APB: 80000000 Hz
+00:56:33.465 > 
+00:56:33.466 > Launching tasks 1 to 5
+00:56:33.468 > Task 1 started.
+00:56:33.469 > Task 2 started.
+00:56:33.471 > Task 3 started.
+00:56:33.472 > Task 4 started.
+00:56:33.473 > Task 5 started.
+00:56:36.466 > Task 1 finished.
+00:56:38.460 > Task 2 finished.
+00:56:38.469 > Task 5 finished.
+00:56:41.467 > Task 4 finished.
+00:56:46.459 > Task 3 finished.
+00:56:46.469 > All tasks have finished. Setup will finish.
