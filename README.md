@@ -1,8 +1,8 @@
 # ESP32 Development Boards - Getting started
 
-A big variety of **ESP32** development boards (from Espressif and lots of other companies) have flooded the markets since the first ESP32 chip was released in 2016 by Espressif. Most boards contain the original **ESP32**, some an **ESP32-S2** and newer ones the most recent incarnation **ESP32-S3**. For differences between those chips look [**here**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/ESP32 specs & sheets/Comparison_Espressif-ESP32-S2-C3-S3.pdf).
+A big variety of **ESP32** development boards (from Espressif and lots of other companies) have flooded the markets since the first ESP32 chip was released in 2016 by Espressif. Most boards contain the original **ESP32**, some an **ESP32-S2** and newer ones the most recent incarnation **ESP32-S3**. For differences between those chips look [**here**]("https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/ESP32 specs & sheets/Comparison_Espressif-ESP32-S2-C3-S3.pdf").
 
-The ESP32 chip family is loaded with features, e.g. WiFi/Bluetooth, dual core (up to 240MHz clock frequency), integrated Flash memory, lots of GPIO pins (peripheral input/output), ADC/DAC, UART, I2S, SPI, low power states, JTAG debugging option, etc. Have a look at the many documents in folder [**doc**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/blob/main/ESP32 specs & sheets) for ESP32 datasheets.
+The ESP32 chip family is loaded with features, e.g. WiFi/Bluetooth, dual core (up to 240MHz clock frequency), integrated Flash memory, lots of GPIO pins (peripheral input/output), ADC/DAC, UART, I2S, SPI, low power states, JTAG debugging option, etc. Have a look at the many documents in folder [**doc**]("https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/blob/main/ESP32 specs & sheets") for ESP32 datasheets.
 
 Almost all development boards feature a greater number of GPIO pins, a combination of WLAN antenna and/or IPX antenna connector, USB-Port, LDO voltage regulator and some LEDs (Power/RX/TX). Some boards have additional features, like TFT display, camera (e.g. OV2640), RGB-LED (e.g. WS2812B), battery connector, more Flash memory (up to 16MB) and/or PSRAM (up to 8MB), etc.
 
@@ -90,7 +90,7 @@ debug_init_break = tbreak setup
 ; 0 no debug output, 1 errors, 2 warnings, 3 infos, 4 debug info, 5 verbose 
 build_flags = -DCORE_DEBUG_LEVEL=4
 ```
-7) Disables any activity on COM signals RTS and/or DTR. Required by some ESP32 dev boards to enable serial output (e.g. ESP32-CAM-MB board). However, this setting prevents the Development IDE from [selecting boot modes](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/ESP32 specs & sheets/ESP32_DevBoard_Boot_Mode_Selection.jpg) and therefore perform automatic software uploads to the board. In this case you must press "flash" button for uploads.
+7) Disables any activity on COM signals RTS and/or DTR. Required by some ESP32 dev boards to enable serial output (e.g. ESP32-CAM-MB board). However, this setting prevents the Development IDE from [selecting boot modes]("https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/ESP32 specs & sheets/ESP32_DevBoard_Boot_Mode_Selection.jpg") and therefore perform automatic software uploads to the board. In this case you must press "flash" button for uploads.
 ```c
 monitor_rts = 0
 monitor_dtr = 0
