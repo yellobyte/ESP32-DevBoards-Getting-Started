@@ -47,7 +47,7 @@ void myTask(void *args) {
       // if commented out, the chip will reboot after ~5s --> see file "Serial_Output_watchdog_triggers.log"
       esp_task_wdt_reset();
       // delay() does not reset the task watchdog, it will only release the core for other tasks
-      // if commented out, all other task on CPU1 (inkl. setup & loop) won't get execution time anymore --> see file "Serial_Output_loop_starved.log"
+      // if commented out, all other tasks on CPU1 (inkl. setup & loop) won't get execution time anymore --> see file "Serial_Output_loop_starved.log"
       delay(1);  
   }
   // it never gets here
