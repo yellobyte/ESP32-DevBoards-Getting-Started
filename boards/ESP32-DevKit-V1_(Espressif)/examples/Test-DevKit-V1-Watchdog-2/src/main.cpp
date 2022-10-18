@@ -3,7 +3,7 @@
 
   Using an IRQ routine to implement a watchdog instead of framework provided watchdogs. 
 	
-   Last updated 2020-04-06, ThJ <yellobyte@bluewin.ch>
+  Last updated 2020-04-06, ThJ <yellobyte@bluewin.ch>
 */
 
 #include <Arduino.h>
