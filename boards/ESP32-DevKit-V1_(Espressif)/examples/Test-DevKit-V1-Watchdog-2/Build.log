@@ -1,0 +1,84 @@
+Executing task: C:\Users\tj\.platformio\penv\Scripts\platformio.exe run 
+
+Processing esp32dev (platform: espressif32; board: esp32dev; framework: arduino)
+---------------------------------------------------------------------------------------------------------------------------------------------------------Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/esp32dev.html
+PLATFORM: Espressif 32 (5.2.0) > Espressif ESP32 Dev Module
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (cmsis-dap) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES:
+ - framework-arduinoespressif32 @ 3.20005.220925 (2.0.5)
+ - tool-esptoolpy @ 1.40201.0 (4.2.1)
+ - toolchain-xtensa-esp32 @ 8.4.0+2021r2-patch3
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 61 compatible libraries
+Scanning dependencies...
+No dependencies
+Building in release mode
+Compiling .pio\build\esp32dev\src\main.cpp.o
+Building .pio\build\esp32dev\bootloader.bin
+Generating partitions .pio\build\esp32dev\partitions.bin
+esptool.py v4.2.1
+Creating esp32 image...
+Merged 1 ELF section
+Successfully created esp32 image.
+Compiling .pio\build\esp32dev\FrameworkArduino\Esp.cpp.o
+Compiling .pio\build\esp32dev\FrameworkArduino\FirmwareMSC.cpp.o
+Compiling .pio\build\esp32dev\FrameworkArduino\FunctionalInterrupt.cpp.o
+Compiling .pio\build\esp32dev\FrameworkArduino\HWCDC.cpp.o
+Compiling .pio\build\esp32dev\FrameworkArduino\HardwareSerial.cpp.o
+Compiling .pio\build\esp32dev\FrameworkArduino\IPAddress.cpp.o
+Compiling .pio\build\esp32dev\FrameworkArduino\IPv6Address.cpp.o
+Compiling .pio\build\esp32dev\FrameworkArduino\MD5Builder.cpp.o
+Compiling .pio\build\esp32dev\FrameworkArduino\Print.cpp.o
+Compiling .pio\build\esp32dev\FrameworkArduino\Stream.cpp.o
+Compiling .pio\build\esp32dev\FrameworkArduino\StreamString.cpp.o
+Compiling .pio\build\esp32dev\FrameworkArduino\Tone.cpp.o
+Compiling .pio\build\esp32dev\FrameworkArduino\USB.cpp.o
+Compiling .pio\build\esp32dev\FrameworkArduino\USBCDC.cpp.o
+Compiling .pio\build\esp32dev\FrameworkArduino\USBMSC.cpp.o
+Compiling .pio\build\esp32dev\FrameworkArduino\WMath.cpp.o
+Compiling .pio\build\esp32dev\FrameworkArduino\WString.cpp.o
+Compiling .pio\build\esp32dev\FrameworkArduino\base64.cpp.o
+Compiling .pio\build\esp32dev\FrameworkArduino\cbuf.cpp.o
+Compiling .pio\build\esp32dev\FrameworkArduino\esp32-hal-adc.c.o
+Compiling .pio\build\esp32dev\FrameworkArduino\esp32-hal-bt.c.o
+Compiling .pio\build\esp32dev\FrameworkArduino\esp32-hal-cpu.c.o
+Compiling .pio\build\esp32dev\FrameworkArduino\esp32-hal-dac.c.o
+Compiling .pio\build\esp32dev\FrameworkArduino\esp32-hal-gpio.c.o
+Compiling .pio\build\esp32dev\FrameworkArduino\esp32-hal-i2c-slave.c.o
+Compiling .pio\build\esp32dev\FrameworkArduino\esp32-hal-i2c.c.o
+Compiling .pio\build\esp32dev\FrameworkArduino\esp32-hal-ledc.c.o
+Compiling .pio\build\esp32dev\FrameworkArduino\esp32-hal-matrix.c.o
+Compiling .pio\build\esp32dev\FrameworkArduino\esp32-hal-misc.c.o
+Compiling .pio\build\esp32dev\FrameworkArduino\esp32-hal-psram.c.o
+Compiling .pio\build\esp32dev\FrameworkArduino\esp32-hal-rgb-led.c.o
+Compiling .pio\build\esp32dev\FrameworkArduino\esp32-hal-rmt.c.o
+Compiling .pio\build\esp32dev\FrameworkArduino\esp32-hal-sigmadelta.c.o
+Compiling .pio\build\esp32dev\FrameworkArduino\esp32-hal-spi.c.o
+Compiling .pio\build\esp32dev\FrameworkArduino\esp32-hal-time.c.o
+Compiling .pio\build\esp32dev\FrameworkArduino\esp32-hal-timer.c.o
+Compiling .pio\build\esp32dev\FrameworkArduino\esp32-hal-tinyusb.c.o
+Compiling .pio\build\esp32dev\FrameworkArduino\esp32-hal-touch.c.o
+Compiling .pio\build\esp32dev\FrameworkArduino\esp32-hal-uart.c.o
+Compiling .pio\build\esp32dev\FrameworkArduino\firmware_msc_fat.c.o
+Compiling .pio\build\esp32dev\FrameworkArduino\libb64\cdecode.c.o
+Compiling .pio\build\esp32dev\FrameworkArduino\libb64\cencode.c.o
+Compiling .pio\build\esp32dev\FrameworkArduino\main.cpp.o
+Compiling .pio\build\esp32dev\FrameworkArduino\stdlib_noniso.c.o
+Compiling .pio\build\esp32dev\FrameworkArduino\wiring_pulse.c.o
+Compiling .pio\build\esp32dev\FrameworkArduino\wiring_shift.c.o
+Archiving .pio\build\esp32dev\libFrameworkArduino.a
+Linking .pio\build\esp32dev\firmware.elf
+Retrieving maximum program size .pio\build\esp32dev\firmware.elf
+Checking size .pio\build\esp32dev\firmware.elf
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+RAM:   [=         ]   5.0% (used 16480 bytes from 327680 bytes)
+Flash: [==        ]  19.2% (used 251545 bytes from 1310720 bytes)
+Building .pio\build\esp32dev\firmware.bin
+esptool.py v4.2.1
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+============================================================== [SUCCESS] Took 7.68 seconds ==============================================================

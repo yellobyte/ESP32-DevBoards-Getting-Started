@@ -1,0 +1,50 @@
+--- Terminal on COM4 | 115200 8-N-1
+--- Available filters and text transformations: colorize, debug, default, direct, esp32_exception_decoder, hexlify, log2file, nocontrol, printable, send_on_enter, time
+--- More details at https://bit.ly/pio-monitor-filters
+--- Quit: Ctrl+C | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H
+16:06:13.564 > n  8 2016 00[     5][D][esp32-hal-cpu.c:244] setCpuFrequencyMhz(): PLL: 480 / 2 = 240 Mhz, APB: 80000000 Hz
+16:06:13.564 >
+16:06:13.564 > running setup
+16:06:13.564 > running main loop, loop time (ms): 45
+16:06:13.564 > running main loop, loop time (ms): 589
+16:06:14.324 > running main loop, loop time (ms): 939
+16:06:15.552 > running main loop, loop time (ms): 1226
+16:06:16.862 > running main loop, loop time (ms): 1310
+16:06:17.796 > reboot requested.
+16:06:17.799 > ets Jun  8 2016 00:22:57
+16:06:17.801 >
+16:06:17.801 > rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+16:06:17.806 > configsip: 0, SPIWP:0xee
+16:06:17.808 > clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+16:06:17.816 > mode:DIO, clock div:2
+16:06:17.818 > load:0x3fff0030,len:1184
+16:06:17.820 > load:0x40078000,len:13132
+16:06:17.822 > load:0x40080400,len:3036
+16:06:17.825 > entry 0x400805e4
+16:06:17.946 > [     5][D][esp32-hal-cpu.c:244] setCpuFrequencyMhz(): PLL: 480 / 2 = 240 Mhz, APB: 80000000 Hz
+16:06:17.986 > 
+16:06:17.986 > running setup
+16:06:17.988 > running main loop, loop time (ms): 45
+16:06:18.729 > running main loop, loop time (ms): 743
+16:06:19.828 > running main loop, loop time (ms): 1098
+16:06:20.779 > running main loop, loop time (ms): 951
+16:06:21.610 > running main loop, loop time (ms): 846
+16:06:22.335 > running main loop, loop time (ms): 710
+16:06:22.986 > reboot requested.
+16:06:22.988 > ets Jun  8 2016 00:22:57
+16:06:22.990 >
+16:06:22.990 > rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+16:06:22.995 > configsip: 0, SPIWP:0xee
+16:06:22.997 > clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+16:06:23.004 > mode:DIO, clock div:2
+16:06:23.006 > load:0x3fff0030,len:1184
+16:06:23.008 > load:0x40078000,len:13132
+16:06:23.010 > load:0x40080400,len:3036
+16:06:23.013 > entry 0x400805e4
+16:06:23.134 > [     5][D][esp32-hal-cpu.c:244] setCpuFrequencyMhz(): PLL: 480 / 2 = 240 Mhz, APB: 80000000 Hz
+16:06:23.174 > 
+16:06:23.174 > running setup
+16:06:23.176 > running main loop, loop time (ms): 45
+16:06:23.774 > running main loop, loop time (ms): 599
+16:06:24.481 > running main loop, loop time (ms): 707
+...

@@ -1,0 +1,18 @@
+--- Terminal on COM4 | 115200 8-N-1
+--- Available filters and text transformations: colorize, debug, default, direct, esp32_exception_decoder, hexlify, log2file, nocontrol, printable, send_on_enter, time
+--- More details at https://bit.ly/pio-monitor-filters
+--- Quit: Ctrl+C | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H
+16:01:37.749 > [     5][D][esp32-hal-cpu.c:244] setCpuFrequencyMhz(): PLL: 480 / 2 = 240 Mhz, APB: 80000000 Hz
+16:01:37.749 >
+16:01:37.749 > running setup
+16:01:37.749 > running main loop, loop time (ms): 45
+16:01:38.129 > running main loop, loop time (ms): 1144
+16:01:38.902 > running main loop, loop time (ms): 773
+16:01:39.717 > running main loop, loop time (ms): 816
+16:01:40.857 > running main loop, loop time (ms): 1140
+16:01:41.501 > running main loop, loop time (ms): 656
+16:01:42.829 > running main loop, loop time (ms): 1316
+16:01:43.675 > running main loop, loop time (ms): 845
+16:01:44.653 > running main loop, loop time (ms): 979
+16:01:45.901 > running main loop, loop time (ms): 1251
+16:01:46.838 > running main loop, loop time (ms): 934

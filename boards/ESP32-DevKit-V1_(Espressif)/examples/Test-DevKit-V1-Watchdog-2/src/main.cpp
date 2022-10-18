@@ -1,15 +1,19 @@
-//
-//	Using an IRQ routine to implement a watchdog
-//
+/*
+  Test Watchdog-2
+
+  Using an IRQ routine to implement a watchdog instead of framework provided watchdogs. 
+	
+   Last updated 2020-04-06, ThJ <yellobyte@bluewin.ch>
+*/
 
 #include <Arduino.h>
 
-//const int button = 0;         //gpio to use to trigger delay
-const int wdtTimeout = 5000;  //time in ms to trigger the watchdog
+const int wdtTimeout = 5000;            // watchdog timeout in ms
 hw_timer_t *timer = NULL;
+long loopTime = millis();
 
 void IRAM_ATTR resetModule() {
-  ets_printf("reboot\n");     // printf/Serial.print shouldn't be used in a IRQ routine !!
+  ets_printf("reboot requested.\n");    // Never use Serial.print() in an IRQ routine !!!
   esp_restart();
 }
 
@@ -18,26 +22,23 @@ void setup() {
   Serial.println();
   Serial.println("running setup");
 
-  //pinMode(button, INPUT_PULLUP);                    //init control pin
-  timer = timerBegin(0, 80, true);                  // Use 1st timer (0), prescaler 80, counting upwards (true)
-  timerAttachInterrupt(timer, &resetModule, true);  // Call resetModule on timer alarm, generated on edge (true)
-  timerAlarmWrite(timer, wdtTimeout * 1000, false); //set time in us (5000000us = 5s in our case), no reload
-  timerAlarmEnable(timer);                          //enable interrupt
+  timer = timerBegin(0, 80, true);                      // use 1st timer (0), set prescaler to 80, count upwards (true)
+  timerAttachInterrupt(timer, &resetModule, false);     // call resetModule() on timer alarm, generated on LEVEL (false)
+  timerAlarmWrite(timer, wdtTimeout * 1000, false);     // set watchdog timeout (5000000us = 5s in our case), no reload
+  timerAlarmEnable(timer);                              // enable timer interrupt
 }
 
 void loop() {
-  Serial.println("running main loop");
+  long now = millis();
+  Serial.print("running main loop, loop time (ms): ");  // should be well under 2000
+  Serial.println(now - loopTime);
+  loopTime = now;
 
-  //timerWrite(timer, 0);               //reset timer (feed watchdog)
-  long loopTime = millis();
-  //while button is pressed, delay up to 3 seconds to trigger the timer
-  //while (!digitalRead(button)) {
-  //  Serial.println("button pressed");
-  //  delay(500);
-  //}
-  delay(1000); //simulate work
-  loopTime = millis() - loopTime;
-  
-  Serial.print("loop time is = ");
-  Serial.println(loopTime); //should be under 3000
+  // reset timer (feed watchdog)
+  // comment out to see the watchdog kicking in --> see file "Serial_Output_watchdog_triggers.log"
+  timerWrite(timer, 0);
+
+  // simulate some work
+  int rand = random(500, 1500);         
+  delay(rand);
 }
