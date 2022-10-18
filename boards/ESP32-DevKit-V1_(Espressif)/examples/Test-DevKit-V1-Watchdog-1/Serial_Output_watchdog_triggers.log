@@ -1,0 +1,34 @@
+--- Terminal on COM4 | 115200 8-N-1
+--- Available filters and text transformations: colorize, debug, default, direct, esp32_exception_decoder, hexlify, log2file, nocontrol, printable, send_on_enter, time
+--- More details at https://bit.ly/pio-monitor-filters
+--- Quit: Ctrl+C | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H
+14:38:36.692 > [     5][D][esp32-hal-cpu.c:244] setCpuFrequencyMhz(): PLL: 480 / 2 = 240 Mhz, APB: 80000000 Hz
+14:38:36.692 > New Task on Core: 1
+14:38:36.692 >  esp_task_wdt_add: Ok. Task subscribed to task watchdog timer.
+14:38:36.692 >  esp_task_wdt_status: Ok
+14:38:36.692 >  task starts looping
+14:38:36.692 > Setup finished on core: 1
+14:38:36.929 > Loop on core: 1, loop count: 1
+14:38:37.920 > Loop on core: 1, loop count: 2
+14:38:38.929 > Loop on core: 1, loop count: 3
+14:38:39.918 > Loop on core: 1, loop count: 4
+14:38:40.918 > E (10179) task_wdt: Task watchdog got triggered. The following tasks did not reset the watchdog in time:
+14:38:40.921 > E (10179) task_wdt:  - myTask (CPU 1)
+14:38:40.921 > E (10179) task_wdt: Tasks currently running:
+14:38:40.936 > E (10179) task_wdt: CPU 0: IDLE
+14:38:40.938 > E (10179) task_wdt: CPU 1: IDLE
+14:38:40.941 > E (10179) task_wdt: Aborting.  
+14:38:40.944 >
+14:38:40.944 > abort() was called at PC 0x400d8699 on core 0
+14:38:40.948 >
+14:38:40.948 >
+14:38:40.949 > Backtrace:0x400833d1:0x3ffbe78c |<-CORRUPTED
+14:38:40.989 >
+14:38:40.989 >   #0  0x400833d1:0x3ffbe78c in panic_abort at /Users/ficeto/Desktop/ESP32/ESP32S2/esp-idf-public/components/esp_system/panic.c:402        
+14:38:40.989 > 
+14:38:40.989 >
+14:38:40.989 >
+14:38:40.989 >
+14:38:40.989 > ELF file SHA256: 0000000000000000
+14:38:40.989 >
+14:38:40.989 > Rebooting...

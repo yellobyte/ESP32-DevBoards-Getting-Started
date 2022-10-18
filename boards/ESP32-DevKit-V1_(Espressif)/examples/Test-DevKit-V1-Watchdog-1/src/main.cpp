@@ -1,69 +1,79 @@
-//
-//	Testing the task related watchdogs in ESP32
-//
 /*
-	The implementation on the ESP32 is such that each core operates independently with a task scheduler running (IDLE task)
-  - The Loop Watchdog is disabled by default and if needed has to be enabled with enableLoopWDT().
-  - The loop() task is always pinned to CPU1.
-  - By default the CPU0 IDLE Task (task switcher) watchdog is enabled: no need to call enableCore0WDT()
-  - By default the CPU1 IDLE Task (task switcher) watchdog is disabled. If enableCore1WDT() is called in
-    setup() then all tasks running on CPU1 must call delay(), even the loop() task !!!
-  - If the IDLEx task is not allowed to run periodically then the IDLE (task switcher) watchdog on CPUx will be triggered
-    in case the IDLE task switcher watchdog for CPUx is enabled.
-  - By default the CPU0/CPU1 Task watchdogs are enabled: no need to call esp_task_wdt_init() in setup()
-  - The (IDLE) task watchdogs default timeout is about 5 secs
-  - Yield() will only allow higher priority tasks to run, but the IDLE watchdogs run in the idle task (lower priority) 
-    so it won't run with just a yield() -> call delay() instead.
-  - Delay() will allow all other tasks to run, including the IDLEx Tasks (task switcher) and resets the IDLE task WDTs
-  - Delay() will not reset task watchdogs if the tasks are subscribed: use esp_task_wdt_reset() for it
-*/		
+  Test Watchdog-1
+
+  Testing the task related watchdogs in ESP32 mikrocontroller. 
+	
+  Some useful info to ESP32 watchdogs: 
+
+  The ESP32 Arduino framework is build around FreeRTOS and therefore provides multiple types of watchdogs. The implementation on the 
+  ESP32 is such that each core operates independently with an IDLE task (task scheduler) running in the background. These IDLE tasks 
+  run with low priority and must not get starved of execution time. If this happens, there assigned watchdog (if activated) will trigger
+  and resets the chip. By default the CPU0 IDLE task watchdog is enabled, the CPU1 IDLE Task watchdog is disabled. Their state can be
+  changed with enableCore0WDT()/disableCore0WDT() resp. enableCore1WDT()/disableCore1WDT(). Their default timeout is about 5 secs. 
+
+  All tasks running with higher priority always run first while the IDLE tasks will have to wait. Thus all higher priority tasks must be 
+  short enough to avoid triggering the watchdog or insert pauses in sufficient intervals by calling vTaskDelay(), delay(), some blocking 
+  I/O functions, etc. Be aware: yield() will only allow higher priority tasks to run, it won't help in this case. 
+  If your task has to run without pause then it must have priority "tskIDLE_PRIORITY" to share execution time with the IDLE task.
+
+  All user tasks can have their own watchdog assigned. Calling esp_task_wdt_add() subscribes a task to the task watchdog timer (TWDT).
+  Calling delay() will not reset a tasks watchdog if the task is subscribed. Function esp_task_wdt_reset() must be used instead.
+  By default the task watchdog timer (TWDT) is enabled, there is no need to call esp_task_wdt_init() in setup(). 
+
+  The loop task is always pinned to CPU1 and the loop task watchdog is disabled by default. Calling enableLoopWDT() will activate it. 
+  The watchdog timout would be ~2 seconds. 
+
+  If the CPU1 IDLE task watchdog has been enabled with enableCore1WDT() then all (!) tasks running on CPU1 must insert pauses as 
+  explained above, even the loop() task.
+  	
+  More infos about ESP32 watchdogs: 
+  "https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/system/wdts.html?highlight=watchdog#l".
+
+  Last updated 2020-04-06, ThJ <yellobyte@bluewin.ch>
+*/
 
 #include <Arduino.h>
 #include <esp_task_wdt.h>
 
-#define TIMEOUT 3
-//TaskHandle_t myTaskHandle = NULL;
-bool taskRunning = false;
+uint32_t loopCount = 0;
 
-void setup() {
-    Serial.begin(115200);
-    Serial.printf("esp_task_wdt_init: %d\n", esp_task_wdt_init(TIMEOUT, false));
-    //enableLoopWDT();      // Enables watchdog only for loop() task !!
-    Serial.printf("Setup finished on Core: %d\n", xPortGetCoreID());
-    //disableCore0WDT();  // Explanation see below !
+void myTask(void *args) {
+  Serial.printf("New Task on Core: %d\n", xPortGetCoreID());
+  Serial.printf(" esp_task_wdt_add: %s\n", esp_task_wdt_add(NULL) == ESP_OK ? "Ok. Task subscribed to task watchdog timer." : "Error");
+  Serial.printf(" esp_task_wdt_status: %s\n", esp_task_wdt_status(NULL) == ESP_OK ? "Ok" : "Error");
+  Serial.println(" task starts looping");
+
+  while (true) {
+      // if commented out, the chip will reboot after ~5s --> see file "Serial_Output_watchdog_triggers.log"
+      esp_task_wdt_reset();
+      // delay() does not reset the task watchdog, it will only release the core for other tasks
+      // if commented out, all other task on CPU1 (inkl. setup & loop) won't get execution time anymore --> see file "Serial_Output_loop_starved.log"
+      delay(1);  
+  }
+  // it never gets here
+  Serial.println(" task stops looping.");
+  Serial.printf(" esp_task_wdt_delete: %s\n\n", esp_task_wdt_delete(NULL) == ESP_OK ? "Ok" : "Error");
+  Serial.flush();
+  delay(50);
+  vTaskDelete(NULL);
 }
 
-void doOnCore1(void *args) {
-    Serial.printf("New Task on Core: %d\n", xPortGetCoreID());
-    Serial.printf("esp_task_wdt_add: %d\n", esp_task_wdt_add(NULL));
-    Serial.printf("esp_task_wdt_status: %d\n", esp_task_wdt_status(NULL));
-
-    long increment = 5000000;
-    while (increment > 0) {
-        increment--;
-        //delay(1);    // <--- HERE, Why is this required for ESP32 to proper reset the WD timer?
-                       // Answer: The IDLE-task on CPU 0 is complaining about not getting any time to run !
-                       //         The IDLE-task watchdog can be disabled with disableCore0WDT().
-        //esp_task_wdt_reset();
-    }
-
-    Serial.printf("esp_task_wdt_delete: %d\n\n", esp_task_wdt_delete(NULL));
-    Serial.flush();
-    delay(50);
-    taskRunning = false;
-    vTaskDelete(NULL);
+void setup() {
+  Serial.begin(115200);
+  //Serial.printf("esp_task_wdt_init: %d\n", esp_task_wdt_init(TIMEOUT, false));
+  if (pdPASS != xTaskCreatePinnedToCore(&myTask,                        // task function
+                                        "myTask",                       // name of task
+                                        configMINIMAL_STACK_SIZE * 10,  // stack size
+                                        NULL,                           // function parameters (not used)
+                                        2 | portPRIVILEGE_BIT,          // higher task priority
+                                        NULL,                           // task handle (not used)
+                                        APP_CPU_NUM)) {                 // selects core 1 (PRO_CPU_NUM = 0, APP_CPU_NUM = 1)
+    Serial.println("Error creating new task"); 
+  }
+  Serial.printf("Setup finished on core: %d\n", xPortGetCoreID());
 }
 
 void loop() {
-    delay(4000);  // max value of 2000 if enableLoopWDT() was called !
-    Serial.printf("Loop on Core: %d\n", xPortGetCoreID());
-    if (taskRunning == false && pdPASS != xTaskCreatePinnedToCore(&doOnCore1, "doOnCore1", configMINIMAL_STACK_SIZE * 10, 
-                                                                  NULL, 2 | portPRIVILEGE_BIT, NULL, PRO_CPU_NUM)) {
-      Serial.println("Error creating new task"); 
-      taskRunning = false;
-    }
-    else {
-      taskRunning = true;
-    }
-    Serial.printf("Free System Memory %d, Loop Stack Minimum %d\r\n", ESP.getFreeHeap(), uxTaskGetStackHighWaterMark(NULL));
+  delay(1000);
+  Serial.printf("Loop on core: %d, loop count: %d\r\n", xPortGetCoreID(), ++loopCount);
 }

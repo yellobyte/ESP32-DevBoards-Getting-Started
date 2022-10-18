@@ -1,0 +1,26 @@
+--- Terminal on COM4 | 115200 8-N-1
+--- Available filters and text transformations: colorize, debug, default, direct, esp32_exception_decoder, hexlify, log2file, nocontrol, printable, send_on_enter, time
+--- More details at https://bit.ly/pio-monitor-filters
+--- Quit: Ctrl+C | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H
+14:56:12.397 >   8 2016 00:[     5][D][esp32-hal-cpu.c:244] setCpuFrequencyMhz(): PLL: 480 / 2 = 240 Mhz, APB: 80000000 Hz
+14:56:12.397 > New Task on Core: 1
+14:56:12.397 >  esp_task_wdt_add: Ok. Task subscribed to task watchdog timer.
+14:56:12.397 >  esp_task_wdt_status: Ok
+14:56:12.397 >  task starts looping
+14:56:12.397 > Setup finished on core: 1
+14:56:12.621 > Loop on core: 1, loop count: 1
+14:56:13.621 > Loop on core: 1, loop count: 2
+14:56:14.624 > Loop on core: 1, loop count: 3
+14:56:15.621 > Loop on core: 1, loop count: 4
+14:56:16.624 > Loop on core: 1, loop count: 5
+14:56:17.624 > Loop on core: 1, loop count: 6
+14:56:18.624 > Loop on core: 1, loop count: 7
+14:56:19.625 > Loop on core: 1, loop count: 8
+14:56:20.624 > Loop on core: 1, loop count: 9
+14:56:21.624 > Loop on core: 1, loop count: 10
+14:56:22.625 > Loop on core: 1, loop count: 11
+14:56:23.624 > Loop on core: 1, loop count: 12
+14:56:24.624 > Loop on core: 1, loop count: 13
+14:56:25.624 > Loop on core: 1, loop count: 14
+14:56:26.624 > Loop on core: 1, loop count: 15
+...

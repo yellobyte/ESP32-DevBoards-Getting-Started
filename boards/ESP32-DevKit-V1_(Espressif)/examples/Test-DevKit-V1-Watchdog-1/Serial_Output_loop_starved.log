@@ -1,0 +1,9 @@
+--- Terminal on COM4 | 115200 8-N-1
+--- Available filters and text transformations: colorize, debug, default, direct, esp32_exception_decoder, hexlify, log2file, nocontrol, printable, send_on_enter, time
+--- More details at https://bit.ly/pio-monitor-filters
+--- Quit: Ctrl+C | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H
+14:48:27.438 > [     5][D][esp32-hal-cpu.c:244] setCpuFrequencyMhz(): PLL: 480 / 2 = 240 Mhz, APB: 80000000 Hz
+14:48:27.438 > New Task on Core: 1
+14:48:27.438 >  esp_task_wdt_add: Ok. Task subscribed to task watchdog timer.
+14:48:27.438 >  esp_task_wdt_status: Ok
+14:48:27.438 >  task starts looping
