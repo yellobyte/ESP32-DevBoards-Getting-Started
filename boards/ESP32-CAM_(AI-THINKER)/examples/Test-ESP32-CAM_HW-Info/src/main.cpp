@@ -1,7 +1,7 @@
 /*
   Test-ESP32-CAM_HW-Info
 
-  Shows available RAM/PSRAM on ESP32-CAM board.
+  Show available RAM/PSRAM on ESP32-CAM board.
 
   Last updated 2022-08-28, ThJ <yellobyte@bluewin.ch>
 */
@@ -50,14 +50,14 @@ bool allocRAM(size_t size)
       }
     }
     if (i == size) {
-			Serial.printf("success, buf = %x (RAM starts from 0x3FF00000, PSRAM starts from 0x3F800000)\n", buf);
-			return true;
-		}	
+      Serial.printf("success, buf = %x (RAM starts from 0x3FF00000, PSRAM starts from 0x3F800000)\n", buf);
+      return true;
+    }	
   } 
   else {
     Serial.printf("error !\n");
   }
-	return false;
+  return false;
 }  
 
 void freeBuf()
@@ -72,7 +72,8 @@ void setup() {
   // put your setup code here, to run once:
   Serial.begin(115200);
   Serial.println();
-	Serial.print("ESP32 Chip Rev. (official version): "); Serial.println((int)(REG_READ(EFUSE_BLK0_RDATA3_REG) >> (EFUSE_RD_CHIP_VER_RESERVE_S) && EFUSE_RD_CHIP_VER_RESERVE_V));
+  Serial.print("ESP32 Chip Rev. (official version): ");
+  Serial.println((int)(REG_READ(EFUSE_BLK0_RDATA3_REG) >> (EFUSE_RD_CHIP_VER_RESERVE_S) && EFUSE_RD_CHIP_VER_RESERVE_V));
   Serial.print("ESP32 SDK: ");        Serial.println(ESP.getSdkVersion());
   Serial.print("ESP32 CPU FREQ: ");   Serial.print(getCpuFrequencyMhz());             Serial.println(" MHz");
   Serial.print("ESP32 APB FREQ: ");   Serial.print(getApbFrequency() / 1000000.0, 1); Serial.println(" MHz (Advanced Peripheral Bus)");
