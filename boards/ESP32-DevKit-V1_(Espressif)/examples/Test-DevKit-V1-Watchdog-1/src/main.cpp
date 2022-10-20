@@ -3,13 +3,13 @@
 
   Testing the task related watchdogs in ESP32 mikrocontroller. 
 	
-  Some useful info to ESP32 watchdogs: 
+  Some useful info about ESP32 watchdogs: 
 
   The ESP32 Arduino framework is build around FreeRTOS and therefore provides multiple types of watchdogs. The implementation on the 
   ESP32 is such that each core operates independently with an IDLE task (task scheduler) running in the background. These IDLE tasks 
   run with low priority and must not get starved of execution time. If this happens, there assigned watchdog (if activated) will trigger
   and resets the chip. By default the CPU0 IDLE task watchdog is enabled, the CPU1 IDLE Task watchdog is disabled. Their state can be
-  changed with enableCore0WDT()/disableCore0WDT() resp. enableCore1WDT()/disableCore1WDT(). Their default timeout is about 5 secs. 
+  changed with enableCore0WDT()/disableCore0WDT() resp. enableCore1WDT()/disableCore1WDT(). Their default timeout is ~5 secs. 
 
   All tasks running with higher priority always run first while the IDLE tasks will have to wait. Thus all higher priority tasks must be 
   short enough to avoid triggering the watchdog or insert pauses in sufficient intervals by calling vTaskDelay(), delay(), some blocking 
@@ -21,7 +21,7 @@
   By default the task watchdog timer (TWDT) is enabled, there is no need to call esp_task_wdt_init() in setup(). 
 
   The loop task is always pinned to CPU1 and the loop task watchdog is disabled by default. Calling enableLoopWDT() will activate it. 
-  The watchdog timout would be ~2 seconds. 
+  The watchdog timout would be ~5 seconds. 
 
   If the CPU1 IDLE task watchdog has been enabled with enableCore1WDT() then all (!) tasks running on CPU1 must insert pauses as 
   explained above, even the loop() task.

@@ -1,0 +1,78 @@
+--- Terminal on COM4 | 115200 8-N-1
+--- Available filters and text transformations: colorize, debug, default, direct, esp32_exception_decoder, hexlify, log2file, nocontrol, printable, send_on_enter, time
+--- More details at https://bit.ly/pio-monitor-filters
+--- Quit: Ctrl+C | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H
+17:28:04.553 > [     5][D][esp32-hal-cpu.c:244] setCpuFrequencyMhz(): PLL: 480 / 2 = 240 Mhz, APB: 80000000 Hz
+17:28:04.553 > user task myTask1 started on core 0, parameter: 0
+17:28:04.788 > user task myTask1 still running on core 0, count: 0
+17:28:05.788 > user task myTask1 still running on core 0, count: 1
+17:28:06.788 > user task myTask1 still running on core 0, count: 2
+17:28:07.788 > user task myTask1 still running on core 0, count: 3
+17:28:08.788 > user task myTask1 still running on core 0, count: 4
+17:28:08.798 > user task myTask2 started on core 1, parameter: 1  
+17:28:09.788 > user task myTask1 still running on core 0, count: 5
+17:28:09.797 > user task myTask2 still running on core 1, count: 0
+17:28:10.288 > Loop running on core: 1, loop count: 1
+17:28:10.788 > user task myTask1 still running on core 0, count: 6
+17:28:10.797 > user task myTask2 still running on core 1, count: 1
+17:28:11.293 > Loop running on core: 1, loop count: 2
+17:28:11.792 > user task myTask1 still running on core 0, count: 7
+17:28:11.797 > user task myTask2 still running on core 1, count: 2
+17:28:12.292 > Loop running on core: 1, loop count: 3
+17:28:12.788 > user task myTask1 still running on core 0, count: 8
+17:28:12.797 > user task myTask2 still running on core 1, count: 3
+17:28:13.293 > Loop running on core: 1, loop count: 4
+17:28:13.792 > user task myTask1 still running on core 0, count: 9
+17:28:13.797 > user task myTask2 still running on core 1, count: 4
+17:28:14.288 > Loop running on core: 1, loop count: 5
+17:28:14.788 > user task myTask1 still running on core 0, count: 10
+17:28:14.797 > user task myTask2 still running on core 1, count: 5
+17:28:15.288 > Loop running on core: 1, loop count: 6
+17:28:15.788 > user task myTask1 still running on core 0, count: 11
+17:28:15.797 > user task myTask2 still running on core 1, count: 6
+17:28:16.292 > Loop running on core: 1, loop count: 7
+17:28:16.788 > user task myTask1 still running on core 0, count: 12
+17:28:16.798 > user task myTask2 still running on core 1, count: 7
+17:28:17.288 > Loop running on core: 1, loop count: 8
+17:28:17.792 > user task myTask1 still running on core 0, count: 13
+17:28:17.798 > user task myTask2 still running on core 1, count: 8
+17:28:18.293 > Loop running on core: 1, loop count: 9
+17:28:18.788 > user task myTask1 still running on core 0, count: 14
+17:28:18.797 > user task myTask2 still running on core 1, count: 9
+17:28:19.293 > Loop running on core: 1, loop count: 10
+17:28:19.788 > user task myTask1 still running on core 0, count: 15
+17:28:19.797 > user task myTask2 on core 1 stops feeding task watchdog !
+17:28:19.802 > user task myTask2 still running on core 1, count: 10
+17:28:20.288 > Loop running on core: 1, loop count: 11
+17:28:20.788 > user task myTask1 still running on core 0, count: 16
+17:28:20.803 > user task myTask2 still running on core 1, count: 11
+17:28:21.288 > Loop running on core: 1, loop count: 12
+17:28:21.789 > user task myTask1 still running on core 0, count: 17
+17:28:21.803 > user task myTask2 still running on core 1, count: 12
+17:28:22.288 > Loop running on core: 1, loop count: 13
+17:28:22.788 > user task myTask1 still running on core 0, count: 18
+17:28:22.803 > user task myTask2 still running on core 1, count: 13
+17:28:23.292 > Loop running on core: 1, loop count: 14
+17:28:23.788 > user task myTask1 still running on core 0, count: 19
+17:28:23.803 > user task myTask2 still running on core 1, count: 14
+17:28:24.288 > Loop running on core: 1, loop count: 15
+17:28:24.788 > E (24282) task_wdt: Task watchdog got triggered. The following tasks did not reset the watchdog in time:
+17:28:24.801 > E (24282) task_wdt:  - myTask2 (CPU 1)
+17:28:24.804 > E (24282) task_wdt: Tasks currently running:
+17:28:24.808 > E (24282) task_wdt: CPU 0: IDLE
+17:28:24.811 > E (24282) task_wdt: CPU 1: IDLE
+17:28:24.814 > E (24282) task_wdt: Aborting.
+17:28:24.817 >
+17:28:24.817 > abort() was called at PC 0x400d86b5 on core 0
+17:28:24.821 >
+17:28:24.821 >
+17:28:24.821 > Backtrace:0x400833d1:0x3ffbe78c |<-CORRUPTED
+17:28:24.837 >
+17:28:24.837 >   #0  0x400833d1:0x3ffbe78c in panic_abort at /Users/ficeto/Desktop/ESP32/ESP32S2/esp-idf-public/components/esp_system/panic.c:402
+17:28:24.837 >
+17:28:24.837 >
+17:28:24.837 >
+17:28:24.837 >
+17:28:24.837 > ELF file SHA256: 0000000000000000
+17:28:24.837 >
+17:28:24.837 > Rebooting...
