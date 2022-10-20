@@ -1,7 +1,7 @@
 /*
   Test-ESP32-CAM_HW-Info
 
-  Show available RAM/PSRAM on ESP32-CAM board.
+  Show available Flash/RAM/PSRAM on ESP32-CAM board.
 
   Last updated 2022-08-28, ThJ <yellobyte@bluewin.ch>
 */
