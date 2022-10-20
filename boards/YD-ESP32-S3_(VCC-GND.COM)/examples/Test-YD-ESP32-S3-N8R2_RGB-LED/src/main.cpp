@@ -2,6 +2,7 @@
   Test_RGB-LED
 
   Test of YD-ESP32-S3_DevBoard (Manufactorer VCC-GND.COM) onboard RGB-LED.
+  Uses Adafruit's NeoPixel library.
 
   Last updated 2022-08-28, ThJ <yellobyte@bluewin.ch>
 */
@@ -39,15 +40,15 @@ void setup() {
 
   strip.begin();
   //strip.setPixelColor(0, strip.Color(255, 0, 0)); // Red
-  strip.setBrightness(5);                         // 1 = Min, 255 = one below Max, 0 = Max
-  //strip.show();                                   // Initialize all pixels to 'off'
+  strip.setBrightness(5);                           // 1 = Min, 255 = one below Max, 0 = Max
+  //strip.show();                                   // initialize all pixels to 'off'
 }
 
 void loop() {
   char c;
 
   if (Serial.read(&c, 1) && (c == 'r' || c == 'R')) {
-		// check for terminal input: reboot requested
+    // check for terminal input: reboot requested
     Serial.println("\nSystem will restart in 3 seconds.\n\n"); 
     delay(3000);
     ESP.restart();  
