@@ -14,9 +14,9 @@
 
 void setup() {
   // read partition table entries from flash
-  size_t size;
   esp_partition_iterator_t partitionIterator;
   const esp_partition_t *part;
+  size_t size;
 
   Serial.begin(115200);
 
@@ -25,7 +25,10 @@ void setup() {
   Serial.println(size);
 
   Serial.println("Partition table:");
+  
+  // search for partitions holding programs
   partitionIterator = esp_partition_find(ESP_PARTITION_TYPE_APP, ESP_PARTITION_SUBTYPE_ANY, NULL);
+
   if (partitionIterator) {
     Serial.println("App Partition table:");
     do {
@@ -35,7 +38,10 @@ void setup() {
     } while (partitionIterator = esp_partition_next(partitionIterator));
   }
   esp_partition_iterator_release(partitionIterator);
+
+  // search for partitions holding data
   partitionIterator = esp_partition_find(ESP_PARTITION_TYPE_DATA, ESP_PARTITION_SUBTYPE_ANY, NULL);
+
   if (partitionIterator) {
     Serial.println("Data Partition table:");
     do {
