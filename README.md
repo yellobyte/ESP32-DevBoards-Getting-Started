@@ -67,7 +67,8 @@ Some very useful general settings (for more experienced programmers) deserve to 
 ```c 
 ;platform = espressif32
 platform = espressif32 @ 4.2.0
-platform_packages = framework-arduinoespressif32 @ https://github.com/espressif/arduino-esp32/releases/download/2.0.3/esp32-2.0.3.zip
+platform_packages = framework-arduinoespressif32 @ https://github.com/espressif/arduino-esp32/releases/download/2.0.4/esp32-2.0.4.zip
+;platform_packages = framework-arduinoespressif32@https://github.com/espressif/arduino-esp32.git#2.0.3
 ```
 2) Serial output lines carry time stamps, exceptions get decoded with function backtrace and serial output gets logged to a file:
 ```c
