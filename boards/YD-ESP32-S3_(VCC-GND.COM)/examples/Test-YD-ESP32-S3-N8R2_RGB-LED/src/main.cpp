@@ -25,7 +25,7 @@ Adafruit_NeoPixel strip = Adafruit_NeoPixel(LED_COUNT, PIN, NEO_GRB + NEO_KHZ800
 
 void setPixelColor(uint8_t r, uint8_t g, uint8_t b)
 {
-  for(uint16_t i=0; i<strip.numPixels(); i++) {
+  for(uint16_t i = 0; i < strip.numPixels(); i++) {
     strip.setPixelColor(i, strip.Color(r, g, b));
   }
   strip.show();
@@ -52,13 +52,13 @@ void loop() {
     delay(3000);
     ESP.restart();  
   }
-  setPixelColor(255, 0, 0); // Red
+  setPixelColor(255, 0, 0);    // Red
   delay(1000);
-  setPixelColor(0, 255, 0); // Green
+  setPixelColor(0, 255, 0);    // Green
   delay(1000);
-  setPixelColor(255, 255, 0); // Yellow
+  setPixelColor(255, 255, 0);  // Yellow
   delay(1000);  
-  setPixelColor(0, 0, 255); // Blue
+  setPixelColor(0, 0, 255);    // Blue
   delay(1000);
   Serial.println("Loop finished.");
 }
