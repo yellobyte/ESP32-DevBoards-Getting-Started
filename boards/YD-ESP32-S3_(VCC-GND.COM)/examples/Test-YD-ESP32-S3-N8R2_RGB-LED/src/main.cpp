@@ -25,7 +25,7 @@ Adafruit_NeoPixel strip = Adafruit_NeoPixel(LED_COUNT, PIN, NEO_GRB + NEO_KHZ800
 
 void setPixelColor(uint8_t r, uint8_t g, uint8_t b)
 {
-  for(uint16_t i = 0; i < strip.numPixels(); i++) {
+  for (uint16_t i = 0; i < strip.numPixels(); i++) {
     strip.setPixelColor(i, strip.Color(r, g, b));
   }
   strip.show();
