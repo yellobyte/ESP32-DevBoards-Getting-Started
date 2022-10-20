@@ -33,7 +33,6 @@ void setPixelColor(uint8_t r, uint8_t g, uint8_t b)
 }
 
 void setup() {
-  // put your setup code here, to run once:
   Serial.begin(115200);
   Serial.println();
   Serial.println("--> Sketch started: RGB-LED-Test ESP32-S3-N8R2-DevKitC-1 Modul (VCC-GND.COM):\n"); 
