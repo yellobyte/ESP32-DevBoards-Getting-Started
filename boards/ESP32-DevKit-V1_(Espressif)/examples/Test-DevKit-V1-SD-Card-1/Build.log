@@ -24,7 +24,7 @@ Building .pio\build\esp32dev\bootloader.bin
 Generating partitions .pio\build\esp32dev\partitions.bin
 esptool.py v4.2.1
 Creating esp32 image...
-Merged 1 ELF section
+Merged 1 ELF section   
 Successfully created esp32 image.
 Compiling .pio\build\esp32dev\libf4f\FS\FS.cpp.o
 Compiling .pio\build\esp32dev\libf4f\FS\vfs_api.cpp.o
@@ -59,8 +59,8 @@ Compiling .pio\build\esp32dev\FrameworkArduino\esp32-hal-dac.c.o
 Compiling .pio\build\esp32dev\FrameworkArduino\esp32-hal-gpio.c.o
 Compiling .pio\build\esp32dev\FrameworkArduino\esp32-hal-i2c-slave.c.o
 Compiling .pio\build\esp32dev\FrameworkArduino\esp32-hal-i2c.c.o
-Archiving .pio\build\esp32dev\libf4f\libFS.a
 Compiling .pio\build\esp32dev\FrameworkArduino\esp32-hal-ledc.c.o
+Archiving .pio\build\esp32dev\libf4f\libFS.a
 Compiling .pio\build\esp32dev\FrameworkArduino\esp32-hal-matrix.c.o
 Compiling .pio\build\esp32dev\FrameworkArduino\esp32-hal-misc.c.o
 Compiling .pio\build\esp32dev\FrameworkArduino\esp32-hal-psram.c.o
@@ -87,10 +87,10 @@ Retrieving maximum program size .pio\build\esp32dev\firmware.elf
 Checking size .pio\build\esp32dev\firmware.elf
 Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
 RAM:   [=         ]   5.2% (used 17040 bytes from 327680 bytes)
-Flash: [==        ]  23.5% (used 308629 bytes from 1310720 bytes)
+Flash: [==        ]  23.6% (used 308853 bytes from 1310720 bytes)
 Building .pio\build\esp32dev\firmware.bin
 esptool.py v4.2.1
 Creating esp32 image...
 Merged 2 ELF sections
 Successfully created esp32 image.
-==================================================================== [SUCCESS] Took 8.74 seconds ====================================================================
+==================================================================== [SUCCESS] Took 8.76 seconds ====================================================================

@@ -2,10 +2,19 @@
 --- Available filters and text transformations: colorize, debug, default, direct, esp32_exception_decoder, hexlify, log2file, nocontrol, printable, send_on_enter, time
 --- More details at https://bit.ly/pio-monitor-filters
 --- Quit: Ctrl+C | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H
-01:33:51.179 >
-01:33:51.179 > initialize SD card...initialization done.
-01:33:51.179 > create file /example.txt ...success.
-01:33:51.179 > delete file /example.txt ...success.
-01:33:51.179 > create directory /myDir ...success.
-01:33:51.179 > delete directory /myDir ...success.
-01:33:51.179 > all done.
+00:00:08.591 >
+00:00:08.591 > initialize SD card...initialization successful.
+00:00:08.591 > scan SD card:
+00:00:08.591 >
+00:00:08.591 > System Volume Information/
+00:00:08.591 >    WPSettings.dat   12
+00:00:08.591 >    IndexerVolumeGuid   76
+00:00:08.591 > Song01.mp3   6892958
+00:00:08.591 > SubDir_lev1/
+00:00:08.591 >    SubDir_lev2/
+00:00:08.591 >       Song21.mp3   12300060
+00:00:08.591 >       Song22.mp3   10340861
+00:00:08.591 >       Song23.mp3   10160119
+00:00:08.591 >    Song11.mp3   5213097
+00:00:08.591 >
+00:00:08.591 > done!
