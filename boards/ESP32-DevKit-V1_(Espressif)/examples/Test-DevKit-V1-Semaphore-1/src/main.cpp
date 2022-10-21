@@ -2,13 +2,13 @@
   Test Semaphore-1
 
   Semaphores are useful in many situations, especially for thread synchronisation and control.
-	This example demonstrates the usage of a binary semaphore (also called mutual-exclusion semaphore, mutex, boolean semaphore) 
-  for triggering a waiting threat.
-	
-	The first call to xSemaphoreTake() in loop() is successful, the next calls will make the loop pause because 
-	a binary semaphore can only be taken once. Only when the ISR in the background periodically releases the semaphore
+  This example demonstrates the usage of a binary semaphore (also called mutual-exclusion semaphore, mutex or
+  boolean semaphore) for triggering a waiting threat.
+  
+  The first call to xSemaphoreTake() in loop() is successful, the next calls will make the loop pause because 
+  a binary semaphore can only be taken once. Only when the ISR in the background periodically releases the semaphore
   the loop can obtain it again and carry on.
-	
+  
   More infos about semaphores & their usage: "https://www.freertos.org/a00113.html".
 
   Last updated 2020-07-21, ThJ <yellobyte@bluewin.ch>
@@ -41,7 +41,7 @@ void loop() {
   xSemaphoreTake(syncSemaphore, portMAX_DELAY);     // wait to obtain semaphore when it becomes available
   Serial.print("Semaphore was released. Loop count = ");
   Serial.println(++count);
-	//
-	// do some work...
-	//
+  //
+  // do some work...
+  //
 }

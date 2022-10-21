@@ -2,7 +2,7 @@
   Test Watchdog-1
 
   Testing the task related watchdogs in ESP32 mikrocontroller. 
-	
+  
   Some useful info about ESP32 watchdogs: 
 
   The ESP32 Arduino framework is build around FreeRTOS and therefore provides multiple types of watchdogs. The implementation on the 
@@ -25,7 +25,7 @@
 
   If the CPU1 IDLE task watchdog has been enabled with enableCore1WDT() then all (!) tasks running on CPU1 must insert pauses as 
   explained above, even the loop() task.
-  	
+    
   More infos about ESP32 watchdogs: 
   "https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-reference/system/wdts.html?highlight=watchdog#l".
 
@@ -44,27 +44,29 @@ void myTask(void *args) {
   Serial.println(" task starts looping");
 
   while (true) {
-      // if commented out, the chip will reboot after ~5s --> see file "Serial_Output_watchdog_triggers.log"
-      esp_task_wdt_reset();
-      // delay() does not reset the task watchdog, it will only release the core for other tasks
-      // if commented out, all other tasks on CPU1 (inkl. setup & loop) won't get execution time anymore --> see file "Serial_Output_loop_starved.log"
-      delay(1);  
+    // if commented out, the chip will reboot after ~5s --> see file "Serial_Output_watchdog_triggers.log"
+    esp_task_wdt_reset();
+    // delay() does not reset the task watchdog, it will only release the core for other tasks
+    // if commented out, all other tasks on CPU1 (inkl. setup & loop) won't get execution time anymore --> see file "Serial_Output_loop_starved.log"
+    delay(1);  
   }
   // it never gets here
+  /*
   Serial.println(" task stops looping.");
   Serial.printf(" esp_task_wdt_delete: %s\n\n", esp_task_wdt_delete(NULL) == ESP_OK ? "Ok" : "Error");
   Serial.flush();
   delay(50);
   vTaskDelete(NULL);
+  */
 }
 
 void setup() {
   Serial.begin(115200);
   //Serial.printf("esp_task_wdt_init: %d\n", esp_task_wdt_init(TIMEOUT, false));
-  if (pdPASS != xTaskCreatePinnedToCore(&myTask,                        // task function
+  if (pdPASS != xTaskCreatePinnedToCore(myTask,                         // task function
                                         "myTask",                       // name of task
                                         configMINIMAL_STACK_SIZE * 10,  // stack size
-                                        NULL,                           // function parameters (not used)
+                                        NULL,                           // function input parameters (not used)
                                         2 | portPRIVILEGE_BIT,          // higher task priority
                                         NULL,                           // task handle (not used)
                                         APP_CPU_NUM)) {                 // selects core 1 (PRO_CPU_NUM = 0, APP_CPU_NUM = 1)
