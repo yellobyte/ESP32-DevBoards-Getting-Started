@@ -1,7 +1,7 @@
 /*
-  Test-SD-2
+  Test-SD-1
 
-  This example creates and destroys a file "example.txt" and a directory "myDir" on the attached SD card.
+  This example prints the files on a connected SD card.
 
   The (micro)SD-Card Adapter is attached to ESP32 dev board as follows:
     SD MOSI  -  GPIO23
@@ -18,83 +18,58 @@
 #include <Arduino.h>
 #include <SD.h>
 
-File myFile;
+File root;
+
+void printDirectory(File dir, int numTabs) {
+  while(true) {
+    File entry = dir.openNextFile();
+    if (!entry) {
+      // no more files
+      break;
+    }
+    for (uint8_t i = 0; i < numTabs; i++) {
+      Serial.print("   ");
+    }
+
+    Serial.print(entry.name());
+    if (entry.isDirectory()) {
+      Serial.println("/");
+      printDirectory(entry, numTabs + 1);
+    } 
+    else {
+      Serial.print("   ");
+      // entry.size() returns file size in bytes and 0 for directories
+      Serial.println(entry.size());
+    }
+    entry.close();
+  }
+}
 
 void setup()
 {
   Serial.begin(115200);
-  Serial.print("\ninitialize SD card...");
+  Serial.println();
+  Serial.print("initialize SD card...");
 
   if (!SD.begin(17)) {
     Serial.println("initialization failed!");
-    while(true);
+    while (true);
   }
-  Serial.println("initialization done.");
+  Serial.println("initialization successful.");
+  Serial.println("scan SD card:");
+  Serial.println();
 
-  // check if file /example.txt exists on SD
-  if (SD.exists("/example.txt")) {
-    Serial.println("file /example.txt already exists");
-  }
-  else {
-    Serial.print("create file /example.txt ...");
-    myFile = SD.open("/example.txt", FILE_WRITE);
-    myFile.close();
+  // print SD content starting with root
+  root = SD.open("/");
+  printDirectory(root, 0);
 
-    // check if the file has been created
-    if (SD.exists("/example.txt")) {
-      Serial.println("success.");
-    }
-    else {
-      Serial.println("error.");
-      while(true);
-    }
-  }
-
-  // delete the file
-  Serial.print("delete file /example.txt ...");
-  SD.remove("/example.txt");
-
-  if (SD.exists("/example.txt")) {
-    Serial.println("error.");
-  }
-  else {
-    Serial.println("success.");
-  }
-
-  // check if directory /myDir already exists on SD
-  if (SD.exists("/myDir")) {
-    Serial.println("directory /myDir already exists");
-  }
-  else {
-    Serial.print("create directory /myDir ...");
-    bool err = SD.mkdir("/myDir");
-    // check if directory has been created
-    if (SD.exists("/myDir")) {
-      Serial.println("success.");
-    }
-    else {
-      Serial.println("error.");
-      while(true);
-    }
-  }
-
-  // delete the directory
-  Serial.print("delete directory /myDir ...");
-  SD.rmdir("/myDir");
-
-  if (SD.exists("/myDir")) {
-    Serial.println("error.");
-  }
-  else {
-    Serial.println("success.");
-  }
-
-  Serial.println("all done.");
+  Serial.println();
+  Serial.println("done!");
 }
 
 void loop()
 {
-  // nothing happens after setup finishes.
+  // 
 }
 
 
