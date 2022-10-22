@@ -1,0 +1,11 @@
+--- Terminal on COM4 | 115200 8-N-1
+--- Available filters and text transformations: colorize, debug, default, direct, esp32_exception_decoder, hexlify, log2file, nocontrol, printable, send_on_enter, time
+--- More details at https://bit.ly/pio-monitor-filters
+--- Quit: Ctrl+C | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H
+01:33:51.179 >
+01:33:51.179 > initialize SD card...initialization done.
+01:33:51.179 > create file /example.txt ...success.
+01:33:51.179 > delete file /example.txt ...success.
+01:33:51.179 > create directory /myDir ...success.
+01:33:51.179 > delete directory /myDir ...success.
+01:33:51.179 > all done.
