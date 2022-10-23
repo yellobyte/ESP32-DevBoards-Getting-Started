@@ -1,0 +1,40 @@
+--- Terminal on COM4 | 115200 8-N-1
+--- Available filters and text transformations: colorize, debug, default, direct, esp32_exception_decoder, hexlify, log2file, nocontrol, printable, send_on_enter, time
+--- More details at https://bit.ly/pio-monitor-filters
+--- Quit: Ctrl+C | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H
+21:48:51.107 > Jun  8 2016 ets Jun  8 2016 00:22:57
+21:48:51.107 >
+21:48:51.107 > rst:0x10 (RTCWDT_RTC_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+21:48:51.107 > configsip: 0, SPIWP:0xee
+21:48:51.107 > clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+21:48:51.107 > mode:DIO, clock div:2
+21:48:51.107 > load:0x3fff0030,len:1184
+21:48:51.107 > load:0x40078000,len:13132
+21:48:51.107 > load:0x40080400,len:3036
+21:48:51.107 > entry 0x400805e4
+21:48:51.107 >
+21:48:51.107 > Example Update-per-SD started:
+21:48:51.107 > initialize SD card...ok
+21:48:51.107 > check for update file /firmware.bin on SD card...ok, file size (bytes): 247776
+21:48:51.107 > flash update file to ESP32, please wait...ok
+21:48:53.604 > UPDATE SUCCESSFULLY FLASHED TO ESP32        
+21:48:53.613 > system will restart in 3 seconds
+21:48:56.611 > ets Jun  8 2016 00:22:57
+21:48:56.613 >
+21:48:56.613 > rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+21:48:56.618 > configsip: 0, SPIWP:0xee
+21:48:56.620 > clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+21:48:56.627 > mode:DIO, clock div:2
+21:48:56.629 > load:0x3fff0030,len:1184
+21:48:56.631 > load:0x40078000,len:13132
+21:48:56.633 > load:0x40080400,len:3036
+21:48:56.636 > entry 0x400805e4
+21:48:56.933 > [   101][D][esp32-hal-cpu.c:244] setCpuFrequencyMhz(): PLL: 480 / 2 = 240 Mhz, APB: 80000000 Hz
+21:48:56.975 > ESP32-DevKitC-V1 board LED test started. MODE = 0
+21:48:56.980 > LED off
+21:48:57.976 > LED on
+21:48:58.966 > LED off
+21:48:59.976 > LED on
+21:49:00.975 > LED off
+21:49:01.975 > LED on
+21:49:02.975 > LED off

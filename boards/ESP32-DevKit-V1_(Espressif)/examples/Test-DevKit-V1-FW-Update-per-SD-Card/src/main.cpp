@@ -1,16 +1,16 @@
 /*
-  Test Update-per-SD
+  Test FW-Update-per-SD-Card
 
   This example demonstrates the possibility to flash ESP32 devices with new software per attached SD card.
   Important for devices without WiFi or USB-to-PC connections.  
 
   The program scans an attached SD card for a file "firmware.bin" and if found, flashes it onto the ESP32.
   The ESP32 will reboot afterwards and run the new program which only lets the onboard LED blink. If defined,
-  the update file on SD card gets deleted after upgrade.
+  the update file on SD card gets deleted after flashing.
 
-  So to get started:
+  To get started:
   1) connect a SD card module to the dev board as explained below
-  2) build this example and flash it onto the dev board per USB, the program will not detect an upgrade file 
+  2) build this example and flash it onto the dev board per USB, the program will not yet detect an update file 
   3) copy the provided file "firmware.bin" onto SD card and insert the SD card into the SD card module
 
   Finally, press the reset button on the dev board and the ESP32 gets re-flashed from SD card. If successful, 
@@ -35,7 +35,7 @@
 #define SD_CS_PIN        17
 #define UPDATE_FILE_NAME "/firmware.bin"
 
-// uncomment if update file on SD card should get deleted after upgrade is done
+// uncomment if update file on SD card should get deleted after flashing
 //#define DELETE_UPDATE_FILE
 #ifdef DELETE_UPDATE_FILE
 #define TEST_FILE_NAME   "/testfile.txt"
@@ -50,7 +50,6 @@ File   myTestFile,
 //
 bool checkUpdate()
 {
-  Serial.printf("check for update file %s on SD card...", UPDATE_FILE_NAME);
   myUpdateFile = SD.open(UPDATE_FILE_NAME);
   if (!myUpdateFile) {
     Serial.println("no update file detected");
@@ -59,16 +58,14 @@ bool checkUpdate()
   updateSize = myUpdateFile.size();
   bool isDir = myUpdateFile.isDirectory();
   if (isDir || updateSize == 0) {
-    Serial.println("error, entry is a directory or update file is empty");
+    Serial.printf("error, %s is a directory or file size = 0\n", UPDATE_FILE_NAME);
     myUpdateFile.close();
     return false;
   }
   myUpdateFile.close();
-  Serial.printf("ok, update file (size: %d Byte) detected\n", updateSize);
 
 #ifdef DELETE_UPDATE_FILE
   // check write access to SD-Card
-  Serial.print("test write access to SD card...");
   myTestFile = SD.open(TEST_FILE_NAME, FILE_WRITE);
   if (myTestFile) {
     myTestFile.close();
@@ -82,7 +79,6 @@ bool checkUpdate()
     Serial.println("error creating test file");
     return false;
   }
-  Serial.println("ok");
 #endif
 
   return true;
@@ -137,17 +133,19 @@ void setup() {
   }
   Serial.println("ok");
 
+  Serial.printf("check for update file %s on SD card...", UPDATE_FILE_NAME);
   if (!checkUpdate()) {
     // no update file found or SD card problem (no write access)
     SD.end();
     return;
   }
+  Serial.printf("ok, file size (bytes): %d\n", updateSize);
 
-  Serial.println("flash update file to ESP32, please wait...");
+  Serial.print("flash update file to ESP32, please wait...");
   bool ret = performUpdate();
 
   if (ret) {
-    Serial.println("UPDATE SUCCESSFULLY FLASHED TO ESP32");
+    Serial.println("ok\nUPDATE SUCCESSFULLY FLASHED TO ESP32");
   }
   else {
     Serial.println("UPDATE NOT SUCCESSFUL");
