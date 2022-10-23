@@ -1,0 +1,11 @@
+--- Terminal on COM4 | 115200 8-N-1
+--- Available filters and text transformations: colorize, debug, default, direct, esp32_exception_decoder, hexlify, log2file, nocontrol, printable, send_on_enter, time
+--- More details at https://bit.ly/pio-monitor-filters
+--- Quit: Ctrl+C | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H
+22:35:12.555 > Jun  8 2016
+22:35:12.555 > Example Update-per-SD started:
+22:35:12.555 > initialize SD card...ok
+22:35:12.555 > check for update file /firmware.bin on SD card...ok, file size (bytes): 36352
+22:35:12.555 > flash update file to ESP32, please wait...error, only 0/36352 bytes written to flash
+22:35:12.555 > error, update returned error code 8
+22:35:12.555 > UPDATE NOT SUCCESSFUL
