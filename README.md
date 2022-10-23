@@ -110,10 +110,14 @@ board_build.partitions = partitions_custom.csv
 extra_scripts = add_tasks.py
 ```
 
-### :information_source: Software Upload
+### :information_source: Resetting the board via USB
 
 Under construction.
 
-### :information_source: Debugging your Program 
+### :information_source: Software upload to the board
+
+Under construction.
+
+### :information_source: Debugging a program 
 
 Under construction.
