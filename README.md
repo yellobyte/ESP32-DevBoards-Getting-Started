@@ -118,13 +118,13 @@ But have you ever wondered why your dev board sometimes is resetting when you st
 
 Almost every ESP32 dev board with an USB port hosts a little but nevertheless sophisticated circuitry which is located between the USB-to-UART bridge chip (usually CP2102, FT232 or CH340) and the ESP32. Such a chip has a lot of pins, the 4 most important ones are called **TX** (output, for data sent from PC to the ESP32), **RX** (input, for data sent from ESP32 to the PC), **DTR** (output, legacy "Data Terminal Ready") and **RTS** (output, legacy "Request To Send"). Back in the computer stone age the signals DTR & RTS (among others) were used to control the connection between Computers/Terminals and analog modems.
 
-The whole magic is such that the little tool **esptool** (which is part of the development environment) can independently set those signals to active (0=low) or passive (1=high). With 2 signals you have 4 possible combinations and this basically tells the ESP32 what the IDE wants.
+The whole magic is such that the little tool **esptool** (which is part of the development environment) can independently set those signals to active (0=low) or passive (1=high) which tell the ESP32 to reboot or go into upload mode. 
 
 The above mentioned circuitry is shown below. DTR & RTS are connected to the USB bridge chip and EN & IO0 are connected to the ESP32.
 
 ![](reset_and_software_upload/ESP32_reset_and_upload_circuitry.jpg)
 
-This allows an IDE to work with a dev board without prompting to press physical buttons. You can work remotely on a PC that is running the IDE and is connected to the board. Lying comfortably with a laptop on a couch at home while the dev board is far away (e.g. in an office) would be possible. In my case I additionally have a USB camera attached which enables me to see the onboard LEDs or displays. :-).  
+That way an IDE can work with a dev board without prompting to press any physical buttons, means one can work remotely on a PC that is running the IDE and is connected to the board. Lying comfortably with a laptop on a couch at home while the dev board is far away (e.g. in an office) would be possible. In my case I additionally have a USB camera attached which enables me to see the onboard LEDs or displays. :-).  
 
 For all following demonstrations a program is running on the board (or gets uploaded) which simply switches the onboard LED on & off and produces some serial output. After starting the Serial Monitor task in PlatformIO this is shown:
 
