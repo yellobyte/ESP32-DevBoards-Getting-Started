@@ -124,7 +124,7 @@ The above mentioned circuitry is shown below. DTR & RTS are connected to the USB
 
 ![](reset_and_software_upload/ESP32_reset_and_upload_circuitry.jpg)
 
-That way an IDE can work with a dev board without prompting to press any physical buttons, means one can work remotely on a PC that is running the IDE and is connected to the board. Lying comfortably with a laptop on a couch at home while the dev board is far away (e.g. in an office) would be possible. In my case I additionally have a USB camera attached which enables me to see the onboard LEDs or displays. :-)  
+That way an IDE can work with a dev board without prompting to press any physical buttons, means one can work remotely on a PC that is running the IDE and is connected to a dev board. Lying comfortably with a laptop on a couch at home while the dev board is far away (e.g. in an office) would be possible. In my case I additionally have a USB camera attached which enables me to see the onboard LEDs or displays. :-)  
 
 For all following demonstrations a program is running on the board (or gets uploaded) which simply switches the onboard LED on & off and produces some serial output. After starting the Serial Monitor task in PlatformIO this is shown:
 
