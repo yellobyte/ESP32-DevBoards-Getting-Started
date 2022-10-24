@@ -141,7 +141,9 @@ For all following demonstrations a program is running on the board (or gets uplo
 ```
 As one can see the serial monitor task just displays the serial output from the board and no reset happened.  
 
-However, the dev board will perform a reset when you enter the key combinations CTRL-T followed by CTRL-D and again CTRL-T followed by CTRL-D as shown below:
+**Resetting the board:**
+
+The dev board will perform a reset when you enter the key combinations CTRL-T followed by CTRL-D and again CTRL-T followed by CTRL-D as shown below:
 
 ```c
 ...
@@ -168,8 +170,6 @@ However, the dev board will perform a reset when you enter the key combinations 
 How come ? Let's look at the signals on the dev board while doing above key combinations.  
 
 Without serial monitor task being started, DTR & RTS signals are usually both inactive (1=high). Starting the serial monitor will change the signals DTR & RTS to active (0=low). In both cases ESP32 pins EN & IO0 see a logical high(1) and the ESP32 continues to run normally and unaffected by the change.  
-
-**Resetting the board:**
 
 Entering CTRL-T followed by CTRL-D for the first time makes the signal DTR change to inactive (1=high). This makes the signal EN go low(0) and the ESP32 stops running. Only after entering CTRL-T followed by CTRL-D for the second time the signal DTR becomes active again (0=low) and the signal EN on the ESP32 rises to high(1). The ESP32 is not resetted anymore and re-starts the program as shown above.
 
