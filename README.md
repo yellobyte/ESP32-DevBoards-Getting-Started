@@ -245,7 +245,7 @@ The sigal trace shows that in this case Esptool needs a second attempt to put th
 
 ![](reset_and_software_upload/Software_Upload_Esptool(PlatformIO).jpg)
 
-Zooming in shows in more detail how the ESP32 is put into upload mode. Immediately after the EN pin goes high the ESP32 starts running and checks the status of the IO0 pin first. If high(1) it will run normally, if low(0) it will enter upload mode.
+Zooming in shows in more detail how the ESP32 is put into upload mode. Immediately after the EN pin goes high an ESP32 starts running and checks the status of the IO0 pin first. If high(1) it will run normally, if low(0) it will enter upload mode.
 
 ![](reset_and_software_upload/ESP32_put_into_upload_mode.jpg)
 
