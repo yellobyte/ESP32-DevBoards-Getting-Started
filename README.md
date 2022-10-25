@@ -64,49 +64,49 @@ The project configuration file has sections (each denoted by a [header]) and one
 
 Some very useful general settings (for more experienced programmers) deserve to be mentioned here. 
 1) Forces builds to use older platform packages and/or frameworks instead of the newest one.
-```c 
+```
 ;platform = espressif32
 platform = espressif32 @ 4.2.0
 platform_packages = framework-arduinoespressif32 @ https://github.com/espressif/arduino-esp32/releases/download/2.0.4/esp32-2.0.4.zip
 ;platform_packages = framework-arduinoespressif32@https://github.com/espressif/arduino-esp32.git#2.0.3
 ```
 2) Serial output lines carry time stamps, exceptions get decoded with function backtrace and serial output gets logged to a file:
-```c
+```
 monitor_filters = time, esp32_exception_decoder, log2file
 ```
 3) The program is compiled with full symbolic debug information and no optimization.
-```c
+```
 build_type = debug
 ```
 4) Enables usage of ESP32 JTAG debug adapter "[ESP32-Prog](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/debugging/doc/ESP-Prog.jpg)" for debugging.
-```c
+```
 debug_tool = esp-prog
 ```
 5) Sets the initial breakpoint to first line in function setup().
-```c
+```
 debug_init_break = tbreak setup
 ```
 6) Generates various levels of debug output.
-```c
+```
 ; 0 no debug output, 1 errors, 2 warnings, 3 infos, 4 debug info, 5 verbose 
 build_flags = -DCORE_DEBUG_LEVEL=4
 ```
 7) Disables any activity on COM signals RTS and/or DTR. Required by some ESP32 dev boards to enable serial output (e.g. ESP32-CAM-MB board). However, this setting prevents the Development IDE from [selecting boot modes](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/reset_and_upload/ESP32_reset_and_upload_circuitry.jpg) and therefore perform automatic software uploads to the board. In this case you must start the upload while pressing the "flash" button for a few seconds.
-```c
+```
 monitor_rts = 0
 monitor_dtr = 0
 ```
 8) Switch between various built-in tables. A big collection of predefined tables can be found [here](https://github.com/espressif/arduino-esp32/tree/master/tools/partitions).
-```c
+```
 ;board_build.partitions = min_spiffs.csv
 board_build.partitions = no_ota.csv
 ```
 9) Your own "partitions_custom.csv" in the root of the project directory.
-```c
+```
 board_build.partitions = partitions_custom.csv
 ```
 10) Collection of personal tasks, to be found under PlatformIO -> PROJECT TASKS -> Custom. Eventual paths are relative to the project folder.
-```c
+```
 extra_scripts = add_tasks.py
 ```
 
@@ -128,7 +128,7 @@ That way an IDE can work with a dev board without prompting to press any physica
 
 For the following demonstrations a program is running on the board (or gets uploaded) which simply switches the onboard LED on & off and produces some serial output. After starting the Serial Monitor task in PlatformIO this is shown:
 
-```c
+```
 --- Terminal on COM4 | 115200 8-N-1
 --- Available filters and text transformations: colorize, debug, default, direct, esp32_exception_decoder, hexlify, log2file, nocontrol, printable, send_on_enter, time
 --- More details at https://bit.ly/pio-monitor-filters
@@ -145,7 +145,7 @@ As one can see the serial monitor task just displays the serial output from the 
 
 The dev board will perform a reset when you enter the key combinations CTRL-T followed by CTRL-D and again CTRL-T followed by CTRL-D as shown below:
 
-```c
+```
 ...
 16:32:43.709 > LED off
 16:32:44.887 > LED on
@@ -187,7 +187,7 @@ When a Development Environment (PlatformIO, Arduino IDE) performs a software upl
 
 An upload usually looks like this:
 
-```c
+```
 Configuring upload protocol...
 AVAILABLE: cmsis-dap, esp-bridge, esp-prog, espota, esptool, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa
 CURRENT: upload_protocol = esptool
@@ -251,7 +251,7 @@ Zooming in shows in more detail how the ESP32 is put into upload mode. Immediate
 
 **Troubleshooting:**   
 Some dev boards notoriously defy to be flashed and all attempts of Esptool to upload software permanently fail. It then looks like this:
-```c
+```
 Configuring upload protocol...
 AVAILABLE: cmsis-dap, esp-bridge, esp-prog, espota, esptool, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa
 CURRENT: upload_protocol = esptool
