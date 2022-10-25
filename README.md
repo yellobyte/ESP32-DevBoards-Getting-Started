@@ -139,7 +139,7 @@ For the following demonstrations a program is running on the board (or gets uplo
 16:32:46.880 > LED on
 ....
 ```
-As one can see the serial monitor task just displays the serial output from the board and no reset happens.  
+As one can see the serial monitor task just starts to display the serial output from the board and no reset happens.  
 
 **Resetting the board:**
 
