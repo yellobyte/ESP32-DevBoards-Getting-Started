@@ -91,7 +91,7 @@ debug_init_break = tbreak setup
 ; 0 no debug output, 1 errors, 2 warnings, 3 infos, 4 debug info, 5 verbose 
 build_flags = -DCORE_DEBUG_LEVEL=4
 ```
-7) Disables any activity on COM signals RTS and/or DTR. Required by some ESP32 dev boards to enable serial output (e.g. ESP32-CAM-MB board). However, this setting prevents the Development IDE from [selecting boot modes](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/reset_and_upload/ESP32_reset_and_upload_circuitry.jpg) and therefore perform automatic software uploads to the board. In this case you must start the upload while pressing the "flash" button for a few seconds.
+7) Disables any activity on COM signals RTS and/or DTR. Required by some ESP32 dev boards to enable serial output (e.g. ESP32-CAM-MB board). However, this setting prevents the IDE from selecting boot modes and performing automatic software uploads to the board. In this case you must start the upload while pressing the "flash" button for a few seconds.
 ```
 monitor_rts = 0
 monitor_dtr = 0
