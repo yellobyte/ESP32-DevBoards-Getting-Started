@@ -147,8 +147,8 @@ The dev board will perform a reset when you enter the key combinations CTRL-T fo
 
 ```
 ...
-16:32:43.709 > LED off
-16:32:44.887 > LED on
+16:33:43.709 > LED off
+16:33:44.887 > LED on
 --- DTR inactive ---
 --- DTR active ---
 16:34:21.426 > ets Jun  8 2016 00:22:57
