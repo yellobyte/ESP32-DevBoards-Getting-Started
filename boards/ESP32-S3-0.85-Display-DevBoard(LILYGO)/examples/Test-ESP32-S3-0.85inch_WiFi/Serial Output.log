@@ -1,0 +1,14 @@
+--- Terminal on COM6 | 115200 8-N-1
+--- Available filters and text transformations: colorize, debug, default, direct, esp32_exception_decoder, hexlify, log2file, nocontrol, printable, send_on_enter, time
+--- More details at https://bit.ly/pio-monitor-filters
+--- Quit: Ctrl+C | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H
+01:17:15.855 > scan started:
+01:17:22.433 > scan done, 3 networks found:
+01:17:22.433 >   1: Mibs (-66dBm), Channel: 9, WIFI_AUTH_WPA2_PSK
+01:17:22.436 >   2: OOP WiFi (-73dBm), Channel: 6, WIFI_AUTH_WPA2_ENTERPRISE
+01:17:22.463 >   3: arp-9366 (-89dBm), Channel: 11, WIFI_AUTH_WPA2_PSK
+01:17:22.513 >
+01:17:22.513 > Connecting to WiFi network "Mibs"
+01:17:22.518 > ..Connected successfully to "Mibs". IP address: 192.168.1.33
+01:17:23.019 >
+01:17:23.019 > Sketch finished.
