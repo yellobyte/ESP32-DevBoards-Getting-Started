@@ -1,4 +1,4 @@
-The Lilygo T-QT Display ESP32-S3 development board features a 0.85" LCD color display (128x128 pixels, driver IC GC9107), a battery connector, USB-C socket, 8MB Flash, GPIO pins and WiFi.
+The Lilygo "T-QT" ESP32-S3 development board features a 0.85" LCD color display (128x128 pixels, driver IC GC9107), a battery connector, USB-C socket, 8MB Flash, GPIO pins and WiFi.
 
 More infos under:  https://github.com/Xinyuan-LilyGO/T-QT
 
