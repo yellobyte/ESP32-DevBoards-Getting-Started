@@ -1,4 +1,4 @@
-The Lilygo "T-Display-S3" ESP32-S3 development board features a 1.9" LCD color display (170x320 pixels, driver IC ST7789), a battery connector, USB-C socket, 16MB Flash, 8MB PSRAM, abundant GPIO pins and WiFi.
+The Lilygo "T-Display-S3" ESP32-S3 development board features a 1.9" LCD color display (170x320 pixels, driver IC ST7789), a battery connector, USB-C socket, 16MB Flash, 8MB PSRAM, abundant GPIO pins and WiFi/BT.
 
 More infos under:  https://github.com/Xinyuan-LilyGO/T-Display-S3
 
