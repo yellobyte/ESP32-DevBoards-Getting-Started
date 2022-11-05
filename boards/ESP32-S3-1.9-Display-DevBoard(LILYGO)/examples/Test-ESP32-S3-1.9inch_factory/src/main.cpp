@@ -7,7 +7,7 @@
   
   This example uses above code with only minor modifications and adjustments for PlatformIO & latest ESP32 frameworks.
 
-  Last updated 2022-10-14, ThJ <yellobyte@bluewin.ch>
+  Last updated 2022-11-05, ThJ <yellobyte@bluewin.ch>
 */
 
 #include <Arduino.h>
@@ -17,11 +17,12 @@
 #include <esp_lcd_panel_io.h>
 #include <esp_lcd_panel_ops.h>
 #include <esp_lcd_panel_vendor.h>
-#include "OneButton.h"
+#include "pin_config.h"
+//#include "lv_conf.h"
+#include "lvgl.h"
 #include "cstxx.h"
 #include "factory_gui.h"
-#include "lvgl.h"
-#include "pin_config.h"
+#include "OneButton.h"
 
 #define WIFI_SSID          "MySSID"
 #define WIFI_PASSWORLD     "MyPassword"
