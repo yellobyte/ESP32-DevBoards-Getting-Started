@@ -1,0 +1,27 @@
+--- Terminal on COM6 | 115200 8-N-1
+--- Available filters and text transformations: colorize, debug, default, direct, esp32_exception_decoder, hexlify, log2file, nocontrol, printable, send_on_enter, time
+--- More details at https://bit.ly/pio-monitor-filters
+--- Quit: Ctrl+C | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H
+15:25:48.418 > Test TFT on Lilygo T-QT started:
+15:25:48.418 > Settings:
+15:25:48.418 >  Display driver = 9a01
+15:25:48.418 >  Transactions = Yes
+15:25:48.418 >  Display width = 128, height = 128
+15:25:48.418 >  Offsets (x,y): R0 = 2,1 R1 = 0,0 R2 = 0,0 R3 = 0,0
+15:25:48.418 >  GPIOs: MOSI = 2, MISO = 2, SCK = 3, CS = 5, DC = 6
+15:25:48.418 >
+15:25:52.713 > setup() finished
+15:25:52.713 > loop() started
+15:25:52.713 > small font size 2, inverted portrait, black background, no wrapping
+15:25:57.734 > medium font size 4, inverted landscape, white background, wrapping
+15:26:02.757 > loop() started
+15:26:02.757 > small font size 2, inverted portrait, black background, no wrapping
+15:26:07.778 > medium font size 4, inverted landscape, white background, wrapping
+15:26:12.801 > loop() started
+15:26:12.803 > small font size 2, inverted portrait, black background, no wrapping
+15:26:17.822 > medium font size 4, inverted landscape, white background, wrapping
+15:26:22.843 > loop() started
+15:26:22.846 > small font size 2, inverted portrait, black background, no wrapping
+15:26:27.860 > medium font size 4, inverted landscape, white background, wrapping
+15:26:32.890 > loop() started
+15:26:32.890 > small font size 2, inverted portrait, black background, no wrapping

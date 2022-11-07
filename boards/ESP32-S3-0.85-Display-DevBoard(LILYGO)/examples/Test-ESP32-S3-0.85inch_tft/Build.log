@@ -1,0 +1,125 @@
+Executing task: C:\Users\tj\.platformio\penv\Scripts\platformio.exe run 
+
+Processing ESP32-S3-DevKitC-1 (platform: espressif32; board: esp32-s3-devkitc-1; framework: arduino)
+----------------------------------------------------------------------------------------------------------------------------------------------------------------Removing unused dependencies...
+Library Manager: Installing Bodmer/TFT_eSPI
+Unpacking  [####################################]  100%
+Library Manager: TFT_eSPI@2.4.79 has been installed!
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/esp32-s3-devkitc-1.html
+PLATFORM: Espressif 32 (5.2.0) > Espressif ESP32-S3-DevKitC-1-N8 (8 MB QD, No PSRAM)
+HARDWARE: ESP32S3 240MHz, 320KB RAM, 8MB Flash
+DEBUG: Current (esp-builtin) On-board (esp-builtin) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES:
+ - framework-arduinoespressif32 @ 3.20005.220925 (2.0.5)
+ - tool-esptoolpy @ 1.40201.0 (4.2.1)
+ - toolchain-riscv32-esp @ 8.4.0+2021r2-patch3
+ - toolchain-xtensa-esp32s3 @ 8.4.0+2021r2-patch3
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 62 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- TFT_eSPI @ 2.4.79
+|   |-- SPI @ 2.0.0
+|   |-- SPIFFS @ 2.0.0
+|   |   |-- FS @ 2.0.0
+|   |-- FS @ 2.0.0
+|   |-- LittleFS @ 2.0.0
+|   |   |-- FS @ 2.0.0
+Building in release mode
+Compiling .pio\build\ESP32-S3-DevKitC-1\src\main.cpp.o
+Building .pio\build\ESP32-S3-DevKitC-1\bootloader.bin
+Generating partitions .pio\build\ESP32-S3-DevKitC-1\partitions.bin
+esptool.py v4.2.1
+Creating esp32s3 image...
+Merged 1 ELF section
+Successfully created esp32s3 image.
+Compiling .pio\build\ESP32-S3-DevKitC-1\libc43\SPI\SPI.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libf4f\FS\FS.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libf4f\FS\vfs_api.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\libd46\SPIFFS\SPIFFS.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\lib6b6\LittleFS\LittleFS.cpp.o
+In file included from .pio/libdeps/ESP32-S3-DevKitC-1/TFT_eSPI/TFT_eSPI.h:94,
+                 from src/main.cpp:11:
+.pio/libdeps/ESP32-S3-DevKitC-1/TFT_eSPI/Processors/TFT_eSPI_ESP32_S3.h:11:3: warning: #warning >>>>------>> DMA is not supported on the ESP32 S3 (possible future update) [-Wcpp]
+  #warning >>>>------>> DMA is not supported on the ESP32 S3 (possible future update)
+   ^~~~~~~
+In file included from src/main.cpp:11:
+.pio/libdeps/ESP32-S3-DevKitC-1/TFT_eSPI/TFT_eSPI.h:909:8: warning: #warning >>>>------>> TOUCH_CS pin not defined, TFT_eSPI touch functions will not be available! [-Wcpp]
+       #warning >>>>------>> TOUCH_CS pin not defined, TFT_eSPI touch functions will not be available!
+        ^~~~~~~
+Compiling .pio\build\ESP32-S3-DevKitC-1\lib43d\TFT_eSPI\TFT_eSPI.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\Esp.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\FirmwareMSC.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\FunctionalInterrupt.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\HWCDC.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\HardwareSerial.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\IPAddress.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\IPv6Address.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\MD5Builder.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\Print.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\Stream.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\StreamString.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\Tone.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\USB.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\USBCDC.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\USBMSC.cpp.o
+Archiving .pio\build\ESP32-S3-DevKitC-1\libc43\libSPI.a
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\WMath.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\WString.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\base64.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\cbuf.cpp.o
+Archiving .pio\build\ESP32-S3-DevKitC-1\libf4f\libFS.a
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\esp32-hal-adc.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\esp32-hal-bt.c.o
+Archiving .pio\build\ESP32-S3-DevKitC-1\libd46\libSPIFFS.a
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\esp32-hal-cpu.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\esp32-hal-dac.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\esp32-hal-gpio.c.o
+Archiving .pio\build\ESP32-S3-DevKitC-1\lib6b6\libLittleFS.a
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\esp32-hal-i2c-slave.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\esp32-hal-i2c.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\esp32-hal-ledc.c.o
+In file included from .pio/libdeps/ESP32-S3-DevKitC-1/TFT_eSPI/TFT_eSPI.h:94,
+                 from .pio/libdeps/ESP32-S3-DevKitC-1/TFT_eSPI/TFT_eSPI.cpp:16:
+.pio/libdeps/ESP32-S3-DevKitC-1/TFT_eSPI/Processors/TFT_eSPI_ESP32_S3.h:11:3: warning: #warning >>>>------>> DMA is not supported on the ESP32 S3 (possible future update) [-Wcpp]
+  #warning >>>>------>> DMA is not supported on the ESP32 S3 (possible future update)
+   ^~~~~~~
+In file included from .pio/libdeps/ESP32-S3-DevKitC-1/TFT_eSPI/TFT_eSPI.cpp:16:
+.pio/libdeps/ESP32-S3-DevKitC-1/TFT_eSPI/TFT_eSPI.h:909:8: warning: #warning >>>>------>> TOUCH_CS pin not defined, TFT_eSPI touch functions will not be available! [-Wcpp]
+       #warning >>>>------>> TOUCH_CS pin not defined, TFT_eSPI touch functions will not be available!
+        ^~~~~~~
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\esp32-hal-matrix.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\esp32-hal-misc.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\esp32-hal-psram.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\esp32-hal-rgb-led.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\esp32-hal-rmt.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\esp32-hal-sigmadelta.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\esp32-hal-spi.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\esp32-hal-time.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\esp32-hal-timer.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\esp32-hal-tinyusb.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\esp32-hal-touch.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\esp32-hal-uart.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\firmware_msc_fat.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\libb64\cdecode.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\libb64\cencode.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\main.cpp.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\stdlib_noniso.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\wiring_pulse.c.o
+Compiling .pio\build\ESP32-S3-DevKitC-1\FrameworkArduino\wiring_shift.c.o
+Archiving .pio\build\ESP32-S3-DevKitC-1\lib43d\libTFT_eSPI.a
+Archiving .pio\build\ESP32-S3-DevKitC-1\libFrameworkArduino.a
+Linking .pio\build\ESP32-S3-DevKitC-1\firmware.elf
+Retrieving maximum program size .pio\build\ESP32-S3-DevKitC-1\firmware.elf
+Checking size .pio\build\ESP32-S3-DevKitC-1\firmware.elf
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+RAM:   [          ]   4.2% (used 13856 bytes from 327680 bytes)
+Flash: [=         ]   9.2% (used 308309 bytes from 3342336 bytes)
+Building .pio\build\ESP32-S3-DevKitC-1\firmware.bin
+esptool.py v4.2.1
+Creating esp32s3 image...
+Merged 2 ELF sections
+Successfully created esp32s3 image.
+================================================================= [SUCCESS] Took 13.80 seconds =================================================================
