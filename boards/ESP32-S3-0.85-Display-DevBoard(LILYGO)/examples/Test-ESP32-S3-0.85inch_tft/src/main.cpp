@@ -18,7 +18,7 @@
 #include "pin_config.h"
 
 // in case you want to check
-#define SHOW_CONFIG
+//#define SHOW_CONFIG
 
 #define MYDELAY 5000
 #define FONT_SIZE_2 2
