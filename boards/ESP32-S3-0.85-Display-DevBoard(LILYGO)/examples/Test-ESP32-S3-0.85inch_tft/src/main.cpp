@@ -6,8 +6,8 @@
 
   IMPORTANT:
   As of TFT_eSPI lib version 2.4.79 there is a problem with screen to CGRAM offset for LILYGO T-QT. 
-  Please replace file "".pio\libdeps\ESP32-S3-DevKitC-1\TFT_eSPI\TFT_Drivers\GC9A01_Rotation.h" with 
-  provided file GC9A01_Rotation.h.
+  Please replace the file ".pio\libdeps\ESP32-S3-DevKitC-1\TFT_eSPI\TFT_Drivers\GC9A01_Rotation.h" with 
+  the provided file "GC9A01_Rotation.h".
 
   Last updated 2022-11-06, ThJ <yellobyte@bluewin.ch>
 */
