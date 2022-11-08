@@ -262,7 +262,7 @@ esptool.py v4.2.1
 Serial port COM4
 Connecting...............................................
 ```
-Finally Esptool gives up and prints an error message. This happens sometimes with various dev boards but always with the original ESP32-T dev board equipped with an ESP32-Bit module (shown below). Which is very annoying for it is a slim board, can be equipped with different EP32 modules and therefore I have a preference for it and use it in many projects.
+Finally Esptool gives up and prints an error message. This happens sometimes with various dev boards but always with the original ESP32-T dev board equipped with an ESP32-Bit module (shown below). Which is very annoying for it is a slim board, can be equipped with different ESP32 modules and therefore I have a preference for it and use it in many projects.
 
 Looking at the signals EN & IO0 the idea came up to delay the reset signal a bit. I gave it a try and soldered a small capacitor of 100nF between EN & GND. This did the trick. Now the automatic software upload with Esptool works flawlessly on all modified ESP32-T boards. Maybe this solution might help with other renitent boards.
 
