@@ -1,3 +1,4 @@
+from os.path import expanduser
 Import("env")
 env.AddCustomTarget(
     name="envdump",
@@ -17,11 +18,12 @@ env.AddCustomTarget(
     title="Prune System",
     description="Prune System"
 )
+cmd1 = "python.exe " + expanduser("~") + "\.platformio\packages\\tool-esptoolpy\espefuse.py --port $UPLOAD_PORT summary"
 env.AddCustomTarget(
     name="fuses-summary",
     dependencies=None,
     actions=[
-        "python.exe c:/Users/tj/.platformio/packages/tool-esptoolpy/espefuse.py --port COM4 summary",
+        cmd1
     ],
     title="Fuses Summary",
     description="Fuses Summary"
