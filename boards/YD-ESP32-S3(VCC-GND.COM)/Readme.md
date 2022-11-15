@@ -4,7 +4,7 @@ Other variants e.g. with 16MB Flash/8MB PSRAM (-N16R8), 8MB Flash/8MB PSRAM (-N8
 ![](doc/YD-ESP32-S3_DevBoard2.jpg)
 
 **Important:**  
-The USB2 socket is connected directly to the ESP32-S3 chip. Therefore when resetting the board a to USB2 connected PC/Laptop will temporarily lose connection (the associated COM port will disappear for a second or two). This might confuse some terminal programs.  
+The USB2 socket is connected directly to the ESP32-S3 chip. Therefore when resetting the board a PC/Laptop connected to USB2 might temporarily lose connection (the associated COM port can disappear for a second or two). This might confuse some terminal programs.  
 
 With both USB ports connected simultaneously you will see 2 COM ports and a usb device "USB JTAG/serial debug unit".  
 
