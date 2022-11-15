@@ -1,5 +1,5 @@
 The development board "YD-ESP32-S3-N8R2 is a  ESP32-S3-DevKitC-1 clone and features two USB-C sockets, 8MB Flash, 2MB PSRAM, abundant GPIO pins, one WS2812B RGB-LED and WiFi/BT5LE.  
-Other variants e.g. with 16MB Flash/8MB PSRAM (-N16R8), 8MB Flash/8MB PSRAM (-N8R8) and many [more](doc/YD-ESP32-S3_DevBoard_Variants.jpg) are available as well.
+Other variants e.g. with 16MB Flash/8MB PSRAM (-N16R8), 8MB Flash/8MB PSRAM (-N8R8) and many [more](doc/YD-ESP32-S3_DevBoard_Variants.JPG) are available as well.
 
 ![](doc/YD-ESP32-S3_DevBoard2.jpg)
 
