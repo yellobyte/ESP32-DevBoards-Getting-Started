@@ -20,7 +20,7 @@ For loading, editing and uploading an example just start VSCode/PlatformIO, go t
 
 Right now examples are provided for the following boards:
 
-- [ESP32-DevKit-V1](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/ESP32-DevKit-V1(Espressif)) (orig. Manufacturer: Espressif, DOIT)  
+- [ESP32-DevKit-V1](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/ESP32-DevKit-V1(Espressif)) (orig. Manufacturer: Espressif, DOIT) and it's various clones  
 <p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/ESP32-DevKit-V1(Espressif)/doc/ESP32-Devkit-V1.jpg" height="160"/></p>  
 
 - [ESP32-CAM, ESP32-CAM-USB and ESP32-CAM-MB](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/ESP32-CAM(AI-THINKER)) (orig. Manufacturer: AI-THINKER)
