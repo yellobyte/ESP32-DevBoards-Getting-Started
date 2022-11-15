@@ -10,7 +10,7 @@ With both USB ports connected simultaneously you will see 2 COM ports and a usb 
 
 The PlatformIO builder scripts (*.json) for modules containing ESP32-S3/C3 should already define the build flag ARDUINO_USB_MODE=1. It disables the USB-OTG mode. If not (or you want to override it) you can (re-)define it in your platformio.ini control file. Normally you don't have to worry about it.
 
-Serial output can be directed to USB1 or USB2. A single build flag in platformio.ini defines the USB port it goes to:
+Serial output generated with Serial.print() can be directed to USB1 or USB2. A single build flag in platformio.ini defines the USB port it goes to:
 - **ARDUINO_USB_CDC_ON_BOOT=0**, serial output --> USB1
 - **ARDUINO_USB_CDC_ON_BOOT=1**, serial output --> USB2
 
