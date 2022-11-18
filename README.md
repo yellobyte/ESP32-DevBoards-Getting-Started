@@ -110,15 +110,21 @@ board_build.partitions = partitions_custom.csv
 extra_scripts = add_tasks.py
 ```
 
-### :information_source: Resetting the board and uploading software via USB
+## :information_source: Resetting the board and uploading software via USB
 
 The easiest way to reset an ESP32 dev board is to press the **reset button** (mostly labeled **RST** or **EN**). The easiest way to put the ESP32 into flash or upload mode is to press and release the reset button while holding down the button which selects the ESP32 boot mode (mostly labeled **BOOT**, **PRG** or **IO0**).
 
 But have you ever wondered why your dev board sometimes is resetting when you start the Serial Monitor task and your development environment (PlatformIO or Arduino IDE) performs a successful software upload to the ESP32 and resets the board afterwards without prompting to press any button ? 
 
-Almost each ESP32 dev board contains a 2 transistor circuit which is used to reset the ESP32 chip or put it in boot mode. Function and design is explained [here](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/reset_and_software_upload).
+Almost each ESP32 dev board contains a 2 transistor circuit which is used to auto reset the ESP32 chip or put it in boot mode. Function and design is explained [here](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/reset_and_software_upload).
 
 
-### :information_source: Debugging a program 
+## :information_source: Debugging a program 
 
-Under construction.
+The ESP32 toolchain features a GNU online debugger (GDB). For debugging programs running on the ESP32 the GDB only needs access to the JTAG pins on the ESP32. This is normally done with a small JTAG adapter/tool with a USB and a JTAG port sitting inbetween the computer running the GDB and the ESP32 dev board.
+
+<p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/debugging/Debugging_with_JTAG_adapter.jpg" height="180"/></p>
+
+Since the release of the ESP32-S3 with builtin JTAG adapter debugging without external adapter has become possible. All one need is an ESP32-S3 dev board with two USB ports, like the YD-ESP32-S3 dev board as shown above.
+
+More infos to debugging the ESP32 is shown [here](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/debugging).

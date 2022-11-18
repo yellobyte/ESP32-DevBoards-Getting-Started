@@ -1,4 +1,4 @@
-# Resetting the board and uploading software via USB
+# Auto resetting the board and uploading software via USB
 
 Almost every ESP32 dev board with an USB port hosts a little but nevertheless sophisticated circuitry which is located between the USB-to-UART bridge chip (usually CP2102, FT232 or CH340) and the ESP32. Such a chip has a lot of pins, the 4 most important ones are called **TX** (output, for data sent from PC to the ESP32), **RX** (input, for data sent from ESP32 to the PC), **DTR** (output, legacy "Data Terminal Ready") and **RTS** (output, legacy "Request To Send"). Back in the computer stone age the signals DTR & RTS (among others) were used to control the connection between Computers/Terminals and analog modems.
 
