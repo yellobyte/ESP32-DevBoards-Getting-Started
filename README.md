@@ -116,7 +116,7 @@ The easiest way to reset an ESP32 dev board is to press the **reset button** (mo
 
 But have you ever wondered why your dev board sometimes is resetting when you start the Serial Monitor task and your development environment (PlatformIO or Arduino IDE) performs a successful software upload to the ESP32 and resets the board afterwards without prompting to press any button ? 
 
-Almost each ESP32 dev board contains a 2 transistor circuit which is used to auto reset the ESP32 chip or put it in boot mode. 
+Almost each ESP32 dev board contains a 2 transistor circuit which enables any IDE to auto reset the ESP32 chip or put it in boot mode. 
 
 <p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/reset_and_software_upload/ESP32_reset_and_upload_circuitry_only.jpg" height="180"/></p>
 
