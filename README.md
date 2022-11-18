@@ -118,7 +118,7 @@ But have you ever wondered why your dev board sometimes is resetting when you st
 
 Almost each ESP32 dev board contains a 2 transistor circuit which is used to auto reset the ESP32 chip or put it in boot mode. 
 
-<p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/debugging/ESP32_reset_and_upload_circuitry_only.jpg" height="180"/></p>
+<p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/reset_and_software_upload/ESP32_reset_and_upload_circuitry_only.jpg" height="180"/></p>
 
 Function and design is explained [here](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/reset_and_software_upload).
 
