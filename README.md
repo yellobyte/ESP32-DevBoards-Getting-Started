@@ -120,7 +120,7 @@ Almost each ESP32 dev board contains a 2 transistor circuit which enables any ID
 
 <p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/reset_and_software_upload/ESP32_reset_and_upload_circuitry_only.jpg" height="180"/></p>
 
-Function and design is explained [here](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/reset_and_software_upload).
+Function and design of this little circuitry is explained in detail [here](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/reset_and_software_upload).
 
 
 ## :information_source: Debugging a program 
