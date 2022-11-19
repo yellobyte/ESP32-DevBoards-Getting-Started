@@ -125,11 +125,10 @@ Function and design of this little circuitry is explained in detail [here](https
 
 ## :information_source: Debugging a program 
 
-The ESP32 toolchain features a GNU online debugger (GDB). For debugging programs running on the ESP32 the GDB only needs access to the JTAG pins on the ESP32. This is normally done with a small JTAG adapter/tool with a USB and a JTAG port sitting between the computer running the GDB and the ESP32 dev board.
+The ESP32 toolchain features a GNU online debugger (GDB). GDB relies on another task running in the background called OpenOCD (Online-Chip-Debugger for ESP32). This task interacts via USB with an external JTAG adapter (e.g. ESP32-Prog module) which finally is connected to the ESP32 JTAG pins. 
 
-<p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/debugging/Debugging_with_JTAG_adapter.jpg" height="180"/></p>
+In contrast, the newer ESP32-S3 chip has a builtin JTAG adapter and when attached to a dedicated USB port on a dev board (e.g. YD-ESP32-S3 dev board with two USB sockets) then no external JTAG adapter is needed anymore.
 
-Good news:  
-Since the release of the ESP32-S3 with builtin JTAG adapter debugging without external adapter has become possible. All one need is an ESP32-S3 dev board with two USB ports, like the YD-ESP32-S3 dev board as shown above.
+<p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/debugging/Debugging_with_JTAG_adapter-block-diagram.jpg" height="180"/></p>
 
-More infos about debugging the ESP32 is shown [here](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/debugging).
+More infos about debugging the ESP32 are shown in folder [debugging](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/debugging).
