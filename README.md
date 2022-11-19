@@ -133,6 +133,6 @@ This JTAG adapter can be
 
 A general introduction to JTAG debugging is given on Espressif's webpage [**JTAG Debugging**](https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-guides/jtag-debugging/index.html).  The picture below is taken from it.
 
-<p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/debugging/Debugging_with_JTAG_adapter-block-diagram.jpg" height="300"/></p>
+<p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/debugging/Debugging_with_JTAG_adapter-block-diagram.jpg" height="350"/></p>
 
 Some practical hints on how to get started with debugging (based on my personal experiences) have been put together in folder [**debugging**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/debugging).
