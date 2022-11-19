@@ -128,7 +128,7 @@ Function and design of this little circuitry is explained in detail in folder [*
 The ESP32 toolchain features a GNU online debugger (GDB). GDB relies on another task running in the background called OpenOCD (Online-Chip-Debugger for ESP32). This task interacts via USB with an JTAG adapter.
 
 This JTAG adapter can be 
-- a separate external hardware (e.g. ESP32-Prog module) which is connected to the ESP32 JTAG pins, or
+- a separate external hardware (e.g. [ESP32-Prog module](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/debugging/JTAG%20adapter%20docs/ESP-Prog.jpg)) which is connected to the ESP32 JTAG pins, or
 - integrated into the ESP32 chip itself (e.g ESP32-S3 with builtin JTAG adapter) 
 
 A general introduction to JTAG debugging is given on Espressifs webpage [**JTAG Debugging**](https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-guides/jtag-debugging/index.html).  The picture below is taken from it.
