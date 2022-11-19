@@ -54,11 +54,11 @@ VSCode/PlatformIO provides some major advantages over the Arduino IDE:
 
 Freshly released boards with special features (e.g. more Flash, additional PSRAM, exotic display) are sometimes only fully supported by the ESP32 development framework after being added to its official ESP32 board list! Normally this quickly happens but in rare cases this might take weeks/month or does not happen at all. If your particular board is not (yet) on the board list and you want to start programming it anyway then in platformio.ini select another, already known board from the list which preferably is similar in features to your new board and you should be good to go.  
 
-In this case, be aware, you might not be able to fully utilize every board feature and build logs might report incorrect port numbers, memory sizes, etc. Provided example [Test-ESP32-S3-1.9inch_RAM-PSRAM](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/ESP32-S3-1.9-Display-DevBoard(LILYGO)/examples/Test-ESP32-S3-1.9inch_RAM-PSRAM) demonstrates how to reveal the true memory sizes of an ESP32 development board. Have a look at this example's files _Build.log_ & _Serial_Output.log_ to see above mentioned discrepancies.
+In this case, be aware, you might not be able to fully utilize every board feature and build logs might report incorrect port numbers, memory sizes, etc. Provided example [**Test-ESP32-S3-1.9inch_RAM-PSRAM**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/ESP32-S3-1.9-Display-DevBoard(LILYGO)/examples/Test-ESP32-S3-1.9inch_RAM-PSRAM) demonstrates how to reveal the true memory sizes of an ESP32 development board. Have a look at this example's files _Build.log_ & _Serial_Output.log_ to see above mentioned discrepancies.
 
 ### :zap: Useful settings in platformio.ini
 
-The project configuration file has sections (each denoted by a [header]) and one or multiple key/value pairs within the sections. Lines beginning with ";" are ignored and may be used to provide comments. The file platformio.ini is explained in more detail [here](https://docs.platformio.org/en/stable/projectconf/index.html). 
+The project configuration file has sections (each denoted by a [header]) and one or multiple key/value pairs within the sections. Lines beginning with ";" are ignored and may be used to provide comments. The file platformio.ini is explained in more detail [**here**](https://docs.platformio.org/en/stable/projectconf/index.html). 
 
 **Important:** Different examples might require different build options, so always have a look at the platformio.ini file for relevant infos.
 
@@ -120,7 +120,7 @@ Almost each ESP32 dev board contains a 2 transistor circuit which enables any ID
 
 <p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/reset_and_software_upload/ESP32_reset_and_upload_circuitry_only.jpg" height="180"/></p>
 
-Function and design of this little circuitry is explained in detail in folder [reset_and_software_upload](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/reset_and_software_upload).
+Function and design of this little circuitry is explained in detail in folder [**reset_and_software_upload**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/reset_and_software_upload).
 
 
 ## :information_source: Debugging a program 
@@ -131,8 +131,8 @@ This JTAG adapter can be
 - a separate external hardware (e.g. ESP32-Prog module) which is connected to the ESP32 JTAG pins, or
 - integrated into the ESP32 chip itself (e.g ESP32-S3 with builtin JTAG adapter) 
 
-A general introduction to JTAG debugging is given on Espressifs website [JTAG Debugging](https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-guides/jtag-debugging/index.html).  The picture below is taken from it.
+A general introduction to JTAG debugging is given on Espressifs webpage [**JTAG Debugging**](https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-guides/jtag-debugging/index.html).  The picture below is taken from it.
 
-<p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/debugging/Debugging_with_JTAG_adapter-block-diagram.jpg" height="270"/></p>
+<p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/debugging/Debugging_with_JTAG_adapter-block-diagram.jpg" height="300"/></p>
 
-A short summary of my personal experiences with debugging ESP32 boards I put together in folder [debugging](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/debugging).
+Some infos on how to get started with debugging (based on my personal experiences) I have put together in folder [**debugging**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/debugging).
