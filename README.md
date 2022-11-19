@@ -135,4 +135,4 @@ A general introduction to JTAG debugging is given on Espressif's webpage [**JTAG
 
 <p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/debugging/Debugging_with_JTAG_adapter-block-diagram.jpg" height="350"/></p>
 
-Some practical hints on how to get started with debugging (based on my personal experiences) have been put together in folder [**debugging**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/debugging).
+Some **practical hints** on how to get started with debugging esp. with **ESP32-S3's builtin JTAG adapter** I have put together in folder [**debugging**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/debugging).
