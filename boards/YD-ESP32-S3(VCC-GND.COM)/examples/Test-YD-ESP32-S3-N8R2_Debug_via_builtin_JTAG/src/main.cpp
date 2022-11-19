@@ -1,9 +1,9 @@
 /*
   Test Debug
 
-  Test of YD-ESP32-S3_DevBoard (Manufactorer VCC-GND.COM) 2nd USB-C port (JTAG Debug).
+  Debugging a program running on a YD-ESP32-S3 dev board via ESP32-S3's builtin JTAG adapter.
 
-  Last updated 2022-11-28, ThJ <yellobyte@bluewin.ch>
+  Last updated 2022-11-19, ThJ <yellobyte@bluewin.ch>
 */
 
 #include <Arduino.h>
@@ -18,7 +18,7 @@ void setup() {
   Serial.begin(115200);
   delay(2000);
   Serial.println();
-  Serial.println("--> Sketch started: Debug YD-ESP32-S3-N8R2 (DevKitC-1) module:"); 
+  Serial.println("--> Sketch started: Debugging program running on YD-ESP32-S3-N8R2 module:"); 
 }
 
 void loop() {
