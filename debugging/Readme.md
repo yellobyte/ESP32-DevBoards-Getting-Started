@@ -6,9 +6,9 @@ ESP32-S3 dev boards featuring two USB ports can be debugged without usage of an 
 
 <p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/debugging/Debugging_via_2nd_USB_port.jpg" height="200"/></p>  
 
-With both USB ports connected you see two additional COM ports and a usb device "USB JTAG/serial debug unit". The driver "WinUSB(libwdi) needs to be assigned to it.
+With both USB ports connected you see two additional COM ports and a usb device "USB JTAG/serial debug unit".
 
-### b) Replace driver for "USB JTAG/serial debug" unit:  
+### b) Replace driver for device "USB JTAG/serial debug unit":  
 Initially Windows assigns a generic driver to it. It must be replaced with the **libwdi** driver (ex WinUSB). There are two ways to do it:
 - by using the well known **Zadig** tool and choosing the device "USB JTAG/serial debug unit (Interface 2)" or 
 - by replacing the default driver with the one from the provided  [**zip file**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/debugging/JTAG%20adapter%20driver) (containing the original Espressif driver). Under Windows just start device manager, right click on the device and select "driver update" -> "Search for driver on my PC" and perform the usual steps.
