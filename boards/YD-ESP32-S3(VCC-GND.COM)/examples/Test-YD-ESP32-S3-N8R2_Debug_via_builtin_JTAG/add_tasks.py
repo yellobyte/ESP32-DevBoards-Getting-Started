@@ -36,5 +36,5 @@ env.AddCustomTarget(
         cmd2
     ],
     title="Start OpenOCD",
-    description="Start the Open On-Chip Debugger (OpenOCD) background task"
+    description="Start the Open On-Chip-Debugger (OpenOCD) background task"
 )
