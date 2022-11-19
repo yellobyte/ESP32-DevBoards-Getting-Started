@@ -120,15 +120,19 @@ Almost each ESP32 dev board contains a 2 transistor circuit which enables any ID
 
 <p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/reset_and_software_upload/ESP32_reset_and_upload_circuitry_only.jpg" height="180"/></p>
 
-Function and design of this little circuitry is explained in detail [here](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/reset_and_software_upload).
+Function and design of this little circuitry is explained in detail in folder [reset_and_software_upload](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/reset_and_software_upload).
 
 
 ## :information_source: Debugging a program 
 
-The ESP32 toolchain features a GNU online debugger (GDB). GDB relies on another task running in the background called OpenOCD (Online-Chip-Debugger for ESP32). This task interacts via USB with an external JTAG adapter (e.g. ESP32-Prog module) which finally is connected to the ESP32 JTAG pins. 
+The ESP32 toolchain features a GNU online debugger (GDB). GDB relies on another task running in the background called OpenOCD (Online-Chip-Debugger for ESP32). This task interacts via USB with an JTAG adapter.
 
-In contrast, the newer ESP32-S3 chip has a builtin JTAG adapter and when attached to a dedicated USB port on a dev board (e.g. YD-ESP32-S3 dev board with two USB sockets) then no external JTAG adapter is needed anymore.
+This JTAG adapter can be 
+- a separate external hardware (e.g. ESP32-Prog module) which is connected to the ESP32 JTAG pins, or
+- integrated into the ESP32 chip itself (e.g ESP32-S3 with builtin JTAG adapter) 
 
-<p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/debugging/Debugging_with_JTAG_adapter-block-diagram.jpg" height="180"/></p>
+A general introduction to JTAG debugging is given on Espressifs website [JTAG Debugging](https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-guides/jtag-debugging/index.html).  The picture below is taken from it.
 
-More infos about debugging the ESP32 are shown in folder [debugging](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/debugging).
+<p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/debugging/Debugging_with_JTAG_adapter-block-diagram.jpg" height="270"/></p>
+
+A short summary of my personal experiences with debugging ESP32 boards I put together in folder [debugging](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/debugging).
