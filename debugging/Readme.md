@@ -79,7 +79,7 @@ Info : Listening on port 3333 for gdb connections
 Above lines state that OpenOCD connected successfully to the ESP32-S3 JTAG interface, identified 2 cores, stopped the target chip and started listening for incoming GDB connections on tcp port 3333.  
 Having a look at the task manager right now shows that the OpenOCD task is running and the GDB task is still not. 
 
-### e) Start debugging:
+### e) Start the GDB:
 Press PlatformIO -> Run -> Start Debugging or simply press F5. This will start the GDB and the actual ESP32 debugging session begins.  
 
 The "Start OpenOCD (debug) task" terminal shows the interaction between GDB and OpenOCD and gives you an idea whats going on:
