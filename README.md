@@ -131,8 +131,8 @@ This JTAG adapter can be
 - a separate external hardware (e.g. [ESP32-Prog module](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/debugging/JTAG%20adapter%20docs/ESP-Prog.jpg)) which is connected to the ESP32 JTAG pins, or
 - integrated into the ESP32 chip itself (e.g ESP32-S3 with builtin JTAG adapter) 
 
-A general introduction to JTAG debugging is given on Espressifs webpage [**JTAG Debugging**](https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-guides/jtag-debugging/index.html).  The picture below is taken from it.
+A general introduction to JTAG debugging is given on Espressif's webpage [**JTAG Debugging**](https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-guides/jtag-debugging/index.html).  The picture below is taken from it.
 
 <p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/debugging/Debugging_with_JTAG_adapter-block-diagram.jpg" height="300"/></p>
 
-Some infos on how to get started with debugging (based on my personal experiences) I have put together in folder [**debugging**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/debugging).
+Some practical hints on how to get started with debugging (based on my personal experiences) have been put together in folder [**debugging**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/debugging).
