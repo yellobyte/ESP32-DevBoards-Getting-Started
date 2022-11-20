@@ -19,8 +19,7 @@ After successfully installing the driver view the device properties and check if
 
 ![](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/debugging/Installation_WinUSB_for_builtin_JTAG_espressif_driver.jpg)
 
-### c) Add below lines to the [env:debug] section of the project's platformio.ini file: 
-This requests OpenOCD tool be installed (if it's still missing) and sets the proper values for debugging.
+### c) Add below lines to the corresponding [env:.....] section of the project's platformio.ini file: 
 ```
 [env:debug]
 platform_packages = platformio/tool-openocd
@@ -59,7 +58,7 @@ Now one of the new "USB Serial Ports" will have disappeared and a **new USB devi
 
 <p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/debugging/ESP-Prog_wiring_to_ESP32_dev_board.jpg" height="500"/></p>
 
-### d) Add below lines to the [env:debug] section of the project's platformio.ini file: 
+### d) Add below lines to the corresponding [env:.....] section of the project's platformio.ini file: 
 ```
 [env:debug]
 platform_packages = platformio/tool-openocd
