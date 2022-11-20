@@ -1,4 +1,4 @@
-# Required preparations for online debugging a ESP32 board:
+# Required preparations for online debugging an ESP32 board:
 
 ## Scenario 1: Debugging an ESP32-S3 via builtin JTAG adapter:
 
