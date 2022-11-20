@@ -8,12 +8,12 @@ ESP32-S3 dev boards featuring two USB ports can be debugged without usage of an 
 
 <p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/debugging/Debugging_via_2nd_USB_port.jpg" height="300"/></p>  
 
-With both USB ports connected you see two additional COM ports and a usb device "USB JTAG/serial debug unit". Your operating system might automatically assign a default driver to it. In most cases it's the wrong one and useless for our purposes.
+With both USB ports connected you see two additional "USB Serial Ports" and a usb device "USB JTAG/serial debug unit". Your operating system might automatically assign a default driver to it. In most cases it's the wrong one and useless for our purposes.
 
 ### b) Assign libwdi driver to device "USB JTAG/serial debug unit":  
 A special driver called **libwdi** (ex WinUSB) needs to be assigned to the device. There are two ways to do it:
-- by using the well known **Zadig** tool and choosing the device "USB JTAG/serial debug unit (Interface 2)" or 
-- by replacing the default driver with the one from the provided  [**zip file**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/debugging/JTAG%20adapter%20driver) (containing the original Espressif driver). Unzip the file content into a temporary folder and perform the necessary steps to install the driver. Under Windows just start device manager, right click on the device and select "driver update" -> "Search for driver on my PC" and select the just created temp folder.
+- by using the well known **Zadig** tool, selecting the device "USB JTAG/serial debug unit (Interface 2)" and hitting the "Replace Driver" button or 
+- by replacing the default driver with the one from the provided  [**zip file**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/debugging/JTAG%20adapter%20driver) (containing the original Espressif driver). In this case you need to unzip the file content into a temporary folder and perform the necessary steps to install the driver. Under Windows just start device manager, right click on the device and select "Update Driver" -> "Search for driver on my PC" and select the just created temp folder.
 
 After successfully installing the driver view the device properties and check if the driver has been assigned ok. As an example, on my Windows PC it looks like this:
 
