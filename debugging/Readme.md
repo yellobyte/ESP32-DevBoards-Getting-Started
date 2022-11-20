@@ -15,7 +15,7 @@ A special driver called **libwdi** (ex WinUSB) needs to be assigned to the devic
 - by using the well known **Zadig** tool and choosing the device "USB JTAG/serial debug unit (Interface 2)" or 
 - by replacing the default driver with the one from the provided  [**zip file**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/debugging/JTAG%20adapter%20driver) (containing the original Espressif driver). Unzip the file content into a temporary folder and perform the necessary steps to install the driver. Under Windows just start device manager, right click on the device and select "driver update" -> "Search for driver on my PC" and select the just created temp folder.
 
-After successfully installing the driver view the device properties and check if the driver has been assigned ok. On Windows it should look like this:
+After successfully installing the driver view the device properties and check if the driver has been assigned ok. As an example, on my Windows PC it looks like this:
 
 ![](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/debugging/Installation_WinUSB_for_builtin_JTAG_espressif_driver.jpg)
 
