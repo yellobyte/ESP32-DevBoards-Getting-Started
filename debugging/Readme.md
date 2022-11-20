@@ -46,12 +46,14 @@ A widely used and affordabale external JTAG adapter is Espressif's own developme
 Espressifs own webpage [ESP32-Prog Reference]( https://espressif-docs.readthedocs-hosted.com/projects/espressif-esp-iot-solution/en/latest/hw-reference/ESP-Prog_guide.html) provides a very comprehensive introduction to the ESP32-Prog adapter. Above picture has been taken from there.
 
 ### a) Connect the ESP32-Prog adapter to the computer:
-A new and unknown device will appear "Dual RS232-HS ......".
+After a few seconds two new "USB Serial Ports" are supposed to show up.
 
 ### b) Assign libwdi driver to device "Dual RS232-HS (Interface 0)":  
-A special driver called **libwdi** (ex WinUSB) needs to be assigned to the device.  
+A special driver called **libwdi** (ex WinUSB) needs to be assigned to the ESP32-Prog JTAG adapter .  
 
-Easiest way is to use the **Zadig** tool. Start it as Administrator, activate "Show all devices" and a list of various devices should bee seen.  Choose the device "Dual RS232-HS (Interface 0)", select "WinUSB (v6.1.7600.16385)" and hit the button "Replace Driver".
+Easiest way is to use the **Zadig** tool. Start it as Administrator and tick Options -> "List All devices". Now in the pull-down list a number of devices should be visible, including "Dual RS232-HS (Interface 0)". Select it, choose "WinUSB (v6.1.7600.16385)" and hit the button "Replace Driver". After a while a success message should pop up.  
+
+Now one of the new "USB Serial Ports" will have disappeared and a **new USB device** should have surfaced: **Dual RS232-HS**.
 
 ### c) Connect the ESP32-Prog adapter to the ESP32 target board as shown below:
 
