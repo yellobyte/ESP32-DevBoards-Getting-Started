@@ -6,7 +6,7 @@ ESP32-S3 dev boards featuring two USB ports can be debugged without usage of an 
 
 ### a) Connect both USB ports on the dev board with the computer:  
 
-<p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/debugging/Debugging_via_2nd_USB_port.jpg" height="250"/></p>  
+<p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/debugging/Debugging_via_2nd_USB_port.jpg" height="260"/></p>  
 
 With both USB ports connected you see two additional COM ports and a usb device "USB JTAG/serial debug unit". Your operating system might automatically assign a default driver to it. In most cases it's the wrong one and useless for our purposes.
 
@@ -41,7 +41,7 @@ Debugging an ESP32 development board featuring only one USB port for flushing an
 
 A widely used and affordabale external JTAG adapter is Espressif's own development and debugging tool **ESP32-Prog**. This JTAG adapter connects to the computer via USB and on the other side via it's JTAG connector to the four ESP32 JTAG pins (TDO, TDI, TCK, TMS) and usually dev board GND.
 
-<p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/debugging/JTAG adapter docs/ESP-Prog.jpg" height="280"/></p>
+<p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/debugging/JTAG adapter docs/ESP-Prog.jpg" height="300"/></p>
 
 Espressifs own webpage [ESP32-Prog Reference]( https://espressif-docs.readthedocs-hosted.com/projects/espressif-esp-iot-solution/en/latest/hw-reference/ESP-Prog_guide.html) provides a very comprehensive introduction to the ESP32-Prog adapter. Above picture has been taken from there.
 
