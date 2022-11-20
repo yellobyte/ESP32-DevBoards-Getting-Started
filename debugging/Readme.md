@@ -1,8 +1,8 @@
-# Required preparations for debugging an ESP32 board:
+# Required preparations for online debugging a ESP32 board:
 
 ## Scenario 1: Debugging an ESP32-S3 via builtin JTAG adapter:
 
-ESP32-S3 dev boards featuring two USB ports can be debugged without usage of an external JTAG adapter (e.g. ESP32-Prog). Therefore the preparation for online debugging is quickly done:
+ESP32-S3 dev boards featuring two USB ports can be debugged without usage of an external JTAG adapter (e.g. ESP32-Prog). Only a few steps need to be done:
 
 ### a) Connect both USB ports on the dev board with the computer:  
 
