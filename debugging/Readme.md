@@ -46,7 +46,7 @@ A widely used and affordabale external JTAG adapter is Espressif's own developme
 Espressifs own webpage [ESP32-Prog Reference]( https://espressif-docs.readthedocs-hosted.com/projects/espressif-esp-iot-solution/en/latest/hw-reference/ESP-Prog_guide.html) provides a very comprehensive introduction to the ESP32-Prog adapter. Above picture has been taken from there.
 
 ### a) Connect the ESP32-Prog adapter to the computer:
-A new and unknown device will appear "Dual RS232-HS (Interface 0)".
+A new and unknown device will appear "Dual RS232-HS ......".
 
 ### b) Assign libwdi driver to device "Dual RS232-HS (Interface 0)":  
 A special driver called **libwdi** (ex WinUSB) needs to be assigned to the device.  
