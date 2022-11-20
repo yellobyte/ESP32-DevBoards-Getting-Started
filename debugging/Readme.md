@@ -6,7 +6,7 @@ ESP32-S3 dev boards featuring two USB ports can be debugged without usage of an 
 
 ### a) Connect both USB ports with the computer:  
 
-<p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/debugging/Debugging_via_2nd_USB_port.jpg" height="260"/></p>  
+<p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/debugging/Debugging_via_2nd_USB_port.jpg" height="300"/></p>  
 
 With both USB ports connected you see two additional COM ports and a usb device "USB JTAG/serial debug unit". Your operating system might automatically assign a default driver to it. In most cases it's the wrong one and useless for our purposes.
 
