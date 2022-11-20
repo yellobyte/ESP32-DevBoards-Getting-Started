@@ -4,7 +4,7 @@
 
 ESP32-S3 dev boards featuring two USB ports can be debugged without usage of an external JTAG adapter (e.g. ESP32-Prog). Only a few steps need to be done:
 
-### a) Connect both USB ports on the dev board with the computer:  
+### a) Connect both USB ports with the computer:  
 
 <p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/debugging/Debugging_via_2nd_USB_port.jpg" height="260"/></p>  
 
