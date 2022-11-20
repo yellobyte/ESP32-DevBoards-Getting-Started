@@ -78,10 +78,9 @@ The alternative way is to prepare a script file with above command and then add 
 With this done you only need to hit the respective entry under "PlatformIO -> PROJECT TASKS -> Custom" every time you want to start OpenOCD. Have a look at the file [**add_tasks.py**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/blob/main/boards/YD-ESP32-S3(VCC-GND.COM)/examples/Test-YD-ESP32-S3-N8R2_Debug_via_builtin_JTAG/add_tasks.py) in the examples root directory for further details.
 
 **Important:**  
-The automatically created "Start OpenOCD (debug) task" terminal logs errors, warnings and basic infos while OpenOCD is starting up and running.   
-If any errors show up indicating a problem with OpenOCD or with it's actions performed then I urge you to find the problems and fix them, otherwise you definitely will come a gutser later on.
+The automatically created "Start OpenOCD (debug) task" terminal logs errors, warnings and basic infos while OpenOCD is starting up and running. If errors show up indicating a problem with OpenOCD then I urge you to find the problems and fix them, otherwise you definitely will come a gutser later on.
 
-A successful start of OpenOCD without any errors is shown below:
+An example for a successful start of OpenOCD without any errors is shown below:
 ```
 Executing task: C:\Users\tj\.platformio\penv\Scripts\platformio.exe run --target openocd --environment debug 
 
