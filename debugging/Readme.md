@@ -1,23 +1,25 @@
-## 1. Debugging an ESP32-S3 with builtin JTAG adapter:
+# Required preparations for debugging an ESP32 board:
 
-ESP32-S3 dev boards featuring two USB ports can be debugged without usage of an external JTAG adapter (e.g. ESP32-Prog). Therefore the preparation for online debugging is easy:
+## Scenario 1: Debugging an ESP32-S3 via builtin JTAG adapter:
+
+ESP32-S3 dev boards featuring two USB ports can be debugged without usage of an external JTAG adapter (e.g. ESP32-Prog). Therefore the preparation for online debugging is quickly done:
 
 ### a) Connect both USB ports on the dev board with the computer:  
 
 <p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/debugging/Debugging_via_2nd_USB_port.jpg" height="200"/></p>  
 
-With both USB ports connected you see two additional COM ports and a usb device "USB JTAG/serial debug unit".
+With both USB ports connected you see two additional COM ports and a usb device "USB JTAG/serial debug unit". Your operating system might automatically assign a default driver to it. In most cases it's the wrong one and useless for our purposes.
 
-### b) Replace driver for device "USB JTAG/serial debug unit":  
-Initially Windows assigns a generic driver to it. It must be replaced with the **libwdi** driver (ex WinUSB). There are two ways to do it:
+### b) Assign libwdi driver to device "USB JTAG/serial debug unit":  
+A special driver called **libwdi** (ex WinUSB) needs to be assigned to the device. There are two ways to do it:
 - by using the well known **Zadig** tool and choosing the device "USB JTAG/serial debug unit (Interface 2)" or 
-- by replacing the default driver with the one from the provided  [**zip file**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/debugging/JTAG%20adapter%20driver) (containing the original Espressif driver). Under Windows just start device manager, right click on the device and select "driver update" -> "Search for driver on my PC" and perform the usual steps.
+- by replacing the default driver with the one from the provided  [**zip file**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/debugging/JTAG%20adapter%20driver) (containing the original Espressif driver). Unzip the file content into a temporary folder and perform the necessary steps to install the driver. Under Windows just start device manager, right click on the device and select "driver update" -> "Search for driver on my PC" and select the just created temp folder.
 
-After successfully installing the driver the device properties should look like this on Windows:
+After successfully installing the driver view the device properties and check if the driver has been assigned ok. On Windows it should look like this:
 
 ![](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/debugging/Installation_WinUSB_for_builtin_JTAG_espressif_driver.jpg)
 
-### c) Now add a few needed lines to the [env:debug] section of the project's platformio.ini file. 
+### c) Add a few needed lines to the [env:debug] section of the project's platformio.ini file: 
 This requests OpenOCD tool be installed (if it's still missing) and sets the proper values for debugging.
 ```
 [env:debug]
@@ -33,16 +35,45 @@ build_type = debug
 ```
 Have a look at the platformio.ini file of this [**example**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/YD-ESP32-S3(VCC-GND.COM)/examples/Test-YD-ESP32-S3-N8R2_Debug_via_builtin_JTAG) to get more info.
 
-### d) Start the OpenOCD task:
-GDB needs the OpenOCD task to run in the background before debugging can be started. Simplest way to start OpenOCD is to open a PlatformIO CLI window and enter the command:  
+## Scenario 2: Debugging an ESP32 using the external JTAG adapter "ESP32-Prog":
+
+Debugging an ESP32 development board featuring only one USB port for flushing and serial output requires an external JTAG adapter. 
+
+A widely used and affordabale external JTAG adapter is Espressif's own development and debugging tool **ESP32-Prog**. This JTAG adapter connects to the computer via USB and on the other side via it's JTAG connector to the four ESP32 JTAG pins (TDO, TDI, TCK, TMS) and usually dev board GND.
+
+<p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/debugging/JTAG adapter docs/ESP-Prog.jpg" height="280"/></p>
+
+Espressifs own webpage [ESP32-Prog Reference]( https://espressif-docs.readthedocs-hosted.com/projects/espressif-esp-iot-solution/en/latest/hw-reference/ESP-Prog_guide.html) provides a very comprehensive introduction to the ESP32-Prog adapter. Above picture has been taken from there.
+
+### a) Connect the ESP32-Prog adapter to the ESP32 target board as shown below:
+
+<p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/debugging/ESP-Prog_wiring_to_ESP32_dev_board.jpg" height="350"/></p>
+
+### d) Add some needed lines to the [env:debug] section of the project's platformio.ini file: 
+```
+[env:debug]
+platform_packages = platformio/tool-openocd
+; tells the debugger which JTAG adapter is used
+debug_tool = esp-prog
+; sets an initial breakpoint at setup()
+debug_init_break = tbreak setup
+; sets an initial breakpoint at loop()
+;debug_init_break = break loop
+build_type = debug
+```
+
+# Start the OpenOCD task:
+GDB needs the OpenOCD task to run in the background before debugging can be started. It connects GDB with the various JTAG adapters and seems to acts as an abstraction layer. Simplest way to start OpenOCD is entering the following command in a PlatformIO CLI window:  
 &nbsp;&nbsp;&nbsp;&nbsp; $ pio run --target openocd --environment debug  
  
 The alternative way is to prepare a script file with above command and then add an entry "extra_scripts = name_of_script_file.py" to the [env] section in platformio.ini. 
-With this done you only need to hit the respective entry under "PlatformIO -> PROJECT TASKS -> Custom" every time you want to start OpenOCD.
+With this done you only need to hit the respective entry under "PlatformIO -> PROJECT TASKS -> Custom" every time you want to start OpenOCD. Have a look at the file [**add_tasks.py**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/blob/main/boards/YD-ESP32-S3(VCC-GND.COM)/examples/Test-YD-ESP32-S3-N8R2_Debug_via_builtin_JTAG/add_tasks.py) in the examples root directory for further details.
 
-Have a look at [**add_tasks.py**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/blob/main/boards/YD-ESP32-S3(VCC-GND.COM)/examples/Test-YD-ESP32-S3-N8R2_Debug_via_builtin_JTAG/add_tasks.py) in the examples root directory for further details.
+**Important:**  
+The automatically created "Start OpenOCD (debug) task" terminal logs errors, warnings and basic infos while OpenOCD is starting up.   
+If any errors show up indicating a problem with OpenOCD or with it's actions performed then I urge you to find the problems and fix them, otherwise you definitely will come a gutser later on.
 
-Below is the output of the "Start OpenOCD (debug) task" terminal, showing a successful start:
+A successful start of OpenOCD without any errors is shown below:
 ```
 Executing task: C:\Users\tj\.platformio\penv\Scripts\platformio.exe run --target openocd --environment debug 
 
@@ -76,17 +107,17 @@ Info : [esp32s3.cpu1] Target halted, PC=0x40000400, debug_reason=00000000
 Info : starting gdb server for esp32s3.cpu0 on 3333
 Info : Listening on port 3333 for gdb connections
 ```
-Above lines state that OpenOCD connected successfully to the ESP32-S3 JTAG interface, identified 2 cores, stopped the target chip and started listening for incoming GDB connections on tcp port 3333.  
-Having a look at the task manager right now shows that the OpenOCD task is running and the GDB task is still not. 
+Above lines state that OpenOCD found the ESP32-S3 builtin JTAG interface, connected successfully to it, identified 2 ESP32 cores, stopped the target chip, opened 3 tcp sockets and started listening on them.  
+Looking at the task manager at this point shows that the OpenOCD task is running and the GDB task is still not. 
 
-### e) Start the GDB:
-Press PlatformIO -> Run -> Start Debugging or simply press F5. This will start the GDB and the actual ESP32 debugging session begins.  
+# Start the GDB:
+Select PlatformIO -> Run -> Start Debugging or simply press F5. This will start the GDB and the actual ESP32 debugging session begins.  
 
-The "Start OpenOCD (debug) task" terminal shows the interaction between GDB and OpenOCD and gives you an idea whats going on:
+The "Start OpenOCD (debug) task" terminal (if still kept open) continues with logging the interaction between GDB and OpenOCD, giving you an idea whats going on:
 
 ```
 Info : Listening on port 3333 for gdb connections
-Info : accepting 'gdb' connection on tcp/3333       <---------- GDB started
+Info : accepting 'gdb' connection on tcp/3333       <---------- GDB started !!!
 Warn : No symbols for FreeRTOS!
 Info : [esp32s3.cpu0] Target halted, PC=0x403B2482, debug_reason=00000001
 Info : Set GDB target to 'esp32s3.cpu0'
@@ -182,38 +213,11 @@ Thread 3 "loopTask" hit Breakpoint 10, loop () at src/main.cpp:34
 ...
 ...and so on...
 ```
-At this stage you know everything is configured and set up properly and debugging via the ESP32-S3 builtin JTAG adapter can go on.
+At this stage you know everything is configured and set up properly. Debugging via the ESP32-S3 builtin JTAG adapter can go on flawlessly.
 
+## Start debugging your program:
 
-## 2. Debugging an ESP32 using the external JTAG adapter "ESP32-Prog":
-
-Debugging an ESP32 development board featuring only one USB port for flushing and serial output requires an external JTAG adapter. 
-
-A widely used and affordabale external JTAG adapter is Espressif's own development and debugging tool **ESP32-Prog**. This JTAG adapter connects to the computer via USB and on the other side via it's JTAG connector to the four ESP32 JTAG pins (TDO, TDI, TCK, TMS) and usually dev board GND.
-
-<p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/debugging/JTAG adapter docs/ESP-Prog.jpg" height="280"/></p>
-
-Espressifs own webpage [ESP32-Prog Reference]( https://espressif-docs.readthedocs-hosted.com/projects/espressif-esp-iot-solution/en/latest/hw-reference/ESP-Prog_guide.html) provides a very comprehensive introduction to the ESP32-Prog adapter. Above picture has been taken from there.
-
-### a) Connecting the ESP32-Prog to an ESP32 development board is required as follows:
-
-<p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/debugging/ESP-Prog_wiring_to_ESP32_dev_board.jpg" height="350"/></p>
-
-### d) Add some needed lines to the [env:debug] section of the project's platformio.ini file: 
-```
-[env:debug]
-; tells the debugger which JTAG adapter is used
-debug_tool = esp-prog
-; sets an initial breakpoint at setup()
-debug_init_break = tbreak setup
-; sets an initial breakpoint at loop()
-;debug_init_break = break loop
-build_type = debug
-```
-
-## Debugging with GDB:
-
-Once GDB has started you can set breakpoints, watch variables and much much more. A great introduction into debugging with PlatformIO/GDB is given [**here**](https://docs.platformio.org/en/stable/plus/debugging.html#debugging-tools).
+Once GDB has started you can set breakpoints, watch variables and much much more. A comprehensive & detailed introduction into debugging with PlatformIO/GDB is given [**here**](https://docs.platformio.org/en/stable/plus/debugging.html#debugging-tools). 
 
 Just as an example below a snapshot of my latest debugging session with an [**YD-ESP32-S3-N8R2**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/YD-ESP32-S3(VCC-GND.COM)) dev board featuring 2 USB ports and an ESP32-S3 with builtin JTAG adapter:
 
