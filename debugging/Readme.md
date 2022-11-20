@@ -55,7 +55,7 @@ Easiest way is to use the **Zadig** tool. Start it as Administrator, activate "S
 
 ### c) Connect the ESP32-Prog adapter to the ESP32 target board as shown below:
 
-<p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/debugging/ESP-Prog_wiring_to_ESP32_dev_board.jpg" height="450"/></p>
+<p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/debugging/ESP-Prog_wiring_to_ESP32_dev_board.jpg" height="500"/></p>
 
 ### d) Add some needed lines to the [env:debug] section of the project's platformio.ini file: 
 ```
