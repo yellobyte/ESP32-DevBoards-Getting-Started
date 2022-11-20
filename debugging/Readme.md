@@ -221,7 +221,7 @@ Thread 3 "loopTask" hit Breakpoint 10, loop () at src/main.cpp:34
 ...
 ...and so on...
 ```
-It's best to always keep an eye on both outputs as it provides a lot of useful information that might help you.  
+It's best to always keep an eye on both outputs as they provide a lot of additional information that might help you.  
 At this stage you know everything is configured and set up properly. You are ready for action.
 
 ## Start debugging your program:
