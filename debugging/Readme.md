@@ -115,6 +115,7 @@ Info : starting gdb server for esp32s3.cpu0 on 3333
 Info : Listening on port 3333 for gdb connections
 ```
 Above lines state that OpenOCD found the ESP32-S3 builtin JTAG interface, connected successfully to it, identified 2 ESP32 cores, stopped the target chip, opened 3 tcp sockets and started listening on them.  
+
 Looking at the task manager at this point shows that the OpenOCD task is running and the GDB task is still not. 
 
 # Start the GDB:
