@@ -1,3 +1,11 @@
+/*
+  Test-ESP32-CAM-MB_Camera
+
+  Functionality test of ESP32-MB-MB onboard camera OV2640.
+  
+  Last updated 2022-12-27, ThJ <yellobyte@bluewin.ch>
+*/
+
 #include <Arduino.h>
 #include "esp_camera.h"
 #include <WiFi.h>
