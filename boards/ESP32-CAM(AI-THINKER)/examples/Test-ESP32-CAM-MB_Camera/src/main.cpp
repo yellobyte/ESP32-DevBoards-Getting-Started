@@ -1,7 +1,7 @@
 /*
   Test-ESP32-CAM-MB_Camera
 
-  Functionality test of ESP32-MB-MB onboard camera OV2640.
+  Functionality test of ESP32-CAM-MB onboard camera OV2640.
   
   Last updated 2022-12-27, ThJ <yellobyte@bluewin.ch>
 */
