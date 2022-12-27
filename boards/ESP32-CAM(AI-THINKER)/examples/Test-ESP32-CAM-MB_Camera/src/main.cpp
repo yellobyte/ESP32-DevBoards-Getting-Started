@@ -70,14 +70,15 @@ void setup() {
   
   // if PSRAM IC present, init with UXGA resolution and higher JPEG quality
   //                      for larger pre-allocated frame buffer.
-  if(psramFound()){
+  if (psramFound()) {
     Serial.println("PSRAM has been found");
     config.frame_size = FRAMESIZE_UXGA;
     //config.frame_size = FRAMESIZE_SVGA;
     config.jpeg_quality = 10;
     //config.fb_count = 2;
     config.fb_count = 1;
-  } else {
+  } 
+  else {
     Serial.println("No PSRAM has been found");
     config.frame_size = FRAMESIZE_SVGA;
     config.jpeg_quality = 12;
