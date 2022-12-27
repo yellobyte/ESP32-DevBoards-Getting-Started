@@ -15,7 +15,7 @@ monitor_rts = 0
 monitor_dtr = 0
 ```
 
-Very few camera boards (maybe camera dependent?) have problems to deliver a proper video stream. In such case it almost always helped to vary the camera clock XCLK slightly, e.g from 20MHz (default) to 18MHz or 22Mhz. Just experiment with various frequencies and choose one that fits you best. This can be done on the Web interface: 
+Very few camera boards (maybe camera dependent?) have problems to deliver a proper video stream. In such case it almost always helped to vary the camera clock XCLK slightly, e.g from 20MHz (default) to 18MHz or 22Mhz. Just experiment with various frequencies and choose one that fixes the problem and fits you best. This can be done on the Web interface: 
 <p align="left"><img src="doc/Setting_XCLK_via_web_interfaceJPG.jpg" height="60"/></p>  
 
 or in the program in function setup():
