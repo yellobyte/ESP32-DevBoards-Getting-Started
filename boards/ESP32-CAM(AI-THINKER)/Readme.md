@@ -9,7 +9,7 @@ ESP32-CAM AI-Thinker camera boards come in different flavours. All boards I came
 
 **Important:**
 
-If you don't get any serial output when using the **ESP32-CAM-MB** sandwich board then you need to add below lines to the [env:esp32cam] section in platformio.ini, this will disables any activity on COM signals RTS and/or DTR:
+If you don't get any serial output when using the **ESP32-CAM-MB** sandwich board then you need to add below lines to the [env:esp32cam] section in platformio.ini, this will disable any activity on COM signals RTS and/or DTR:
 ```
 monitor_rts = 0
 monitor_dtr = 0
