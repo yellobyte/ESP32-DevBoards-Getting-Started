@@ -36,7 +36,7 @@ Have a look at the platformio.ini file of this [**example**](https://github.com/
 
 ## Scenario 2: Debugging an ESP32 using the external JTAG adapter "ESP32-Prog":
 
-Debugging an ESP32 development board featuring only one USB port for flushing and serial output requires an external JTAG adapter. 
+Debugging an ESP32 development board featuring only one USB port for flashing and/or serial output requires an external JTAG adapter. 
 
 A widely used and affordabale external JTAG adapter is Espressif's own development and debugging tool **ESP32-Prog**. This JTAG adapter connects to the computer via USB and on the other side via it's JTAG connector to the four ESP32 JTAG pins (TDO, TDI, TCK, TMS) and usually dev board GND.
 
