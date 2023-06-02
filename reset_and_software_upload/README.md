@@ -27,12 +27,13 @@ As one can see the serial monitor task just starts to display the serial output 
 
 ## Resetting the board:
 
-The dev board will perform a reset when you enter the key combinations CTRL-T followed by CTRL-D and again CTRL-T followed by CTRL-D as shown below:
+Toggle RTS (with CTRL-T followed by CTRL-R) until RTS is active. Now the dev board will perform a reset when you enter the key combinations CTRL-T followed by CTRL-D and again CTRL-T followed by CTRL-D as shown below:
 
 ```
 ...
 16:33:25.122 > LED off
 16:33:26.120 > LED on
+--- RTS active ---
 --- DTR inactive ---
 --- DTR active ---
 16:34:21.426 > ets Jun  8 2016 00:22:57
