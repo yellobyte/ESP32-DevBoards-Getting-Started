@@ -22,9 +22,10 @@ After successfully installing the driver view the device properties and check if
 ### c) Add below lines to the corresponding [env:.....] section of the project's platformio.ini file: 
 ```
 [env:debug]
-platform_packages = platformio/tool-openocd
+platform_packages = platformio/tool-openocd-esp32
 debug_tool = custom
-;debug_server = 
+debug_server = ${platformio.packages_dir}/tool-openocd-esp32/bin/openocd 
+  -fboard/esp32s3-builtin.cfg
 debug_port = localhost:3333
 ; for initial breakpoint at setup()
 debug_init_break = tbreak setup
