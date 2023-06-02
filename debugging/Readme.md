@@ -73,10 +73,16 @@ build_type = debug
 ```
 
 # Start the OpenOCD task:
-GDB needs the OpenOCD task to run in the background before debugging can be started. It connects GDB with the various JTAG adapters and seems to act as an abstraction layer. Simplest way to start OpenOCD is entering the following command in a PlatformIO CLI window:  
+GDB needs the OpenOCD task to run in the background before debugging can be started. It connects GDB with the various JTAG adapters and seems to act as an abstraction layer.  
+Simplest way to start OpenOCD is with the following command in a PlatformIO CLI window:  
 &nbsp;&nbsp;&nbsp;&nbsp; $ pio run --target openocd --environment debug  
- 
-The alternative way is to prepare a script file with above command and then add the line "extra_scripts = name_of_script_file.py" to the [env] section in platformio.ini. 
+
+First alternative way is to start a command prompt and enter the command  
+&nbsp;&nbsp;&nbsp;&nbsp; C:\Users\name\\.platformio\packages\tool-openocd-esp32\bin\openocd.exe -f board\esp32s3-builtin.cfg'  
+
+<p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/debugging/OpenOCD_starting_via_command_prompt.jpg" height="200"/></p>
+
+Second alternative way is to prepare a script file with above command and then add the line "extra_scripts = name_of_script_file.py" to the [env] section in platformio.ini. 
 With this done you only need to hit the respective entry under "PlatformIO -> PROJECT TASKS -> Custom" every time you want to start OpenOCD. Have a look at the file [**add_tasks.py**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/blob/main/boards/YD-ESP32-S3(VCC-GND.COM)/examples/Test-YD-ESP32-S3-N8R2_Debug_via_builtin_JTAG/add_tasks.py) in the examples root directory for further details.
 
 **Important:**  
