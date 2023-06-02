@@ -73,7 +73,7 @@ build_type = debug
 ```
 
 # Start the OpenOCD task:
-GDB needs the OpenOCD task to run in the background before debugging can be started. It connects GDB with the various JTAG adapters and seems to act as an abstraction layer.  Simplest way to start OpenOCD is with the following command in a PlatformIO CLI window:  
+GDB needs the OpenOCD task to run in the background before debugging can be started. It connects GDB with the various JTAG adapters and acts as an abstraction layer.  Simplest way to start OpenOCD is with the following command in a PlatformIO CLI window:  
 &nbsp;&nbsp;&nbsp;&nbsp; $ pio run --target openocd --environment debug  
 
 First alternative way is to start a command prompt and enter the command  
