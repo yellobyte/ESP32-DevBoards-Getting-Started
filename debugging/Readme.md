@@ -96,10 +96,19 @@ Processing debug (platform: espressif32; board: esp32-s3-devkitc-1; framework: a
 CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/esp32-s3-devkitc-1.html
 PLATFORM: Espressif 32 (5.2.0) > Espressif ESP32-S3-DevKitC-1-N8 (8 MB QD, No PSRAM)
 HARDWARE: ESP32S3 240MHz, 320KB RAM, 8MB Flash
-DEBUG: Current (custom) On-board (esp-builtin) External (cmsis-dap, esp-bridge, esp-prog, 
-...
-...
-Building in release mode
+DEBUG: Current (custom) On-board (esp-builtin) External (cmsis-dap, esp-bridge, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES:
+ - framework-arduinoespressif32 @ 3.20007.0 (2.0.7)
+ - tool-esptoolpy @ 1.40500.0 (4.5.0)
+ - tool-openocd-esp32 @ 2.1200.20230419 (12.0)
+ - toolchain-riscv32-esp @ 8.4.0+2021r2-patch5
+ - toolchain-xtensa-esp32s3 @ 8.4.0+2021r2-patch5
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 62 compatible libraries
+Scanning dependencies...
+No dependencies
+Building in debug mode
 C:\Users\tj\.platformio\packages\tool-openocd-esp32\bin\openocd.exe -f board\esp32s3-builtin.cfg
 Open On-Chip Debugger  v0.11.0-esp32-20220706 (2022-07-06-15:48)
 Licensed under GNU GPL v2
