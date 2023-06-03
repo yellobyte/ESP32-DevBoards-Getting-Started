@@ -62,7 +62,7 @@ Now one of the new "USB Serial Ports" will have disappeared and a **new USB devi
 ### d) Add below lines to the corresponding [env:.....] section of the project's platformio.ini file: 
 ```
 [env:debug]
-platform_packages = platformio/tool-openocd
+platform_packages = platformio/tool-openocd-esp32
 ; tells the debugger which JTAG adapter is used
 debug_tool = esp-prog
 ; sets an initial breakpoint at setup()
