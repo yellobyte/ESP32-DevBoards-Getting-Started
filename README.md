@@ -23,6 +23,9 @@ Right now examples are provided for the following boards:
 - [ESP32-DevKit-V1](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/ESP32-DevKit-V1(Espressif)) (orig. Manufacturer: Espressif) and it's various clones (e.g. from DOIT, etc)  
 <p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/ESP32-DevKit-V1(Espressif)/doc/ESP32-Devkit-V1.jpg" height="160"/></p>  
 
+- [YB-ESP32-S3-ETH DevBoard with Ethernet, 8MB Flash/PSRAM & two USB ports](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/ESP32-DevKit-V1(Espressif)) (Manufacturer: YelloByte) in different variants
+<p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-ETH(YelloByte)/doc/YB-ESP32-S3-ETH_board_top.jpg" height="160"/></p>  
+
 - [ESP32-CAM, ESP32-CAM-USB and ESP32-CAM-MB](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/ESP32-CAM(AI-THINKER)) (orig. Manufacturer: AI-THINKER)
 <p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/ESP32-CAM(AI-THINKER)/doc/ESP32-CAM.jpg" height="160"/><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/ESP32-CAM(AI-THINKER)/doc/ESP32-CAM-USB.jpg" height="150"/><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/ESP32-CAM(AI-THINKER)/doc/ESP32-CAM-MB.jpg" height="160"/></p>
 
