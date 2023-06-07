@@ -33,7 +33,7 @@ The board uses a LDO to drop the external supply voltage (5VDC min.) and interna
   - 5...9VDC applied to the VIN pin
   - 3.3VDC applied to the 3V3 pin(s)  
 
-Normal operating current of the board (equipped with ESP32-S3-WROOM-1-N8R8, all GPIOs unconnected, Ethernet Link up) is about 210mA. Without attached Ethernet cable the current drops to about 155mA.
+Normal operating current of the board (equipped with ESP32-S3-WROOM-1-N8R8, all GPIOs unconnected, Ethernet Link up) is about 180mA. Without attached Ethernet cable the current drops to about 120mA.
 
 ## Application hints:
 At the time of this writing most development IDEs support the Espressif32 platform including ESP32-S3/C3 boards, e.g. the popular Espressif ESP32-S3-DevKitC-1 board. Selecting this board will produce code which runs flawlessly on the standard YB-ESP32-S3-ETH (-N8R8) board, incl. SPI/I2C port settings. The only major issue is the not accessible PSRAM.
