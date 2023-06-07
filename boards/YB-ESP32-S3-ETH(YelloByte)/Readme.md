@@ -40,7 +40,7 @@ At the time of this writing most development IDEs support the Espressif32 platfo
 
  Therefore each provided software example comes with a subdirectory *'boards'* in it's root directory. There lie the specific board definition files (yb-esp32-s3-eth-n...json) that provide the build environment with the proper board definitions & settings.  
  
-Going a step further and putting these files to your development platforms *core_dir/platforms/espressif32/boards* directory (on my PC it's  *C:\Users\name\\.platformio\platforms\espressif32\boards*) means you can now create a new project in PlatformIO and simply select this board.  
+Going a step further and putting these files to your development platforms *core_dir/platforms/espressif32/boards* directory (on my PC it's  *C:\Users\name\\.platformio\platforms\espressif32\boards*) means you can now create a new project in PlatformIO and simply select this board from the pull-down list.  
 
  ![](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-ETH(YelloByte)/doc/YB-ESP32-S3-ETH_PlatformIO_board_selection.jpg)
 
@@ -57,7 +57,7 @@ Serial output generated with Serial.print() can be directed either to port **'US
 The PlatformIO builder scripts (*.json) for modules containing ESP32-S3/C3 already define the build flag _ARDUINO_USB_MODE=1_. It disables the USB-OTG mode. If not or you want to override it you can (re-)define it in your platformio.ini control file. Normally you don't have to worry about it.
    
 ### First Software Upload to new boards:
-The ESP32-S3-WROOM-1U modules put onto the dev boards during production are often not initialized. Attempting a SW upload with an IDE using the (reset & upload) hardware logic on port 'UART' will then mostly fail. A serial monitor (Speed setting: 115200Bd) connected to 'UART' only show this:
+The ESP32-S3-WROOM-1U modules put onto the dev boards during production are often not initialized. Attempting a SW upload with an IDE using the (reset & upload) hardware logic on port 'UART' will then mostly fail. A serial monitor (Speed setting: 115200Bd) connected to 'UART' only shows this:
 
 ```
 ESP-ROM:esp32s3-20210327
