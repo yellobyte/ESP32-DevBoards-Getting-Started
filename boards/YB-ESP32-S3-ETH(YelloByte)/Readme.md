@@ -57,7 +57,7 @@ Serial output generated with Serial.print() can be directed either to port **'US
 The PlatformIO builder scripts (*.json) for modules containing ESP32-S3/C3 already define the build flag _ARDUINO_USB_MODE=1_. It disables the USB-OTG mode. If not or you want to override it you can (re-)define it in your platformio.ini control file. Normally you don't have to worry about it.
    
 ### First Software Upload to new boards:
-The ESP32-S3-WROOM-1U modules put onto the dev boards during production are often not initialized. Attempting a SW upload with an IDE using the (reset & upload) hardware logic on port 'UART' will then mostly fail. A serial monitor (Speed setting: 115200Bd) connected to 'UART' only shows this:
+The ESP32-S3-WROOM-1(U) module put onto the dev board during production contains a rudimentary bootloader. Attempting a software upload with an IDE using the (reset & upload) hardware logic on port 'UART' will fail. A serial monitor (Speed setting: 115200Bd) connected to 'UART' shows this after resetting the board:
 
 ```
 ESP-ROM:esp32s3-20210327
@@ -71,9 +71,7 @@ ESP-ROM:esp32s3-20210327
 ....
 ....
 ```
-The second USB port on the dev board, labeled 'USB', is not functional as well for the ESP32-S3 hasn't been initialized yet. Remember: 'USB'' is directly attached to the ESP32-S3 chip.
-
-In this scenario the **ESP32-S3 has to be put manually into upload mode** by keeping the **'B'** button pressed, pressing/releasing the **'R'** button shortly and then finally releasing the **'B'** button. The serial monitor connected to port 'UART' will confirm the boards readiness:  
+In this scenario the **ESP32-S3 needs to be put into upload mode manually** by keeping the **'B'** button pressed, then pressing/releasing the **'R'** button and then finally releasing the **'B'** button. The serial monitor connected to port 'UART' will subsequently confirm the boards readiness:  
 
 ```
 ....

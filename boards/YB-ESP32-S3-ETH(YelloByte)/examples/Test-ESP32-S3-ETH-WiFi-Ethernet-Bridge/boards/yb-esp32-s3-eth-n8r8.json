@@ -3,7 +3,7 @@
     "arduino":{
       "ldscript": "esp32s3_out.ld",
       "partitions": "default_8MB.csv",
-			"memory_type": "qio_opi"
+      "memory_type": "qio_opi"
     },
     "core": "esp32",
     "extra_flags": [
@@ -11,7 +11,8 @@
       "-DARDUINO_USB_MODE=1",
       "-DARDUINO_RUNNING_CORE=1",
       "-DARDUINO_EVENT_RUNNING_CORE=1",
-			"-DBOARD_HAS_PSRAM"
+      "-DBOARD_HAS_PSRAM",
+      "-mfix-esp32-psram-cache-issue"
     ],
     "f_cpu": "240000000L",
     "f_flash": "80000000L",
@@ -39,7 +40,7 @@
     "arduino",
     "espidf"
   ],
-  "name": "YB-ESP32-S3-ETH-N8R8 (8 MB QD Flash, 8 MB Octal SPI PSRAM)",
+  "name": "YB-ESP32-S3-ETH-N8R8 (8 MB QD Flash, 8 MB Octal-SPI PSRAM)",
   "upload": {
     "flash_size": "8MB",
     "maximum_ram_size": 327680,
@@ -47,6 +48,6 @@
     "require_upload_port": true,
     "speed": 460800
   },
-  "url": "https://docs.espressif.com/projects/esp-idf/en/latest/esp32s3/hw-reference/esp32s3/user-guide-devkitc-1.html",
-  "vendor": "Espressif"
+  "url": "https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/YB-ESP32-S3-ETH(YelloByte)",
+  "vendor": "YelloByte"
 }

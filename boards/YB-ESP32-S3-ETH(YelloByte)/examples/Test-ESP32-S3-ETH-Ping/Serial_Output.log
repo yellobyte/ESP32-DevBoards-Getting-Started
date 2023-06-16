@@ -1,0 +1,36 @@
+23:16:54.570 > ESP-ROM:esp32s3-20210327
+23:16:54.585 > Build:Mar 27 2021
+23:16:54.585 > rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+23:16:54.590 > SPIWP:0xee
+23:16:54.590 > mode:DIO, clock div:1
+23:16:54.593 > load:0x3fce3808,len:0x44c
+23:16:54.595 > load:0x403c9700,len:0xbe4
+23:16:54.595 > load:0x403cc700,len:0x2a38
+23:16:54.598 > entry 0x403c98d4
+23:16:55.670 > 
+23:16:55.670 > Please make sure Ethernet cable is connected between board and switch and DHCP service is available in your LAN.
+23:16:55.689 > Initializing Ethernet...DHCP on Ethernet ok.
+23:16:56.919 > Local Ethernet IP: 192.168.1.33
+23:16:56.919 > Reply[0] from: 8.8.8.8: bytes=64 time=5ms TTL=128
+23:16:58.020 > Reply[1] from: 8.8.8.8: bytes=64 time=4ms TTL=128
+23:16:59.133 > Reply[2] from: 8.8.8.8: bytes=64 time=4ms TTL=128
+23:17:00.239 > Reply[3] from: 8.8.8.8: bytes=64 time=4ms TTL=128
+23:17:01.343 > Reply[4] from: 8.8.8.8: bytes=64 time=4ms TTL=128
+23:17:02.447 > Reply[5] from: 8.8.8.8: bytes=64 time=4ms TTL=128
+23:17:03.552 > Reply[6] from: 8.8.8.8: bytes=64 time=4ms TTL=128
+23:17:04.656 > Reply[7] from: 8.8.8.8: bytes=64 time=3ms TTL=128
+23:17:05.761 > Reply[8] from: 8.8.8.8: bytes=64 time=5ms TTL=128
+23:17:06.865 > Reply[9] from: 8.8.8.8: bytes=64 time=4ms TTL=128
+23:17:07.969 > Reply[10] from: 8.8.8.8: bytes=64 time=4ms TTL=128
+23:17:09.070 > Reply[11] from: 8.8.8.8: bytes=64 time=3ms TTL=128
+23:17:10.170 > Reply[12] from: 8.8.8.8: bytes=64 time=4ms TTL=128
+23:17:11.270 > Reply[13] from: 8.8.8.8: bytes=64 time=4ms TTL=128
+23:17:12.386 > Reply[14] from: 8.8.8.8: bytes=64 time=4ms TTL=128
+23:17:13.492 > Reply[15] from: 8.8.8.8: bytes=64 time=4ms TTL=128
+23:17:14.597 > Reply[16] from: 8.8.8.8: bytes=64 time=4ms TTL=128
+23:17:15.702 > Reply[17] from: 8.8.8.8: bytes=64 time=4ms TTL=128
+23:17:16.806 > Reply[18] from: 8.8.8.8: bytes=64 time=3ms TTL=128
+23:17:17.911 > Reply[19] from: 8.8.8.8: bytes=64 time=5ms TTL=128
+23:17:19.015 > Reply[20] from: 8.8.8.8: bytes=64 time=4ms TTL=128
+23:17:20.119 > Reply[21] from: 8.8.8.8: bytes=64 time=4ms TTL=128
+23:17:21.220 > Reply[22] from: 8.8.8.8: bytes=64 time=4ms TTL=128
