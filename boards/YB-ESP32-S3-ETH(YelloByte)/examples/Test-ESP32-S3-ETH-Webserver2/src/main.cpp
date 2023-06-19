@@ -5,7 +5,7 @@
   Built with ESP-IDF instead of Arduino Ethernet lib.
 
   IMPORTANT:  
-  Utilizes W5500 interrupts, therefore solder bridge "INT" on bottom of dev boeard must be closed!
+  Utilizes W5500 interrupts, therefore solder bridge "INT" on bottom of dev board must be closed!
 
   Last updated 2023-06-19, ThJ <yellobyte@bluewin.ch>
 */
@@ -75,7 +75,7 @@ static void got_ip_event_handler(void *arg, esp_event_base_t eventBase, int32_t 
   Serial.printf("GW: %d.%d.%d.%d\n", IP2STR(&ipInfo->gw));
 
   ethOk = true;
-  digitalWrite(GPIO_STATUS_LED, HIGH);              // LED on
+  digitalWrite(GPIO_STATUS_LED, HIGH);             // LED on
   // http init 
 }
 
@@ -100,12 +100,12 @@ void setup() {
   // Initialize TCP/IP network interface
   ESP_ERROR_CHECK(esp_netif_init());
 
-  // Create instance(s) of esp-netif for SPI Ethernet
-  //esp_netif_config_t netifConfig = ESP_NETIF_DEFAULT_ETH();
+  // Create instance of esp-netif for SPI Ethernet
   esp_netif_inherent_config_t espNetifConfig = ESP_NETIF_INHERENT_DEFAULT_ETH();
   espNetifConfig.if_key = "ETH_SPI"; 
   espNetifConfig.route_prio = 30;
   
+  //esp_netif_config_t netifConfig = ESP_NETIF_DEFAULT_ETH();
   esp_netif_config_t netifConfig = {
     .base = &espNetifConfig,
     .stack = ESP_NETIF_NETSTACK_DEFAULT_ETH
@@ -149,12 +149,12 @@ void setup() {
 
   spi_device_handle_t spiHandle = NULL;
   spi_device_interface_config_t devConfig = {
-      .command_bits = 16,   // Address phase in W5500 SPI frame
-      .address_bits = 8,    // Control phase in W5500 SPI frame
-      .mode = 0,
-      .clock_speed_hz = 12 * 1000 * 1000,
-      .spics_io_num = GPIO_W5500_CS,
-      .queue_size = 20
+    .command_bits = 16,   // Address phase in W5500 SPI frame
+    .address_bits = 8,    // Control phase in W5500 SPI frame
+    .mode = 0,
+    .clock_speed_hz = 12 * 1000 * 1000,
+    .spics_io_num = GPIO_W5500_CS,
+    .queue_size = 20
   };
   ESP_ERROR_CHECK(spi_bus_add_device((spi_host_device_t)host, &devConfig, &spiHandle));
 
@@ -194,7 +194,7 @@ void setup() {
 #ifndef ETH_STATIC_IP
   Serial.println("Waiting for IP address...");
 #endif
-  while (!ethOk) delay(1);                            // delay() yields processing time
+  while (!ethOk) delay(1);                         // delay() yields processing time
 
   // start webserver
   server.on("/", HTTP_GET, [](AsyncWebServerRequest *request) {

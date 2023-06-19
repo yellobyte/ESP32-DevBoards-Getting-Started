@@ -1,0 +1,19 @@
+--- Terminal on COM7 | 115200 8-N-1
+--- Available filters and text transformations: colorize, debug, default, direct, esp32_exception_decoder, hexlify, log2file, nocontrol, printable, send_on_enter, time
+--- More details at https://bit.ly/pio-monitor-filters
+--- Quit: Ctrl+C | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H
+14:12:50.933 > [   230][E][WiFiSTA.cpp:317] begin(): connect failed! 0x300a
+14:12:50.933 >
+14:12:50.933 > Initializing Ethernet...
+14:12:50.933 > Waiting for IP address...
+14:12:50.933 > Ethernet started
+14:12:51.985 > Ethernet Link Up, HW Addr: de:ad:be:ef:fe:ed
+14:12:52.008 > Ethernet IP: 192.168.1.33, Mask: 255.255.255.0, GW: 192.168.1.1
+14:12:52.014 > Waiting for client...
+14:15:15.636 > Client request received 1
+14:15:18.903 > Client request received 2
+14:15:20.088 > Client request received 3
+14:15:21.121 > Client request received 4
+14:15:22.379 > Client request received 5
+14:15:23.231 > Client request received 6
+14:15:24.188 > Client request received 7
