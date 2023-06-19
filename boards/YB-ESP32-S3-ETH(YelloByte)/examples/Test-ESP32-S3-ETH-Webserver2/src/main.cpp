@@ -7,7 +7,7 @@
   IMPORTANT:  
   Utilizes W5500 interrupts, therefore solder bridge "INT" on bottom of dev boeard must be closed!
 
-  Last updated 2023-06-18, ThJ <yellobyte@bluewin.ch>
+  Last updated 2023-06-19, ThJ <yellobyte@bluewin.ch>
 */
 
 #include <Arduino.h>
@@ -30,13 +30,10 @@ byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED };
 #define ETH_GW        "192.168.1.1"
 #endif
 
-// GPIO settings for W5500 
+// definitions for W5500 SPI control pins
 #define GPIO_W5500_CS    14                        // onboard W5500 CS chip select pin connected to GPIO14
-#define GPIO_W5500_INT   18                        // onboard W5500 INT pin connected to GPIO18
-//#define GPIO_W5500_RST   21                        // onboard W5500 RST reset pin connected to GPIO21, not used here
-#define GPIO_W5500_MOSI  11                        // SPI bus pins
-#define GPIO_W5500_MISO  13                        //
-#define GPIO_W5500_SCLK  12                        //
+#define GPIO_W5500_INT   18                        // onboard W5500 INT pin connected to GPIO18 (only if solder bridge is closed)
+#define GPIO_W5500_RST   21                        // onboard W5500 RST reset pin connected to GPIO21 (not used in this example)
 
 AsyncWebServer server(80);
 bool ethOk = false;
@@ -138,8 +135,8 @@ void setup() {
   gpio_install_isr_service(0);
 
   spi_bus_config_t busConfig = {
-    // SPI bus signals
-    .mosi_io_num = GPIO_W5500_MOSI, .miso_io_num = GPIO_W5500_MISO, .sclk_io_num = GPIO_W5500_SCLK,
+    // standard SPI bus pins as defined for this board in .../variants/esp32s3/pins_arduino.h
+    .mosi_io_num = MOSI, .miso_io_num = MISO, .sclk_io_num = SCK,
     // SPI control signals 'write protect' & 'hold' are not used
     .quadwp_io_num = -1, .quadhd_io_num = -1,
   };
