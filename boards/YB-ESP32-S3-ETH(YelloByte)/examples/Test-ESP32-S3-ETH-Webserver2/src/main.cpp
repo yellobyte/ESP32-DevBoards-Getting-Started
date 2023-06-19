@@ -106,12 +106,13 @@ void setup() {
   // Create instance(s) of esp-netif for SPI Ethernet
   //esp_netif_config_t netifConfig = ESP_NETIF_DEFAULT_ETH();
   esp_netif_inherent_config_t espNetifConfig = ESP_NETIF_INHERENT_DEFAULT_ETH();
-  esp_netif_config_t netifConfig = {
-      .base = &espNetifConfig,
-      .stack = ESP_NETIF_NETSTACK_DEFAULT_ETH
-    };
   espNetifConfig.if_key = "ETH_SPI"; 
   espNetifConfig.route_prio = 30;
+  
+  esp_netif_config_t netifConfig = {
+    .base = &espNetifConfig,
+    .stack = ESP_NETIF_NETSTACK_DEFAULT_ETH
+  };
   esp_netif_t *ethNetif = esp_netif_new(&netifConfig);
 
 #ifdef ETH_STATIC_IP
