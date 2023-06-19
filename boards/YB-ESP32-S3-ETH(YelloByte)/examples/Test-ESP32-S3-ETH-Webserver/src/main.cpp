@@ -29,7 +29,7 @@ void setup() {
 #if ARDUINO_USB_CDC_ON_BOOT == 1
   // we continue only when serial port becomes available: important when serial output is directed to port 'USB'
   while (!Serial);
-	delay(100);
+  delay(100);
 #endif	
 
   Serial.println();
