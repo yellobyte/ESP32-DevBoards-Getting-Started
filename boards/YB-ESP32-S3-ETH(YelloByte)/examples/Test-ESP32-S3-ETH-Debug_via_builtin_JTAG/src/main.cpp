@@ -2,7 +2,7 @@
   Test Debug
 
   Debugging a program running on a YB-ESP32-S3-ETH dev board via ESP32-S3's builtin JTAG adapter (on port 'USB').
-	Serial output must be directed to port 'UART' for not interfering with JTAG port 'USB'.
+  Serial output must be directed to port 'UART' for not interfering with JTAG port 'USB'.
 
   Last updated 2023-06-05, ThJ <yellobyte@bluewin.ch>
 */
