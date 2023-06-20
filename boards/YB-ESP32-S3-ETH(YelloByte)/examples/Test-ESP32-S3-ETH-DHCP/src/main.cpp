@@ -1,10 +1,10 @@
 /*
   Test-DHCP
 
-  The sketch gets an IP address from DHCP server via RJ45 Ethernet port integrated on YB-ESP32-S3-ETH dev board. 
+  The sketch gets an Ethernet IP address from DHCP server on RJ45 Ethernet port. 
   The LED will: blink very fast - with no Ethernet cable attached/no link to a switch
                 blink normal    - with Ethernet cable attached to a switch and the link is up
-                blink very slow - when a local IP has been obtained from DHPC service       
+                blink very slow - local IP has been obtained from DHPC service       
 
   Last updated 2023-06-06, ThJ <yellobyte@bluewin.ch>
 */
@@ -22,7 +22,7 @@ uint32_t tdelay = 100;                      // blink delay in ms
 
 void blinkTask (void *parameter) {
   Serial.println("blinkTask has started.");
-  while(true) {
+  while (true) {
     digitalWrite(GPIO_STATUS_LED, !digitalRead(GPIO_STATUS_LED));
     delay(*((uint32_t*)parameter));
   }
@@ -53,14 +53,14 @@ void setup() {
                           NULL,             // task handle (not used)
                           1);               // core the task should run on
 
-	Serial.println();
+  Serial.println();
   Serial.println("Please make sure Ethernet cable is connected between board and switch and DHCP service is available in your LAN.");
   Ethernet.init(GPIO_W5500_CS);
 }
 
 void loop() {
-    // only continue when Ethernet link is up
-  while(Ethernet.linkStatus() != LinkON) { 
+  // only continue when Ethernet link is up
+  while (Ethernet.linkStatus() != LinkON) { 
     Serial.println("Ethernet link is down.");
     delay(1000);
     tdelay = 100;                           // blink very fast
