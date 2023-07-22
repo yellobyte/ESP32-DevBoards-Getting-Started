@@ -5,7 +5,7 @@ The **YB-ESP32-S3-ETH** is a general purpose development board based on Espressi
 
 Arduino libraries for the Wiznet W5500 are widely available (e.g. [**here**](https://www.arduino.cc/reference/en/libraries/ethernet/)), enabling you to easily realise ESP32 projects around this board with Ethernet or even combined Ethernet/WLAN support.
 
-The densly populated YB-ESP32-S3-ETH board provides [**multiple GPIO pins**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-ETH(YelloByte)/doc/YB-ESP32-S3-ETH_pinlayout.jpg) and is still [**highly breadboard compatible**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-ETH(YelloByte)/doc/YB-ESP32-S3-ETH_on_breadboard.jpg) for it leaves one row of accessible breadboard contacts on either side of the board. All I/O ports (GPIOx) are labeled on both sides of the board. 
+The densly populated YB-ESP32-S3-ETH board provides multiple GPIO pins (as shown below) and is still [**highly breadboard compatible**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-ETH(YelloByte)/doc/YB-ESP32-S3-ETH_on_breadboard.jpg) for it leaves one row of accessible breadboard contacts on either side of the board. All I/O ports (GPIOx) are labeled on both sides of the board. 
 
 If WLAN/BT is needed instead of or additionally to an Ethernet connection then an external 2.4GHz antenna can be connected to the onboard WROOM-1U module. The connector is compatible with the following standards: U.FL (Hirose), MHF-I (I-PEX) and AMC (Amphen). 
 
