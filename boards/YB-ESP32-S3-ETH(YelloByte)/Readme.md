@@ -27,6 +27,9 @@ Detailed technical infos about Espressif's MCU ESP32-S3 and their ESP32-S3-WROOM
 
 Just for information purposes: The ESP32-S3-WROOM-1(U) module family comprises several [**versions**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-ETH(YelloByte)/doc/ESP32-S3-WROOM-1(U)_Variants.jpg). The **-1** versions come with embedded PCB antenna, the **-1U** versions with IPEX antenna socket instead. The extension -Nx(Ry) defines the amount of available FLASH/PSRAM, e.g. -N4 (4MB Flash, no PSRAM), -N8 (8MB Flash, no PSRAM), -N8R2 (8 MB Flash and 2MB PSRAM), -N8R8 (8 MB Flash and 8MB PSRAM) etc.  
 
+## Board Pin Layout
+ ![](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-ETH(YelloByte)/doc/YB-ESP32-S3-ETH_pinlayout.jpg)
+
 ## Powering the board:
 The board uses a LDO to drop the external supply voltage (5VDC min.) and internally operates on 3.3Volt. There are three (mutually exclusive) ways to provide power to the board.
   - through the microUSB ports
@@ -34,9 +37,6 @@ The board uses a LDO to drop the external supply voltage (5VDC min.) and interna
   - 3.3VDC applied to the 3V3 pin(s)  
 
 Normal operating current of the idle board (equipped with ESP32-S3-WROOM-1-N8R8, all GPIOs unconnected, Ethernet Link down, WiFi disabled) is about 120mA. With attached Ethernet cable and Link up the current rises to about 180mA. With WiFi active as well the board draws about 210...270mA (depending on WiFi link).
-
-## Board Pin Layout
- ![](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-ETH(YelloByte)/doc/YB-ESP32-S3-ETH_pinlayout.jpg)
 
 ## Application hints:
 At the time of this writing most development IDEs support the Espressif32 platform including ESP32-S3/C3 boards, e.g. the popular Espressif ESP32-S3-DevKitC-1 board. Selecting this board will produce code which runs flawlessly on the standard YB-ESP32-S3-ETH (-N8R8) board, incl. SPI/I2C port settings. The only major issue is the not accessible PSRAM.
