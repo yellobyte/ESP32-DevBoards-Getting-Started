@@ -3,7 +3,7 @@ The **YB-ESP32-S3-ETH** is a general purpose development board based on Espressi
 
 ![](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-ETH(YelloByte)/doc/YB-ESP32-S3-ETH_board_top.jpg)
 
-Arduino libraries for the Wiznet W5500 are widely available (e.g. [**here**](https://www.arduino.cc/reference/en/libraries/ethernet/)), enabling you to easily realise ESP32 projects around this board with Ethernet or even combined Ethernet/WLAN support.
+Arduino libraries for the Wiznet W5500 are widely available (e.g. [**here**](https://www.arduino.cc/reference/en/libraries/ethernet/)), enabling you to easily realise ESP32 projects around this board with **Ethernet or combined Ethernet/WLAN** support.
 
 The densly populated YB-ESP32-S3-ETH board provides multiple GPIO pins (as shown below) and is still [**highly breadboard compatible**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-ETH(YelloByte)/doc/YB-ESP32-S3-ETH_on_breadboard.jpg) for it leaves one row of accessible breadboard contacts on either side of the board. All I/O ports (GPIOx) are labeled on both sides of the board. 
 
