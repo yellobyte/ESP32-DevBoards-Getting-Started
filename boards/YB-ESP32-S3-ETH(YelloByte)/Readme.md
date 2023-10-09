@@ -39,15 +39,21 @@ The board uses a LDO to drop the external supply voltage (5VDC min.) and interna
 Normal operating current of the idle board (equipped with ESP32-S3-WROOM-1-N8R8, all GPIOs unconnected, Ethernet Link down, WiFi disabled) is about 120mA. With attached Ethernet cable and Link up the current rises to about 180mA. With WiFi active as well the board draws about 210...270mA (depending on WiFi link).
 
 ## Application hints:
-At the time of this writing most development IDEs support the Espressif32 platform including ESP32-S3/C3 boards, e.g. the popular Espressif ESP32-S3-DevKitC-1 board. Selecting this board will produce code which runs flawlessly on the standard YB-ESP32-S3-ETH (-N8R8) board, incl. SPI/I2C port settings. The only major issue is the not accessible PSRAM.
+At the time of this writing most development IDEs support the Espressif32 platform including ESP32-S3/C3 boards, e.g. the popular Espressif ESP32-S3-DevKitC-1 board.  
 
- Therefore each provided software example comes with a subdirectory *'boards'* in it's root directory. There lie the specific board definition files (yb-esp32-s3-eth-n...json) that provide the build environment with the proper board definitions & settings.  
- 
-Going a step further and putting these files to your development platforms *core_dir/platforms/espressif32/boards* directory (on my PC it's  *C:\Users\name\\.platformio\platforms\espressif32\boards*) means you can now create a new project in PlatformIO and simply select this board from the pull-down list.  
+### Arduino IDE:
+When building with the **ArduinoIDE** then you can select the board **ESP32S3 Dev Module** for example. Then choose the proper settings as shown in the examples directory (...ArduinoIDE) and you are fine. Just for the sake of knowing I selected a few other ESP32S3 boards from the list and all worked fine. Since the ESP32S3 is so versatile there are a lot of options to play with. Espressif's homapage offers some help es well.
+
+Some example settings I used for testing:  
+Board: *ESP32S3 Dev Module*, Flash Mode: *QIO 80MHz*, Flash Size: *8MB*, PSRAM: *OPI PSRAM*
+
+### PlatformIO:
+Building with **PlatformIO** is no problem as well. Use the provided files in the examples directories.
+Each of the provided software example for PlatformIO comes with a subdirectory *'boards'*. There lie the specific board definition files (yb-esp32-s3-eth-n...json) that provide the build environment with the proper board definitions & settings.  
+
+Going a step further and putting these files to your development platforms *core_dir/platforms/espressif32/boards* global directory (on my PC it's  *C:\Users\name\\.platformio\platforms\espressif32\boards*) means you can now create a new project in PlatformIO and simply select this board from the pull-down list.  
 
  ![](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-ETH(YelloByte)/doc/YB-ESP32-S3-ETH_PlatformIO_board_selection.jpg)
-
- Then in *platformio.ini* you'll have the setting **board = yb-esp32-s3-eth-n8r8** and voilà, the 8MB PSRAM are available as well. Have a look at the provided example [Test-ESP32-S3-ETH-RAM-PSRAM](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-ETH(YelloByte)/examples/Test-ESP32-S3-ETH-RAM-PSRAM) for more detailed infos to PSRAM usage.
 
 The MicroUSB socket labeled 'USB' is wired directly to the ESP32-S3 MCU (GPIO19/GPIO20). Therefore when the development board gets resetted a PC/Laptop connected to this port might temporarily lose connection (the associated COM port will disappear for a second or two). This can confuse some terminal programs.  
 

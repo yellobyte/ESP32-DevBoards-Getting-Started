@@ -1,0 +1,49 @@
+15:53:02.220 -> 
+15:53:02.220 -> --> Sketch started: Testing RAM/PSRAM on YB-ESP32-S3-ETH dev board:
+15:53:02.268 -> 
+15:53:02.268 -> ESP32 SDK: v4.4.3
+15:53:02.268 -> ESP32 CPU FREQ: 240 MHz
+15:53:02.268 -> ESP32 APB FREQ: 80.0 MHz (Advanced Peripheral Bus)
+15:53:02.268 -> ESP32 FLASH SIZE: 8388608 Byte
+15:53:02.268 -> ESP32 RAM Size: 392292 Byte, Used: 25024 Byte, Free: 367268, max alloc: 335860 Byte (largest free block)
+15:53:02.268 -> ESP32 PSRAM Size: 8386163 Byte, Used: 260 Byte, Free: 8385903 Byte
+15:53:02.268 -> 
+15:53:02.268 -> ----- allocation of 6MB memory ----->
+15:53:02.268 -> -> malloc(6291456): success, buf = 3d800a90
+15:53:02.929 -> ESP32 RAM Size: 392292 Byte, Used: 25024 Byte, Free: 367268, max alloc: 335860 Byte (largest free block)
+15:53:02.976 -> ESP32 PSRAM Size: 8386147 Byte, Used: 6291716 Byte, Free: 2094431 Byte
+15:53:02.976 -> 
+15:53:02.976 -> -> free(buf=3d800a90)
+15:53:02.976 -> ESP32 RAM Size: 392292 Byte, Used: 25024 Byte, Free: 367268, max alloc: 335860 Byte (largest free block)
+15:53:02.976 -> ESP32 PSRAM Size: 8386163 Byte, Used: 260 Byte, Free: 8385903 Byte
+15:53:02.976 -> 
+15:53:02.976 -> ----- allocation of 2MB memory ----->
+15:53:02.976 -> -> malloc(2097152): success, buf = 3d800a90
+15:53:03.211 -> ESP32 RAM Size: 392292 Byte, Used: 25024 Byte, Free: 367268, max alloc: 335860 Byte (largest free block)
+15:53:03.211 -> ESP32 PSRAM Size: 8386147 Byte, Used: 2097412 Byte, Free: 6288735 Byte
+15:53:03.211 -> 
+15:53:03.211 -> -> free(buf=3d800a90)
+15:53:03.211 -> ESP32 RAM Size: 392292 Byte, Used: 25024 Byte, Free: 367268, max alloc: 335860 Byte (largest free block)
+15:53:03.211 -> ESP32 PSRAM Size: 8386163 Byte, Used: 260 Byte, Free: 8385903 Byte
+15:53:03.258 -> 
+15:53:03.258 -> ----- allocation of 100kB memory ----->
+15:53:03.258 -> -> malloc(102400): success, buf = 3d800a90
+15:53:03.258 -> ESP32 RAM Size: 392292 Byte, Used: 25024 Byte, Free: 367268, max alloc: 335860 Byte (largest free block)
+15:53:03.258 -> ESP32 PSRAM Size: 8386147 Byte, Used: 102660 Byte, Free: 8283487 Byte
+15:53:03.258 -> 
+15:53:03.258 -> -> free(buf=3d800a90)
+15:53:03.258 -> ESP32 RAM Size: 392292 Byte, Used: 25024 Byte, Free: 367268, max alloc: 335860 Byte (largest free block)
+15:53:03.258 -> ESP32 PSRAM Size: 8386163 Byte, Used: 260 Byte, Free: 8385903 Byte
+15:53:03.258 -> 
+15:53:03.258 -> ----- allocation of 1kB memory ----->
+15:53:03.305 -> -> malloc(1024): success, buf = 3fcecdbc
+15:53:03.305 -> ESP32 RAM Size: 392276 Byte, Used: 26048 Byte, Free: 366228, max alloc: 335860 Byte (largest free block)
+15:53:03.305 -> ESP32 PSRAM Size: 8386163 Byte, Used: 260 Byte, Free: 8385903 Byte
+15:53:03.305 -> 
+15:53:03.305 -> -> free(buf=3fcecdbc)
+15:53:03.305 -> ESP32 RAM Size: 392292 Byte, Used: 25024 Byte, Free: 367268, max alloc: 335860 Byte (largest free block)
+15:53:03.305 -> ESP32 PSRAM Size: 8386163 Byte, Used: 260 Byte, Free: 8385903 Byte
+15:53:03.305 -> 
+15:53:03.305 -> 
+15:53:03.305 -> Press 'r' or 'R' to reset the board.
+15:53:03.305 -> 
