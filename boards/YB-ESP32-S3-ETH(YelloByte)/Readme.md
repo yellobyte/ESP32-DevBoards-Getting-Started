@@ -42,10 +42,10 @@ Normal operating current of the idle board (equipped with ESP32-S3-WROOM-1-N8R8,
 At the time of this writing most development IDEs support the Espressif32 platform including ESP32-S3/C3 boards, e.g. the popular Espressif ESP32-S3-DevKitC-1 board.  
 
 ### Arduino IDE:
-When building with the **ArduinoIDE** then you can select the board **ESP32S3 Dev Module** for example. Then choose the proper settings as shown in the examples directory (...ArduinoIDE) and you are fine. Just for the sake of knowing I selected a few other ESP32S3 boards from the list and all worked fine. Since the ESP32S3 is so versatile there are a lot of options to play with. Espressif's homapage offers some help es well.
+When building with the **ArduinoIDE** then you can select the board **ESP32S3 Dev Module** for example. Then choose the proper settings as shown in the examples directory (...ArduinoIDE) and you are fine. Just for the sake of knowing I selected a few other ESP32S3 boards from the list and no issues either. Be aware, since the ESP32S3 is so versatile there are a lot of build options to play with. Espressif's homapage offers some help es well.
 
 Some example settings I used for testing:  
-Board: *ESP32S3 Dev Module*, Flash Mode: *QIO 80MHz*, Flash Size: *8MB*, PSRAM: *OPI PSRAM*
+Board: *ESP32S3 Dev Module*, USB CDC On Boot & USB DFU On Boot: *Disabled*, Flash Mode: *QIO 80MHz*, Flash Size: *8MB*, PSRAM: *OPI PSRAM*
 
 ### PlatformIO:
 Building with **PlatformIO** is no problem as well. Use the provided files in the examples directories.
