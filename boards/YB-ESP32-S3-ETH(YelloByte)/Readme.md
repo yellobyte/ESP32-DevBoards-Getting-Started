@@ -201,6 +201,5 @@ See https://docs.platformio.org/page/projectconf/build_configurations.html
 
 ```
 ## Remarks:  
-- Only after successfully flashing the board for the first time will the port labeled 'USB' be fully operational.  
-- In very rare cases I couldn't get any serial output at all on USB/UART right after flashing. Resetting the board by pressing the reset button 'R' always fixed the problem.
-- Some YB-ESP32-S3-ETH boards will be delivered already flashed with provided software example 'Test-ESP32-S3-ETH-DHCP'. In this case the blue status LED will blink when power is applied and the board is already capable of automatic SW uploads via your selected IDE (pressing buttons not required).
+- After successfully flashing the board for the first time will the port labeled 'USB' be fully operational.  
+- Some YB-ESP32-S3-ETH boards will be delivered already flashed with provided software example 'Test-ESP32-S3-ETH-DHCP'. In this case the status LED 'IO47' will blink when power is applied and the board is already capable of automatic SW uploads via your selected IDE (pressing buttons not required).
