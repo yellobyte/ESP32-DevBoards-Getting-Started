@@ -1,5 +1,5 @@
 ## YB-ESP32-S3-ETH Development Board Overview:
-The **YB-ESP32-S3-ETH** is a general purpose development board based on Espressif's ESP32-S3 MCU. It hosts an **ESP32-S3-WROOM-1U-N8R8 module** with **WLAN**, **8MB Flash**, **8MB PSRAM** and additionally a **RJ45 Ethernet connector**, an Ethernet PHY bridge chip **Wiznet W5500** and **two microUSB connectors** for software upload, serial output, debugging and feeding power to the board. The board is currently available on sales platforms [Ebay](https://www.ebay.com/itm/125966982183) and [Ricardo.ch](https://www.ricardo.ch/en/s/YB-ESP32-S3-ETH).
+The **YB-ESP32-S3-ETH** is a general purpose development board based on Espressif's ESP32-S3 MCU. It comes in different variants: with **ESP32-S3-WROOM-1U-N8R8 module** (8MB Flash/8MB PSRAM) or with **ESP32-S3-WROOM-1U-N4 module** (4MB Flash) and **WiFi**, **RJ45 Ethernet connector**, an Ethernet PHY bridge chip **Wiznet W5500** and **two microUSB connectors** for software upload, serial output, debugging and feeding power to the board. The board (8MB Flash/8MB PSRAM) is currently available on sales platforms [Ebay](https://www.ebay.com/itm/125966982183) and [Ricardo.ch](https://www.ricardo.ch/en/s/YB-ESP32-S3-ETH).
 
 ![](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-ETH(YelloByte)/doc/YB-ESP32-S3-ETH_board_top.jpg)
 
@@ -10,7 +10,8 @@ The densly populated YB-ESP32-S3-ETH board provides multiple GPIO pins (as shown
 If WLAN/BT is needed instead of or additionally to an Ethernet connection then an external 2.4GHz antenna can be connected to the onboard WROOM-1U module. The connector is compatible with the following standards: U.FL (Hirose), MHF-I (I-PEX) and AMC (Amphen). 
 
 ### YB-ESP32-S3-ETH board features:
- - ESP32-S3-WROOM-1U-N8R8 module with Espressif's modern ESP32-S3 MCU, 8MB Flash, 8MB PSRAM and WLAN/BT IPEX antenna connector
+ - ESP32-S3-WROOM-1U-N8R8 module with 8MB Flash, 8MB PSRAM **or** ESP32-S3-WROOM-1U-N4 module with 4MB Flash 
+ - WiFi/BT IPEX antenna connector
  - RJ45 10M/100M Ethernet connector driven by onboard PHY controller chip Wiznet W5500
  - The W5500 pins required to control the chip are hardwired to the ESP32-S3 GPIOs as follows:
    - *MOSI - GPIO11, MISO - GPIO13, SCK - GPIO12* (SPI bus data communication)
