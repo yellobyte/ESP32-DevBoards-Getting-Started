@@ -43,14 +43,21 @@ Normal operating current of the idle board (equipped with ESP32-S3-WROOM-1-N8R8,
 At the time of this writing most development IDEs support the Espressif32 platform including ESP32-S3/C3 boards, e.g. the popular Espressif ESP32-S3-DevKitC-1 board.  
 
 ### Arduino IDE:
-Select the board **ESP32S3 Dev Module** and choose the proper settings as shown below. Be aware, since the ESP32-S3 MCU is very versatile there are a lot of build options to play with. Espressif's homapage offers some help es well.
+Select the board "**ESP32S3 Dev Module**" and choose the proper settings as shown below. Be aware, since the ESP32-S3 MCU is very versatile there are a lot of build options to play with. Espressif's homapage offers some help es well.
 
 Settings that apply to the -N8R8 board:  
-Board: *ESP32S3 Dev Module*, USB CDC On Boot & USB DFU On Boot: *Disabled*, Flash Mode: *QIO 80MHz*, Flash Size: *8MB*, PSRAM: *OPI PSRAM*  
+- Board: *ESP32S3 Dev Module*
+- USB CDC On Boot & USB DFU On Boot: *Disabled*
+- Flash Mode: *QIO 80MHz*
+- Flash Size: *8MB*
+- PSRAM: *OPI PSRAM*  
 
  ![](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-ETH(YelloByte)/doc/YB-ESP32-S3-ETH-N8R8_ArduinoIDE-Settings.jpg)  
 
-For the -N4 board set as follows: Flash Size: *4MB*, PSRAM: *Disabled*.
+For the -N4 board set as follows: 
+- Flash Size: *4MB*
+- Partition Scheme: *Default 4MB*
+- PSRAM: *Disabled*.
 
 ### PlatformIO:
 Building with **PlatformIO** is no problem as well. Use the provided files in the examples directories.
@@ -60,19 +67,28 @@ Going a step further and putting these files to your development platforms *core
 
  ![](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-ETH(YelloByte)/doc/YB-ESP32-S3-ETH_PlatformIO_board_selection.jpg)
 
-The MicroUSB socket labeled 'USB' is wired directly to the ESP32-S3 MCU (GPIO19/GPIO20). Therefore when the development board gets resetted a PC/Laptop connected to this port might temporarily lose connection (the associated COM port will disappear for a second or two). This can confuse some terminal programs.  
+### Using the two USB ports:
 
 With both MicroUSB ports connected simultaneously you will see 2 COM ports and an additional usb device "USB JTAG/serial debug unit". How to use this device for debugging is explained in detail [**here**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/debugging).
 
-Serial output generated with Serial.print() can be directed either to port **'USB'** or port **'UART'**. A single build flag in platformio.ini defines the USB port it goes to:
+**Serial output** generated with Serial.print() can be directed either to port **'USB'** or port **'UART'**. 
+
+In ArduinoIDE choose as follows:  
+- **USB CDC On Boot: Disabled**, serial output goes to **UART**
+- **USB CDC On Boot: Enabled**, serial output goes to **USB**
+
+In PlatformIO set a build flag in file platformio.ini:  
 - **ARDUINO_USB_CDC_ON_BOOT=0**, serial output goes to **UART**
 - **ARDUINO_USB_CDC_ON_BOOT=1**, serial output goes to **USB**
 
-The PlatformIO builder scripts (*.json) for modules containing ESP32-S3/C3 already define the build flag _ARDUINO_USB_MODE=1_. It disables the USB-OTG mode. If not or you want to override it you can (re-)define it in your platformio.ini control file. Normally you don't have to worry about it.
-   
-### First Software Upload to new boards:
-The ESP32-S3-WROOM-1(U) module put onto the dev board during production contains a rudimentary bootloader. Attempting a software upload with an IDE using the (reset & upload) hardware logic on port 'UART' will fail. A serial monitor (Speed setting: 115200Bd) connected to 'UART' shows this after resetting the board:
+**Remarks:**  
 
+The MicroUSB socket labeled 'USB' is wired directly to the ESP32-S3 MCU (GPIO19/GPIO20). Therefore when the development board gets resetted a PC/Laptop connected to this port might temporarily lose connection (the associated COM port will disappear for a second or two). This can confuse some terminal programs. Preferably port UART is used for serial output and port USB for debugging.  
+
+The PlatformIO builder scripts (*.json) for modules containing ESP32-S3/C3 already define the build flag _ARDUINO_USB_MODE=1_. It disables the USB-OTG mode. If not disabled or you want to override it you can (re-)define it in your platformio.ini control file. Normally you don't have to worry about it.
+   
+### Software Upload to the board:
+In rare cases you might see the following after powering up the board:  
 ```
 ESP-ROM:esp32s3-20210327
 23:10:07.248 > Build:Mar 27 2021
@@ -81,22 +97,20 @@ ESP-ROM:esp32s3-20210327
 23:10:07.256 > invalid header: 0xffffffff
 23:10:07.259 > invalid header: 0xffffffff
 23:10:07.262 > invalid header: 0xffffffff
-23:10:07.262 > invalid header: 0xffffffff
 ....
 ....
 ```
-In this scenario the **ESP32-S3 needs to be put into upload mode manually** by keeping the **'B'** button pressed, then pressing/releasing the **'R'** button and then finally releasing the **'B'** button. The serial monitor connected to port 'UART' will subsequently confirm the boards readiness:  
+In such case **put the ESP32-S3 into upload mode manually** by keeping the **'B'** button pressed, then pressing/releasing the **'R'** button and finally releasing the **'B'** button. The serial monitor output will subsequently confirm the boards readiness:  
 
 ```
 ....
-23:19:07.143 > invalid header: 0xffffffff
 23:19:07.147 > invalid header: 0xffffffff
 23:19:07.453 > ESP-ROM:esp32s3-20210327
 23:19:07.453 > Build:Mar 27 2021
 23:19:07.453 > rst:0x1 (POWERON),boot:0x0 (DOWNLOAD(USB/UART0))
 23:19:07.459 > waiting for download
 ```
-Now the dev board is ready to get flashed for the very first time. Below the log of flashing the dev board with provided software example [Test-ESP32-S3-ETH-DHCP](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-ETH(YelloByte)/examples/Test-ESP32-S3-ETH-DHCP).  
+Below the log of flashing the dev board with provided software example [Test-ESP32-S3-ETH-DHCP](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-ETH(YelloByte)/examples/Test-ESP32-S3-ETH-DHCP).  
 ```
 Executing task: C:\Users\tj\.platformio\penv\Scripts\platformio.exe run --target upload --target monitor --environment n8r8 --upload-port COM7 --monitor-port COM7 
 
@@ -206,5 +220,4 @@ See https://docs.platformio.org/page/projectconf/build_configurations.html
 
 ```
 ## Remarks:  
-- After successfully flashing the board for the first time will the port labeled 'USB' be fully operational.  
 - Some YB-ESP32-S3-ETH boards will be delivered already flashed with provided software example 'Test-ESP32-S3-ETH-DHCP'. In this case the status LED 'IO47' will blink when power is applied and the board is already capable of automatic SW uploads via your selected IDE (pressing buttons not required).
