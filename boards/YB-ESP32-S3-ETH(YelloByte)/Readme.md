@@ -220,4 +220,4 @@ See https://docs.platformio.org/page/projectconf/build_configurations.html
 
 ```
 ## Remarks:  
-- Some YB-ESP32-S3-ETH boards will be delivered already flashed with provided software example 'Test-ESP32-S3-ETH-DHCP'. In this case the status LED 'IO47' will blink when power is applied and the board is already capable of automatic SW uploads via your selected IDE (pressing buttons not required).
+- Some YB-ESP32-S3-ETH boards will be delivered already flashed with provided software example 'Test-ESP32-S3-ETH-DHCP'. In this case the status LED 'IO47' will blink fast when power is applied and blink slow when getting an IP address via DHCP was successful.
