@@ -56,6 +56,7 @@ VSCode/PlatformIO provides some major advantages over the Arduino IDE:
 ### :heavy_exclamation_mark: Application notes  
 
 If your particular board is not (yet) on the board list and you want to start programming it anyway then select another, already known board from the list which preferably is similar in features to your new board and you should be good to go.  
+
 However, in some cases you might not be able to fully utilize every board feature and build logs might report incorrect port numbers, memory sizes, etc. Provided example [**Test-ESP32-S3-1.9inch_RAM-PSRAM**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/ESP32-S3-1.9-Display-DevBoard(LILYGO)/examples/Test-ESP32-S3-1.9inch_RAM-PSRAM) demonstrates how to reveal the true memory sizes of an ESP32 development board. Have a look at this example's files _Build.log_ & _Serial_Output.log_ to see above mentioned discrepancies.
 ### :zap: Useful settings in platformio.ini
 
