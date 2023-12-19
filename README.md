@@ -20,25 +20,25 @@ For loading, editing and uploading an example just start VSCode/PlatformIO, go t
 
 Right now examples are provided for the following boards:
 
-- [ESP32-DevKit-V1](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/ESP32-DevKit-V1(Espressif)) (orig. Manufacturer: Espressif) and it's various clones (e.g. from DOIT, etc)  
+- [ESP32-DevKit-V1](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/ESP32-DevKit-V1(Espressif))  
 <p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/ESP32-DevKit-V1(Espressif)/doc/ESP32-Devkit-V1.jpg" height="160"/></p>  
 
-- [YB-ESP32-S3-ETH DevBoard with Ethernet, WLAN, 8MB Flash/PSRAM & two USB ports](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/YB-ESP32-S3-ETH(YelloByte)) (Manufacturer: YelloByte) in different variants
+- [YB-ESP32-S3-ETH DevBoard with Ethernet, WiFi, two USB ports and optional PSRAM](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/YB-ESP32-S3-ETH(YelloByte)) in different variants
 <p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-ETH(YelloByte)/doc/YB-ESP32-S3-ETH_board_top.jpg" height="160"/></p>  
 
-- [ESP32-CAM, ESP32-CAM-USB and ESP32-CAM-MB](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/ESP32-CAM(AI-THINKER)) (orig. Manufacturer: AI-THINKER)
+- [ESP32-CAM, ESP32-CAM-USB and ESP32-CAM-MB](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/ESP32-CAM(AI-THINKER))
 <p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/ESP32-CAM(AI-THINKER)/doc/ESP32-CAM.jpg" height="160"/><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/ESP32-CAM(AI-THINKER)/doc/ESP32-CAM-USB.jpg" height="150"/><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/ESP32-CAM(AI-THINKER)/doc/ESP32-CAM-MB.jpg" height="160"/></p>
 
-- [ESP32-1.14-Display DevBoard](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/ESP32-1.14-Display-DevBoard(TTGO)) (orig. Manufacturer: TTGO)
+- [ESP32-1.14-Display DevBoard](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/ESP32-1.14-Display-DevBoard(TTGO))
 <p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/ESP32-1.14-Display-DevBoard(TTGO)/doc/LILYGO-ESP32-1.14-Display.jpg" height="160"/></p>
 
-- [ESP32-S3-0.85-Display DevBoard](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/ESP32-S3-0.85-Display-DevBoard(LILYGO)) (orig. Manufacturer: LILYGO)
+- [ESP32-S3-0.85-Display DevBoard](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/ESP32-S3-0.85-Display-DevBoard(LILYGO))
 <p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/ESP32-S3-0.85-Display-DevBoard(LILYGO)/doc/LILYGO-ESP32-S3-0.85-Display.jpg" height="160"/></p>
 
-- [ESP32-S3-1.9-Display DevBoard](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/ESP32-S3-1.9-Display-DevBoard(LILYGO)) (orig. Manufacturer: LILYGO)
+- [ESP32-S3-1.9-Display DevBoard](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/ESP32-S3-1.9-Display-DevBoard(LILYGO))
 <p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/ESP32-S3-1.9-Display-DevBoard(LILYGO)/doc/LILYGO-ESP32-S3-1.9-Display.jpg" height="160"/></p>
 
-- [YD-ESP32-S3 DevBoard with big Flash, ext. PSRAM & two USB ports](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/YD-ESP32-S3(VCC-GND.COM)) (orig. Manufacturer: VCC-GND.COM)  
+- [YD-ESP32-S3 DevBoard with big Flash, ext. PSRAM & two USB ports](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/YD-ESP32-S3(VCC-GND.COM))  
 <p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YD-ESP32-S3(VCC-GND.COM)/doc/YD-ESP32-S3_DevBoard.JPG" height="160"/></p>
 
 ## :hammer_and_wrench: Choosing a Development Platform
