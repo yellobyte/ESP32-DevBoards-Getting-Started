@@ -47,9 +47,10 @@ Select the board **ESP32S3 Dev Module** and choose the proper settings as shown 
 
 Settings that apply to the -N8R8 board:  
 Board: *ESP32S3 Dev Module*, USB CDC On Boot & USB DFU On Boot: *Disabled*, Flash Mode: *QIO 80MHz*, Flash Size: *8MB*, PSRAM: *OPI PSRAM*  
+
  ![](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-ETH(YelloByte)/doc/YB-ESP32-S3-ETH-N8R8_ArduinoIDE-Settings.jpg)  
 
-When using the -N4 board then the following must be set: Flash Size: *4MB*, PSRAM: *Disabled*.
+For the -N4 board set as follows: Flash Size: *4MB*, PSRAM: *Disabled*.
 
 ### PlatformIO:
 Building with **PlatformIO** is no problem as well. Use the provided files in the examples directories.
