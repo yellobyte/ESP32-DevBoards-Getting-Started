@@ -1,5 +1,5 @@
 ## YB-ESP32-S3-ETH Development Board Overview:
-The **YB-ESP32-S3-ETH** is a general purpose development board based on Espressif's ESP32-S3 MCU. It comes in different variants: with **ESP32-S3-WROOM-1U-N8R8 module** (8MB Flash/8MB PSRAM) or with **ESP32-S3-WROOM-1U-N4 module** (4MB Flash) and **WiFi**, **RJ45 Ethernet connector**, an Ethernet PHY bridge chip **Wiznet W5500** and **two microUSB connectors** for software upload, serial output, debugging and feeding power to the board. The board (8MB Flash/8MB PSRAM) is currently available on sales platforms [Ebay](https://www.ebay.com/itm/125966982183) and [Ricardo.ch](https://www.ricardo.ch/en/s/YB-ESP32-S3-ETH).
+The **YB-ESP32-S3-ETH** is a general purpose development board based on Espressif's ESP32-S3 MCU. It comes in different variants: with **ESP32-S3-WROOM-1U-N8R8 module** (8MB Flash/8MB PSRAM) or with **ESP32-S3-WROOM-1U-N4 module** (4MB Flash). All variants provide **WiFi**, **RJ45 Ethernet connector**, an Ethernet PHY bridge chip **Wiznet W5500** and **two microUSB connectors** for software upload, serial output, debugging and feeding power to the board. The boards ware currently available on sales platforms [Ebay](https://www.ebay.com/itm/125966982183) and [Ricardo.ch](https://www.ricardo.ch/en/s/YB-ESP32-S3-ETH).
 
 ![](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-ETH(YelloByte)/doc/YB-ESP32-S3-ETH_board_top.jpg)
 
@@ -37,16 +37,19 @@ The board uses a LDO to drop the external supply voltage (5VDC min.) and interna
   - 5...9VDC applied to the VIN pin
   - 3.3VDC applied to the 3V3 pin(s)  
 
-Normal operating current of the idle board (equipped with ESP32-S3-WROOM-1-N8R8, all GPIOs unconnected, Ethernet Link down, WiFi disabled) is about 120mA. With attached Ethernet cable and Link up the current rises to about 180mA. With WiFi active as well the board draws about 210...270mA (depending on WiFi link).
+Normal operating current of the idle board (equipped with ESP32-S3-WROOM-1-N8R8, all GPIOs unconnected, Ethernet Link down, WiFi disabled) is about 120mA. With attached Ethernet cable and Link up the current rises to about 180mA. With WiFi active as well the board draws about 210...260mA (depending on WiFi link).
 
 ## Application hints:
 At the time of this writing most development IDEs support the Espressif32 platform including ESP32-S3/C3 boards, e.g. the popular Espressif ESP32-S3-DevKitC-1 board.  
 
 ### Arduino IDE:
-When building with the **ArduinoIDE** then you can select the board **ESP32S3 Dev Module** for example. Then choose the proper settings as shown in the examples directory (...ArduinoIDE) and you are fine. Just for the sake of knowing I selected a few other ESP32S3 boards from the list and no issues either. Be aware, since the ESP32S3 is so versatile there are a lot of build options to play with. Espressif's homapage offers some help es well.
+Select the board **ESP32S3 Dev Module** and choose the proper settings as shown below. Be aware, since the ESP32-S3 MCU is very versatile there are a lot of build options to play with. Espressif's homapage offers some help es well.
 
-Some example settings I used for testing:  
-Board: *ESP32S3 Dev Module*, USB CDC On Boot & USB DFU On Boot: *Disabled*, Flash Mode: *QIO 80MHz*, Flash Size: *8MB*, PSRAM: *OPI PSRAM*
+Settings that apply to the -N8R8 board:  
+Board: *ESP32S3 Dev Module*, USB CDC On Boot & USB DFU On Boot: *Disabled*, Flash Mode: *QIO 80MHz*, Flash Size: *8MB*, PSRAM: *OPI PSRAM*  
+ ![](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-ETH(YelloByte)/doc/YB-ESP32-S3-ETH-N8R8_ArduinoIDE-Settings.jpg)  
+
+When using the -N4 board then the following must be set: Flash Size: *4MB*, PSRAM: *Disabled*.
 
 ### PlatformIO:
 Building with **PlatformIO** is no problem as well. Use the provided files in the examples directories.
