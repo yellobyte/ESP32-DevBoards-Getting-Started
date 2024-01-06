@@ -47,16 +47,16 @@ At the time of this writing most development IDEs support the Espressif32 platfo
 ### Arduino IDE:
 Select the board "**ESP32S3 Dev Module**" and choose the proper settings as shown below. Be aware, since the ESP32-S3 MCU is very versatile there are a lot of build options to play with. Espressif's homapage offers some help es well.
 
-Settings that apply to the **-N8R8** board:  
+Special settings that apply to the **-N8R8** board:  
 - Board: *ESP32S3 Dev Module*
-- USB CDC On Boot & USB DFU On Boot: *Disabled*
-- Flash Mode: *QIO 80MHz*
 - Flash Size: *8MB*
+- Partition Scheme: *8MB with spiffs (...)*
 - PSRAM: *OPI PSRAM*  
 
  ![](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-ETH(YelloByte)/doc/YB-ESP32-S3-ETH-N8R8_ArduinoIDE-Settings.jpg)  
 
 For the **-N4** board the following applies: 
+- Board: *ESP32S3 Dev Module*
 - Flash Size: *4MB*
 - Partition Scheme: *Default 4MB*
 - PSRAM: *Disabled*.
@@ -205,7 +205,6 @@ Hard resetting via RTS pin...
 Please build project in debug configuration to get more details about an exception.
 See https://docs.platformio.org/page/projectconf/build_configurations.html
 
-
 --- Terminal on COM7 | 115200 8-N-1
 --- Available filters and text transformations: colorize, debug, default, direct, esp32_exception_decoder, hexlify, log2file, nocontrol, printable, send_on_enter, time        
 --- More details at https://bit.ly/pio-monitor-filters
@@ -215,10 +214,7 @@ See https://docs.platformio.org/page/projectconf/build_configurations.html
 23:27:28.307 > blinkTask has started.
 23:27:28.860 > Ethernet link is down.
 23:27:29.861 > Ethernet link is down.
-23:27:30.860 > Ethernet link is down.
 ....
-....
-
 ```
 ## Remarks:  
-- All delivered YB-ESP32-S3-ETH boards are already flashed with software example 'Test-ESP32-S3-ETH-DHCP'. Means the status LED 'IO47' blinks fast whith power applied and blinks slow with obtained IP address (DHCP via Ethernet).
+- All YB-ESP32-S3-ETH boards delivered are already flashed with software example 'Test-ESP32-S3-ETH-DHCP'. Means the status LED 'IO47' blinks fast whith power applied and blinks slow with obtained IP address (DHCP via Ethernet).
