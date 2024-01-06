@@ -47,7 +47,7 @@ At the time of this writing most development IDEs support the Espressif32 platfo
 ### Arduino IDE:
 Select the board "**ESP32S3 Dev Module**" and choose the proper settings as shown below. Be aware, since the ESP32-S3 MCU is very versatile there are a lot of build options to play with. Espressif's homapage offers some help es well.
 
-Settings that apply to the -N8R8 board:  
+Settings that apply to the **-N8R8** board:  
 - Board: *ESP32S3 Dev Module*
 - USB CDC On Boot & USB DFU On Boot: *Disabled*
 - Flash Mode: *QIO 80MHz*
@@ -56,7 +56,7 @@ Settings that apply to the -N8R8 board:
 
  ![](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-ETH(YelloByte)/doc/YB-ESP32-S3-ETH-N8R8_ArduinoIDE-Settings.jpg)  
 
-For the -N4 board set as follows: 
+For the **-N4** board the following applies: 
 - Flash Size: *4MB*
 - Partition Scheme: *Default 4MB*
 - PSRAM: *Disabled*.
@@ -98,7 +98,6 @@ ESP-ROM:esp32s3-20210327
 23:10:07.256 > Saved PC:0x40049087
 23:10:07.256 > invalid header: 0xffffffff
 23:10:07.259 > invalid header: 0xffffffff
-23:10:07.262 > invalid header: 0xffffffff
 ....
 ....
 ```
@@ -222,4 +221,4 @@ See https://docs.platformio.org/page/projectconf/build_configurations.html
 
 ```
 ## Remarks:  
-- Some YB-ESP32-S3-ETH boards will be delivered already flashed with provided software example 'Test-ESP32-S3-ETH-DHCP'. In this case the status LED 'IO47' will blink fast when power is applied and blink slow when getting an IP address via DHCP was successful.
+- All delivered YB-ESP32-S3-ETH boards are already flashed with software example 'Test-ESP32-S3-ETH-DHCP'. Means the status LED 'IO47' blinks fast whith power applied and blinks slow with obtained IP address (DHCP via Ethernet).
