@@ -1,7 +1,9 @@
 ## YB-ESP32-S3-ETH Development Board Overview:
-The **YB-ESP32-S3-ETH** is a general purpose development board based on Espressif's ESP32-S3 MCU. It comes in different variants: with **ESP32-S3-WROOM-1U-N8R8 module** (8MB Flash/8MB PSRAM) or with **ESP32-S3-WROOM-1U-N4 module** (4MB Flash).  
+The **YB-ESP32-S3-ETH** is a general purpose development board based on Espressif's ESP32-S3 MCU. Presently it comes in two different variants:  
+- with **ESP32-S3-WROOM-1U-N8R8 module** (8MB Flash/8MB PSRAM) or
+- with **ESP32-S3-WROOM-1U-N4 module** (4MB Flash).  
 
-All variants provide **WiFi**, **RJ45 Ethernet connector**, an Ethernet PHY bridge chip **Wiznet W5500** and **two microUSB connectors** for software upload, serial output, debugging and feeding power to the board. The boards are currently available on sales platforms [eBay (Variant with 8MB Flash/8MB PSRAM)](https://www.ebay.com/itm/125966982183), [eBay (Variant with 4MB Flash)](https://www.ebay.com/itm/126265587891) and [Ricardo.ch](https://www.ricardo.ch/en/s/YB-ESP32-S3-ETH). If they are reported 'out of stock' you can [email](mailto:yellobyte@bluewin.ch) me to get latest availability and delivery dates.
+All variants provide **WiFi**, **RJ45 Ethernet connector**, an Ethernet PHY bridge chip **Wiznet W5500**, two status LEDs and **two microUSB connectors** for software upload, serial output, debugging and feeding power to the board. The boards are currently available on sales platforms [eBay (Variant with 8MB Flash/8MB PSRAM)](https://www.ebay.com/itm/125966982183), [eBay (Variant with 4MB Flash)](https://www.ebay.com/itm/126265587891) and [Ricardo.ch](https://www.ricardo.ch/en/s/YB-ESP32-S3-ETH). If they are reported 'out of stock' you can [email](mailto:yellobyte@bluewin.ch) me to get latest availability and delivery dates.
 
 ![](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-ETH(YelloByte)/doc/YB-ESP32-S3-ETH_board_top.jpg)
 
@@ -9,7 +11,7 @@ Arduino libraries for the Wiznet W5500 are widely available (e.g. [**here**](htt
 
 The densly populated YB-ESP32-S3-ETH board provides multiple GPIO pins (as shown below) and is still [**highly breadboard compatible**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-ETH(YelloByte)/doc/YB-ESP32-S3-ETH_on_breadboard.jpg) for it leaves one row of accessible breadboard contacts on either side of the board. All I/O ports (GPIOx) are labeled on both sides of the board. 
 
-If WiFi/BT is needed instead of or additionally to an Ethernet connection then an external 2.4GHz antenna can be connected to the onboard WROOM-1U module. The connector is compatible with the following standards: U.FL (Hirose), MHF-I (I-PEX) and AMC (Amphen). 
+If WiFi/BT is needed instead of or additionally to an Ethernet connection then the external 2.4GHz WLAN antenna can be connected to the onboard WROOM-1U module. The connector is compatible with the following standards: U.FL (Hirose), MHF-I (I-PEX) and AMC (Amphen). 
 
 ### YB-ESP32-S3-ETH board features:
  - ESP32-S3-WROOM-1U-N8R8 module with 8MB Flash, 8MB PSRAM **or** ESP32-S3-WROOM-1U-N4 module with 4MB Flash 
@@ -28,7 +30,7 @@ If WiFi/BT is needed instead of or additionally to an Ethernet connection then a
 		
 Detailed technical infos about Espressif's MCU ESP32-S3 and their ESP32-S3-WROOM-1(U) modules are provided [**here**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/YB-ESP32-S3-ETH(YelloByte)/doc).
 
-Just for information purposes: The ESP32-S3-WROOM-1(U) module family comprises several [**versions**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-ETH(YelloByte)/doc/ESP32-S3-WROOM-1(U)_Variants.jpg). The **-1** versions come with embedded PCB antenna, the **-1U** versions with IPEX antenna socket instead. The extension -Nx(Ry) defines the amount of available FLASH/PSRAM, e.g. -N4 (4MB Flash, no PSRAM), -N8 (8MB Flash, no PSRAM), -N8R2 (8 MB Flash and 2MB PSRAM), -N8R8 (8 MB Flash and 8MB PSRAM) etc.  
+Just for information purposes: The ESP32-S3-WROOM-1(U) module family comprises several [**versions**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-ETH(YelloByte)/doc/ESP32-S3-WROOM-1(U)_Variants.jpg). The **-1** versions come with embedded PCB antenna, the **-1U** versions with IPEX antenna socket instead. The extension -Nx(Ry) defines the amount of available FLASH/PSRAM, e.g. -N4 (4MB Flash, no PSRAM), -N8 (8MB Flash, no PSRAM), -N8R2 (8 MB Flash, 2MB PSRAM), -N8R8 (8 MB Flash, 8MB PSRAM) etc.  
 
 ## Board Pin Layout:
  ![](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-ETH(YelloByte)/doc/YB-ESP32-S3-ETH_pinlayout.jpg)
@@ -39,13 +41,13 @@ The board uses a LDO to drop the external supply voltage (5VDC min.) and interna
   - 5...9VDC applied to the VIN pin
   - 3.3VDC applied to the 3V3 pin(s)  
 
-Normal operating current of the idle board (equipped with ESP32-S3-WROOM-1-N8R8, all GPIOs unconnected, Ethernet Link down, WiFi disabled) is about 120mA. With attached Ethernet cable and Link up the current rises to about 180mA. With WiFi active as well the board draws about 210...260mA (depending on WiFi link).
+Normal operating current of the idle board (all GPIOs unconnected, Ethernet Link down, WiFi disabled) is about 100mA (-N4) resp. 120mA (-N8R8). With Ethernet cable attached and Link up the current rises to about 165mA resp 180mA. With both Ethernet and WiFi active the board draws about 200...260mA (mainly depending on WiFi link).
 
 ## Application hints:
-At the time of this writing most development IDEs support the Espressif32 platform including ESP32-S3/C3 boards, e.g. the popular Espressif ESP32-S3-DevKitC-1 board.  
+At the time of this writing most development IDEs support the Espressif32 platform including ESP32, ESP32-S3/C3 boards, e.g. the popular Espressif ESP32-S3-DevKitC-1 board.  
 
 ### Arduino IDE:
-Select the board "**ESP32S3 Dev Module**" and choose the proper settings as shown below. Be aware, since the ESP32-S3 MCU is very versatile there are a lot of build options to play with. Espressif's homapage offers some help es well.
+Select the board "**ESP32S3 Dev Module**" and choose the proper settings as shown below. Be aware, since the ESP32-S3 MCU is very versatile there are a lot of build options to play with. Espressif's homapage offers some help.
 
 Special settings that apply to the **-N8R8** board:  
 - Board: *ESP32S3 Dev Module*
@@ -55,7 +57,7 @@ Special settings that apply to the **-N8R8** board:
 
  ![](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-ETH(YelloByte)/doc/YB-ESP32-S3-ETH-N8R8_ArduinoIDE-Settings.jpg)  
 
-For the **-N4** board the following applies: 
+For the **-N4** board the following settings apply: 
 - Board: *ESP32S3 Dev Module*
 - Flash Size: *4MB*
 - Partition Scheme: *Default 4MB*
@@ -63,9 +65,9 @@ For the **-N4** board the following applies:
 
 ### PlatformIO:
 Building with **PlatformIO** is no problem as well. Use the provided files in the examples directories.
-Each of the provided software example for PlatformIO comes with a subdirectory *'boards'*. There lie the specific board definition files (yb-esp32-s3-eth-n...json) that provide the build environment with the proper board definitions & settings.  
+Each of the provided software example for PlatformIO comes with a subdirectory *'boards'*. There lie the specific board definition files (yb-esp32-s3-eth-n4.json, yb-esp32-s3-eth-n8r8.json) which provide the proper board definitions & settings.  
 
-Going a step further and putting these files to your development platforms *core_dir/platforms/espressif32/boards* global directory (on my PC it's  *C:\Users\name\\.platformio\platforms\espressif32\boards*) means you can now create a new project in PlatformIO and simply select this board from the pull-down list.  
+Going a step further and putting these files to your development platforms *core_dir/platforms/espressif32/boards* global directory (on my PC it's  *C:\Users\name\\.platformio\platforms\espressif32\boards*) means you can create a new project in PlatformIO and simply select this board from the pull-down list.  
 
  ![](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-ETH(YelloByte)/doc/YB-ESP32-S3-ETH_PlatformIO_board_selection.jpg)
 
@@ -76,12 +78,12 @@ With both MicroUSB ports connected simultaneously you will see 2 COM ports and a
 **Serial output** generated with Serial.print() can be directed either to port **'USB'** or port **'UART'**. 
 
 In ArduinoIDE choose as follows:  
-- **USB CDC On Boot: Disabled**, serial output goes to **UART**
-- **USB CDC On Boot: Enabled**, serial output goes to **USB**
+- **USB CDC On Boot: Disabled**, serial output goes to port **UART**
+- **USB CDC On Boot: Enabled**, serial output goes to port **USB**
 
 In PlatformIO set a build flag in file platformio.ini:  
-- **ARDUINO_USB_CDC_ON_BOOT=0**, serial output goes to **UART**
-- **ARDUINO_USB_CDC_ON_BOOT=1**, serial output goes to **USB**
+- **ARDUINO_USB_CDC_ON_BOOT=0**, serial output goes to port **UART**
+- **ARDUINO_USB_CDC_ON_BOOT=1**, serial output goes to port **USB**
 
 **Remarks:**  
 
