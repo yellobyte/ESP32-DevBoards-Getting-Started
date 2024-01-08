@@ -26,14 +26,14 @@ If WiFi/BT is needed instead of or additionally to an Ethernet connection then t
  - Two microUSB ports. One is connected to the ESP32-S3 directly for debugging or serial output (labeled 'USB') and the other via USB-TTL bridge chip CH340 (labeled 'UART') for serial output and software upload (e.g. via ArduinoIDE, VSCode/PlatformIO etc). The ESP32-S3 contains an inbuild JTAG adapter hence [**debugging**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/debugging) via port 'USB' becomes fairly easy.
  - Hardware logic for *automatic* software uploads (supported by most Development IDEs) via microUSB port labeled 'UART'.  
  - Two pushbuttons. One is labeled 'R' and resets the ESP32-S3 (shorts EN pin to ground) and the other one is labeled 'B' and shorts GPIO0 to ground when pressed. The latter is sometimes needed to force the board into boot mode.
- - Lots of available GPIOs next to the ones already mentioned above. Have a look at the boards pin layout and [**block diagram**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-ETH(YelloByte)/doc/YB-ESP32-S3-ETH_block_diagram.jpg) for more detailed hardware infos.
-		
-Detailed technical infos about Espressif's MCU ESP32-S3 and their ESP32-S3-WROOM-1(U) modules are provided [**here**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/YB-ESP32-S3-ETH(YelloByte)/doc).
+ - Lots of available GPIOs next to the ones already mentioned above.
 
 Just for information purposes: The ESP32-S3-WROOM-1(U) module family comprises several [**versions**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-ETH(YelloByte)/doc/ESP32-S3-WROOM-1(U)_Variants.jpg). The **-1** versions come with embedded PCB antenna, the **-1U** versions with IPEX antenna socket instead. The extension -Nx(Ry) defines the amount of available FLASH/PSRAM, e.g. -N4 (4MB Flash, no PSRAM), -N8 (8MB Flash, no PSRAM), -N8R2 (8 MB Flash, 2MB PSRAM), -N8R8 (8 MB Flash, 8MB PSRAM) etc.  
 
 ## Board Pin Layout:
  ![](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-ETH(YelloByte)/doc/YB-ESP32-S3-ETH_pinlayout.jpg)
+
+The boards outline, block diagram and schematic are all located in folder [doc](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/YB-ESP32-S3-ETH(YelloByte)/doc), together with data sheets for Espressif's MCU ESP32-S3 and the ESP32-S3-WROOM-1(U) modules.
 
 ## Powering the board:
 The board uses a LDO to drop the external supply voltage (5VDC min.) and internally operates on 3.3Volt. There are three (mutually exclusive) ways to provide power to the board.
