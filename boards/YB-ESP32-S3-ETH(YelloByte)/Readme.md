@@ -33,7 +33,7 @@ Just for information purposes: The ESP32-S3-WROOM-1(U) module family comprises s
 ## Board Pin Layout:
  ![](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-ETH(YelloByte)/doc/YB-ESP32-S3-ETH_pinlayout.jpg)
 
-The boards outline, block diagram and schematic are all located in folder [doc](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/YB-ESP32-S3-ETH(YelloByte)/doc), together with data sheets for Espressif's MCU ESP32-S3 and the ESP32-S3-WROOM-1(U) modules.
+The boards outline, block diagram and schematic files are all located in folder [doc](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/YB-ESP32-S3-ETH(YelloByte)/doc), together with data sheets for Espressif's MCU ESP32-S3 and the ESP32-S3-WROOM-1(U) modules.
 
 ## Powering the board:
 The board uses a LDO to drop the external supply voltage (5VDC min.) and internally operates on 3.3Volt. There are three (mutually exclusive) ways to provide power to the board.
