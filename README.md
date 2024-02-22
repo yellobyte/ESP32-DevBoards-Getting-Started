@@ -127,6 +127,10 @@ Function and design of this little circuitry is explained in detail in folder [*
 
 ## :information_source: Debugging a program 
 
+Some **practical hints** on how to get started with debugging esp. with **ESP32-Prog** and **ESP32-S3's builtin JTAG adapter** I have put together in folder [**debugging**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/debugging).
+
+Here a quick summary:  
+
 The ESP32 toolchain features a GNU online debugger (GDB). GDB relies on another task running in the background called OpenOCD (Online-Chip-Debugger for ESP32). This task interacts via USB with an JTAG adapter.
 
 This JTAG adapter can be 
@@ -135,6 +139,4 @@ This JTAG adapter can be
 
 A general introduction to JTAG debugging is given on [**this webpage**](https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-guides/jtag-debugging/index.html) from Espressif.  The picture below is taken from it.
 
-<p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/debugging/Debugging_with_JTAG_adapter-block-diagram.jpg" height="350"/></p>
-
-Some **practical hints** on how to get started with debugging esp. with **ESP32-Prog** and **ESP32-S3's builtin JTAG adapter** I have put together in folder [**debugging**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/debugging).
+<p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/debugging/Debugging_with_JTAG_adapter-block-diagram.jpg" height="450"/></p>
