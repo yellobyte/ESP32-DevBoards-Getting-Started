@@ -3,7 +3,7 @@ The **YB-ESP32-S3-ETH** is a general purpose development board based on Espressi
 - with **ESP32-S3-WROOM-1U-N8R8 module** (8MB Flash/8MB PSRAM) or
 - with **ESP32-S3-WROOM-1U-N4 module** (4MB Flash).  
 
-All variants provide **WiFi**, **RJ45 Ethernet connector**, an Ethernet PHY bridge chip **Wiznet W5500**, two status LEDs and **two microUSB connectors** for software upload, serial output, debugging and feeding power to the board. The boards are currently available on sales platforms [eBay (Variant with 8MB Flash/8MB PSRAM)](https://www.ebay.com/itm/125966982183), [eBay (Variant with 4MB Flash)](https://www.ebay.com/itm/126265587891) and [Ricardo.ch](https://www.ricardo.ch/en/s/YB-ESP32-S3-ETH). If they are reported 'out of stock' you can [email](mailto:yellobyte@bluewin.ch) me to get latest availability and delivery dates.
+All variants provide **WiFi**, **RJ45 Ethernet connector**, an Ethernet PHY bridge chip **Wiznet W5500**, two status LEDs and **two microUSB connectors** for software upload, serial output, debugging and feeding power to the board. The boards are currently available on sales platforms [eBay (Variant with 8MB Flash/8MB PSRAM)](https://www.ebay.com/itm/125966982183), [eBay (Variant with 4MB Flash)](https://www.ebay.com/itm/126570619651) and [Ricardo.ch](https://www.ricardo.ch/en/s/YB-ESP32-S3-ETH). If they are reported 'out of stock' you can [email](mailto:yellobyte@bluewin.ch) me to get latest availability and delivery dates.
 
 ![](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-ETH(YelloByte)/doc/YB-ESP32-S3-ETH_board_top.jpg)
 
