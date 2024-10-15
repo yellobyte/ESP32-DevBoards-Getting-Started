@@ -4,11 +4,11 @@ The **YB-ESP32-S3-AMP** is a general purpose development board based on Espressi
 
 The board provides one **microSD** card slot, two **MAX98357A I2S PCM Class D Amplifiers** (for left + right audio channels), **WiFi**, **USB-C connector** for software upload, serial output and (possibly) feeding power to the board and **two status LEDs**. 
 
-![](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-AMP(YelloByte)/doc/under-construction.jpg)
+![](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-AMP/doc/under-construction.jpg)
 
-Schreibfaul1's Arduino library [**ESP32-audioI2S**](https://github.com/schreibfaul1/ESP32-audioI2S) on github.com is perfectly suitable for this bord. Just **connect 2 loudspeakers (4...8 Ohm)** to the board, build and download an example and you are ready for streaming internet radio stations or playing audio files from microSD card. Of course you can connect additional hardware to the board, e.g. TFT displays, I2C modules or IR receivers. Please have a look at the [examples](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/YB-ESP32-S3-AMP(YelloByte)/examples/) directory.  
+Schreibfaul1's Arduino library [**ESP32-audioI2S**](https://github.com/schreibfaul1/ESP32-audioI2S) on github.com is perfectly suitable for this bord. Just **connect 2 loudspeakers (4...8 Ohm)** to the board, build and download an example and you are ready for streaming internet radio stations or playing audio files from microSD card. Of course you can connect additional hardware to the board, e.g. TFT displays, I2C modules or IR receivers. Please have a look at the [examples](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/YB-ESP32-S3-AMP/examples/) directory.  
 
-The densly populated YB-ESP32-S3-AMP board provides multiple GPIO pins (as shown below) and is still [**highly breadboard compatible**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-AMP(YelloByte)/doc/YB-ESP32-S3-AMP_on_breadboard.jpg) for it leaves one row of accessible breadboard contacts on either side of the board. All I/O ports (GPIOx) are labeled on both sides of the board. 
+The densly populated YB-ESP32-S3-AMP board provides multiple GPIO pins (as shown below) and is still [**highly breadboard compatible**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-AMP/doc/YB-ESP32-S3-AMP_on_breadboard.jpg) for it leaves one row of accessible breadboard contacts on either side of the board. All I/O ports (GPIOx) are labeled on both sides of the board. 
 
 ### YB-ESP32-S3-AMP board features in detail:
  - ESP32-S3-WROOM-1-N8R2 module with 8MB Flash, 2MB PSRAM, WiFi PCB antenna
@@ -29,12 +29,12 @@ The densly populated YB-ESP32-S3-AMP board provides multiple GPIO pins (as shown
  - Two pushbuttons. One is labeled 'R' and resets the ESP32-S3 (shorts EN pin to ground) and the other one is labeled 'B' and shorts GPIO0 to ground when pressed. The latter is sometimes needed to force the board into boot mode.
  - Lots of available GPIOs next to the ones already mentioned above. They can be used for connecting IR remotes, sensors etc. via *I2C* bus, connecting a TFT display via a second SPI bus *HSPI* and much more.
 
-Just for information purposes: The ESP32-S3-WROOM-1 module family comprises several [**versions**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-AMP(YelloByte)/doc/ESP32-S3-WROOM-1(U)_Variants.jpg). The **-1** versions come with embedded PCB antenna, the **-1U** versions with IPEX antenna socket instead. The extension -Nx(Ry) defines the amount of available FLASH/PSRAM, e.g. -N4 (4MB Flash, no PSRAM), -N8 (8MB Flash, no PSRAM), -N4R2 (4 MB Flash, 2MB PSRAM), -N8R8 (8 MB Flash, 8MB PSRAM) etc.  
+Just for information purposes: The ESP32-S3-WROOM-1 module family comprises several [**versions**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-AMP/doc/ESP32-S3-WROOM-1(U)_Variants.jpg). The **-1** versions come with embedded PCB antenna, the **-1U** versions with IPEX antenna socket instead. The extension -Nx(Ry) defines the amount of available FLASH/PSRAM, e.g. -N4 (4MB Flash, no PSRAM), -N8 (8MB Flash, no PSRAM), -N4R2 (4 MB Flash, 2MB PSRAM), -N8R8 (8 MB Flash, 8MB PSRAM) etc.  
 
 ## Board Pin Layout:
- ![](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-AMP(YelloByte)/doc/YB-ESP32-S3-AMP_pinlayout.jpg)
+ ![](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-AMP/doc/YB-ESP32-S3-AMP_pinlayout.jpg)
 
-The boards outline and schematic files are all located in folder [doc](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/YB-ESP32-S3-AMP(YelloByte)/doc), together with data sheets for Espressif's MCU ESP32-S3 and ESP32-S3-WROOM-1 module.
+The boards outline and schematic files are all located in folder [doc](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/YB-ESP32-S3-AMP/doc), together with data sheets for Espressif's MCU ESP32-S3 and ESP32-S3-WROOM-1 module.
 
 ## Powering the board:
 The board uses a LDO to drop the external supply voltage (~5VDC) to 3.3Volt needed by the ESP32-S3. The two I2S amplifiers MAX98357A get their voltage directly from pin '5V'. They can operate up to 5.5V and their absolute maximum rating is 6V. So never supply more than about 5.5V to the '5V' power input pin !  
@@ -56,7 +56,7 @@ Settings that apply to the **YB-ESP32-S3-AMP-N8R2** board:
 - Partition Scheme: e.g. *8MB with spiffs (...)*
 - PSRAM: *OPI PSRAM*  
 
- ![](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-AMP(YelloByte)/doc/YB-ESP32-S3-AMP-N8R2_ArduinoIDE-Settings.jpg)  
+ ![](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-AMP/doc/YB-ESP32-S3-AMP-N8R2_ArduinoIDE-Settings.jpg)  
 
 ### PlatformIO:
 Building with **PlatformIO** is no problem as well. Use the provided files in the example directories.
@@ -64,7 +64,7 @@ Each of the provided software example for PlatformIO comes with a subdirectory *
 
 Going a step further and putting these files to your development platforms *core_dir/platforms/espressif32/boards* global directory (on my PC it's  *C:\Users\name\\.platformio\platforms\espressif32\boards*) means you can create a new project in PlatformIO and simply select this board from the pull-down list.  
 
- ![](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-AMP(YelloByte)/doc/YB-ESP32-S3-AMP_PlatformIO_board_selection.jpg)
+ ![](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-AMP/doc/YB-ESP32-S3-AMP_PlatformIO_board_selection.jpg)
 
 ### Please note:
 
@@ -93,7 +93,7 @@ In such case force the ESP32-S3 into upload mode *manually*. Just keep the **'B'
 23:19:07.453 > rst:0x1 (POWERON),boot:0x0 (DOWNLOAD(USB/UART0))
 23:19:07.459 > waiting for download
 ```
-Below the log of flashing the dev board with provided software example [Play-All-MP3-Files-on-SD](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/YB-ESP32-S3-AMP(YelloByte)/examples/Play-All-MP3-Files-on-SD).  
+Below the log of flashing the dev board with provided software example [Play-All-MP3-Files-on-SD](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/YB-ESP32-S3-AMP/examples/Play-All-MP3-Files-on-SD).  
 ```
 ...
 ...

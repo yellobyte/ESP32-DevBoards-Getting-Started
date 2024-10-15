@@ -33,7 +33,7 @@ debug_init_break = tbreak setup
 ;debug_init_break = break loop
 build_type = debug
 ```
-Have a look at the platformio.ini file of this [**example**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/YD-ESP32-S3(VCC-GND.COM)/examples/Test-YD-ESP32-S3-N8R2_Debug_via_builtin_JTAG) to get more info.
+Have a look at the platformio.ini file of this [**example**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/YD-ESP32-S3/examples/Test-YD-ESP32-S3-N8R2_Debug_via_builtin_JTAG) to get more info.
 
 ## Scenario 2: Debugging an ESP32 using the external JTAG adapter "ESP32-Prog":
 
@@ -82,7 +82,7 @@ First alternative way is to start a command prompt and enter the command
 <p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/debugging/OpenOCD_starting_via_command_prompt.jpg" height="300"/></p>
 
 Second alternative way is to prepare a script file with above command and then add the line "extra_scripts = name_of_script_file.py" to the [env] section in platformio.ini. 
-With this done you only need to hit the respective entry under "PlatformIO -> PROJECT TASKS -> Custom" every time you want to start OpenOCD. Have a look at the file [**add_tasks.py**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/blob/main/boards/YD-ESP32-S3(VCC-GND.COM)/examples/Test-YD-ESP32-S3-N8R2_Debug_via_builtin_JTAG/add_tasks.py) in the examples root directory for further details.
+With this done you only need to hit the respective entry under "PlatformIO -> PROJECT TASKS -> Custom" every time you want to start OpenOCD. Have a look at the file [**add_tasks.py**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/blob/main/boards/YD-ESP32-S3/examples/Test-YD-ESP32-S3-N8R2_Debug_via_builtin_JTAG/add_tasks.py) in the examples root directory for further details.
 
 **Important:**  
 The automatically created "Start OpenOCD (debug) task" terminal logs errors, warnings and basic infos while OpenOCD is starting up and running. If errors show up indicating a problem with OpenOCD then I urge you to find the problems and fix them, otherwise you definitely will come a gutser later on.
