@@ -114,7 +114,7 @@ In such case **put the ESP32-S3 into upload mode manually** by keeping the **'B'
 23:19:07.453 > rst:0x1 (POWERON),boot:0x0 (DOWNLOAD(USB/UART0))
 23:19:07.459 > waiting for download
 ```
-Below the log of flashing the dev board with provided software example [Test-ESP32-S3-ETH-DHCP](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-ETH/examples/Test-ESP32-S3-ETH-DHCP).  
+Below the log of flashing the dev board with provided software example [ESP32-S3-ETH-DHCP](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-ETH/examples/PlatformIO/ESP32-S3-ETH-DHCP).  
 ```
 Executing task: C:\Users\tj\.platformio\penv\Scripts\platformio.exe run --target upload --target monitor --environment n8r8 --upload-port COM7 --monitor-port COM7 
 
@@ -220,4 +220,4 @@ See https://docs.platformio.org/page/projectconf/build_configurations.html
 ....
 ```
 ## Remarks:  
-- All YB-ESP32-S3-ETH boards delivered are already flashed with software example 'Test-ESP32-S3-ETH-DHCP'. Means the status LED 'IO47' blinks fast whith power applied and blinks slow with obtained IP address (DHCP via Ethernet).
+- All YB-ESP32-S3-ETH boards delivered are already flashed with software example 'ESP32-S3-ETH-DHCP'. Means the status LED 'IO47' blinks fast whith power applied and blinks slow with obtained IP address (DHCP via Ethernet).
