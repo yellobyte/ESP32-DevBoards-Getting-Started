@@ -42,14 +42,14 @@ bool allocRAM(size_t size)
       }
     }
     if (i == size) {
-			Serial.printf("success, buf = %x\n", buf);
-			return true;
-		}	
+      Serial.printf("success, buf = %x\n", buf);
+      return true;
+    }	
   } 
   else {
     Serial.printf("error !\n");
   }
-	return false;
+  return false;
 }  
 
 void freeBuf()
@@ -110,7 +110,7 @@ void loop() {
   char c;
 
   if (Serial.read(&c, 1) && (c == 'r' || c == 'R')) {
-		// check for terminal input: reboot requested
+    // check for terminal input: reboot requested
     Serial.println("\nSystem will restart in 3 seconds.\n\n"); 
     delay(3000);
     ESP.restart();  
