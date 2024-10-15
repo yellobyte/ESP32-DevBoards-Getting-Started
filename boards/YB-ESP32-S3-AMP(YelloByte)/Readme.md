@@ -6,7 +6,7 @@ The board provides one **microSD** card slot, two **MAX98357A I2S PCM Class D Am
 
 ![](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-AMP(YelloByte)/doc/under-construction.jpg)
 
-Schreibfaul1's Arduino library [**ESP32-audioI2S**](https://github.com/schreibfaul1/ESP32-audioI2S) on github.com is perfectly usable on this bord for streaming internet radio stations or playing audio files from SD card and generating output over the two MAX98357A I2S amplifiers. Please have a look at the [examples](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/YB-ESP32-S3-AMP(YelloByte)/examples/) directory.  
+Schreibfaul1's Arduino library [**ESP32-audioI2S**](https://github.com/schreibfaul1/ESP32-audioI2S) on github.com is perfectly suitable for this bord. Just **connect 2 loudspeakers (4...8 Ohm)** to the board, build and download an example and you are ready for streaming internet radio stations or playing audio files from microSD card. Of course you can connect additional hardware to the board, e.g. TFT displays, I2C modules or IR receivers. Please have a look at the [examples](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/YB-ESP32-S3-AMP(YelloByte)/examples/) directory.  
 
 The densly populated YB-ESP32-S3-AMP board provides multiple GPIO pins (as shown below) and is still [**highly breadboard compatible**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-AMP(YelloByte)/doc/YB-ESP32-S3-AMP_on_breadboard.jpg) for it leaves one row of accessible breadboard contacts on either side of the board. All I/O ports (GPIOx) are labeled on both sides of the board. 
 
