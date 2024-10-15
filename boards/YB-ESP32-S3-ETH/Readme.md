@@ -45,7 +45,6 @@ The board uses a LDO to drop the external supply voltage (5VDC min.) and interna
 Normal operating current of the idle board (all GPIOs unconnected, Ethernet Link down, WiFi disabled) is about 100mA (-N4) resp. 120mA (-N8R8). With Ethernet cable attached and Link up the current rises to about 165mA resp 180mA. With both Ethernet and WiFi active the board draws about 200...260mA (mainly depending on WiFi link).
 
 ## Application hints:
-At the time of this writing most development IDEs support the Espressif32 platform including ESP32, ESP32-S3/C3 boards, e.g. the popular Espressif ESP32-S3-DevKitC-1 board.  
 
 ### Arduino IDE:
 Select the board "**ESP32S3 Dev Module**" and choose the proper settings as shown below. Be aware, since the ESP32-S3 MCU is very versatile there are a lot of build options to play with. Espressif's homapage offers some help.
@@ -65,8 +64,7 @@ For the **-N4** board the following settings apply:
 - PSRAM: *Disabled*.
 
 ### PlatformIO:
-Building with **PlatformIO** is no problem as well. Use the provided files in the examples directories.
-Each of the provided software example for PlatformIO comes with a subdirectory *'boards'*. There lie the specific board definition files (yb-esp32-s3-eth-n4.json, yb-esp32-s3-eth-n8r8.json) which provide the proper board definitions & settings.  
+Building with **PlatformIO** is no problem as well. Each of the provided software examples for PlatformIO comes with a subdirectory *'boards'*. There lie the specific board definition files (yb-esp32-s3-eth-n4.json, yb-esp32-s3-eth-n8r8.json) which provide the proper board definitions & settings.  
 
 Going a step further and putting these files to your development platforms *core_dir/platforms/espressif32/boards* global directory (on my PC it's  *C:\Users\name\\.platformio\platforms\espressif32\boards*) means you can create a new project in PlatformIO and simply select this board from the pull-down list.  
 
