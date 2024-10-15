@@ -1,7 +1,8 @@
 ## YB-ESP32-S3-ETH Development Board Overview:
-The **YB-ESP32-S3-ETH** is a general purpose development board based on Espressif's ESP32-S3 MCU. Presently it comes in two different variants:  
-- with **ESP32-S3-WROOM-1U-N8R8 module** (8MB Flash/8MB PSRAM) or
-- with **ESP32-S3-WROOM-1U-N4 module** (4MB Flash).  
+The **YB-ESP32-S3-ETH** is a general purpose development board based on Espressif's ESP32-S3 MCU. Presently it comes in three different variants:  
+- with **ESP32-S3-WROOM-1U-N8R8 module** (8MB Flash/8MB PSRAM),
+- with **ESP32-S3-WROOM-1U-N4 module** (4MB Flash) and
+- with **ESP32-S3-WROOM-1-N4R8 module** (4MB Flash/8MB PSRAM).  
 
 All variants provide **WiFi**, **RJ45 Ethernet connector**, an Ethernet PHY bridge chip **Wiznet W5500**, two status LEDs and **two microUSB connectors** for software upload, serial output, debugging and feeding power to the board. The boards are currently available on sales platforms [eBay](https://www.ebay.com/itm/126265587891) and [Ricardo.ch](https://www.ricardo.ch/en/s/YB-ESP32-S3-ETH). 
 
