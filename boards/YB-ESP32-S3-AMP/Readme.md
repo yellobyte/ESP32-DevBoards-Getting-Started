@@ -93,7 +93,7 @@ In such case force the ESP32-S3 into upload mode *manually*. Just keep the **'B'
 23:19:07.453 > rst:0x1 (POWERON),boot:0x0 (DOWNLOAD(USB/UART0))
 23:19:07.459 > waiting for download
 ```
-Below the log of flashing the dev board with provided software example [Play-All-MP3-Files-on-SD](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/YB-ESP32-S3-AMP/examples/Play-All-MP3-Files-on-SD).  
+Below the log of flashing the dev board with provided software example [Play-All-MP3-Files-on-SD](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/YB-ESP32-S3-AMP/examples/ArduinoIDE/Play-All-MP3-Files-on-SD).  
 ```
 ...
 ...
