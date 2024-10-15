@@ -41,7 +41,7 @@ The boards outline and schematic files are all located in folder [doc](https://g
 The board uses a LDO to drop the external supply voltage (~5VDC) to 3.3Volt needed by the ESP32-S3. The two audio amplifiers MAX98357A get their voltage directly from pin '5V'. They can operate up to 5.5V and their absolute maximum rating is 6V. Therefore **never supply more than ~5.5V to the '5V' power input pin** !!  
 There are two ways to provide power to the board:
   - through the USB-C port or
-  - ~5...5.5VDC applied to the 5V pin
+  - ~5VDC applied to the 5V pin
 
 Normal operating current of the idle board (all GPIOs unconnected, no audio output, WiFi disabled) is about 45mA. With WiFi active the board draws about 100mA (mainly depending on WiFi link). With WiFi active, a microSD in the slot and audio output on both amp channels the current rises to ~150mA.
 
