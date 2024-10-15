@@ -10,7 +10,7 @@ Schreibfaul1's Arduino library [**ESP32-audioI2S**](https://github.com/schreibfa
 
 The densly populated YB-ESP32-S3-AMP board provides multiple GPIO pins (as shown below) and is still [**highly breadboard compatible**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-AMP/doc/YB-ESP32-S3-AMP_on_breadboard.jpg) for it leaves one row of accessible breadboard contacts on either side of the board. All I/O ports (GPIOx) are labeled on both sides of the board. 
 
-### YB-ESP32-S3-AMP board features in detail:
+## YB-ESP32-S3-AMP board features in detail:
  - **ESP32-S3-WROOM-1-N8R2** module with 8MB Flash, 2MB PSRAM, WiFi PCB antenna
  - **MAX98357A** I2S PCM Class D Amplifiers (for stereo output) connected to the ESP32-S3 as follows:
    - *GPIO5 - BCLK* (bit clock)

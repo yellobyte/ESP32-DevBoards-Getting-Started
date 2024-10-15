@@ -14,20 +14,20 @@ The densly populated YB-ESP32-S3-ETH board provides multiple GPIO pins (as shown
 
 If WiFi/BT is needed instead of or additionally to an Ethernet connection then the external 2.4GHz WLAN antenna can be connected to the onboard WROOM-1U module. The connector is compatible with the following standards: U.FL (Hirose), MHF-I (I-PEX) and AMC (Amphen). 
 
-### YB-ESP32-S3-ETH board features:
- - ESP32-S3-WROOM-1U-N8R8 module with 8MB Flash, 8MB PSRAM **or** ESP32-S3-WROOM-1U-N4 module with 4MB Flash 
- - WiFi/BT IPEX antenna connector
- - RJ45 10M/100M Ethernet connector driven by onboard PHY controller chip Wiznet W5500
- - The W5500 pins required to control the chip are hardwired to the ESP32-S3 GPIOs as follows:
+## YB-ESP32-S3-ETH board features:
+ - **ESP32-S3-WROOM-1U-N8R8** module with 8MB Flash, 8MB PSRAM or **ESP32-S3-WROOM-1U-N4** module with 4MB Flash 
+ - **WiFi/BT IPEX** antenna connector
+ - **RJ45 10M/100M Ethernet** connector driven by onboard PHY controller chip Wiznet W5500
+ - the **W5500** pins required to control the chip are hardwired to the ESP32-S3 GPIOs as follows:
    - *MOSI - GPIO11, MISO - GPIO13, SCK - GPIO12* (SPI bus data communication)
    - *SCS - GPIO14* (chip select, required for SPI bus control)
    - *RST - GPIO21* (chip reset, needed only for chip reset without resetting the whole board)  
    - *INT - GPIO18* (only if solder bridge on bottom is closed, seldomly needed)  
- - Two control LEDs. One LED labeled 'P' is connected to the 3.3V rail to indicate board power and the other LED labeled 'IO47' is connected to GPIO47 which can be used as status LED, for debugging purposes etc.
- - Two microUSB ports. One is connected to the ESP32-S3 directly for debugging or serial output (labeled 'USB') and the other via USB-TTL bridge chip CH340 (labeled 'UART') for serial output and software upload (e.g. via ArduinoIDE, VSCode/PlatformIO etc). The ESP32-S3 contains an inbuild JTAG adapter hence [**debugging**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/debugging) via port 'USB' becomes fairly easy.
- - Hardware logic for *automatic* software uploads (supported by most Development IDEs) via microUSB port labeled 'UART'.  
- - Two pushbuttons. One is labeled 'R' and resets the ESP32-S3 (shorts EN pin to ground) and the other one is labeled 'B' and shorts GPIO0 to ground when pressed. The latter is sometimes needed to force the board into boot mode.
- - Lots of available GPIOs next to the ones already mentioned above.
+ - **control LEDs**. One LED labeled 'P' is connected to the 3.3V rail to indicate board power and the other LED labeled 'IO47' is connected to GPIO47 which can be used as status LED, for debugging purposes etc.
+ - two **microUSB** ports. One is connected to the ESP32-S3 directly for debugging or serial output (labeled 'USB') and the other via USB-TTL bridge chip CH340 (labeled 'UART') for serial output and software upload (e.g. via ArduinoIDE, VSCode/PlatformIO etc). The ESP32-S3 contains an inbuild JTAG adapter hence [**debugging**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/debugging) via port 'USB' becomes fairly easy.
+ - **hardware logic** for *automatic* software uploads (supported by most Development IDEs) via microUSB port labeled 'UART'.  
+ - **pushbuttons**. One is labeled 'R' and resets the ESP32-S3 (shorts EN pin to ground) and the other one is labeled 'B' and shorts GPIO0 to ground when pressed. The latter is sometimes needed to force the board into boot mode.
+ - **lots of available GPIOs** next to the ones already mentioned above.
 
 Just for information purposes: The ESP32-S3-WROOM-1(U) module family comprises several [**versions**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-ETH/doc/ESP32-S3-WROOM-1(U)_Variants.jpg). The **-1** versions come with embedded PCB antenna, the **-1U** versions with IPEX antenna socket instead. The extension -Nx(Ry) defines the amount of available FLASH/PSRAM, e.g. -N4 (4MB Flash, no PSRAM), -N8 (8MB Flash, no PSRAM), -N8R2 (8 MB Flash, 2MB PSRAM), -N8R8 (8 MB Flash, 8MB PSRAM) etc.  
 
