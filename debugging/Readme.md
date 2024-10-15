@@ -244,6 +244,6 @@ At this stage you know everything is configured and set up properly. You are rea
 
 Once GDB is running you can start your debugging session and set breakpoints, watch variables and much much more. A very comprehensive & detailed introduction into debugging with PlatformIO/GDB is given [**here**](https://docs.platformio.org/en/stable/plus/debugging.html#debugging-tools). 
 
-Just as an example below a snapshot of my latest debugging session with an [**YD-ESP32-S3-N8R2**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/YD-ESP32-S3(VCC-GND.COM)) dev board featuring 2 USB ports and an ESP32-S3 with builtin JTAG adapter:
+Just as an example below a snapshot of my latest debugging session with an [**YD-ESP32-S3-N8R2**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/YD-ESP32-S3) dev board featuring 2 USB ports and an ESP32-S3 with builtin JTAG adapter:
 
 ![](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/debugging/DebugSession_using_ESP32-S3_builtin_JTAG.jpg)
