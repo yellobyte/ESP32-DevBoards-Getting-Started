@@ -30,7 +30,7 @@ The densly populated YB-ESP32-S3-AMP board provides multiple GPIO pins (as shown
  - **USB-C** port connected to ESP32-S3 via USB-TTL bridge chip CH340 for serial output and software upload (e.g. via ArduinoIDE, VSCode/PlatformIO etc). Also can be used to power the board.
  - **hardware logic** for *automatic* software uploads (supported by most Development IDEs) via USB-C port. How this works is explained [here](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/reset_and_software_upload).  
  - **pushbuttons**. One is labeled 'R' and resets the ESP32-S3 (shorts EN pin to ground) and the other one is labeled 'B' and shorts GPIO0 to ground when pressed. The latter is sometimes needed to force the board into boot mode.
- - **lots of available GPIOs** next to the ones already mentioned above. They can be used for connecting IR remotes, sensors etc. via *I2C* bus, connecting a TFT display via a second SPI bus *HSPI* and much more.
+ - **lots of available GPIOs** next to the ones already mentioned above. Useful e.g. for connecting additional modules, displays, rotary encoders, LEDs, etc.
 
 Just for information purposes: The ESP32-S3-WROOM-1 module family comprises several [**versions**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-AMP/doc/ESP32-S3-WROOM-1(U)_Variants.jpg). The **-1** versions come with embedded PCB antenna, the **-1U** versions with IPEX antenna socket instead. The extension -Nx(Ry) defines the amount of available FLASH/PSRAM, e.g. -N4 (4MB Flash, no PSRAM), -N8 (8MB Flash, no PSRAM), -N4R2 (4 MB Flash, 2MB PSRAM), -N8R8 (8 MB Flash, 8MB PSRAM) etc.  
 
