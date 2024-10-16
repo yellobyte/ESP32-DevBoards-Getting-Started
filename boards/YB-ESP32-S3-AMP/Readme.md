@@ -2,7 +2,7 @@
 The **YB-ESP32-S3-AMP** is a general purpose development board based on Espressif's ESP32-S3 MCU. Presently it comes in one variant:  
 - with **ESP32-S3-WROOM-1-N8R2** module (**8MB** Flash, **2MB** PSRAM, **WiFi** PCB antenna)
 
-Additionally it provides a **microSD** card slot, two **MAX98357A I2S PCM Class D Amplifiers** (for left + right audio channels), **USB-C connector** for software upload, serial output and/or feeding power to the board, **two status LEDs** and GPIO pins for free use. 
+Additionally it provides a **microSD** card slot, two **MAX98357A I2S PCM Class D Amplifiers** (for left + right audio channels), **USB-C connector** for software upload, serial output and/or feeding power to the board, **two status LEDs** and **GPIO pins** for free use. 
 
 ![](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-AMP/doc/under-construction.jpg)
 
@@ -21,8 +21,7 @@ The densly populated YB-ESP32-S3-AMP board provides multiple GPIO pins (as shown
    - *GPIO7 - DIN* (digital audio signal)
  - **screw terminals** for connecting 2 loudspeakers (4...8 Ohm, left + right audio channels)
  - **microSD** card slot connected to the ESP32-S3 via fast SPI bus *FSPI*:
-   - *GPIO10 - SCS* (SPI bus control, chip select  
-   (this control line is not needed for SD_MMC-lib and available for other usage when solder bridge *SD_CS* is open [default closed])
+   - *GPIO10 - SCS* (SPI bus control, chip select, this control line is not needed for SD_MMC-lib and available for other usage when solder bridge *SD_CS* is open [default closed])
    - *GPIO11 - MOSI* (SPI bus data communication, SD_MMC calls it *CMD*)
    - *GPIO12 - SCK* (SPI bus clock signal)
    - *GPIO13 - MISO* (SPI bus data communication, SD_MMC calls it *D0*)
