@@ -1,14 +1,17 @@
 ## YB-ESP32-S3-AMP Development Board Overview:
 The **YB-ESP32-S3-AMP** is a general purpose development board based on Espressif's ESP32-S3 MCU. Presently it comes in one variant:  
-- with **ESP32-S3-WROOM-1-N8R2 module** (8MB Flash/2MB PSRAM/WiFi PCB antenna)
+- with **ESP32-S3-WROOM-1-N8R2** module (**8MB** Flash, **2MB** PSRAM, **WiFi** PCB antenna)
 
-The board provides one **microSD** card slot, two **MAX98357A I2S PCM Class D Amplifiers** (for left + right audio channels), **WiFi**, **USB-C connector** for software upload, serial output and (possibly) feeding power to the board and **two status LEDs**. 
+Additionally it provides a **microSD** card slot, two **MAX98357A I2S PCM Class D Amplifiers** (for left + right audio channels), **USB-C connector** for software upload, serial output and/or feeding power to the board, **two status LEDs** and GPIO pins for free use. 
 
 ![](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-AMP/doc/under-construction.jpg)
 
-Schreibfaul1's Arduino library [**ESP32-audioI2S**](https://github.com/schreibfaul1/ESP32-audioI2S) on github.com is perfectly suitable for this bord. Just **connect 2 loudspeakers (4...8 Ohm)** to the board, build and download an example and you are ready for streaming internet radio stations or playing audio files from microSD card. Of course you can connect additional hardware to the board, e.g. TFT displays, I2C modules or IR receivers. Please have a look at the [examples](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/YB-ESP32-S3-AMP/examples/) directory.  
+Just **connect 2 loudspeakers (4...8 Ohm)** to the board, apply power, build and download an example and off you go. You can listen to internet radio stations, play audio files from microSD card and much more.  
 
-The densly populated YB-ESP32-S3-AMP board provides multiple GPIO pins (as shown below) and is still [**highly breadboard compatible**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-AMP/doc/YB-ESP32-S3-AMP_on_breadboard.jpg) for it leaves one row of accessible breadboard contacts on either side of the board. All I/O ports (GPIOx) are labeled on both sides of the board. 
+Of course you can connect additional hardware to the board, e.g. TFT displays, IR receivers or any other module that communicates via I2C/SPI, etc. Please have a look at the provided [examples](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/YB-ESP32-S3-AMP/examples) for PlatformIO resp. ArduinoIDE. 
+Most of them use Schreibfaul1's awesome Arduino library [**ESP32-audioI2S**](https://github.com/schreibfaul1/ESP32-audioI2S) which is perfectly suitable for this bord.  
+
+The densly populated YB-ESP32-S3-AMP board provides multiple GPIO pins (as shown below) and is still highly [**breadboard compatible**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-AMP/doc/YB-ESP32-S3-AMP_on_breadboard.jpg) for it leaves one row of accessible breadboard contacts on either side of the board. All I/O ports (GPIOx) are clearly labeled on both sides of the board. 
 
 ## YB-ESP32-S3-AMP board features in detail:
  - **ESP32-S3-WROOM-1-N8R2** module with 8MB Flash, 2MB PSRAM, WiFi PCB antenna
@@ -16,7 +19,7 @@ The densly populated YB-ESP32-S3-AMP board provides multiple GPIO pins (as shown
    - *GPIO5 - BCLK* (bit clock)
    - *GPIO6 - LRCLK* (frame clock)
    - *GPIO7 - DIN* (digital audio signal)
- - **screw terminals** for connecting 2 loudspeakers (4...8 Ohm, left + right audio channels) 
+ - **screw terminals** for connecting 2 loudspeakers (4...8 Ohm, left + right audio channels)
  - **microSD** card slot connected to the ESP32-S3 via fast SPI bus *FSPI*:
    - *GPIO10 - SCS* (SPI bus control, chip select  
    (this control line is not needed for SD_MMC-lib and available for other usage when solder bridge *SD_CS* is open [default closed])
