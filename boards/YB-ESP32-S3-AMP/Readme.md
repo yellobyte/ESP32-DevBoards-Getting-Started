@@ -6,7 +6,7 @@ Additionally it provides a **microSD** card slot, two **MAX98357A I2S PCM Class 
 
 ![](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-AMP/doc/under-construction.jpg)
 
-Just **connect 2 loudspeakers (4...8 Ohm)** to the board, apply power, build and download an example and off you go. You can listen to internet radio stations, play audio files from microSD card and much more.  
+Just **connect 2 loudspeakers (4...8 Ohm)** to the board, apply power, build and upload an example to the board and off you go. You can listen to internet radio stations, play audio files from microSD card and much more.  
 
 Of course you can connect additional hardware to the board, e.g. TFT displays, IR receivers or any other module that communicates via I2C/SPI, etc. Please have a look at the provided [examples](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/YB-ESP32-S3-AMP/examples) for PlatformIO resp. ArduinoIDE. 
 Most of them use Schreibfaul1's awesome Arduino library [**ESP32-audioI2S**](https://github.com/schreibfaul1/ESP32-audioI2S) which is perfectly suitable for this bord.  
