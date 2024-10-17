@@ -78,8 +78,8 @@ void setup()
   Serial.println();
   Serial.println("running example \"Play-All-MP3-Files-on-SD\":");
 
-  // the FSPI default definitions for SS, MOSI, SCK & MISO are 10, 11, 12 & 13 
-  // (see pins_arduino.h for more info)
+  // FSPI default definitions for SS, MOSI, SCK & MISO are 10, 11, 12 & 13 
+  // (see pins_arduino.h for more info) and match the boards wiring
   spi_onboardSD->begin();
 
   if (!SD.begin(SS, *spi_onboardSD)) {
