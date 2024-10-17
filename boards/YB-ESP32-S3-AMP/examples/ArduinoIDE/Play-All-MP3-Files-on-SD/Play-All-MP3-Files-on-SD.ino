@@ -4,14 +4,14 @@
   This example plays all mp3-files from the microSD card over the two integrated MAX98357A I2S amplifiers 
   (left + right audio channels).
   
-  Since we use the "SD" library which requires GPIO10 the solder bridge SD_CS must be closed [default].
-  Make sure you have "SD" and "ESP32-audioI2S" libraries added to your project or ArduinoIDE. 
+  Since we use "SD" library which requires the cards CS signal (GPIO10) the solder bridge SD_CS must be closed [default].
+  Please add libraries "SD" and "ESP32-audioI2S" to your project or ArduinoIDE. 
 
   Jumper bridge DAC_MUTE is open by default and both MAX98357A are active. Closing the jumper bridge will connect pin
   GPIO47 (onboard LED IO47) with the amps SD_MODE pin. Setting GPIO47 to LOW (LED off) will shut down (mute) the amps
   and setting GPIO47 to HIGH (LED on) will activate the amps.
 
-  Last updated 2024-10-15, ThJ <yellobyte@bluewin.ch>
+  Last updated 2024-10-17, ThJ <yellobyte@bluewin.ch>
 */
 
 #include <Arduino.h>
@@ -97,6 +97,3 @@ void loop()
 {
   audio.loop();                        // play mp3 audio file
 }
-
-
-

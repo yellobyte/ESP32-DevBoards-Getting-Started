@@ -2,7 +2,7 @@
   Play-Radio-Station-with-TFT
 
   Plays a radio station's audio stream over the 2 MAX98357A I2S amplifiers (left+right audio channels). An attached 
-  TFT display with ILI9431 controller shows some serial output.
+  TFT display with ILI9431 controller shows some stream info.
 
   Please add libraries "ESP32-audioI2S", "Adafruit GFX" and "Adafruit ILI9341" to your project or ArduinoIDE.
 
@@ -10,7 +10,7 @@
   GPIO47 (onboard LED IO47) with the amps SD_MODE pin. Setting GPIO47 to LOW (LED off) will shut down (mute) the amps
   and setting GPIO47 to HIGH (LED on) will activate the amps.
 
-  Last updated 2024-10-15, ThJ <yellobyte@bluewin.ch>
+  Last updated 2024-10-17, ThJ <yellobyte@bluewin.ch>
 */
 
 #include <Arduino.h>
@@ -39,31 +39,27 @@
 const char ssid[] = "MySSID";
 const char pass[] = "MyPassword"; 
  
-// simple wrapper class to provide a "scrolling text" feature on the tft display,
+// wrapper class to provide a very basic "scrolling text" feature on the TFT display,
 // with scrolling only supported in portrait mode !
 class myTFT : public Adafruit_ILI9341 {
 public:
   myTFT(SPIClass *spiClass, int8_t dc, int8_t cs = -1, int8_t rst = -1) 
     : Adafruit_ILI9341(spiClass, dc, cs, rst) {}; // Constructor
-  void printf(const char* format, ...)
+  void println(const char* str)
   {
-    char buf[300];
+    char buf[strlen(str) + 3];
     static uint16_t dummy1, textHeight = 0;
     static int16_t dummy2, rotation, scrollValue = 0;
     static bool bScroll = false;
 
-    va_list varArgs;
-    va_start(varArgs, format);
-    vsnprintf(buf, sizeof(buf), format, varArgs);
-    va_end(varArgs);
-
+    snprintf(buf, sizeof(buf), "%s\r\n", str);
     rotation = getRotation();
     if (rotation == 0 || rotation == 2) {
       if (wrap || (!wrap && !textHeight))
         getTextBounds(buf, 0, 0, &dummy2, &dummy2, &dummy1, &textHeight);
       if (getCursorY() + textHeight > height()) {
         setCursor(0, 0);
-        bScroll = true;  // scrolling starts
+        bScroll = true;
       }  
       if (bScroll) {
         scrollValue = (rotation == 0) ? 
@@ -80,19 +76,13 @@ public:
 
 SPIClass spi_tft = SPIClass(HSPI);      // second SPI bus (HSPI) used for TFT display
 myTFT tft        = myTFT(&spi_tft, TFT_DC, TFT_CS, TFT_RST);
-
 Audio audio;
 
-void audio_info(const char *info)       // file info
+void audio_info(const char *info)       // stream info
 {
-  Serial.printf("info: %s\n", info); 
-  tft.printf("i: %s\n", info);
-}
-
-void audio_id3data(const char *info)    // id3 metadata
-{
-  Serial.printf("id3data: %s\n", info);
-  tft.printf("id3: %s\n", info);
+  String str = "i: "; str += info;
+  Serial.println(str); 
+  tft.println(str.c_str());
 }
 
 void setup()
@@ -102,7 +92,7 @@ void setup()
   tft.begin();
   tft.fillScreen(ILI9341_BLACK);
   tft.setTextColor(ILI9341_WHITE, ILI9341_BLACK);
-  tft.setTextWrap(true);               // text wrapping enabled
+  tft.setTextWrap(true);               // enable text wrapping
   tft.setTextSize(0);                  // smallest font
   tft.setRotation(2);                  // portrait mode upside down
 
@@ -120,7 +110,7 @@ void setup()
   Serial.printf("\nconnected successfully to \"%s\". IP address: %s\n", ssid, WiFi.localIP().toString());
 
   audio.setPinout(I2S_BCLK, I2S_LRC, I2S_DOUT);
-  audio.setVolume(10);                 // 0...21(max)
+  audio.setVolume(6);                  // 0...21(max)
   audio.setConnectionTimeout(1200,0);  // needed for some stations esp. from around the globe
   audio.connecttohost(RADIO_STREAM);
 }
@@ -129,6 +119,3 @@ void loop()
 {
   audio.loop();                        // play audio stream
 }
-
-
-
