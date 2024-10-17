@@ -9,7 +9,7 @@
   GPIO47 (onboard LED IO47) with the amps SD_MODE pin. Setting GPIO47 to LOW (LED off) will shut down (mute) the amps
   and setting GPIO47 to HIGH (LED on) will activate the amps.
 
-  Last updated 2024-10-15, ThJ <yellobyte@bluewin.ch>
+  Last updated 2024-10-17, ThJ <yellobyte@bluewin.ch>
 */
 
 #include <Arduino.h>
@@ -32,11 +32,11 @@ const char pass[] = "MyPassword";
 Audio audio;
  
 void audio_info(const char *info) {     // file info
-  Serial.print("info        "); 
+  Serial.print("info: "); 
   Serial.println(info);
 }
 void audio_id3data(const char *info) {  // id3 metadata
-  Serial.print("id3data     ");
+  Serial.print("id3: ");
   Serial.println(info);
 }
 
@@ -44,16 +44,16 @@ void setup()
 {
   Serial.begin(115200);
   Serial.println();
-  Serial.println("Running example \"Play-Radio-Station\":");
+  Serial.println("running example \"Play-Radio-Station\":");
 
   // connecting to local WiFi network
-  Serial.printf("Connecting to WiFi network \"%s\"\n", ssid);
+  Serial.printf("connecting to WiFi network \"%s\"\n", ssid);
   WiFi.begin(ssid, pass);
   while ( WiFi.status() != WL_CONNECTED) {
     Serial.print(".");
     delay(2000);
   }
-  Serial.printf("\nConnected successfully to \"%s\". IP address: %s\n", ssid, WiFi.localIP().toString());
+  Serial.printf("\nconnected successfully to \"%s\". IP address: %s\n", ssid, WiFi.localIP().toString());
 
   audio.setPinout(I2S_BCLK, I2S_LRC, I2S_DOUT);
   audio.setVolume(10);                 // 0...21(max)
