@@ -6,7 +6,7 @@
 
   Please add libraries "ESP32-audioI2S", "Adafruit GFX" and "Adafruit ILI9341" to your project or ArduinoIDE.
 
-  Jumper bridge DAC_MUTE is open by default and both MAX98357A are active. Closing the solder bridge will connect pin
+  Solder bridge DAC_MUTE is open by default and both MAX98357A are active. Closing the solder bridge will connect pin
   GPIO47 (onboard LED IO47) with the amps SD_MODE pin. Setting GPIO47 to LOW (LED off) will shut down (mute) the amps
   and setting GPIO47 to HIGH (LED on) will activate the amps.
 
