@@ -5,7 +5,7 @@
   Make sure you have library "ESP32-audioI2S" added to your project or ArduinoIDE. More info about this versatile lib
   are available on its homepage "https://github.com/schreibfaul1/ESP32-audioI2S".
 
-  Jumper bridge DAC_MUTE is open by default and both MAX98357A are active. Closing the jumper bridge will connect pin
+  Jumper bridge DAC_MUTE is open by default and both MAX98357A are active. Closing the solder bridge will connect pin
   GPIO47 (onboard LED IO47) with the amps SD_MODE pin. Setting GPIO47 to LOW (LED off) will shut down (mute) the amps
   and setting GPIO47 to HIGH (LED on) will activate the amps.
 
