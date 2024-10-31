@@ -8,13 +8,13 @@ Apart from the **ESP32-S3** it provides a **microSD** card slot, two **MAX98357A
 Just **connect 2 loudspeakers (4...8 Ohm)** to the board, apply power, build and upload an example and off you go. You quickly can listen to **internet radio stations**, **play audio files from microSD card** and much more.  
 
 Of course you can connect additional hardware to the board, e.g. TFT displays, IR receivers or any other module that communicates via I2C/SPI, etc. Please have a look at the provided [examples](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/YB-ESP32-S3-AMP/examples) for PlatformIO resp. ArduinoIDE. 
-Most of them use Schreibfaul1's awesome Arduino library [**ESP32-audioI2S**](https://github.com/schreibfaul1/ESP32-audioI2S) which is perfectly suitable for this bord.  
+Most of them use Schreibfaul1's awesome Arduino library [**ESP32-audioI2S**](https://github.com/schreibfaul1/ESP32-audioI2S) which is highly suitable for this bord.  
 
 The densly populated YB-ESP32-S3-AMP board provides multiple GPIO pins (as shown below) and is still highly [**breadboard compatible**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-AMP/doc/YB-ESP32-S3-AMP_on_breadboard.jpg) for it leaves one row of accessible breadboard contacts on either side of the board. All I/O ports (GPIOx) are clearly labeled on both sides of the board. 
 
 ## YB-ESP32-S3-AMP board features in detail:
  - **ESP32-S3-WROOM-1-N8R2** module with 8MB Flash, 2MB PSRAM, WiFi PCB antenna
- - **MAX98357A** I2S PCM Class D Amplifiers (for stereo output) connected to the ESP32-S3 as follows:
+ - **MAX98357A** I2S PCM Class D Amplifier (2x for stereo output, 3.2W @ 4Ohm) connected to the ESP32-S3 as follows:
    - *GPIO5 - BCLK* (bit clock)
    - *GPIO6 - LRCLK* (frame clock)
    - *GPIO7 - DIN* (digital audio signal)  
