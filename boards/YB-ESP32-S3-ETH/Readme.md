@@ -4,7 +4,7 @@ The **YB-ESP32-S3-ETH** is a general purpose development board based on Espressi
 - with **ESP32-S3-WROOM-1U-N4 module** (4MB Flash) and
 - with **ESP32-S3-WROOM-1-N4R8 module** (4MB Flash/8MB PSRAM).  
 
-All variants provide **WiFi**, **RJ45 Ethernet connector**, an Ethernet PHY bridge chip **Wiznet W5500**, two status LEDs and **two microUSB connectors** for software upload, serial output, debugging and feeding power to the board. The boards are currently available on sales platforms [eBay](https://www.ebay.com/sch/i.html?_nkw=yb-esp32-s3-eth) and [Ricardo.ch](https://www.ricardo.ch/en/s/YB-ESP32-S3-ETH). 
+All variants provide **WiFi**, **RJ45 Ethernet connector**, an Ethernet PHY bridge chip **Wiznet W5500**, two status LEDs and **two microUSB connectors** for software upload, serial output, debugging and feeding power to the board. The boards are currently available on sales platforms [eBay](https://www.ebay.com/sch/i.html?_nkw=yb-esp32-s3) and [Ricardo.ch](https://www.ricardo.ch/en/s/YB-ESP32-S3). 
 
 ![](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-ETH/doc/YB-ESP32-S3-ETH_board_top.jpg)
 
@@ -27,7 +27,11 @@ If WiFi/BT is needed instead of or additionally to an Ethernet connection then t
  - two **microUSB** ports. One is connected to the ESP32-S3 directly for debugging or serial output (labeled 'USB') and the other via USB-TTL bridge chip CH340 (labeled 'UART') for serial output and software upload (e.g. via ArduinoIDE, VSCode/PlatformIO etc). The ESP32-S3 contains an inbuild JTAG adapter hence [**debugging**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/debugging) via port 'USB' becomes fairly easy.
  - **hardware logic** for *automatic* software uploads (supported by most Development IDEs) via microUSB port labeled 'UART'.  
  - **pushbuttons**. One is labeled 'R' and resets the ESP32-S3 (shorts EN pin to ground) and the other one is labeled 'B' and shorts GPIO0 to ground when pressed. The latter is sometimes needed to force the board into boot mode.
- - **lots of available GPIOs** next to the ones already mentioned above.
+ - **lots of available GPIOs** next to the ones already mentioned above.  
+
+The board will spare you the trouble of cabling two different Arduino boards and saves a lot of room on the breadboard as well:  
+
+ ![](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-ETH/doc/YB-ESP32-S3-ETH_modules_replacement.jpg)
 
 Just for information purposes: The ESP32-S3-WROOM-1(U) module family comprises several [**versions**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-ETH/doc/ESP32-S3-WROOM-1(U)_Variants.jpg). The **-1** versions come with embedded PCB antenna, the **-1U** versions with IPEX antenna socket instead. The extension -Nx(Ry) defines the amount of available FLASH/PSRAM, e.g. -N4 (4MB Flash, no PSRAM), -N8 (8MB Flash, no PSRAM), -N8R2 (8 MB Flash, 2MB PSRAM), -N8R8 (8 MB Flash, 8MB PSRAM) etc.  
 
