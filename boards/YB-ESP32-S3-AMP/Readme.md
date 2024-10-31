@@ -1,12 +1,11 @@
 ## YB-ESP32-S3-AMP Development Board Overview:
-The **YB-ESP32-S3-AMP** is a general purpose development board based on Espressif's ESP32-S3 MCU. Presently it comes in one variant:  
-- with **ESP32-S3-WROOM-1-N8R2** module (**8MB** Flash, **2MB** PSRAM, **WiFi** PCB antenna)
+The **YB-ESP32-S3-AMP** is a general purpose development board based on Espressif's ESP32-S3 MCU. Presently it comes in one variant, with **ESP32-S3-WROOM-1-N8R2** module (8MB Flash, 2MB PSRAM, WiFi PCB antenna) and is available on sales platforms [eBay](https://www.ebay.com/sch/i.html?_nkw=yb-esp32-s3-amp) and [Ricardo.ch](https://www.ricardo.ch/en/s/YB-ESP32-S3-AMP).
 
-Additionally it provides a **microSD** card slot, two **MAX98357A I2S PCM Class D Amplifiers** (for left + right audio channels), **USB-C connector** for software upload, serial output and/or feeding power to the board, **two status LEDs** and **GPIO pins** for free use. 
+Apart from the **ESP32-S3** it provides a **microSD** card slot, two **MAX98357A I2S PCM Class D Amplifiers** (for left + right audio channels), **USB-C connector** for software upload, serial output and/or feeding power to the board, **two status LEDs** and **GPIO pins** for free use. 
 
-![](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-AMP/doc/under-construction.jpg)
+![](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-AMP/doc/YB-ESP32-S3-AMP_top.jpg)
 
-Just **connect 2 loudspeakers (4...8 Ohm)** to the board, apply power, build and upload an example and off you go. You can listen to internet radio stations, play audio files from microSD card and much more.  
+Just **connect 2 loudspeakers (4...8 Ohm)** to the board, apply power, build and upload an example and off you go. You quickly can listen to **internet radio stations**, **play audio files from microSD card** and much more.  
 
 Of course you can connect additional hardware to the board, e.g. TFT displays, IR receivers or any other module that communicates via I2C/SPI, etc. Please have a look at the provided [examples](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/YB-ESP32-S3-AMP/examples) for PlatformIO resp. ArduinoIDE. 
 Most of them use Schreibfaul1's awesome Arduino library [**ESP32-audioI2S**](https://github.com/schreibfaul1/ESP32-audioI2S) which is perfectly suitable for this bord.  
@@ -36,6 +35,10 @@ The densly populated YB-ESP32-S3-AMP board provides multiple GPIO pins (as shown
  - **pushbuttons**. One is labeled 'R' and resets the ESP32-S3 (shorts EN pin to ground) and the other one is labeled 'B' and shorts GPIO0 to ground when pressed. The latter is sometimes needed to force the board into boot mode.
  - **lots of available GPIOs**, useful for connecting LEDs, buttons, additional modules via SPI/I2C, e.g displays, rotary encoders, bluetooth, etc.
 
+In summary, the board replaces a lot of separate modules & cables, saves space on the breadboard and might avoid the odd frustration to get it all running.  
+
+ ![](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-AMP/doc/YB-ESP32-S3-AMP_modules_replacement.jpg)
+
 ## Board Pin Layout:
  ![](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-AMP/doc/YB-ESP32-S3-AMP_pinlayout.jpg)
 
@@ -48,8 +51,7 @@ There are two ways to provide power to the board:
 
 The board uses a LDO to drop the external supply voltage to 3.3Volt needed by the ESP32-S3. The two audio amplifiers MAX98357A get their voltage directly from pin '5V'. They can operate up to 5.5V and their absolute maximum rating is 6V. Therefore **never supply more than ~5.5VDC to the '5V' power input pin** !!  
 
-
-Normal operating current of the idle board (all GPIOs unconnected, no audio output, WiFi disabled) is about 45mA. With WiFi active the board draws about 100mA (mainly depending on WiFi link). With WiFi active, a microSD in the slot and audio output on both amp channels the current rises to ~150mA.
+Normal operating current of the idle board (all GPIOs unconnected, no audio output, WiFi disabled) is about 45mA. With WiFi active the board draws about 100mA (mainly depending on WiFi link). With WiFi active, a microSD in the slot and audio output on both amp channels the current rises to ~160mA.
 
 ## Application hints: 
 

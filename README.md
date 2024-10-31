@@ -23,6 +23,9 @@ Right now examples are provided for the following boards:
 - [ESP32-DevKit-V1](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/ESP32-DevKit-V1)  
 <p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/ESP32-DevKit-V1/doc/ESP32-Devkit-V1.jpg" height="160"/></p>  
 
+- [YB-ESP32-S3-AMP DevBoard with microSD slot, 2 x MAX98357A Audio Amplifier, WiFi, USB-C, PSRAM](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/YB-ESP32-S3-AMP)
+<p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-AMP/doc/YB-ESP32-S3-AMP_top.jpg" height="160"/></p>  
+
 - [YB-ESP32-S3-ETH DevBoard with Ethernet, WiFi, two USB ports and optional PSRAM](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/YB-ESP32-S3-ETH) in different variants
 <p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-ETH/doc/YB-ESP32-S3-ETH_board_top.jpg" height="160"/></p>  
 
