@@ -9,7 +9,7 @@
   GPIO47 (onboard LED IO47) with the amps SD_MODE pin. Setting GPIO47 to LOW (LED off) will shut down (mute) the amps
   and setting GPIO47 to HIGH (LED on) will activate the amps.
 
-  Last updated 2024-10-17, ThJ <yellobyte@bluewin.ch>
+  Last updated 2024-11-01, ThJ <yellobyte@bluewin.ch>
 */
 
 #include <Arduino.h>
@@ -22,7 +22,8 @@
 //#define RADIO_STREAM "http://vis.media-ice.musicradio.com/CapitalMP3"
 //#define RADIO_STREAM "http://stream.laut.fm/oldies"
 
-#define I2S_BCLK    5  // GPIO 5/6/7 are not wired to a pin, they are exclusively used for the MAX98357A
+#define LED_STATUS 47
+#define I2S_BCLK    5  // GPIOs 5/6/7 are not wired to a pin, they are exclusively used for the MAX98357A
 #define I2S_LRC     6
 #define I2S_DOUT    7
 
@@ -42,6 +43,9 @@ void audio_id3data(const char *info) {  // id3 metadata
 
 void setup()
 {
+  digitalWrite(LED_STATUS, LOW);
+  pinMode(LED_STATUS, OUTPUT);
+
   Serial.begin(115200);
   Serial.println();
   Serial.println("running example \"Play-Radio-Station\":");
@@ -54,7 +58,8 @@ void setup()
     delay(2000);
   }
   Serial.printf("\nconnected successfully to \"%s\". IP address: %s\n", ssid, WiFi.localIP().toString());
-
+  digitalWrite(LED_STATUS, HIGH);      // status LED On
+  
   audio.setPinout(I2S_BCLK, I2S_LRC, I2S_DOUT);
   audio.setVolume(10);                 // 0...21(max)
   audio.setConnectionTimeout(1200,0);  // needed for some stations esp. from around the globe
@@ -65,6 +70,3 @@ void loop()
 {
   audio.loop();                        // play audio stream
 }
-
-
-
