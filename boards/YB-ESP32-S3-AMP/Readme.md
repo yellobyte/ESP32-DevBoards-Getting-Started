@@ -3,7 +3,7 @@ The **YB-ESP32-S3-AMP** is a general purpose development board based on Espressi
 
 Apart from the **ESP32-S3** it provides a **microSD** card slot, two **MAX98357A I2S PCM Class D Amplifiers** (for left + right audio channels), **USB-C connector** for software upload, serial output and/or feeding power to the board, **two status LEDs** and **GPIO pins** for free use. 
 
-![](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-AMP/doc/YB-ESP32-S3-AMP_top.jpg)
+![](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-AMP/doc/YB-ESP32-S3-AMP_top_with_screw_terminals.jpg)
 
 Just **connect 2 loudspeakers (4...8 Ohm)** to the board, apply power, build and upload an example and off you go. You quickly can listen to **internet radio stations**, **play audio files from microSD card** and much more.  
 
@@ -19,7 +19,7 @@ The densly populated YB-ESP32-S3-AMP board provides multiple GPIO pins (as shown
    - *GPIO6 - LRCLK* (frame clock)
    - *GPIO7 - DIN* (digital audio signal)  
 
-    Note: GPIO 5/6/7 are not wired to any board pin, they are exclusively used for the two MAX98357A.
+    Note: GPIOs 5/6/7 are not wired to any board pin, they are exclusively used for the two MAX98357A.
  - **screw terminals** for connecting 2 loudspeakers (4...8 Ohm, left + right audio channel)
  - **microSD** card slot connected to the ESP32-S3 via fast SPI bus *FSPI*:
    - *GPIO10 - SCS* (SPI bus control, chip select, this control line is not needed for SD_MMC-lib and available for other usage when solder bridge *SD_CS* is open [default closed])
@@ -27,7 +27,7 @@ The densly populated YB-ESP32-S3-AMP board provides multiple GPIO pins (as shown
    - *GPIO12 - SCK* (SPI bus clock signal)
    - *GPIO13 - MISO* (SPI bus data communication, SD_MMC calls it *D0*)  
 
-   Note: GPIO 11/12/13 are not wired to any board pin, they are exclusively used for the microSD slot.
+   Note: GPIOs 11/12/13 are not wired to any board pin, they are exclusively used for the microSD slot.
  - **control LEDs**. One LED labeled 'P' is connected to the 3.3V rail to indicate board power and the other LED labeled 'IO47' is connected to GPIO47 which can be used as status LED.  
  If solder bridge *DAC_MUTE* is closed [default open] this pin can be used for muting the two audio amplifiers: active when GPIO47 is HIGH or muted when GPIO47 is LOW.
  - **USB-C** port connected to ESP32-S3 via USB-TTL bridge chip CH340 for serial output and software upload (e.g. via ArduinoIDE, VSCode/PlatformIO etc). Can also be used to power the board.

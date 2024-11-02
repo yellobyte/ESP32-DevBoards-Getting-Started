@@ -20,28 +20,28 @@ For loading, editing and uploading an example just start VSCode/PlatformIO, go t
 
 Right now examples are provided for the following boards:
 
-- [ESP32-DevKit-V1](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/ESP32-DevKit-V1)  
+- [**ESP32-DevKit-V1** with ESP32-WROOM-32 module and microUSB](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/ESP32-DevKit-V1)  
 <p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/ESP32-DevKit-V1/doc/ESP32-Devkit-V1.jpg" height="160"/></p>  
 
-- [YB-ESP32-S3-AMP DevBoard with microSD slot, 2 x MAX98357A Audio Amplifier, WiFi, USB-C, PSRAM](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/YB-ESP32-S3-AMP)
-<p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-AMP/doc/YB-ESP32-S3-AMP_top.jpg" height="170"/></p>  
+- [**YB-ESP32-S3-AMP** with PSRAM, microSD, 2 x MAX98357A Audio Amplifier, WiFi, USB-C](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/YB-ESP32-S3-AMP)
+<p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-AMP/doc/YB-ESP32-S3-AMP_top_with_screw_terminals.jpg" height="160"/></p>  
 
-- [YB-ESP32-S3-ETH DevBoard with Ethernet, WiFi, two USB ports and optional PSRAM](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/YB-ESP32-S3-ETH) in different variants
+- [**YB-ESP32-S3-ETH** with Ethernet (W5500), WiFi, two USB ports and optional PSRAM](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/YB-ESP32-S3-ETH)
 <p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-ETH/doc/YB-ESP32-S3-ETH_board_top.jpg" height="160"/></p>  
 
-- [ESP32-CAM, ESP32-CAM-USB and ESP32-CAM-MB](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/ESP32-CAM)
+- [**ESP32-CAM**, **ESP32-CAM-USB**, **ESP32-CAM-MB** with OV2640 camera, microSD and Flash LED](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/ESP32-CAM)
 <p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/ESP32-CAM/doc/ESP32-CAM.jpg" height="160"/><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/ESP32-CAM/doc/ESP32-CAM-USB.jpg" height="150"/><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/ESP32-CAM/doc/ESP32-CAM-MB.jpg" height="160"/></p>
 
-- [ESP32-1.14-Display DevBoard](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/ESP32-1.14-Display-DevBoard)
+- [**ESP32-1.14-Display**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/ESP32-1.14-Display-DevBoard)
 <p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/ESP32-1.14-Display-DevBoard/doc/LILYGO-ESP32-1.14-Display.jpg" height="160"/></p>
 
-- [ESP32-S3-0.85-Display DevBoard](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/ESP32-S3-0.85-Display-DevBoard)
+- [**ESP32-S3-0.85-Display**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/ESP32-S3-0.85-Display-DevBoard)
 <p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/ESP32-S3-0.85-Display-DevBoard/doc/LILYGO-ESP32-S3-0.85-Display.jpg" height="160"/></p>
 
-- [ESP32-S3-1.9-Display DevBoard](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/ESP32-S3-1.9-Display-DevBoard)
+- [**ESP32-S3-1.9-Display**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/ESP32-S3-1.9-Display-DevBoard)
 <p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/ESP32-S3-1.9-Display-DevBoard/doc/LILYGO-ESP32-S3-1.9-Display.jpg" height="160"/></p>
 
-- [YD-ESP32-S3 DevBoard with big Flash, ext. PSRAM & two USB ports](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/YD-ESP32-S3)  
+- [**YD-ESP32-S3** with big Flash, external PSRAM, WS2812B RGB-LED and two USB-C ports](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/YD-ESP32-S3)  
 <p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YD-ESP32-S3/doc/YD-ESP32-S3_DevBoard.JPG" height="160"/></p>
 
 ## :hammer_and_wrench: Choosing a Development Platform
@@ -67,7 +67,7 @@ The project configuration file has sections (each denoted by a [header]) and one
 
 **Important:** Different examples might require different build options, so always have a look at the platformio.ini file for relevant infos.
 
-Some very useful general settings (for more experienced programmers) deserve to be mentioned here. 
+A small selection of some very useful project settings (for more experienced programmers) deserve to be mentioned here. 
 1) Forces builds to use older platform packages and/or frameworks instead of the newest one.
 ```
 ;platform = espressif32
@@ -79,38 +79,43 @@ platform_packages = framework-arduinoespressif32 @ https://github.com/espressif/
 ```
 monitor_filters = time, esp32_exception_decoder, log2file
 ```
-3) The program is compiled with full symbolic debug information and no optimization.
+3) Range of COM ports to be tried for upload and monitoring.
+```
+monitor_port = COM[345678]
+upload_port = COM[345678]
+```
+4) The program is compiled with full symbolic debug information and no optimization.
 ```
 build_type = debug
 ```
-4) Enables usage of ESP32 JTAG debug adapter "[ESP32-Prog](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/blob/main/debugging/JTAG%20adapter%20docs/ESP-Prog.jpg)" for debugging.
+5) Enables usage of ESP32 JTAG debug adapter "[ESP32-Prog](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/blob/main/debugging/JTAG%20adapter%20docs/ESP-Prog.jpg)" for debugging.
 ```
 debug_tool = esp-prog
 ```
-5) Sets the initial breakpoint to first line in function setup().
+6) Sets the initial breakpoint to first line in function setup().
 ```
 debug_init_break = tbreak setup
 ```
-6) Generates various levels of debug output.
+7) Generates various levels of debug output.
 ```
 ; 0 no debug output, 1 errors, 2 warnings, 3 infos, 4 debug info, 5 verbose 
 build_flags = -DCORE_DEBUG_LEVEL=4
 ```
-7) Disables any activity on COM signals RTS and/or DTR. Required by some ESP32 dev boards to enable serial output (e.g. ESP32-CAM-MB board). Be aware, this setting prevents the IDE from selecting boot modes and performing automatic software uploads to the board. In this case you must start the upload while pressing the boot mode button (usually named BOOT, PRG or IO0) for a few seconds.
+8) Disables any activity on COM signals RTS and/or DTR. Required by some ESP32 dev boards to enable serial output (e.g. ESP32-CAM-MB board). Be aware, this setting prevents the IDE from selecting boot modes and performing automatic software uploads to the board. In this case you must start the upload while pressing the boot mode button (usually named BOOT, PRG or IO0) for a few seconds.
 ```
 monitor_rts = 0
 monitor_dtr = 0
 ```
-8) Switch between various built-in tables. A big collection of predefined tables can be found [here](https://github.com/espressif/arduino-esp32/tree/master/tools/partitions).
+9) Switch between various built-in tables. A big collection of predefined tables can be found [here](https://github.com/espressif/arduino-esp32/tree/master/tools/partitions).
 ```
 ;board_build.partitions = min_spiffs.csv
 board_build.partitions = no_ota.csv
 ```
-9) Your own "partitions_custom.csv" in the root of the project directory.
+10) Your own "partitions_custom.csv" in the root of the project directory.
 ```
 board_build.partitions = partitions_custom.csv
 ```
-10) Collection of personal tasks, to be found under PlatformIO -> PROJECT TASKS -> Custom. Eventual paths are relative to the project folder.
+11) Collection of personal tasks, to be found under PlatformIO -> PROJECT TASKS -> Custom. Eventual paths are relative to the project folder.
 ```
 extra_scripts = add_tasks.py
 ```
