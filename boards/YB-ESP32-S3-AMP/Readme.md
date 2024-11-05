@@ -51,7 +51,13 @@ There are two ways to provide power to the board:
 
 The board uses a LDO to drop the external supply voltage to 3.3Volt needed by the ESP32-S3. The two audio amplifiers MAX98357A get their voltage directly from pin '5V'. They can operate up to 5.5V and their absolute maximum rating is 6V. Therefore **never supply more than ~5.5VDC to the '5V' power input pin** !!  
 
-Normal operating current of the idle board (all GPIOs unconnected, no audio output, WiFi disabled) is about 45mA. With WiFi active the board draws about 100mA (mainly depending on WiFi link). With WiFi active, a microSD in the slot and audio output on both amp channels the current rises to ~160mA.
+Normal operating current of the idle board (all GPIOs unconnected, no audio output, WiFi disabled) is about 45mA. With WiFi active the board draws about 100mA (mainly depending on WiFi link). With WiFi active, a microSD in the slot and lower audio output power on both amp channels the current rises to ~160mA.
+
+### Recommended wiring for max. audio output power:
+
+Each audio channel can produce max. 3.2W output power at 4 Ohms. If your project requires more then just a few mW of audio output power at the speakers it is recommended to use a capable power supply (5VDC/1.5A) and preferably an additional capacitor of min. 220uF or greater value across the 5V/GND pins of the board as shown below:  
+
+![](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-AMP/doc/YB-ESP32-S3-AMP_recommended_wiring.jpg)
 
 ## Application hints: 
 
@@ -130,12 +136,6 @@ Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
 RAM:   [=         ]   8.4% (used 27608 bytes from 327680 bytes)
 Flash: [===       ]  28.5% (used 950957 bytes from 3342336 bytes)
 ```
-### Wiring:
-
-Each audio channel can produce max. 3.2W output power at 4 Ohms. If your project comes into this region then it is recommended to use a capable power supply (5VDC/1.5A) and preferably an additional capacitor of min. 220uF or greater value across the 5V/GND pins of the board as shown below:  
-
-![](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-AMP/doc/YB-ESP32-S3-AMP_recommended_wiring.jpg)
-
 ### General notes:
 
 1) In case you get left channel output on the right speaker and vice-versa (L + R channels are swapped) you need to build with a [newer ESP32-AudioI2S library version](https://github.com/schreibfaul1/ESP32-audioI2S/releases) with this error fixed.
