@@ -12,11 +12,9 @@ BTW: Arduino uses the name **sketch** (file extension *.ino) for a program.
 
 ## :file_folder: Software Examples
 
-Under [**boards**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards) you find a (growing) collection of programs for each board listed below. They will help you explore the features of those boards.
+Under [**boards**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards) you find a (slowly growing) collection of programs for each board listed below. They will help you explore the features of those boards.
 
-All examples were created and build with **VSCode/PlatformIO**. Each example has it's own project directory (one that contains a platformio.ini file). Make sure you have the latest **Arduino ESP32 development package** installed (V5.2.0 at the time of this writing).
-
-For loading, editing and uploading an example just start VSCode/PlatformIO, go to "File"-->"Open Folder" and select the example's project directory.
+Examples are available for **VSCode/PlatformIO** and/or **ArduinoIDE**. Each example has it's own project directory (the ones for PlatformIO contain a platformio.ini file). Make sure you have the latest **Arduino ESP32 development package** installed.
 
 Right now examples are provided for the following boards:
 
