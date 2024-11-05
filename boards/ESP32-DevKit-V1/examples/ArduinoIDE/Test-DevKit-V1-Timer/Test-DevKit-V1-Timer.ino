@@ -23,7 +23,7 @@ void IRAM_ATTR onTimer() {
 
 void setup() {
   Serial.begin(115200);
-	Serial.println();
+  Serial.println();
   Serial.println("Running example \"Test Timer\"");	
   pinMode(GPIO_LED, OUTPUT);  
 
@@ -34,7 +34,7 @@ void setup() {
   //timerAlarmEnable(timer);                          // enable timer
 
   // Arduino ESP32 API 3.0                                              
-  timer = timerBegin(1000000);                      // setup timer clock to 1uSec (1MHz)  
+  timer = timerBegin(1000000);                      // set timer clock to 1uSec (1MHz)  
   timerAttachInterrupt(timer, &onTimer);            // call function onTimer on timer alarm
   timerAlarm(timer, TIMEOUT_MS * 1000, true, 0);    // set timeout, reload timer when expired
 }
