@@ -33,7 +33,7 @@ void setup() {
   //timerAlarmWrite(timer, TIMEOUT_MS * 1000, true);  // set timeout, reload timer when expired
   //timerAlarmEnable(timer);                          // enable timer
 
-  // Arduino ESP32 API 3.0                                              
+  // Arduino ESP32 API 3.x                                             
   timer = timerBegin(1000000);                      // set timer clock to 1uSec (1MHz)  
   timerAttachInterrupt(timer, &onTimer);            // on timer alarm call function onTimer
   timerAlarm(timer, TIMEOUT_MS * 1000, true, 0);    // set timeout, reload timer when expired (true)
