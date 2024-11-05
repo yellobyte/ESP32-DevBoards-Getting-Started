@@ -29,14 +29,14 @@ void setup() {
 
   // Arduino ESP32 API 2.x       
   //timer = timerBegin(0, 80, true);                  // use 1st timer (0), set prescaler to 80, count upwards = 1uSec    
-  //timerAttachInterrupt(timer, &onTimer, true);      // call onTimer on timer alarm, generated on edge (true)  
+  //timerAttachInterrupt(timer, &onTimer, false);     // on timer alarm call onTimer, generated on level (false)  
   //timerAlarmWrite(timer, TIMEOUT_MS * 1000, true);  // set timeout, reload timer when expired
   //timerAlarmEnable(timer);                          // enable timer
 
   // Arduino ESP32 API 3.0                                              
   timer = timerBegin(1000000);                      // set timer clock to 1uSec (1MHz)  
-  timerAttachInterrupt(timer, &onTimer);            // call function onTimer on timer alarm
-  timerAlarm(timer, TIMEOUT_MS * 1000, true, 0);    // set timeout, reload timer when expired
+  timerAttachInterrupt(timer, &onTimer);            // on timer alarm call function onTimer
+  timerAlarm(timer, TIMEOUT_MS * 1000, true, 0);    // set timeout, reload timer when expired (true)
 }
 
 void loop() {
