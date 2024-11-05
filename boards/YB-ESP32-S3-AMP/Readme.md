@@ -73,14 +73,6 @@ Going a step further and putting these files to your development platforms *core
 
  ![](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-AMP/doc/YB-ESP32-S3-AMP_PlatformIO_board_selection.jpg)
 
-### General notes:
-
-1) In case you get left channel output on the right speaker and vice-versa (L + R channels are swapped) you need to build with a [newer ESP32-AudioI2S library version](https://github.com/schreibfaul1/ESP32-audioI2S/releases) with this error fixed.
-
-2) The ESP32-S3 includes four SPI controllers: SPI0, SPI1, SPI2(Fast SPI) and SPI3. SPI0/1 are reserved for Flash and PSRAM (if available) and should be left alone. The remaining two are available for the public. In the Arduino universe SPI2 & SPI3 are named FSPI & HSPI. FSPI by default is assigned to GPIOs 10-15 and routed via IO MUX. However, both can get pinned to any available GPIO pin if needed but FSPI will be slower if routed through GPIO Matrix
-
-3) The ESP32-S3-WROOM-1 module family comprises several [**versions**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-AMP/doc/ESP32-S3-WROOM-1(U)_Variants.jpg). The **-1** versions come with embedded PCB antenna, the **-1U** versions with IPEX antenna socket instead. The extension -Nx(Ry) defines the amount of integrated FLASH/PSRAM, e.g. -N4 (4MB Flash, no PSRAM), -N4R2 (4 MB Flash, 2MB PSRAM), -N8R2 (8 MB Flash, 2MB PSRAM) etc.  
-
 ### Software Upload to the board:
 In rare cases you might see the following after powering up the board:  
 ```
@@ -138,5 +130,19 @@ Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
 RAM:   [=         ]   8.4% (used 27608 bytes from 327680 bytes)
 Flash: [===       ]  28.5% (used 950957 bytes from 3342336 bytes)
 ```
-## Remark:  
-All YB-ESP32-S3-AMP boards delivered are already flashed with software example 'Play-All-MP3-Files-on-SD'. For a quick board test just insert a microSD card (FAT32) into the socket holding some *.mp3 files, connect one or two speaker(s) to the board and power it up.
+### Wiring:
+
+Each audio channel can produce max. 3.2W output power at 4 Ohms. If your project comes into this region then it is recommended to use a capable power supply (5VDC/1.5A) and preferably an additional capacitor of min. 220uF or greater value across the 5V/GND pins of the board as shown below:  
+
+![](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-AMP/doc/YB-ESP32-S3-AMP_recommended_wiring.jpg)
+
+### General notes:
+
+1) In case you get left channel output on the right speaker and vice-versa (L + R channels are swapped) you need to build with a [newer ESP32-AudioI2S library version](https://github.com/schreibfaul1/ESP32-audioI2S/releases) with this error fixed.
+
+2) The ESP32-S3 includes four SPI controllers: SPI0, SPI1, SPI2(Fast SPI) and SPI3. SPI0/1 are reserved for Flash and PSRAM (if available) and should be left alone. The remaining two are available for the public. In the Arduino universe SPI2 & SPI3 are named FSPI & HSPI. FSPI by default is assigned to GPIOs 10-15 and routed via IO MUX. However, both can get pinned to any available GPIO pin if needed but FSPI will be slower if routed through GPIO Matrix
+
+3) The ESP32-S3-WROOM-1 module family comprises several [**versions**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-AMP/doc/ESP32-S3-WROOM-1(U)_Variants.jpg). The **-1** versions come with embedded PCB antenna, the **-1U** versions with IPEX antenna socket instead. The extension -Nx(Ry) defines the amount of integrated FLASH/PSRAM, e.g. -N4 (4MB Flash, no PSRAM), -N4R2 (4 MB Flash, 2MB PSRAM), -N8R2 (8 MB Flash, 2MB PSRAM) etc.  
+
+## Final Remark:  
+All YB-ESP32-S3-AMP boards delivered are already flashed with software example 'Play-All-MP3-Files-on-SD'. For a quick board test just insert a microSD card (FAT32) into the socket holding some *.mp3 files, connect one or two speaker(s) to the board and power it up (via USB or 5V pins).
