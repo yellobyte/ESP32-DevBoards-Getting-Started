@@ -2,9 +2,14 @@
   Test-ESP32-1.14inch_Display_TTGO
 
   Simple functionality test of the onboard display. Scans for Wifi networks and prints them on the display.
-  Uses libraries "TFT_eSPI" and "Button2" located in subfolder lib.
+  Uses additional libraries "TFT_eSPI" and "Button2".
 
-  Last updated 2022-08-28, ThJ <yellobyte@bluewin.ch>
+  The following is needed for a successful build:
+  Go to the folder holding TFT_eSPI, open file User_Setup_Select.h and make sure
+    a) line // #include <User_Setup.h> is commented out
+    b) line #include <User_Setups/Setup25_TTGO_T_Display.h> is uncommented
+
+  Last updated 2024-11-05, ThJ <yellobyte@bluewin.ch>
 */
 
 #include <Arduino.h>
