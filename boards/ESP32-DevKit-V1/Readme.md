@@ -15,7 +15,7 @@ Overview of Espressif's latest ESP32 dev kit boards: "https://www.espressif.com/
 
 ## Application hints:
 
-The board (usually) uses a Silicon Labs CP2102 bridge chip between microUSB port and the ESP32 so you need to install the CP210x Drivers on your Laptop/PC. For Windows they are available [here](https://www.silabs.com/developer-tools/usb-to-uart-bridge-vcp-drivers?tab=downloads).  
+The board (usually) uses a Silicon Labs CP2102 bridge chip between microUSB port and the ESP32 so you need to install the CP210x Drivers on your Laptop/PC. For Windows they are available [here](https://www.silabs.com/developer-tools/usb-to-uart-bridge-vcp-drivers?tab=downloads). Select the newest version of the 'CP210x Universal Windows Driver'. 
 
 ### ArduinoIDE:
 
