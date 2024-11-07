@@ -6,7 +6,7 @@ Lots of almost identical China clones (2x15pin, 2x18pin, 2x19pin) for small mone
 
 It features an ESP-WROOM-32 module with 4MB Flash and no PSRAM, two buttons (BOOT and EN/RESET), two LEDs (power + GPIO2), one LDO (e.g. AMS1117-3.3, NCP1117-3.3, etc.) to convert VIN to 3.3 Volts, one microUSB port and lots of available GPIOs (general purpose input/output pins).
 
-<p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/ESP32-DevKit-V1/doc/ESP32-Devkit-V1.jpg" height="160"/></p>  
+<p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/ESP32-DevKit-V1/doc/ESP32-Devkit-V1.jpg" height="210"/></p>  
 
 Overview of Espressif's latest ESP32 dev kit boards: "https://www.espressif.com/en/products/devkits/esp32-devkitc/overview".
 
