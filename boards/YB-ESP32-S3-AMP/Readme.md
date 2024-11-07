@@ -60,7 +60,7 @@ Each audio channel can produce max. 3.2W output power at 4 Ohms. If your project
 ![](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-AMP/doc/YB-ESP32-S3-AMP_recommended_wiring.jpg)
 
 ## Application hints: 
-The board uses the popular WCH CH340X bridge chip between microUSB port labled 'UART' and the ESP32-S3. If you plan to use the port 'UART' then you need to install the CH340X Drivers on your Laptop/PC. For Windows go [here](https://www.wch-ic.com/search?t=all&q=ch341) and select the newest version of the driver installer 'CH341SER.EXE'. 
+The board uses the popular WCH CH340X bridge chip between USB-C port and the ESP32-S3. If you plan to use the USB port then you need to install the CH340X Drivers on your Laptop/PC. For Windows go [here](https://www.wch-ic.com/search?t=all&q=ch341) and select the newest version of the driver installer 'CH341SER.EXE'. 
 
 ### Arduino IDE:
 Select the board "**ESP32S3 Dev Module**" and choose the proper settings as shown below. Be aware, since the ESP32-S3 MCU is very versatile there are a lot of build options to play with. Espressif's homapage offers some help as well.
