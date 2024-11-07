@@ -14,6 +14,8 @@ The densly populated YB-ESP32-S3-ETH board provides multiple GPIO pins (as shown
 
 If WiFi/BT is needed instead of or additionally to an Ethernet connection then the external 2.4GHz WLAN antenna can be connected to the onboard WROOM-1U module. The connector is compatible with the following standards: U.FL (Hirose), MHF-I (I-PEX) and AMC (Amphen). 
 
+A collection of software examples (for PlatformIO and/or ArduinoIDE) are available in folder [examples](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/YB-ESP32-S3-ETH/examples). They will help you to get used to the board and to explore all hardware features.
+
 ## YB-ESP32-S3-ETH board features:
  - **ESP32-S3-WROOM-1U-N8R8** module with 8MB Flash, 8MB PSRAM or **ESP32-S3-WROOM-1U-N4** module with 4MB Flash 
  - **WiFi/BT IPEX** antenna connector
@@ -49,6 +51,7 @@ The board uses a LDO to drop the external supply voltage (5VDC min.) and interna
 Normal operating current of the idle board (all GPIOs unconnected, Ethernet Link down, WiFi disabled) is about 100mA (-N4) resp. 120mA (-N8R8). With Ethernet cable attached and Link up the current rises to about 165mA resp 180mA. With both Ethernet and WiFi active the board draws about 200...260mA (mainly depending on WiFi link).
 
 ## Application hints:
+The board uses the popular WCH CH340X bridge chip between microUSB port labled 'UART' and the ESP32-S3. If you plan to use port 'UART' then you need to install the CH340X Drivers on your Laptop/PC. For Windows go [here](https://www.wch-ic.com/search?t=all&q=ch341) and select the newest version of the driver installer 'CH341SER.EXE'.  
 
 ### Arduino IDE:
 Select the board "**ESP32S3 Dev Module**" and choose the proper settings as shown below. Be aware, since the ESP32-S3 MCU is very versatile there are a lot of build options to play with. Espressif's homapage offers some help.
@@ -95,7 +98,10 @@ The MicroUSB socket labeled 'USB' is wired directly to the ESP32-S3 MCU (GPIO19/
 The PlatformIO builder scripts (*.json) for modules containing ESP32-S3/C3 already define the build flag _ARDUINO_USB_MODE=1_. It disables the USB-OTG mode. If not disabled or you want to override it you can (re-)define it in your platformio.ini control file. Normally you don't have to worry about it.
    
 ### Software Upload to the board:
-In rare cases you might see the following after powering up the board:  
+
+The board contains the usual ESP32 reset and upload circuitry which makes automatic uploading new software to the board with your IDE a breeze. 
+
+However, with brandnew and previously unflashed boards the upload might fail and you will only see the following after powering up the board:
 ```
 ESP-ROM:esp32s3-20210327
 23:10:07.248 > Build:Mar 27 2021

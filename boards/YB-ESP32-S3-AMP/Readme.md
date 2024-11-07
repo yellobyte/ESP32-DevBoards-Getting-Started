@@ -60,6 +60,7 @@ Each audio channel can produce max. 3.2W output power at 4 Ohms. If your project
 ![](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-AMP/doc/YB-ESP32-S3-AMP_recommended_wiring.jpg)
 
 ## Application hints: 
+The board uses the popular WCH CH340X bridge chip between microUSB port labled 'UART' and the ESP32-S3. If you plan to use the port 'UART' then you need to install the CH340X Drivers on your Laptop/PC. For Windows go [here](https://www.wch-ic.com/search?t=all&q=ch341) and select the newest version of the driver installer 'CH341SER.EXE'. 
 
 ### Arduino IDE:
 Select the board "**ESP32S3 Dev Module**" and choose the proper settings as shown below. Be aware, since the ESP32-S3 MCU is very versatile there are a lot of build options to play with. Espressif's homapage offers some help as well.
@@ -80,7 +81,10 @@ Going a step further and putting these files to your development platforms *core
  ![](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-AMP/doc/YB-ESP32-S3-AMP_PlatformIO_board_selection.jpg)
 
 ### Software Upload to the board:
-In rare cases you might see the following after powering up the board:  
+
+The board contains the usual ESP32 reset and upload circuitry which makes automatic uploading new software to the board with your IDE a breeze. 
+
+However, with brandnew and previously unflashed boards the upload might fail and you will only see the following after powering up the board:
 ```
 ESP-ROM:esp32s3-20210327
 23:10:07.248 > Build:Mar 27 2021
