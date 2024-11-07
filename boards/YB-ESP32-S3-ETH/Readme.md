@@ -14,7 +14,7 @@ The densly populated YB-ESP32-S3-ETH board provides multiple GPIO pins (as shown
 
 If WiFi/BT is needed instead of or additionally to an Ethernet connection then the external 2.4GHz WLAN antenna can be connected to the onboard WROOM-1U module. The connector is compatible with the following standards: U.FL (Hirose), MHF-I (I-PEX) and AMC (Amphen). 
 
-A collection of software examples (for PlatformIO and/or ArduinoIDE) are available in folder [examples](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/YB-ESP32-S3-ETH/examples). They will help you to get used to the board and to explore all hardware features.
+A collection of software examples (for PlatformIO and/or ArduinoIDE) are available in folder [examples](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/YB-ESP32-S3-ETH/examples). They will help you getting used to the board and exploring all hardware features.
 
 ## YB-ESP32-S3-ETH board features:
  - **ESP32-S3-WROOM-1U-N8R8** module with 8MB Flash, 8MB PSRAM or **ESP32-S3-WROOM-1U-N4** module with 4MB Flash 

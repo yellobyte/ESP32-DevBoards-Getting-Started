@@ -10,7 +10,10 @@ It features an ESP-WROOM-32 module with 4MB Flash and no PSRAM, two buttons (BOO
 
 Overview of Espressif's latest ESP32 dev kit boards: "https://www.espressif.com/en/products/devkits/esp32-devkitc/overview".
 
+A collection of software examples (for PlatformIO and/or ArduinoIDE) are available in folder [examples](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/ESP32-DevKit-V1/examples). They will help you getting used to the board and exploring all hardware features.
+
 ## Board Pin Layout:
+
 ![](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/ESP32-DevKit-V1/doc/ESP32-DevKit-V1-Pinout.jpg)
 
 ## Application hints:
