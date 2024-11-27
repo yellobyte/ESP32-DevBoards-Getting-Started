@@ -131,7 +131,7 @@ Almost each ESP32 dev board contains a 2 transistor circuit which enables any ID
 Function and design of this little circuitry is explained in detail in folder [**reset_and_software_upload**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/reset_and_software_upload).
 
 
-## :information_source: Debugging a program 
+## :information_source: Debugging a program via JTAG
 
 Some **practical hints** on how to get started with debugging esp. with **ESP32-Prog** and **ESP32-S3's builtin JTAG adapter** I have put together in folder [**debugging**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/debugging).
 
@@ -146,3 +146,17 @@ This JTAG adapter can be
 A general introduction to JTAG debugging is given on [**this webpage**](https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-guides/jtag-debugging/index.html) from Espressif.  The picture below is taken from it.
 
 <p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/debugging/Debugging_with_JTAG_adapter-block-diagram.jpg" height="450"/></p>
+
+## :information_source: Debugging a program without JTAG
+
+Probably the most frustrating part of coding is provoking a core to panic/to crash which in most cases looks similar to this:
+
+```
+23:29:09.416 > Guru Meditation Error: Core  1 panic'ed (IntegerDivideByZero). Exception was unhandled.
+23:29:09.476 >
+23:29:09.476 > Core  1 register dump:
+23:29:09.479 > PC      : 0x4200193b  PS      : 0x00060430  A0      : 0x820019bb  A1      : 0x3fcebf40  
+23:29:09.486 > A2      : 0x00000003  A3      : 0x00000001  A4      : 0x00000000  A5      : 0x0000e100  
+...
+```
+However, don't panic ! A quick guide how to read aboves message and discover the cause of pain I have put together in folder [**debugging_without_JTAG**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/debugging_without_JTAG).
