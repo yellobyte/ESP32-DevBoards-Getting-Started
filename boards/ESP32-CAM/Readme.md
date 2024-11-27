@@ -5,7 +5,7 @@ ESP32-CAM AI-Thinker camera boards come in different flavours. All boards I came
 
 **ESP32-CAM-MB:** comes with a (removable) sandwich board, which contains a USB-TTL bridge chip (CH340C), IO0 & RST buttons and a microUSB socket. The additional board is used for programming the camera board and printing it's serial output.
 
-**ESP32-CAM-USB:** single board, slightly bigger than the ESP32-CAM board, containing a USB-TTL bridge chip (CH340C), FLASH & RST buttons and a microUSB socket.
+**ESP32-CAM-USB:** single board, slightly bigger than the ESP32-CAM board, containing a USB-TTL bridge chip (CH340C), FLASH & RST buttons and a microUSB socket. Since this board doesn't feature a reset logic the buttons "Flash" & "Reset" must be used to get it into upload mode and reset it after successful upload!
 
 **Important:**
 
