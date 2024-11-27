@@ -1,6 +1,6 @@
 # Debugging without JTAG
 
-Following a simple example program (running on an ESP32-S3) with two user defined functions, with one of them causing one core to panic:
+Following a simple example program (running on an ESP32-S3) with two user defined functions, one of them causing a core to panic:
 ```
 int iLoopCount = 0, iVarZero = 0, iVarNotZero = 1, iVarResult;  
 
@@ -89,19 +89,19 @@ In most cases the core panic message in your serial monitor will now look slight
 00:20:48.622 >
 00:20:48.768 > Rebooting...
 ```
-It shows the actual CPU register values at the time of the crash. Line "Backtrace" below contains PC:SP pairs, with Program Counter (PC) and Stack Pointer (SP) of the current task and further down you see it's actual functions call stack. 
+The serial output shows the actual CPU register values at the time of the crash. Line "Backtrace" below contains PC:SP pairs, with Program Counter (PC) and Stack Pointer (SP) of the current task and further down you see the actual function call stack. 
 
 Under different circumstances you might see a long list of functions in your call stack and you can pinpoint the problem right away (probably a recent change).
 
-Well, in our case it doesn't tell a lot. At least it tells us the exception obviously happens in function loop(). The question is: where precisely, in which subfunction ?  
+Well, in our case it doesn't tell a lot. At least it tells us the exception obviously happened in function loop(). The question is: in which subfunction, where precisely ?  
 
 ## Evaluating the map file:
 
-Going a bit further you need to evaluate the map file which was generated during the build. It holds a lot of debug info which can easily help to find the cause of the crash.  
+It's time to evaluate the map file which was generated during the build. It holds a lot of debug info which can easily help to find the cause of the crash.  
 
-The following steps are done under PlatformIO but similarly apply to ArduinoIDE as well and should be understand as a rough guide only. You will get the idea though.
+The following steps are done under PlatformIO but similarly apply to ArduinoIDE and should be understand as a rough guide only. You will get the idea though.
 
-#### 1) Make sure you find the following files in your project's subdirectory *.pio/build/debug*:
+#### 1) Make sure you find the following two files in your project's subdirectory *.pio/build/debug*:
   - *firmware.elf* and *firmware.map*
 
 #### 2) Open *firmware.map* and search for section "Memory Configuration"
@@ -146,7 +146,7 @@ This tells us that the crash at 0x4200193f doesn't happen directly in function l
 ```
 The guilty function myFunction1(int) stretches from address 0x42001934 to 0x4200194c. Therefore the issue lies there. The map file also gives the info as to the source code file which holds this function. In our case it is file *main.cpp*. 
 
-Out of curiosity we could have a look at the (usually very long) *Cross Reference Table* in firmware.map. It confirmes that myFunction1 is only called from within main.cpp(.o) and not any other module:
+Out of curiosity we could have a look at the (usually very long) *Cross Reference Table* in firmware.map. It confirmes that myFunction1() is only called from within main.cpp(.o) and not from any other module:
 ```
 ...
 multi_heap_set_lock             C:\Users\tj\.platformio\packages\framework-arduinoespressif32\tools\sdk\esp32s3\lib\libheap.a(multi_heap.c.obj)
@@ -156,9 +156,9 @@ myFunction2(int)                .pio\build\debug\src\main.cpp.o
 ...
 ```
 #### 3) Find out which directory holds the used toolchain programs
-For this particular project on my PC it is "C:/Users/tj/.platformio/packages/toolchain-xtensa-esp32s3/bin". Two easy ways to find that out:  
-a) Within the project directory go to .vscode, open file *lauch.json* and look for the line "toolchainBinDir": which gives the info.  
-b) Start Sysinternal's tool Procmon and see where the toolchain programs run from.
+For this particular project on my PC it is "C:/Users/tj/.platformio/packages/toolchain-xtensa-esp32s3/bin". Two easy ways to get this info:  
+a) Within the project directory go to .vscode, open file *lauch.json* and look for the line starting with "toolchainBinDir":...  
+b) Start Sysinternal's tool Procmon and see where the toolchain programs run from
 
 #### 4) Open a command terminal from within the project directory
 ...and enter the following commands. The following applies to my PC and particular project ! Please change according to your environment.
@@ -175,7 +175,7 @@ This will produce a file with name *main.obj.log*.
 
 #### 5) Open the just created file main.obj.log
 
-Search for the disassembly of function *myFunction1* which caused the core panic.
+Search for the disassembly of function *myFunction1* which obviously caused the core panic.
 ```
 Disassembly of section .text._Z11myFunction1i:
 
@@ -200,7 +200,7 @@ void myFunction1(int iParam1)
   14:	0020c0        	memw
   17:	f01d      	    retw.n
 ```
-We know the PC register value was 0x4200193f when the crash occurred and function myFunction1 starts from address 0x42001934.
+We know the PC register value was 0x4200193f when the crash occurred and function myFunction1() starts from address 0x42001934.
 
 Now we subtract the functions start address 0x42001934 from the crash address 0x4200193f which results in the offset 0x0b. Around this offset the following assembler code is listed:
 ```
@@ -228,4 +228,5 @@ QUOU         RRRR   Quotient Unsigned (divide giving 32-bit quotient)
 ```
 
 ## Conclusion:
-There you have it. A little bit of knowledge makes seeing a core crash much less terrifying.  And with only moderate effort in time it is possible to get quickly to the root of the problem. 
+There you have it. A little bit of knowledge makes seeing a core crash much less terrifying.  And with only moderate effort in time it is possible to get quickly to the root of the problem.  
+Of course, bigger programs create bigger files and more data to evaluate, the main procedure stays the same though.
