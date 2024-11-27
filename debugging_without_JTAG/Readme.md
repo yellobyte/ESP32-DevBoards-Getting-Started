@@ -91,15 +91,15 @@ In most cases the core panic message in your serial monitor will now look slight
 ```
 The serial output shows the actual CPU register values at the time of the crash. Line "Backtrace" below contains PC:SP pairs, with Program Counter (PC) and Stack Pointer (SP) of the current task and further down you see the actual function call stack. 
 
-Under different circumstances you might see a long list of functions in your call stack and you can pinpoint the problem right away (probably a recent change).
+Under different circumstances you might see a long list of functions in the call stack and you can pinpoint the problem right away (probably a recent change).
 
-Well, in our case it doesn't tell a lot. At least it tells us the exception obviously happened in function loop(). The question is: in which subfunction, where precisely ?  
+Well, in our case it doesn't tell a lot. Only that the exception happened in function loop() obviously. The question is: in which subfunction, where precisely ?  
 
 ## Evaluating the map file:
 
 It's time to evaluate the map file which was generated during the build. It holds a lot of debug info which can easily help to find the cause of the crash.  
 
-The following steps are done under PlatformIO but similarly apply to ArduinoIDE and should be understand as a rough guide only. You will get the idea though.
+The following steps are done under PlatformIO but similarly apply to ArduinoIDE and should be understood as a rough guide only. You will get the idea though.
 
 #### 1) Make sure you find the following two files in your project's subdirectory *.pio/build/debug*:
   - *firmware.elf* and *firmware.map*
@@ -144,7 +144,7 @@ This tells us that the crash at 0x4200193f doesn't happen directly in function l
                 0x0000000042001950                myFunction2(int)
  *fill*         0x0000000042001965        0x3 
 ```
-Function myFunction1(int) stretches from address 0x42001934 to 0x4200194c so we will focus on this function. The map file also gives the info as to the source code file which holds this function. In our case it is file *main.cpp*. 
+Function myFunction1(int) occupies the address range from 0x42001934 to 0x4200194c so we will focus on this function. The map file also gives the info as to the source code file which holds this function. In our case it is file *main.cpp*. 
 
 Out of curiosity we could have a look at the (usually very long) *Cross Reference Table* in firmware.map. It confirmes that myFunction1() is only called from within main.cpp(.o) and not from any other module:
 ```
