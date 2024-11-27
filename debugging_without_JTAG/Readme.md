@@ -144,7 +144,7 @@ This tells us that the crash at 0x4200193f doesn't happen directly in function l
                 0x0000000042001950                myFunction2(int)
  *fill*         0x0000000042001965        0x3 
 ```
-The guilty function myFunction1(int) stretches from address 0x42001934 to 0x4200194c. Therefore the issue lies there. The map file also gives the info as to the source code file which holds this function. In our case it is file *main.cpp*. 
+Function myFunction1(int) stretches from address 0x42001934 to 0x4200194c so we will focus on this function. The map file also gives the info as to the source code file which holds this function. In our case it is file *main.cpp*. 
 
 Out of curiosity we could have a look at the (usually very long) *Cross Reference Table* in firmware.map. It confirmes that myFunction1() is only called from within main.cpp(.o) and not from any other module:
 ```
@@ -213,7 +213,7 @@ Looks like registers A2 & A8 are part of an instruction which is dividing them w
 ```
 iVarResult = iParam1 / iVarZero;
 ```
-So it seems, the earlier blamed line of code really is the culprit. The next logical step would be to have a closer look at your source code and make sure a divider value isn't zero when in action or reverse any hasty code changes you did before you had your last coffee... 
+So it seems, we found the culprit. The next logical step would be to have a closer look at your source code and make sure a divider value isn't zero when in action or reverse any hasty code changes you did before you had your last coffee... 
 
 Please note:  
 If you are not an assembler freak but want to dig a bit deeper you can always have a look at the Xtensa®Instruction Set Architecture's [reference manual](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/ESP32_specs_and_manuals/Xtensa_Instruction_Set_Architecture.pdf) and look up the exact instruction and what it does. In the above case the manual states the following:
