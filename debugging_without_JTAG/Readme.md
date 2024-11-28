@@ -68,6 +68,7 @@ Make sure your project file platformio.ini has the following settings:
 monitor_filters = time, colorize, *esp32_exception_decoder*  
 build_type = *debug*
 
+### More informative message with Exception Decoder installed: 
 In most cases the core panic message in your serial monitor will now look slightly different. You will see a few additional lines, the *call stack*, just below the backtrace info. 
 ```
 00:20:46.493 > ESP32-S3 DEBUG test started.
@@ -160,9 +161,10 @@ If the problem in code is still not quite clear you have to dig deeper.
 ## Evaluating object files on assembler level:
 
 #### 3) Find out which directory holds the used toolchain programs
-For this particular project on my PC it is "C:/Users/tj/.platformio/packages/toolchain-xtensa-esp32s3/bin". Two easy ways to get this info:  
-a) Within the project directory go to .vscode, open file *lauch.json* and look for the line starting with "toolchainBinDir":...  
-b) Start Sysinternal's tool Procmon and see where the toolchain programs run from
+For this particular project on my PC it is "C:/Users/tj/.platformio/packages/toolchain-xtensa-esp32s3/bin".  
+Two easy ways to get this info:  
+**a)** Within the project directory go to .vscode, open file *lauch.json* and look for the line starting with "toolchainBinDir":...  
+**b)** Start Sysinternal's tool Procmon and see where the toolchain programs run from
 
 #### 4) Open a command terminal from within the project directory
 ...and enter the following commands. The following applies to my PC and particular project ! Please change according to your environment.
@@ -179,7 +181,7 @@ This will produce a file with name *main.obj.log*.
 
 #### 5) Open the just created file main.obj.log
 
-Search for the disassembly of function *myFunction1* which obviously caused the core panic.
+Search for the disassembly of function *myFunction1()* which obviously caused the core to panic.
 ```
 Disassembly of section .text._Z11myFunction1i:
 
@@ -206,7 +208,7 @@ void myFunction1(int iParam1)
 ```
 We know the PC register value was 0x4200193f when the crash occurred and function myFunction1() starts from address 0x42001934.
 
-Now we subtract the functions start address 0x42001934 from the crash address 0x4200193f which results in the offset 0x0b. Around this offset the following assembler code is listed:
+Therefore we subtract the functions start address 0x42001934 from the crash address 0x4200193f which results in the offset 0x0b. Around this offset the following assembler code is listed:
 ```
    ...
    9:	0888      	    l32i.n	a8, a8, 0
@@ -217,7 +219,7 @@ Looks like registers A2 & A8 are part of an instruction which is dividing them w
 ```
 iVarResult = iParam1 / iVarZero;
 ```
-So it seems, we found the culprit. The next logical step would be to have a closer look at your source code and make sure a divider value isn't zero when in action or reverse any hasty code changes you did before you had your last coffee... 
+So it seems, we found the culprit. The next logical step would be to have a closer look at your source code and make sure a divisor value isn't zero when in action or reverse any hasty code changes you did before you had your last coffee... 
 
 Please note:  
 If you are not an assembler freak but want to dig a bit deeper you can always have a look at the Xtensa®Instruction Set Architecture's [reference manual](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/ESP32_specs_and_manuals/Xtensa_Instruction_Set_Architecture.pdf) and look up the exact instruction and what it does. In the above case the manual states the following:
