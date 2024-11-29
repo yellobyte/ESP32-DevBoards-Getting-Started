@@ -18,9 +18,9 @@
     "flash_mode": "qio",
     "hwids": [
       [ 
-			  "0x303A", 
-			  "0x1001" 
-			]
+        "0x303A", 
+        "0x1001" 
+      ]
     ],
     "mcu": "esp32s3",
     "variant": "yb-esp32-s3-amp"
