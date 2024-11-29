@@ -15,7 +15,7 @@
   In Arduino SPI2 & SPI3 are named FSPI & HSPI. FSPI by default is assigned to GPIOs 10-15 (IO MUX). However, 
   both can get pinned to any available GPIO pin if needed but will be slower if routed through GPIO Matrix.
 
-  Last updated 2024-10-17, ThJ <yellobyte@bluewin.ch>
+  Last updated 2024-11-29, ThJ <yellobyte@bluewin.ch>
 */
 
 #include <Arduino.h>
@@ -105,6 +105,10 @@ void printDirectory(File dir, int numTabs) {
 void setup()
 {
   Serial.begin(115200);
+#if ARDUINO_USB_CDC_ON_BOOT == 1
+  // we continue only when serial port becomes available: only needed for board revision 3.x
+  while (!Serial);     	
+#endif    
   Serial.println();
   Serial.println("Running example \"List-All-Files-with-TFT\":");
 

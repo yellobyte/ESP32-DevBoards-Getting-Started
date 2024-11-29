@@ -9,7 +9,7 @@
   GPIO47 (onboard LED IO47) with the amps SD_MODE pin. Setting GPIO47 to LOW (LED off) will then shut down (mute) both
   amps and setting GPIO47 to HIGH (LED on) will activate them.
 
-  Last updated 2024-10-17, ThJ <yellobyte@bluewin.ch>
+  Last updated 2024-11-29, ThJ <yellobyte@bluewin.ch>
 */
 
 #include <Arduino.h>
@@ -41,6 +41,10 @@ void audio_id3data(const char *info) {  // id3 metadata
 void setup()
 {
   Serial.begin(115200);
+#if ARDUINO_USB_CDC_ON_BOOT == 1
+  // we continue only when serial port becomes available: only needed for board revision 3.x
+  while (!Serial);     	
+#endif	  
   Serial.println();
   Serial.println("running example \"Play-Local-Media\":");
 
