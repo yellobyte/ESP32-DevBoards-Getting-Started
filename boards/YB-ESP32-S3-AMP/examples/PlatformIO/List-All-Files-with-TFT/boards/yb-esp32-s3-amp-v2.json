@@ -35,7 +35,7 @@
     "arduino",
     "espidf"
   ],
-  "name": "YB-ESP32-S3-AMP-V2 (8MB QD FLASH and 2MB PSRAM, Rev 2.x)",
+  "name": "YB-ESP32-S3-AMP (8MB QD FLASH and 2MB PSRAM, Rev 2.x)",
   "upload": {
     "flash_size": "8MB",
     "maximum_ram_size": 327680,
