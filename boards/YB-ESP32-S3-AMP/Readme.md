@@ -74,7 +74,7 @@ Settings that apply to the **YB-ESP32-S3-AMP** board:
  ![](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-AMP/doc/YB-ESP32-S3-AMP_Rev2_ArduinoIDE-Settings.jpg)  
 
 ### PlatformIO:
-Building with **PlatformIO** is even easier. Each of the provided software examples for PlatformIO comes with a subdirectory *'boards'*. This holds the specific board definition file (YB-ESP32-S3-AMP-V2.json) which provide the proper board definitions & settings.  
+Building with **PlatformIO** is even easier. Each of the provided software examples for PlatformIO comes with a subdirectory *'boards'*. This holds the specific board definition files which provide the proper board definitions & settings.  
 
 Going a step further and putting these files to your development platforms *core_dir/platforms/espressif32/boards* global directory (on my PC it's  *C:\Users\name\\.platformio\platforms\espressif32\boards*) means you can create a new project in PlatformIO and simply select this board from the pull-down list.  
 
