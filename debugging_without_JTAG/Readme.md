@@ -215,7 +215,7 @@ Therefore we subtract the functions start address 0x42001934 from the crash addr
    b:	d22280        	quos	a2, a2, a8
    ...
 ```
-Looks like registers A2 & A8 are part of an instruction which is dividing them with the result staying in A2. However, these instructions belong to this line of code as shown above: 
+Registers A2 & A8 are part of assembler instruction *quos* which in this case is dividing A2 by A8 with the result staying in A2. At the time of the crash A8 unfortunately was zero which resulted in a "IntegerDivideByZero" exception. However, this instruction belongs to this line of code as shown above: 
 ```
 iVarResult = iParam1 / iVarZero;
 ```
@@ -230,6 +230,15 @@ Instruction1 Format Definition
 ---------------------------------------------------------------------
 QUOS         RRRR   Quotient Signed (divide giving 32-bit quotient)
 QUOU         RRRR   Quotient Unsigned (divide giving 32-bit quotient)
+....
+....
+32-bit Integer Divide Option (See Section 4.3.6 on page 59)
+Assembler Syntax
+ QUOS ar, as, at
+Description
+ QUOS performs a 32-bit two’s complement division of the contents 
+ of address register as by the contents of address register at and 
+ writes the quotient to address register ar.
 ....
 ```
 
