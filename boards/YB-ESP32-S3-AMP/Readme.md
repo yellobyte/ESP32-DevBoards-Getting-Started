@@ -31,7 +31,7 @@ The densly populated YB-ESP32-S3-AMP board provides multiple GPIO pins (as shown
  - **control LEDs**. One LED labeled 'P' is connected to the 3.3V rail to indicate board power and the other LED labeled 'IO47' is connected to GPIO47 which can be used as status LED.  
  If solder bridge *DAC_MUTE* is closed [default open] this pin can be used for muting the two audio amplifiers: active when GPIO47 is HIGH or muted when GPIO47 is LOW.
  - **USB-C** port connected to ESP32-S3 via USB-TTL bridge chip CH340 (Board revision 2.x) resp. directly to ESP32-S3 (Board revision 3.x) for serial output and software upload (e.g. via ArduinoIDE, VSCode/PlatformIO etc). Can also be used to power the board.
- - **hardware logic** for *automatic* software uploads (supported by most Development IDEs) via USB-C port. How this works is explained [here](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/reset_and_software_upload).  
+ - **hardware logic** for *automatic* software uploads (supported by most Development IDEs) via USB-C port on boards with revision 2.x. How this works is explained [here](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/reset_and_software_upload).  
  - **pushbuttons**. One is labeled 'R' and resets the ESP32-S3 (shorts EN pin to ground) and the other one is labeled 'B' and shorts GPIO0 to ground when pressed. The latter is sometimes needed to force the board into boot mode.
  - **lots of available GPIOs**, useful for connecting LEDs, buttons, additional modules via second SPI bus or I2C, e.g displays, rotary encoders, bluetooth, etc.
 
@@ -69,7 +69,7 @@ Settings that apply to the **YB-ESP32-S3-AMP** board:
 - Board: *ESP32S3 Dev Module*
 - Flash Size: *8MB*
 - Partition Scheme: e.g. *8MB with spiffs (...)*
-- PSRAM: *OPI PSRAM*  
+- PSRAM: *QSPI PSRAM*  
 
  ![](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-AMP/doc/YB-ESP32-S3-AMP_Rev2_ArduinoIDE-Settings.jpg)  
 
