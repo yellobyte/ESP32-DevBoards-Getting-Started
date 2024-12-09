@@ -92,9 +92,7 @@ In most cases the core panic message in your serial monitor will now look slight
 ```
 The serial output shows the actual CPU register values at the time of the crash. Line "Backtrace" below contains PC:SP pairs, with Program Counter (PC) and Stack Pointer (SP) of the current task and further down you see the actual function call stack. 
 
-Under different circumstances you might see a long list of functions in the call stack and you can pinpoint the problem right away (probably a recent change).
-
-Well, in our case it doesn't tell a lot. Only that the exception happened in function loop() obviously. The question is: in which subfunction, where precisely ?  
+Under different circumstances you might see a long list of functions in the call stack and you can pinpoint the problem right away (probably a recent change). Well, in our case it doesn't tell a lot. Only that the exception happened in function loop() obviously. The question is: in which subfunction, where precisely ?  
 
 ## Evaluating the map file:
 
@@ -215,7 +213,7 @@ Therefore we subtract the functions start address 0x42001934 from the crash addr
    b:	d22280        	quos	a2, a2, a8
    ...
 ```
-Registers A2 & A8 are part of assembler instruction *quos* which in this case is dividing A2 by A8 with the result staying in A2. At the time of the crash A8 unfortunately was zero which resulted in a "IntegerDivideByZero" exception. However, this instruction belongs to this line of code as shown above: 
+Registers A2 & A8 are part of assembler instruction *quos* which in this case is dividing A2 by A8 with the result staying in A2. At the time of execution register A8 unfortunately was zero which resulted in a "IntegerDivideByZero" exception. However, this instruction belongs to this line of code as shown above: 
 ```
 iVarResult = iParam1 / iVarZero;
 ```
