@@ -79,8 +79,8 @@ monitor_filters = time, esp32_exception_decoder, log2file
 ```
 3) Range of COM ports to be tried for upload and monitoring.
 ```
-monitor_port = COM[345678]
-upload_port = COM[345678]
+monitor_port = COM[345679]
+upload_port = COM[345679]
 ```
 4) The program is compiled with full symbolic debug information and no optimization.
 ```
@@ -104,12 +104,24 @@ build_flags = -DCORE_DEBUG_LEVEL=4
 monitor_rts = 0
 monitor_dtr = 0
 ```
-9) Switch between various built-in tables. A big collection of predefined tables can be found [here](https://github.com/espressif/arduino-esp32/tree/master/tools/partitions).
+9) Switch between various built-in partition tables, which gets importand when you build for a board available with various flash sizes (e.g. Board-Xyz-N4 and Board-Xyz-N8R2). A big collection of predefined partition tables can be found [here](https://github.com/espressif/arduino-esp32/tree/master/tools/partitions). Below a few examples:
 ```
+; standard partitions for boards with 4MB Flash (or more)
+board_build.partitions = default.csv
+
+; for boards with 4MB Flash (or more) with reduced spiffs partition and bigger application partition
 ;board_build.partitions = min_spiffs.csv
-board_build.partitions = no_ota.csv
+
+; for boards with 4MB Flash (or more), not OTA partition, bigger application partition
+;board_build.partitions = no_ota.csv
+
+; standard partitions for boards with 8MB Flash (or more)
+;board_build.partitions = default_8MB.csv
+
+; standard partitions for boards with 16MB Flash
+;board_build.partitions = default_16MB.csv
 ```
-10) Your own "partitions_custom.csv" in the root of the project directory.
+10) You can even define your own partition tables. Copy an existing (and ideally almost matching) *.csv file into the root of your project directory, rename it to "partitions_custom.csv" and edit the partition settings as needed (e.g. size, offset).
 ```
 board_build.partitions = partitions_custom.csv
 ```
