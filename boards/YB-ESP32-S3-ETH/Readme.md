@@ -2,9 +2,9 @@
 The **YB-ESP32-S3-ETH** is a general purpose development board based on Espressif's ESP32-S3 MCU. Presently it comes in three different variants:  
 - with **ESP32-S3-WROOM-1U-N8R8 module** (8MB Flash/8MB PSRAM),
 - with **ESP32-S3-WROOM-1U-N4 module** (4MB Flash) and
-- with **ESP32-S3-WROOM-1-N4R8 module** (4MB Flash/8MB PSRAM).  
+- without **ESP32-S3-WROOM-1(U) module** which allows you to solder on a module of your own choice.  
 
-All variants provide **WiFi**, **RJ45 Ethernet connector**, an Ethernet PHY bridge chip **Wiznet W5500**, two status LEDs and **two microUSB connectors** for software upload, serial output, debugging and feeding power to the board. The boards are currently available on sales platforms [eBay](https://www.ebay.com/sch/i.html?_nkw=yb-esp32-s3) and [Ricardo.ch](https://www.ricardo.ch/en/s/YB-ESP32-S3). 
+All variants provide **RJ45 Ethernet connector**, an Ethernet PHY bridge chip **Wiznet W5500**, two status LEDs and **two microUSB connectors** for software upload, serial output, debugging and feeding power to the board. The boards are currently available on sales platforms [eBay](https://www.ebay.com/sch/i.html?_nkw=yb-esp32-s3) and [Ricardo.ch](https://www.ricardo.ch/en/s/YB-ESP32-S3). 
 
 ![](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-ETH/doc/YB-ESP32-S3-ETH_board_top.jpg)
 
@@ -17,8 +17,8 @@ If WiFi/BT is needed instead of or additionally to an Ethernet connection then t
 A collection of software examples (for PlatformIO and/or ArduinoIDE) are available in folder [examples](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/YB-ESP32-S3-ETH/examples). They will help you getting used to the board and exploring all hardware features.
 
 ## YB-ESP32-S3-ETH board features:
- - **ESP32-S3-WROOM-1U-N8R8** module with 8MB Flash, 8MB PSRAM or **ESP32-S3-WROOM-1U-N4** module with 4MB Flash 
- - **WiFi/BT IPEX** antenna connector
+ - **ESP32-S3-WROOM-1U-N8R8** module with 8MB Flash, 8MB PSRAM or **ESP32-S3-WROOM-1U-N4** module with 4MB Flash or without ESP32-S3-WROOM module
+ - **WiFi/BT IPEX** antenna connector (only boards with ESP32-S3-WROOM module)
  - **RJ45 10M/100M Ethernet** connector driven by onboard PHY controller chip Wiznet W5500
  - the **W5500** pins required to control the chip are hardwired to the ESP32-S3 GPIOs as follows:
    - *MOSI - GPIO11, MISO - GPIO13, SCK - GPIO12* (SPI bus data communication)
