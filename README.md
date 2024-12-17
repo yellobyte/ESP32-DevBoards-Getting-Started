@@ -66,12 +66,14 @@ The project configuration file has sections (each denoted by a [header]) and one
 **Important:** Different examples might require different build options, so always have a look at the platformio.ini file for relevant infos.
 
 A small selection of some very useful project settings (for more experienced programmers) deserve to be mentioned here. 
-1) Forces builds to use older platform packages and/or frameworks instead of the newest one.
+1) Forces builds to use alternative or older platform packages and/or frameworks.
 ```
 ;platform = espressif32
+;platform = https://github.com/pioarduino/platform-espressif32/releases/download/stable/platform-espressif32.zip
+;platform = https://github.com/pioarduino/platform-espressif32/releases/download/51.03.07/platform-espressif32.zip
 platform = espressif32 @ 4.2.0
-platform_packages = framework-arduinoespressif32 @ https://github.com/espressif/arduino-esp32/releases/download/2.0.4/esp32-2.0.4.zip
 ;platform_packages = framework-arduinoespressif32@https://github.com/espressif/arduino-esp32.git#2.0.3
+platform_packages = framework-arduinoespressif32@https://github.com/espressif/arduino-esp32/releases/download/2.0.4/esp32-2.0.4.zip
 ```
 2) Serial output lines carry time stamps, exceptions get decoded with function backtrace and serial output gets logged to a file:
 ```
@@ -79,8 +81,8 @@ monitor_filters = time, esp32_exception_decoder, log2file
 ```
 3) Range of COM ports to be tried for upload and monitoring.
 ```
-monitor_port = COM[345679]
-upload_port = COM[345679]
+monitor_port = COM[34569]
+upload_port = COM[34569]
 ```
 4) The program is compiled with full symbolic debug information and no optimization.
 ```
