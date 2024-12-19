@@ -4,10 +4,11 @@
   Debugging a program running on a YB-ESP32-S3-ETH dev board via ESP32-S3's builtin JTAG adapter (on port 'USB').
   Serial output must be directed to port 'UART' for not interfering with JTAG port 'USB'.
 
-  Last updated 2023-06-05, ThJ <yellobyte@bluewin.ch>
+  Last updated 2024-12-19, ThJ <yellobyte@bluewin.ch>
 */
 
 #include <Arduino.h>
+#include <SPI.h>
 
 #define GPIO_STATUS_LED 47
 
