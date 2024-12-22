@@ -66,14 +66,20 @@ The project configuration file has sections (each denoted by a [header]) and one
 **Important:** Different examples might require different build options, so always have a look at the platformio.ini file for relevant infos.
 
 A small selection of some very useful project settings (for more experienced programmers) deserve to be mentioned here. 
-1) Forces builds to use alternative or older platform packages and/or frameworks.
+1) Forces builds to use alternative/older/additional platform packages/frameworks. Not all combinations will  build successfully though.
 ```
 ;platform = espressif32
+platform = espressif32@^6.9.0
+;platform = espressif32@4.2.0
 ;platform = https://github.com/pioarduino/platform-espressif32/releases/download/stable/platform-espressif32.zip
 ;platform = https://github.com/pioarduino/platform-espressif32/releases/download/51.03.07/platform-espressif32.zip
-platform = espressif32 @ 4.2.0
-;platform_packages = framework-arduinoespressif32@https://github.com/espressif/arduino-esp32.git#2.0.3
-platform_packages = framework-arduinoespressif32@https://github.com/espressif/arduino-esp32/releases/download/2.0.4/esp32-2.0.4.zip
+;
+platform_packages = 
+;  framework-arduinoespressif32@https://github.com/espressif/arduino-esp32/releases/download/3.1.0/esp32-3.1.0.zip
+;  framework-arduinoespressif32@https://github.com/espressif/arduino-esp32/releases/download/2.0.4/esp32-2.0.4.zip
+;  framework-arduinoespressif32@https://github.com/espressif/arduino-esp32.git#2.0.3
+;  platformio/tool-openocd-esp32@^2.1100.211028
+  platformio/tool-openocd-esp32
 ```
 2) Serial output lines carry time stamps, exceptions get decoded with function backtrace and serial output gets logged to a file:
 ```
@@ -106,22 +112,37 @@ build_flags = -DCORE_DEBUG_LEVEL=4
 monitor_rts = 0
 monitor_dtr = 0
 ```
-9) Switch between various built-in partition tables, which gets importand when you build for a board available with various flash sizes (e.g. Board-Xyz-N4 and Board-Xyz-N8R2). A big collection of predefined partition tables can be found [here](https://github.com/espressif/arduino-esp32/tree/master/tools/partitions). Below a few examples:
+9) Use specific built-in partition tables, depending on actual flash size of your board variant (e.g. Board-Xyz-N4, Board-Xyz-N8R2, Board-Xyz-N16R8), the size of your program, OTA updates not needed, etc. A big collection of predefined partition tables can be found [here](https://github.com/espressif/arduino-esp32/tree/master/tools/partitions). Below a small selection:
 ```
-; standard partitions for boards with 4MB Flash (or more)
+; boards with >=4MB Flash: standard partition sizes, OTA possible
 board_build.partitions = default.csv
+board_upload.flash_size = 4MB
+board_upload.maximum_size = 4194304
 
-; for boards with 4MB Flash (or more) with reduced spiffs partition and bigger application partition
+; boards with >=4MB Flash: slightly bigger application, reduced spiffs partition, OTA possible
 ;board_build.partitions = min_spiffs.csv
+;board_upload.flash_size = 4MB
+;board_upload.maximum_size = 4194304
 
-; for boards with 4MB Flash (or more), not OTA partition, bigger application partition
+; boards with >=4MB Flash: bigger application, bigger spiffs partition, OTA no more possible
 ;board_build.partitions = no_ota.csv
+;board_upload.flash_size = 4MB
+;board_upload.maximum_size = 4194304
 
-; standard partitions for boards with 8MB Flash (or more)
+; boards with >=4MB Flash: even bigger application, small spiffs partition, OTA not possible 
+;board_build.partitions = huge_app.csv
+;board_upload.flash_size = 4MB
+;board_upload.maximum_size = 4194304
+
+; standard partitions for boards with >=8MB Flash
 ;board_build.partitions = default_8MB.csv
+;board_upload.flash_size = 8MB
+;board_upload.maximum_size = 8388608
 
-; standard partitions for boards with 16MB Flash
+; standard partitions for boards with >=16MB Flash
 ;board_build.partitions = default_16MB.csv
+;board_upload.flash_size = 16MB
+;board_upload.maximum_size = 16777216
 ```
 10) You can even define your own partition tables. Copy an existing (and ideally almost matching) *.csv file into the root of your project directory, rename it to "partitions_custom.csv" and edit the partition settings as needed (e.g. size, offset).
 ```
