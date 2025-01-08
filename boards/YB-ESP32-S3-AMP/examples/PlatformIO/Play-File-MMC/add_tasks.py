@@ -18,7 +18,7 @@ env.AddCustomTarget(
     title="Prune System",
     description="Prune System"
 )
-cmd1 = "python.exe " + expanduser("~") + "\.platformio\packages\\tool-esptoolpy\espefuse.py --port $UPLOAD_PORT summary"
+cmd1 = "python.exe " + expanduser("~") + "/.platformio/packages/tool-esptoolpy/espefuse.py --port $UPLOAD_PORT summary"
 env.AddCustomTarget(
     name="fuses-summary",
     dependencies=None,
