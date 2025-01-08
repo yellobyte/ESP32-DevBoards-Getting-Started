@@ -74,7 +74,7 @@ build_type = debug
 
 # Starting the OpenOCD task:
 **Please note:**  
-Under normal circumstances **this step is not required** and you can skip this paragraph. Just **press F5** and of you go debugging.  
+Under normal circumstances **this step is not required** and you can skip this paragraph. Just **press F5** and off you go debugging.  
 If for any reason you have to start OpenOCD on it's own or just want to test the connection to your external JTAG adapter than please read on.
 
 GDB needs the OpenOCD task to run in the background before debugging can be started. It connects GDB with the various JTAG adapters and acts as an abstraction layer.  There are different ways to start OpenOCD on it'S own:
