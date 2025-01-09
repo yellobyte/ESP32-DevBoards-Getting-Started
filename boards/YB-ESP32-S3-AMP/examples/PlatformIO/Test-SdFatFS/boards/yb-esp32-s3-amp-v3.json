@@ -6,7 +6,7 @@
     },
     "core": "esp32",
     "extra_flags": [
-      "-DARDUINO_YB_ESP32S3_AMP_V3",
+      "-DARDUINO_YB_ESP32_S3_AMP_V3",
       "-DARDUINO_USB_CDC_ON_BOOT=1",
       "-DARDUINO_RUNNING_CORE=1",
       "-DARDUINO_EVENT_RUNNING_CORE=1",
@@ -22,7 +22,7 @@
       ]
     ],
     "mcu": "esp32s3",
-    "variant": "yb_esp32s3_amp_v3"
+    "variant": "yb-esp32-s3-amp"
   },
   "connectivity": [
     "wifi",
@@ -35,7 +35,7 @@
     "arduino",
     "espidf"
   ],
-  "name": "YB_ESP32S3_AMP_V3",
+  "name": "YB-ESP32-S3-AMP (8MB QD FLASH and 2MB PSRAM, Rev 3.x)",
   "upload": {
     "flash_size": "8MB",
     "maximum_ram_size": 327680,

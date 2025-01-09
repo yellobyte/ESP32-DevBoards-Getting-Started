@@ -6,7 +6,7 @@
     },
     "core": "esp32",
     "extra_flags": [
-      "-DARDUINO_YB_ESP32S3_AMP_V2",
+      "-DARDUINO_YB_ESP32_S3_AMP_V2",
       "-DARDUINO_RUNNING_CORE=1",
       "-DARDUINO_EVENT_RUNNING_CORE=1",
       "-DBOARD_HAS_PSRAM"
@@ -34,7 +34,7 @@
     "arduino",
     "espidf"
   ],
-  "name": "YB_ESP32S3_AMP_V2",
+  "name": "YB-ESP32-S3-AMP (8MB QD FLASH and 2MB PSRAM, Rev 2.x)",
   "upload": {
     "flash_size": "8MB",
     "maximum_ram_size": 327680,
