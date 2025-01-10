@@ -74,10 +74,7 @@ platform = espressif32@^6.9.0
 ;platform = https://github.com/pioarduino/platform-espressif32/releases/download/stable/platform-espressif32.zip
 ;platform = https://github.com/pioarduino/platform-espressif32/releases/download/51.03.07/platform-espressif32.zip
 ;
-platform_packages = 
-;  framework-arduinoespressif32@https://github.com/espressif/arduino-esp32/releases/download/3.1.0/esp32-3.1.0.zip
-;  framework-arduinoespressif32@https://github.com/espressif/arduino-esp32/releases/download/2.0.4/esp32-2.0.4.zip
-;  framework-arduinoespressif32@https://github.com/espressif/arduino-esp32.git#2.0.3
+platform_packages =
 ;  platformio/tool-openocd-esp32@^2.1100.211028
   platformio/tool-openocd-esp32
 ```
