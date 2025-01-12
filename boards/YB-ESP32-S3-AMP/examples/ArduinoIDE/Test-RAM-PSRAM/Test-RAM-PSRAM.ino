@@ -1,27 +1,25 @@
 /*
-  Test_RAM
+  Test RAM/PSRAM
 
-  1) Shows available RAM/PSRAM on the YB-ESP32-S3-AMP dev board.
-  2) Allocates as many memory chunks as possible and shows where the allocated memory comes from.
+  1) Shows available RAM/PSRAM on the YB-ESP32-S3-XXX dev board.
+  2) Allocates memory chunks as big as possible and shows where the allocated memory comes from.
      According to the ESP32-S3 spec the address mapping structure is as follows:
-     PSRAM:        0x3C000000-0x3DFFFFFF, 0x42000000-0x43FFFFFF 
-     SRAM:         0x3FC88000-0x3FCFFFFF, 0x40370000-0x403DFFFF
-     RTC FAST MEM: 0x600FE000-0x600FFFFF
-  3) When almost no memory is left then even serial output gets affected.
+       PSRAM:        0x3C000000-0x3DFFFFFF, 0x42000000-0x43FFFFFF 
+       SRAM:         0x3FC88000-0x3FCFFFFF, 0x40370000-0x403DFFFF
+       RTC FAST MEM: 0x600FE000-0x600FFFFF
+  3) When almost no memory is left then even printing serial output might get hampered.
   4) Finally all allocated memory is released.
-
-  The memory allocated will come from RAM or PSRAM as you can see on the address returned by malloc().
 
   Last updated 2025-01-12, ThJ <yellobyte@bluewin.ch>
 */
 
 #include <Arduino.h>
 
-#define ORIGIN(p)                                                                        \
-        ((p >= (uint8_t*)0x3C000000 && p <= (uint8_t*)0x3DFFFFFF) ||                     \
-         (p >= (uint8_t*)0x42000000 && p <= (uint8_t*)0x43FFFFFF)) ? "PSRAM" :           \
-         ((p >= (uint8_t*)0x3FC88000 && p <= (uint8_t*)0x3FCFFFFF) ||                    \
-          (p >= (uint8_t*)0x40370000 && p <= (uint8_t*)0x403DFFFF)) ? "SRAM" :           \
+#define ORIGIN(p)                                                                         \
+        ((p >= (uint8_t*)0x3C000000 && p <= (uint8_t*)0x3DFFFFFF) ||                      \
+         (p >= (uint8_t*)0x42000000 && p <= (uint8_t*)0x43FFFFFF)) ? "PSRAM" :            \
+         ((p >= (uint8_t*)0x3FC88000 && p <= (uint8_t*)0x3FCFFFFF) ||                     \
+          (p >= (uint8_t*)0x40370000 && p <= (uint8_t*)0x403DFFFF)) ? "SRAM" :            \
           (p >= (uint8_t*)0x600FE000 && p <= (uint8_t*)0x600FFFFF) ? "RTC FAST MEM" : ""
 
 uint8_t *p, *pArray[30], cnt = 0;
@@ -70,7 +68,7 @@ uint8_t *allocMaxRAM(size_t startSize)
     }
   }
 
-	return p;
+  return p;
 } 
 
 uint8_t *allocRAM(size_t size)
@@ -84,7 +82,7 @@ uint8_t *allocRAM(size_t size)
     Serial.printf("error !\n");
     return NULL;
   }
-	Serial.printf("success, p = %x(...%x), %s\n", p, p + size, ORIGIN(p));
+  Serial.printf("success, p = %x(...%x), %s\n", p, p + size, ORIGIN(p));
 
   // very simple check of every single byte in allocated memory
   // write pattern
@@ -99,7 +97,7 @@ uint8_t *allocRAM(size_t size)
     }
   }
 
-	return p;
+  return p;
 }  
 
 void setup() {
@@ -111,7 +109,7 @@ void setup() {
 
   delay(1000);
   Serial.println();
-  Serial.println("--> Sketch started: Testing RAM/PSRAM on YB-ESP32-S3-AMP dev board:\n"); 
+  Serial.println("--> Sketch started: Testing RAM/PSRAM on YB-ESP32-S3-XXX dev board:\n"); 
   Serial.print("ESP32 SDK: ");        Serial.println(ESP.getSdkVersion());
   Serial.print("ESP32 CPU FREQ: ");   Serial.print(getCpuFrequencyMhz());             Serial.println(" MHz");
   Serial.print("ESP32 APB FREQ: ");   Serial.print(getApbFrequency() / 1000000.0, 1); Serial.println(" MHz (Advanced Peripheral Bus)");
@@ -131,6 +129,8 @@ void setup() {
     pArray[cnt++] = p;
     logRam();
   }
+
+  Serial.println("----- all memory used up ----->");
 
   Serial.println("\n----- free all allocated memory ----->");
   for (uint8_t i = cnt; i > 0; i--)
