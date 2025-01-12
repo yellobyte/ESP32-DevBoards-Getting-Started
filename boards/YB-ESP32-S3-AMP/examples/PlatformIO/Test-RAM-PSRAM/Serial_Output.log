@@ -1,0 +1,80 @@
+--- Terminal on COM6 | 115200 8-N-1
+--- Available filters and text transformations: colorize, debug, default, direct, esp32_exception_decoder, hexlify, log2file, nocontrol, printable, send_on_enter, time
+--- More details at https://bit.ly/pio-monitor-filters
+--- Quit: Ctrl+C | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H
+18:24:41.450 > 
+18:24:41.451 > --> Sketch started: Testing RAM/PSRAM on YB-ESP32-S3-AMP dev board:
+18:24:41.456 >
+18:24:41.456 > ESP32 SDK: v5.3.2-282-gcfea4f7c98-dirty
+18:24:41.458 > ESP32 CPU FREQ: 240 MHz
+18:24:41.462 > ESP32 APB FREQ: 80.0 MHz (Advanced Peripheral Bus)
+18:24:41.464 > ESP32 FLASH SIZE: 8388608 Byte
+18:24:41.467 >
+18:24:41.467 > ESP32 RAM Size: 395788 Byte, Used: 36672 Byte, Free: 359116, max alloc: 286708 Byte (largest free block)
+18:24:41.478 > ESP32 PSRAM Size: 2097152 Byte, Used: 4076 Byte, Free: 2093076 Byte
+18:24:41.483 >
+18:24:41.483 > ----- allocate biggest possible chunk, please wait ----->
+18:24:42.092 > -> malloc(2064371): success, p = 3c050fec(...3c248fdf), PSRAM
+18:24:42.411 > ESP32 RAM Size: 395788 Byte, Used: 36672 Byte, Free: 359116, max alloc: 286708 Byte (largest free block)
+18:24:42.420 > ESP32 PSRAM Size: 2097152 Byte, Used: 2068464 Byte, Free: 28688 Byte
+18:24:42.425 >
+18:24:42.425 > ----- allocate more chunks of memory ----->
+18:24:42.428 > -> malloc(286708): success, p = 3fca1d68(...3fce7d5c), SRAM
+18:24:42.465 > ESP32 RAM Size: 395788 Byte, Used: 323396 Byte, Free: 72392, max alloc: 31732 Byte (largest free block)
+18:24:42.474 > ESP32 PSRAM Size: 2097152 Byte, Used: 2068464 Byte, Free: 28688 Byte
+18:24:42.479 >
+18:24:42.479 > -> malloc(31732): success, p = 3fcf02ec(...3fcf7ee0), SRAM
+18:24:42.485 > ESP32 RAM Size: 395788 Byte, Used: 355144 Byte, Free: 40644, max alloc: 21492 Byte (largest free block)
+18:24:42.493 > ESP32 PSRAM Size: 2097152 Byte, Used: 2068464 Byte, Free: 28688 Byte
+18:24:42.499 >
+18:24:42.499 > -> malloc(21492): success, p = 3c248ff0(...3c24e3e4), PSRAM
+18:24:42.505 > ESP32 RAM Size: 395788 Byte, Used: 355144 Byte, Free: 40644, max alloc: 21492 Byte (largest free block)
+18:24:42.513 > ESP32 PSRAM Size: 2097152 Byte, Used: 2089972 Byte, Free: 7180 Byte
+18:24:42.521 >
+18:24:42.521 > -> malloc(21492): success, p = 3fce99fc(...3fceedf0), SRAM
+18:24:42.527 > ESP32 RAM Size: 395788 Byte, Used: 376652 Byte, Free: 19136, max alloc: 7156 Byte (largest free block)
+18:24:42.535 > ESP32 PSRAM Size: 2097152 Byte, Used: 2089972 Byte, Free: 7180 Byte
+18:24:42.541 >
+18:24:42.541 > -> malloc(7156): success, p = 3c24e3f4(...3c24ffe8), PSRAM
+18:24:42.546 > ESP32 RAM Size: 395788 Byte, Used: 376652 Byte, Free: 19136, max alloc: 7156 Byte (largest free block)
+18:24:42.555 > ESP32 PSRAM Size: 2097152 Byte, Used: 2097144 Byte, Free: 8 Byte
+18:24:42.560 >
+18:24:42.560 > -> malloc(7156): success, p = 600fe288(...600ffe7c), RTC FAST MEM
+18:24:42.566 > ESP32 RAM Size: 395788 Byte, Used: 383824 Byte, Free: 11964, max alloc: 6516 Byte (largest free block)
+18:24:42.574 > ESP32 PSRAM Size: 2097152 Byte, Used: 2097144 Byte, Free: 8 Byte
+18:24:42.582 >
+18:24:42.582 > -> malloc(6516): success, p = 3fce7d6c(...3fce96e0), SRAM
+18:24:42.585 > ESP32 RAM Size: 395788 Byte, Used: 390356 Byte, Free: 5432, max alloc: 4596 Byte (largest free block)
+18:24:42.596 > ESP32 PSRAM Size: 2097152 Byte, Used: 2097144 Byte, Free: 8 Byte
+18:24:42.602 >
+18:24:42.602 > -> malloc(4596): success, p = 3fc9c9d0(...3fc9dbc4), SRAM
+18:24:42.607 > ESP32 RAM Size: 395788 Byte, Used: 394968 Byte, Free: 820, max alloc: 308 Byte (largest free block)
+18:24:42.616 > ESP32 PSRAM Size: 2097152 Byte, Used: 2097144 Byte, Free: 8 Byte
+18:24:42.621 >
+18:24:42.621 > -> malloc(308): success, p = 600ffe8c(...600fffc0), RTC FAST MEM
+18:24:42.627 > ESP32 RAM Size: 395788 Byte, Used: 395292 Byte, Free: 496, max alloc: 260 Byte (largest free block)
+18:24:42.635 > ESP32 PSRAM Size: 2097152 Byte, Used: 2097144 Byte, Free: 8 Byte
+18:24:42.641 >
+18:24:42.641 > -> malloc(260): success, p = 3fcf7ef0(...3fcf7ff4), SRAM
+18:24:42.646 >
+18:24:42.646 > ESP32 PSRAM Size: 2097152 Byte, Used: 2097144 Byte, Free: 8 Byte
+18:24:42.652 >
+18:24:42.652 > -> malloc(96): success, p = 3fc9dbd4(...3fc9dc34), SRAM
+18:24:42.658 >
+18:24:42.658 >
+18:24:42.658 > -> malloc(44): success, p = 3fceee00(...3fceee2c), SRAM
+18:24:42.663 >
+18:24:42.663 >
+18:24:42.663 > -> malloc(24): success, p = 3fce96f0(...3fce9708), SRAM
+18:24:42.665 >
+18:24:42.669 >
+18:24:42.669 > -> malloc(4): success, p = 3fc9c500(...3fc9c504), SRAM
+18:24:42.671 >
+18:24:42.671 >
+18:24:42.671 >
+18:24:42.671 > ----- free all allocated memory ----->
+18:24:42.677 > ESP32 RAM Size: 395788 Byte, Used: 36672 Byte, Free: 359116, max alloc: 286708 Byte (largest free block)
+18:24:42.685 > ESP32 PSRAM Size: 2097152 Byte, Used: 4076 Byte, Free: 2093076 Byte
+18:24:42.690 >
+18:24:42.690 >
+18:24:42.690 > All done.
