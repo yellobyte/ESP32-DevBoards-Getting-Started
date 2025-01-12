@@ -7,7 +7,7 @@
        PSRAM:        0x3C000000-0x3DFFFFFF, 0x42000000-0x43FFFFFF 
        SRAM:         0x3FC88000-0x3FCFFFFF, 0x40370000-0x403DFFFF
        RTC FAST MEM: 0x600FE000-0x600FFFFF
-  3) When almost no memory is left then even serial output gets affected.
+  3) When almost no memory is left then even printing serial output might get hampered.
   4) Finally all allocated memory is released.
 
   Last updated 2025-01-12, ThJ <yellobyte@bluewin.ch>
