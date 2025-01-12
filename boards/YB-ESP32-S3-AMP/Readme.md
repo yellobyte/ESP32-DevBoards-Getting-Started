@@ -156,4 +156,8 @@ Flash: [===       ]  28.5% (used 950957 bytes from 3342336 bytes)
 3) The ESP32-S3-WROOM-1 module family comprises several [**versions**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-AMP/doc/ESP32-S3-WROOM-1(U)_Variants.jpg). The **-1** versions come with embedded PCB antenna, the **-1U** versions with IPEX antenna socket instead. The extension -Nx(Ry) defines the amount of integrated FLASH/PSRAM, e.g. -N4 (4MB Flash, no PSRAM), -N4R2 (4 MB Flash, 2MB PSRAM), -N8R2 (8 MB Flash, 2MB PSRAM) etc.  
 
 ## Final Remark:  
-All YB-ESP32-S3-AMP boards delivered are already flashed with software example 'Play-All-MP3-Files-on-SD'. For a quick board test just insert a microSD card (FAT32) into the socket holding some *.mp3 files, connect one or two speaker(s) to the board and power it up (via USB or 5V pins).
+**>>> All YB-ESP32-S3-AMP boards delivered have already been flashed with software example 'Play-All-MP3-Files-on-SD'. <<<**  
+
+For a quick board test just insert a microSD card (FAT32) into the socket holding some *.mp3 files, connect one or two speaker(s) to the board and power it up (via USB or 5V pins).  
+
+The status LED will light up when the microSD card has been detected successfully and the board will start playing all *.mp3 files found.
