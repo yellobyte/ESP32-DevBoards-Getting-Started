@@ -227,5 +227,7 @@ See https://docs.platformio.org/page/projectconf/build_configurations.html
 23:27:29.861 > Ethernet link is down.
 ....
 ```
-## Remarks:  
-- All YB-ESP32-S3-ETH boards delivered are already flashed with software example 'ESP32-S3-ETH-DHCP'. Means the status LED 'IO47' blinks fast whith power applied and blinks slow with obtained IP address (DHCP via Ethernet).
+## Final Remark for first usage: 
+**>>> All YB-ESP32-S3-ETH boards delivered have already been flashed with software example 'ESP32-S3-ETH-DHCP'. <<<**  
+
+Means the status LED 'IO47' blinks fast whith power applied and blinks slow with obtained IP address (DHCP via Ethernet).
