@@ -10,7 +10,7 @@
   GPIO47 (onboard LED IO47) with the amps SD_MODE pin. Setting GPIO47 to LOW (LED off) will shut down (mute) the amps
   and setting GPIO47 to HIGH (LED on) will activate the amps.
 
-  Last updated 2024-10-17, ThJ <yellobyte@bluewin.ch>
+  Last updated 2024-12-12, ThJ <yellobyte@bluewin.ch>
 */
 
 #include <Arduino.h>
@@ -18,10 +18,6 @@
 #include <SPI.h>
 #include <SD_MMC.h>
 #include "Audio.h"
-
-#define I2S_BCLK   5   // GPIO 5/6/7 are not wired to a pin, they are exclusively used for the MAX98357A
-#define I2S_LRC    6
-#define I2S_DOUT   7
 
 #define FILE_ON_SD "/File1.mp3"
 
@@ -56,7 +52,7 @@ void setup()
     return;
   }
 
-  audio.setPinout(I2S_BCLK, I2S_LRC, I2S_DOUT);
+  audio.setPinout(I2S_BCLK, I2S_LRCLK, I2S_DOUT);
   audio.setVolume(8);                  // 0...21(max)
   audio.connecttoFS(SD_MMC, FILE_ON_SD);
 }
