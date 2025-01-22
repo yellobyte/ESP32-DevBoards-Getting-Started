@@ -65,24 +65,28 @@ Each audio channel can produce max. 3.2W output power at 4 Ohms. If your project
 The board with revision 2.x uses the popular WCH CH340X bridge chip between USB-C port and the ESP32-S3. If you plan to use the USB port then you need to install the CH340X Drivers on your Laptop/PC. For Windows go [here](https://www.wch-ic.com/search?t=all&q=ch341) and select the newest version of the driver installer 'CH341SER.EXE'. 
 
 ### Arduino IDE:
-Select the board "**ESP32S3 Dev Module**" and choose the proper settings that fit your board variant. Be aware, since the ESP32-S3 MCU is very versatile there are a lot of build options to play with. Espressif's homapage offers some help as well.
+As of Arduino ESP32 Core V3.1.1 you open the board list, enter "yb" and this board "**Yellobyte YB-ESP32-S3-AMP**" pops up. Now choose the proper settings for COM port, debug level, flash size, PSRAM, etc. as shown below. Be aware, since the ESP32-S3 MCU is very versatile there are a lot of build options to play with. Espressif's homapage offers some help.
 
 Correct **ArduinoIDE** settings for the **YB-ESP32-S3-AMP (Rev.2, with CH340)** board:  
-- Board: *ESP32S3 Dev Module*
-- USB CDC On Boot: **_Disabled_**
+- Board: *YB-ESP32-S3-AMP (Rev.2)*
+- USB CDC On Boot: _Disabled_
 - Flash Size: *8MB (64Mb)*
 - Partition Scheme: *8MB with spiffs (...)*
 - PSRAM: *QSPI PSRAM*  
 
-Correct **ArduinoIDE** settings for the **YB-ESP32-S3-AMP (Rev.3)** board:  
-- Board: *ESP32S3 Dev Module*
+ ![](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-AMP/doc/YB-ESP32-S3-AMP_Rev2_ArduinoIDE-Settings.jpg) 
+
+Following the correct **ArduinoIDE** settings for the **YB-ESP32-S3-AMP (Rev.3)** board:  
+- Board: *YB-ESP32-S3-AMP (Rev.3)*
 - USB CDC On Boot: **_Enabled_**
 - Flash Size: *8MB (64Mb)*
 - Partition Scheme: *8MB with spiffs (...)*
 - PSRAM: *QSPI PSRAM* 
+
+ ![](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-AMP/doc/YB-ESP32-S3-AMP_Rev3_ArduinoIDE-Settings.jpg) 
   
 ### PlatformIO:
-Building with **PlatformIO** is even easier. Each of the provided software examples for PlatformIO comes with a subdirectory *'boards'*. This holds the specific board definition files which provide the correct board definitions & settings.  
+Building with **PlatformIO** is easy as well. Each of the provided software examples for PlatformIO comes with a subdirectory *'boards'*. This holds the specific board definition files which provide the correct board definitions & settings.  
 
 Going a step further and putting these files to your development platforms *core_dir/platforms/espressif32/boards* global directory (on my PC it's  *C:\Users\name\\.platformio\platforms\espressif32\boards*) means you can create a new project in PlatformIO and simply select this board from the pull-down list.  
 
