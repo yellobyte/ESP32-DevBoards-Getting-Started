@@ -56,13 +56,19 @@ The board uses the popular WCH CH340X bridge chip between microUSB port labled '
 ### Arduino IDE:
 As of Arduino ESP32 Core V3.1.1 you open the board list, enter "yb" and this board "**Yellobyte YB-ESP32-S3-ETH**" pops up. Now choose the proper settings for COM port, debug level, flash size, PSRAM, etc. as shown below. Be aware, since the ESP32-S3 MCU is very versatile there are a lot of build options to play with. Espressif's homapage offers some help.
 
-Special settings that apply to the **-N8R8** board (8MB Flash/8MB PSRAM):  
+Settings that apply to the **-N8R8** board (8MB Flash/8MB PSRAM):  
 - Board: *Yellobyte YB-ESP32-S3-ETH*
 - Flash Size: *8MB*
 - Partition Scheme: *8MB with spiffs (...)*
 - PSRAM: *OPI PSRAM*  
 
  ![](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-ETH/doc/YB-ESP32-S3-ETH-N8R8_ArduinoIDE-Settings.jpg)  
+
+For the **-N8R2** board (8MB Flash/2MB PSRAM) the following settings apply: 
+- Board: *Yellobyte YB-ESP32-S3-ETH*
+- Flash Size: *8MB*
+- Partition Scheme: *8MB with spiffs (...)*
+- PSRAM: *QSPI PSRAM*.
 
 For the **-N4** board (4MB Flash/no PSRAM) the following settings apply: 
 - Board: *Yellobyte YB-ESP32-S3-ETH*
@@ -71,9 +77,9 @@ For the **-N4** board (4MB Flash/no PSRAM) the following settings apply:
 - PSRAM: *Disabled*.
 
 ### PlatformIO:
-Building with **PlatformIO** is no problem as well. Each of the provided software examples for PlatformIO comes with a subdirectory *'boards'*. There lie the specific board definition files (yb-esp32-s3-eth-n4.json, yb-esp32-s3-eth-n8r8.json) which provide the proper board definitions & settings.  
+Building with **PlatformIO** is easy as well. Each of the provided software examples for PlatformIO comes with a subdirectory *'boards'*. There lie the specific board definition files (*.json) which provide the proper board definitions & settings. If necessary, those settings can finally be overridden with resp. settings in the project file platformio.ini.
 
-Going a step further and putting these files to your development platforms *core_dir/platforms/espressif32/boards* global directory (on my PC it's  *C:\Users\name\\.platformio\platforms\espressif32\boards*) means you can create a new project in PlatformIO and simply select this board from the pull-down list.  
+Going a step further and putting the *.json files to your development platforms *core_dir/platforms/espressif32/boards* global directory (on my PC it's  *C:\Users\name\\.platformio\platforms\espressif32\boards*) means you can create a new project in PlatformIO and simply select this board from the pull-down list.  
 
  ![](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-ETH/doc/YB-ESP32-S3-ETH_PlatformIO_board_selection.jpg)
 
