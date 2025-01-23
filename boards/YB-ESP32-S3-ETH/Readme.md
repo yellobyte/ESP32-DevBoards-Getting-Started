@@ -54,7 +54,7 @@ Normal operating current of the idle board (all GPIOs unconnected, Ethernet Link
 The board uses the popular WCH CH340X bridge chip between microUSB port labled 'UART' and the ESP32-S3. If you plan to use port 'UART' then you need to install the CH340X Drivers on your Laptop/PC. For Windows go [here](https://www.wch-ic.com/search?t=all&q=ch341) and select the newest version of the driver installer 'CH341SER.EXE'.  
 
 ### Arduino IDE:
-As of Arduino ESP32 Core V3.1.1 you open the board list, enter "yb" and this board "**Yellobyte YB-ESP32-S3-ETH**" pops up. Now choose the proper settings for COM port, debug level, flash size, PSRAM, etc. as shown below. Be aware, since the ESP32-S3 MCU is very versatile there are a lot of build options to play with. Espressif's homapage offers some help.
+As of Arduino ESP32 Core V3.1.1 you open the board list, enter "yb" and then select "**Yellobyte YB-ESP32-S3-ETH**". Now choose the proper settings for COM port, debug level, flash size, PSRAM, etc. as shown below. Be aware, since the ESP32-S3 MCU is very versatile there are a lot of build options to play with. Espressif's homapage offers some help.
 
 Settings that apply to the **-N8R8** board (8MB Flash/8MB PSRAM):  
 - Board: *Yellobyte YB-ESP32-S3-ETH*
