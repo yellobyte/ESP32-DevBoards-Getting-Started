@@ -159,6 +159,8 @@ Flash: [===       ]  28.5% (used 950957 bytes from 3342336 bytes)
 
 3) The ESP32-S3-WROOM-1 module family comprises several [**versions**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-AMP/doc/ESP32-S3-WROOM-1(U)_Variants.jpg). The **-1** versions come with embedded PCB antenna, the **-1U** versions with IPEX antenna socket instead. The extension -Nx(Ry) defines the amount of integrated FLASH/PSRAM, e.g. -N4 (4MB Flash, no PSRAM), -N4R2 (4 MB Flash, 2MB PSRAM), -N8R2 (8 MB Flash, 2MB PSRAM) etc.  
 
+5) Boards with revisions 3.x allow debugging programs with PlatformIO via ESP32S3's builtin 'JTAG serial debug unit'. An example is provided [here](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/YB-ESP32-S3-AMP/examples/PlatformIO/Debug-BoardRev3-via-builtin-JTAG). 
+
 ## Final Remark for first usage:  
 **>>> All YB-ESP32-S3-AMP boards delivered have already been flashed with software example 'Play-All-MP3-Files-on-SD'. <<<**  
 
