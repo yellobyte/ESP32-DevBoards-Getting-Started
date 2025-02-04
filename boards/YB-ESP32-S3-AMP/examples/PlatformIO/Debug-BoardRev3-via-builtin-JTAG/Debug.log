@@ -1,0 +1,133 @@
+undefinedOpen On-Chip Debugger v0.12.0-esp32-20230419 (2023-04-18-22:02)
+Licensed under GNU GPL v2
+For bug reports, read
+	http://openocd.org/doc/doxygen/bugs.html
+Info : only one transport option; autoselecting 'jtag'
+Info : esp_usb_jtag: VID set to 0x303a and PID to 0x1001
+Info : esp_usb_jtag: capabilities descriptor set to 0x2000
+Warn : Transport "jtag" was already selected
+adapter speed: 5000 kHz
+Info : Listening on port 6666 for tcl connections
+Info : Listening on port 4444 for telnet connections
+Info : esp_usb_jtag: serial (3C:84:27:31:A2:38)
+Info : esp_usb_jtag: Device found. Base speed 40000KHz, div range 1 to 255
+Info : clock speed 5000 kHz
+Info : JTAG tap: esp32s3.cpu0 tap/device found: 0x120034e5 (mfg: 0x272 (Tensilica), part: 0x2003, ver: 0x1)
+Info : JTAG tap: esp32s3.cpu1 tap/device found: 0x120034e5 (mfg: 0x272 (Tensilica), part: 0x2003, ver: 0x1)
+Info : starting gdb server for esp32s3.cpu0 on 3333
+Info : Listening on port 3333 for gdb connections
+Info : [esp32s3.cpu0] Debug controller was reset.
+Info : [esp32s3.cpu0] Core was reset.
+Info : [esp32s3.cpu1] Debug controller was reset.
+Info : [esp32s3.cpu1] Core was reset.
+Info : [esp32s3.cpu0] Target halted, PC=0x40378C76, debug_reason=00000000
+Info : [esp32s3.cpu0] Reset cause (1) - (Power on reset)
+Info : [esp32s3.cpu1] Target halted, PC=0x40378C76, debug_reason=00000000
+Info : [esp32s3.cpu1] Reset cause (1) - (Power on reset)
+Reading symbols from D:\Projects\VSCode\ESP32\ESP32-S3-AMP YB-DevBoard\Test-V3-Debug_via_builtin_JTAG\.pio\build\debug\firmware.elf...
+
+warning:
+could not convert 'main' from the host encoding (CP1252) to UTF-32.
+This normally should not happen, please file a bug report.
+
+Warning: 'set target-async', an alias for the command 'set mi-async', is deprecated.
+Use 'set mi-async'.
+PlatformIO Unified Debugger -> https://bit.ly/pio-debug
+PlatformIO: debug_tool = custom
+PlatformIO: Initializing remote target...
+Info : accepting 'gdb' connection on tcp/3333
+Info : [esp32s3.cpu0] Target halted, PC=0x40378C76, debug_reason=00000000
+Info : Set GDB target to 'esp32s3.cpu0'
+Info : [esp32s3.cpu1] Target halted, PC=0x40378C76, debug_reason=00000000
+Warn : No symbols for FreeRTOS!
+Info : [esp32s3.cpu0] Target halted, PC=0x403B244A, debug_reason=00000001
+Info : Flash mapping 0: 0x10020 -> 0x3c030020, 75 KB
+Info : Flash mapping 1: 0x30020 -> 0x42000020, 151 KB
+Info : [esp32s3.cpu0] Target halted, PC=0x403B244A, debug_reason=00000001
+Info : Auto-detected flash bank 'esp32s3.cpu0.flash' size 8192 KB
+Info : Using flash bank 'esp32s3.cpu0.flash' size 8192 KB
+Info : [esp32s3.cpu0] Target halted, PC=0x403B244A, debug_reason=00000001
+Info : Flash mapping 0: 0x10020 -> 0x3c030020, 75 KB
+Info : Flash mapping 1: 0x30020 -> 0x42000020, 151 KB
+Info : Using flash bank 'esp32s3.cpu0.irom' size 152 KB
+Info : [esp32s3.cpu0] Target halted, PC=0x403B244A, debug_reason=00000001
+Info : Flash mapping 0: 0x10020 -> 0x3c030020, 75 KB
+Info : Flash mapping 1: 0x30020 -> 0x42000020, 151 KB
+Info : Using flash bank 'esp32s3.cpu0.drom' size 76 KB
+Info : New GDB Connection: 1, Target esp32s3.cpu0, state: halted
+0x40378c76 in esp_cpu_wait_for_intr () at /home/runner/work/esp32-arduino-lib-builder/esp32-arduino-lib-builder/esp-idf/components/esp_hw_support/cpu.c:64
+warning: 64	/home/runner/work/esp32-arduino-lib-builder/esp32-arduino-lib-builder/esp-idf/components/esp_hw_support/cpu.c: No such file or directory
+Info : Detected FreeRTOS version: (10.5.1)
+Info : JTAG tap: esp32s3.cpu0 tap/device found: 0x120034e5 (mfg: 0x272 (Tensilica), part: 0x2003, ver: 0x1)
+Info : JTAG tap: esp32s3.cpu1 tap/device found: 0x120034e5
+JTAG tap: esp32s3.cpu0 tap/device found: 0x120034e5 (mfg: 0x272 (Tensilica), part: 0x2003, ver: 0x1)
+(mfg: 0x272 (Tensilica), part: 0x2003, ver: 0x1)
+JTAG tap: esp32s3.cpu1 tap/device found: 0x120034e5 (mfg: 0x272 (Tensilica), part: 0x2003, ver: 0x1)
+I
+[esp32s3.cpu0] requesting target halt and executing a soft reset
+nfo : [esp32s3.cpu0] requesting target halt and executing a soft reset
+Info : [esp32s3.cpu0] Debug controller was reset.
+[esp32s3.cpu0] Debug controller was reset.
+Info : [esp32s3.cpu0] Core was reset.
+[esp32s3.cpu0] Core was reset.
+Info : [esp32s3.cpu0] Target halted, PC=0x500000EF, debug_reason=00000000
+[esp32s3.cpu0] Target halted, PC=0x500000EF, debug_reason=00000000
+Info : [esp32s3.cpu0] Reset cause (3) - (Software core reset)
+[esp32s3.cpu0] Reset cause (3) - (Software core reset)
+I
+[esp32s3.cpu1] requesting target halt and executing a soft reset
+nfo : [esp32s3.cpu1] requesting target halt and executing a soft reset
+I
+[esp32s3.cpu0] Core was reset.
+nfo : [esp32s3.cpu0] Core was reset.
+Info : [esp32s3.cpu0] Target halted, PC=0x40000400, debug_reason=00000000
+[esp32s3.cpu0] Target halted, PC=0x40000400, debug_reason=00000000
+Info : [esp32s3.cpu1] Debug controller was reset.
+[esp32s3.cpu1] Debug controller was reset.
+I
+[esp32s3.cpu1] Core was reset.
+nfo : [esp32s3.cpu1] Core was reset.
+Info : [esp32s3.cpu1] Target halted, PC=0x40000400, debug_reason=00000000
+[esp32s3.cpu1] Target halted, PC=0x40000400, debug_reason=00000000
+Info : [esp32s3.cpu1] Reset cause (3) - (Software core reset)
+[esp32s3.cpu1] Reset cause (3) - (Software core reset)
+Info : [esp32s3.cpu0] Reset cause (3) - (Software core reset)
+[esp32s3.cpu0] Reset cause (3) - (Software core reset)
+Temporary breakpoint 1 at 0x42001b0c: file src/main.cpp, line 13.
+Note: automatically using hardware breakpoints for read-only addresses.
+PlatformIO: Initialization completed
+PlatformIO: Resume the execution to `debug_init_break = tbreak setup`
+PlatformIO: More configuration options -> https://bit.ly/pio-debug
+Info : [esp32s3.cpu0] Target halted, PC=0x403B244A, debug_reason=00000001
+
+Info : [esp32s3.cpu0] Target halted, PC=0x403B244A, debug_reason=00000001
+Info : [esp32s3.cpu1] Debug controller was reset.
+[esp32s3.cpu1] Debug controller was reset.
+Info : [esp32s3.cpu1] Core was reset.
+[esp32s3.cpu1] Core was reset.
+Info : [esp32s3.cpu1] Target halted, PC=0x40041A76, debug_reason=00000000
+[esp32s3.cpu1] Target halted, PC=0x40041A76, debug_reason=00000000
+Info : [esp32s3.cpu1] Reset cause (3) - (Software core reset)
+[esp32s3.cpu1] Reset cause (3) - (Software core reset)
+Info : [esp32s3.cpu0] Target halted, PC=0x40378C76, debug_reason=00000000
+[esp32s3.cpu0] Target halted, PC=0x40378C76, debug_reason=00000000
+Info : Set GDB target to 'esp32s3.cpu0'
+Set GDB target to 'esp32s3.cpu0'
+Info : [esp32s3.cpu1] Target halted, PC=0x42001B0C, debug_reason=00000001
+[esp32s3.cpu1] Target halted, PC=0x42001B0C, debug_reason=00000001
+Info : Detected FreeRTOS version: (10.5.1)
+[New Thread 1070210104]
+[Remote target exited]
+[New Thread 1070195360]
+[New Thread 1070196828]
+[New Thread 1070177040]
+[New Thread 1070178448]
+[New Thread 1070200332]
+[New Thread 1070187860]
+[Switching to Thread 1070210104]
+Info : [esp32s3.cpu0] Target halted, PC=0x403B244A, debug_reason=00000001
+
+Info : [esp32s3.cpu0] Target halted, PC=0x403B244A, debug_reason=00000001
+
+Thread 2 "loopTask" hit Temporary breakpoint 1, setup () at src/main.cpp:13
+13	void setup() {

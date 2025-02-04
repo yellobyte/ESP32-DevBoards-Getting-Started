@@ -1,0 +1,198 @@
+Executing task: C:\Users\tj\.platformio\penv\Scripts\platformio.exe run --target fuses-summary --environment debug 
+
+Processing debug (platform: https://github.com/pioarduino/platform-espressif32/releases/download/stable/platform-espressif32.zip; framework: arduino; board: yb_esp32s3_amp_v3)
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/yb_esp32s3_amp_v3.html
+PLATFORM: Espressif 32 (53.3.11) > YelloByte YB-ESP32-S3-AMP (Rev.3)
+HARDWARE: ESP32S3 240MHz, 320KB RAM, 8MB Flash
+DEBUG: Current (custom) External (cmsis-dap, esp-bridge, esp-builtin, esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES:
+ - framework-arduinoespressif32 @ 3.1.1
+ - framework-arduinoespressif32-libs @ 5.3.0+sha.cfea4f7c98
+ - tool-esptoolpy @ 4.8.5
+ - tool-mklittlefs @ 3.2.0
+ - tool-openocd-esp32 @ 2.1200.20230419 (12.0)
+ - tool-riscv32-esp-elf-gdb @ 14.2.0+20240403
+ - tool-xtensa-esp-elf-gdb @ 14.2.0+20240403
+ - toolchain-riscv32-esp @ 13.2.0+20240530
+ - toolchain-xtensa-esp-elf @ 13.2.0+20240530
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 41 compatible libraries
+Scanning dependencies...
+No dependencies
+Building in debug mode
+python.exe C:\Users\tj/.platformio/packages/tool-esptoolpy/espefuse.py --port COM8 summary
+espefuse.py v4.5.1
+Connecting...
+Detecting chip type... ESP32-S3
+
+=== Run "summary" command ===
+EFUSE_NAME (Block) Description  = [Meaningful Value] [Readable/Writeable] (Hex Value)
+----------------------------------------------------------------------------------------
+Calibration fuses:
+TEMP_SENSOR_CAL (BLOCK2)                           ??? Temperature calibration                        = 4.4 R/W (0b000101100)
+ADC1_MODE0_D2 (BLOCK2)                             ??? ADC1 calibration 1                             = -168 R/W (0xaa)
+ADC1_MODE1_D2 (BLOCK2)                             ??? ADC1 calibration 2                             = -188 R/W (0xaf)
+ADC1_MODE2_D2 (BLOCK2)                             ??? ADC1 calibration 3                             = -300 R/W (0xcb)
+ADC1_MODE3_D2 (BLOCK2)                             ??? ADC1 calibration 4                             = -208 R/W (0xb4)
+ADC2_MODE0_D2 (BLOCK2)                             ??? ADC2 calibration 5                             = 336 R/W (0x54)
+ADC2_MODE1_D2 (BLOCK2)                             ??? ADC2 calibration 6                             = 456 R/W (0x72)
+ADC2_MODE2_D2 (BLOCK2)                             ??? ADC2 calibration 7                             = -292 R/W (0xc9)
+ADC2_MODE3_D2 (BLOCK2)                             ??? ADC2 calibration 8                             = -456 R/W (0xf2)
+ADC1_MODE0_D1 (BLOCK2)                             ??? ADC1 calibration 9                             = -104 R/W (0b111010)
+ADC1_MODE1_D1 (BLOCK2)                             ??? ADC1 calibration 10                            = -76 R/W (0b110011)
+ADC1_MODE2_D1 (BLOCK2)                             ??? ADC1 calibration 11                            = -52 R/W (0b101101)
+ADC1_MODE3_D1 (BLOCK2)                             ??? ADC1 calibration 12                            = 4 R/W (0b000001)
+ADC2_MODE0_D1 (BLOCK2)                             ??? ADC2 calibration 13                            = -76 R/W (0b110011)
+ADC2_MODE1_D1 (BLOCK2)                             ??? ADC2 calibration 14                            = -16 R/W (0b100100)
+ADC2_MODE2_D1 (BLOCK2)                             ??? ADC2 calibration 15                            = -104 R/W (0b111010)
+ADC2_MODE3_D1 (BLOCK2)                             ??? ADC2 calibration 16                            = 80 R/W (0b010100)
+
+Config fuses:
+DIS_ICACHE (BLOCK0)                                Disables ICache                                    = False R/W (0b0)
+DIS_DCACHE (BLOCK0)                                Disables DCache                                    = False R/W (0b0)
+DIS_DOWNLOAD_ICACHE (BLOCK0)                       Disables Icache when SoC is in Download mode       = False R/W (0b0)
+DIS_DOWNLOAD_DCACHE (BLOCK0)                       Disables Dcache when SoC is in Download mode       = False R/W (0b0)
+DIS_FORCE_DOWNLOAD (BLOCK0)                        Disables forcing chip into Download mode           = False R/W (0b0)
+DIS_CAN (BLOCK0)                                   Disables the TWAI Controller hardware              = False R/W (0b0)
+DIS_APP_CPU (BLOCK0)                               Disables APP CPU                                   = False R/W (0b0)
+FLASH_TPUW (BLOCK0)                                Configures flash startup delay after SoC power-up, = 0 R/W (0x0)
+                                                    unit is (ms/2). When the value is 15, delay is 7.
+                                                   5 ms
+DIS_DIRECT_BOOT (BLOCK0)                           Disables direct boot mode                          = False R/W (0b0)
+DIS_USB_SERIAL_JTAG_ROM_PRINT (BLOCK0)             Disables USB-Serial-JTAG ROM printing              = False R/W (0b0)
+FLASH_ECC_MODE (BLOCK0)                            Configures the ECC mode for SPI flash
+   = 16-byte to 18-byte mode R/W (0b0)
+DIS_USB_SERIAL_JTAG_DOWNLOAD_MODE (BLOCK0)         Disables USB-Serial-JTAG download feature in UART  = False R/W (0b0)
+                                                   download boot mode
+UART_PRINT_CONTROL (BLOCK0)                        Sets the default UART boot message output mode     = Enabled R/W (0b00)
+FLASH_TYPE (BLOCK0)                                Selects SPI flash type                             = 4 data lines R/W (0b0)
+FLASH_PAGE_SIZE (BLOCK0)                           Sets the size of flash page                        = 0 R/W (0b00)
+FLASH_ECC_EN (BLOCK0)                              Enables ECC in Flash boot mode                     = False R/W (0b0)
+FORCE_SEND_RESUME (BLOCK0)                         Forces ROM code to send an SPI flash resume comman = False R/W (0b0)
+                                                   d during SPI boot
+DIS_USB_OTG_DOWNLOAD_MODE (BLOCK0)                 Disables USB-OTG download feature in UART download = False R/W (0b0)
+                                                    boot mode
+DISABLE_WAFER_VERSION_MAJOR (BLOCK0)               Disables check of wafer version major              = False R/W (0b0)
+DISABLE_BLK_VERSION_MAJOR (BLOCK0)                 Disables check of blk version major                = False R/W (0b0)
+BLOCK_USR_DATA (BLOCK3)                            User data
+   = 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 R/W
+
+Efuse fuses:
+WR_DIS (BLOCK0)                                    Disables programming of individual eFuses          = 0 R/W (0x00000000)
+RD_DIS (BLOCK0)                                    Disables software reading from BLOCK4-10           = 0 R/W (0b0000000)
+
+Identity fuses:
+SECURE_VERSION (BLOCK0)                            Secure version (used by ESP-IDF anti-rollback feat = 0 R/W (0x0000)
+                                                   ure)
+MAC (BLOCK1)                                       Factory MAC Address
+   = 3c:84:27:31:a2:38 (OK) R/W
+WAFER_VERSION_MINOR_LO (BLOCK1)                    WAFER_VERSION_MINOR least significant bits         = 2 R/W (0b010)
+PKG_VERSION (BLOCK1)                               Package version                                    = 0 R/W (0b000)
+BLK_VERSION_MINOR (BLOCK1)                         BLOCK version minor                                = 3 R/W (0b011)
+WAFER_VERSION_MINOR_HI (BLOCK1)                    WAFER_VERSION_MINOR most significant bits          = 0 R/W (0b0)
+WAFER_VERSION_MAJOR (BLOCK1)                       WAFER_VERSION_MAJOR                                = 0 R/W (0b00)
+OPTIONAL_UNIQUE_ID (BLOCK2)                        Optional unique 128-bit ID
+   = 60 92 75 5a 94 70 06 73 a9 cd c7 75 57 bb 26 44 R/W
+BLK_VERSION_MAJOR (BLOCK2)                         BLOCK version major                                = With calibration R/W (0b01)
+CUSTOM_MAC (BLOCK3)                                Custom MAC Address
+   = 00:00:00:00:00:00 (OK) R/W
+WAFER_VERSION_MINOR (BLOCK0)                       calc WAFER VERSION MINOR = WAFER_VERSION_MINOR_HI  = 2 R/W (0x2)
+                                                   << 3 + WAFER_VERSION_MINOR_LO (read only)
+
+Security fuses:
+SOFT_DIS_JTAG (BLOCK0)                             Software disables JTAG by programming odd number o = 0 R/W (0b000)
+                                                   f 1 bit(s). JTAG can be re-enabled via HMAC periph
+                                                   eral
+HARD_DIS_JTAG (BLOCK0)                             Hardware disables JTAG permanently                 = False R/W (0b0)
+DIS_DOWNLOAD_MANUAL_ENCRYPT (BLOCK0)               Disables flash encryption when in download boot mo = False R/W (0b0)
+                                                   des
+SPI_BOOT_CRYPT_CNT (BLOCK0)                        Enables encryption and decryption, when an SPI boo = Disable R/W (0b000)
+                                                   t mode is set. Enabled when 1 or 3 bits are set,di
+                                                   sabled otherwise
+SECURE_BOOT_KEY_REVOKE0 (BLOCK0)                   Revokes use of secure boot key digest 0            = False R/W (0b0)
+SECURE_BOOT_KEY_REVOKE1 (BLOCK0)                   Revokes use of secure boot key digest 1            = False R/W (0b0)
+SECURE_BOOT_KEY_REVOKE2 (BLOCK0)                   Revokes use of secure boot key digest 2            = False R/W (0b0)
+KEY_PURPOSE_0 (BLOCK0)                             KEY0 purpose                                       = USER R/W (0x0)
+KEY_PURPOSE_1 (BLOCK0)                             KEY1 purpose                                       = USER R/W (0x0)
+KEY_PURPOSE_2 (BLOCK0)                             KEY2 purpose                                       = USER R/W (0x0)
+KEY_PURPOSE_3 (BLOCK0)                             KEY3 purpose                                       = USER R/W (0x0)
+KEY_PURPOSE_4 (BLOCK0)                             KEY4 purpose                                       = USER R/W (0x0)
+KEY_PURPOSE_5 (BLOCK0)                             KEY5 purpose                                       = USER R/W (0x0)
+SECURE_BOOT_EN (BLOCK0)                            Enables secure boot                                = False R/W (0b0)
+SECURE_BOOT_AGGRESSIVE_REVOKE (BLOCK0)             Enables aggressive secure boot key revocation mode = False R/W (0b0)
+STRAP_JTAG_SEL (BLOCK0)                            Enable selection between usb_to_jtagor pad_to_jtag = False R/W (0b0)
+                                                    through GPIO3
+DIS_DOWNLOAD_MODE (BLOCK0)                         Disables all Download boot modes                   = False R/W (0b0)
+ENABLE_SECURITY_DOWNLOAD (BLOCK0)                  Enables secure UART download mode (read/write flas = False R/W (0b0)
+                                                   h only)
+BLOCK_KEY0 (BLOCK4)
+  Purpose: USER
+               Encryption key0 or user data
+   = 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 R/W
+BLOCK_KEY1 (BLOCK5)
+  Purpose: USER
+               Encryption key1 or user data
+   = 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 R/W
+BLOCK_KEY2 (BLOCK6)
+  Purpose: USER
+               Encryption key2 or user data
+   = 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 R/W
+BLOCK_KEY3 (BLOCK7)
+  Purpose: USER
+               Encryption key3 or user data
+   = 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 R/W
+BLOCK_KEY4 (BLOCK8)
+  Purpose: USER
+               Encryption key4 or user data
+   = 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 R/W
+BLOCK_KEY5 (BLOCK9)
+  Purpose: USER
+               Encryption key5 or user data
+   = 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 R/W
+BLOCK_SYS_DATA2 (BLOCK10)                          System data (part 2)
+   = 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 R/W
+
+Spi_Pad_Config fuses:
+SPI_PAD_CONFIG_CLK (BLOCK1)                        SPI CLK pad                                        = 0 R/W (0b000000)
+SPI_PAD_CONFIG_Q (BLOCK1)                          SPI Q (D1) pad                                     = 0 R/W (0b000000)
+SPI_PAD_CONFIG_D (BLOCK1)                          SPI D (D0) pad                                     = 0 R/W (0b000000)
+SPI_PAD_CONFIG_CS (BLOCK1)                         SPI CS pad                                         = 0 R/W (0b000000)
+SPI_PAD_CONFIG_HD (BLOCK1)                         SPI HD (D3) pad                                    = 0 R/W (0b000000)
+SPI_PAD_CONFIG_WP (BLOCK1)                         SPI WP (D2) pad                                    = 0 R/W (0b000000)
+SPI_PAD_CONFIG_DQS (BLOCK1)                        SPI DQS pad                                        = 0 R/W (0b000000)
+SPI_PAD_CONFIG_D4 (BLOCK1)                         SPI D4 pad                                         = 0 R/W (0b000000)
+SPI_PAD_CONFIG_D5 (BLOCK1)                         SPI D5 pad                                         = 0 R/W (0b000000)
+SPI_PAD_CONFIG_D6 (BLOCK1)                         SPI D6 pad                                         = 0 R/W (0b000000)
+SPI_PAD_CONFIG_D7 (BLOCK1)                         SPI D7 pad                                         = 0 R/W (0b000000)
+
+Usb Config fuses:
+DIS_USB (BLOCK0)                                   Disables the USB OTG hardware                      = False R/W (0b0)
+USB_EXCHG_PINS (BLOCK0)                            Exchanges USB D+ and D- pins                       = False R/W (0b0)
+EXT_PHY_ENABLE (BLOCK0)                            Enables external USB PHY                           = False R/W (0b0)
+BTLC_GPIO_ENABLE (BLOCK0)                          Enables BTLC GPIO                                  = 0 R/W (0b00)
+DIS_USB_JTAG (BLOCK0)                              Disable usb_serial_jtag-to-jtag function           = False R/W (0b0)
+DIS_USB_SERIAL_JTAG (BLOCK0)                       Disable usb_serial_jtag module                     = False R/W (0b0)
+USB_PHY_SEL (BLOCK0)                               Select internal/external PHY for USB OTGand usb_se = False R/W (0b0)
+                                                   rial_jtag
+
+Vdd_Spi Config fuses:
+VDD_SPI_XPD (BLOCK0)                               The VDD_SPI regulator is powered on                = True R/W (0b1)
+VDD_SPI_TIEH (BLOCK0)                              The VDD_SPI power supply voltage at reset
+   = Connect to VDD_RTC_IO R/W (0b1)
+VDD_SPI_FORCE (BLOCK0)                             Force using VDD_SPI_XPD and VDD_SPI_TIEH to config = True R/W (0b1)
+                                                   ure VDD_SPI LDO
+PIN_POWER_SELECTION (BLOCK0)                       Sets default power supply for GPIO33..37           = VDD3P3_CPU R/W (0b0)
+
+Wdt Config fuses:
+WDT_DELAY_SEL (BLOCK0)                             Selects RTC WDT timeout threshold at startup       = 0 R/W (0b00)
+
+Flash voltage (VDD_SPI) set to 3.3V by efuse.
+============================================================== [SUCCESS] Took 2.76 seconds ==============================================================
+
+Environment    Status    Duration
+-------------  --------  ------------
+debug          SUCCESS   00:00:02.759
+============================================================== 1 succeeded in 00:00:02.759 ==============================================================
