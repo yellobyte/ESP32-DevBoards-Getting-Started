@@ -1,13 +1,22 @@
 from os.path import expanduser
 Import("env")
 env.AddCustomTarget(
+    name="uploadAndMonitorV3",
+    dependencies=None,
+    actions=[
+        "pio run --target upload --environment v3", "pio run --target monitor --environment v3"
+    ],
+    title="Upload and Monitor V3",
+    description="Upload and Monitor V3"
+)
+env.AddCustomTarget(
     name="envdump",
     dependencies=None,
     actions=[
         "pio run -t envdump",
     ],
     title="Show Build Options [envdump]",
-    description="Show Build Options "
+    description="Show Build Options"
 )
 env.AddCustomTarget(
     name="prune",
@@ -28,3 +37,4 @@ env.AddCustomTarget(
     title="Fuses Summary",
     description="Fuses Summary"
 )
+
