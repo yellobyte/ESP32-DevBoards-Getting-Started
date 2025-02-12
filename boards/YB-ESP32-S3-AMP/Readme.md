@@ -165,7 +165,7 @@ Flash: [===       ]  28.5% (used 950957 bytes from 3342336 bytes)
 
 Its easy. Folder [doc](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/YB-ESP32-S3-AMP/doc) provides the Eagle library file **_yb-esp32-s3-amp.lbr_** containing both boards. Most other PCB design software (e.g. KiCad) are able to import and use Eagle lib files. 
 
-<p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-AMP/doc/Eagle_project_with_yb-esp32-s3-amp.jpg" height="250"/><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-AMP/doc/Eagle_project_with_yb-esp32-s3-amp2.jpg" height="250"/></p> 
+<p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-AMP/doc/Eagle_project_with_yb-esp32-s3-amp.jpg" height="250"/>&nbsp;<img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-AMP/doc/Eagle_project_with_yb-esp32-s3-amp2.jpg" height="250"/></p> 
 
 ## Final Remark for first usage:  
 **>>> All YB-ESP32-S3-AMP boards delivered have already been flashed with software example 'Play-All-MP3-Files-on-SD'. <<<**  
