@@ -237,7 +237,7 @@ See https://docs.platformio.org/page/projectconf/build_configurations.html
 
 Its easy. Folder [doc](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/YB-ESP32-S3-ETH/doc) provides the Eagle library file **_yb-esp32-s3-eth.lbr_** containing the board. Most other PCB design software (e.g. KiCad) are able to import and use Eagle lib files. 
 
-<p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-ETH/doc/Eagle_project_with_yb-esp32-s3-eth.jpg" height="250"/><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-ETH/doc/Eagle_project_with_yb-esp32-s3-eth2.jpg" height="250"/></p> 
+<p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-ETH/doc/Eagle_project_with_yb-esp32-s3-eth.jpg" height="250"/>&nbsp;&nbsp;&nbsp;&nbsp;<img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-ETH/doc/Eagle_project_with_yb-esp32-s3-eth2.jpg" height="250"/></p> 
 
 
 ## Final Remark for first usage: 
