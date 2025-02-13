@@ -6,29 +6,26 @@
 
   Needs ICMPPing.* sitting next to the sketch file (*.ino).
 
-  Last updated 2023-06-16, ThJ <yellobyte@bluewin.ch>
+  Last updated 2025-02-13, ThJ <yellobyte@bluewin.ch>
 */
 
 #include <Arduino.h>
 #include <Ethernet2.h>
 #include <ICMPPing.h>
 
-#define GPIO_STATUS_LED  47                 // onboard status LED connected to GPIO47
-
 // Ethernet settings
-#define GPIO_W5500_CS  14                   // onboard W5500 CS pin is connected to GPIO14
 byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED };
 
 // Ping settings
 char buffer [128];
 //IPAddress pingAddr(192, 168, 1, 1);         // local IP address to ping
-IPAddress pingAddr(8, 8, 8, 8);             // external IP address to ping (Google DNS server)
+IPAddress pingAddr(8, 8, 8, 8);               // external IP address to ping (Google DNS server)
 SOCKET pingSocket = 0;
 ICMPPing ping(pingSocket, (uint16_t)random(0, 255));
 
 void setup() {
-  pinMode(GPIO_STATUS_LED, OUTPUT);
-  digitalWrite(GPIO_STATUS_LED, LOW);       // status LED off  
+  pinMode(LED_BUILTIN, OUTPUT);
+  digitalWrite(LED_BUILTIN, LOW);             // status LED off  
 
   Serial.begin(115200);
   // Port 'USB' (directly attached to ESP32-S3 chip !) will be gone for a few seconds after resetting the board, 
@@ -44,7 +41,7 @@ void setup() {
 
   // connect to local network via Ethernet
   Serial.print("Initializing Ethernet...");
-  Ethernet.init(GPIO_W5500_CS);
+  Ethernet.init(W5500_SS);
   while (true) {
     if (Ethernet.begin(mac)) {
       Serial.println("DHCP on Ethernet ok.");
@@ -64,13 +61,13 @@ void loop() {
     sprintf(buffer, "Reply[%d] from: %d.%d.%d.%d: bytes=%d time=%ldms TTL=%d",
             echoReply.data.seq, echoReply.addr[0], echoReply.addr[1], echoReply.addr[2], echoReply.addr[3],
             REQ_DATASIZE, millis() - echoReply.data.time, echoReply.ttl);
-    digitalWrite(GPIO_STATUS_LED, HIGH);    // status LED on  
+    digitalWrite(LED_BUILTIN, HIGH);    // status LED on  
   }
   else {
     sprintf(buffer, "Echo request failed: %d", echoReply.status);
   }
   Serial.println(buffer);
   delay(1000);
-  digitalWrite(GPIO_STATUS_LED, LOW);       // status LED off  
+  digitalWrite(LED_BUILTIN, LOW);       // status LED off  
   delay(100);
 }
