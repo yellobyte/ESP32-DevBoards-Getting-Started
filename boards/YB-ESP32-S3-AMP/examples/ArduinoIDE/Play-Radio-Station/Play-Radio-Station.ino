@@ -9,7 +9,7 @@
   GPIO47 (onboard LED IO47) with the amps SD_MODE pin. Setting GPIO47 to LOW (LED off) will shut down (mute) the amps
   and setting GPIO47 to HIGH (LED on) will activate the amps.
 
-  Last updated 2024-12-12, ThJ <yellobyte@bluewin.ch>
+  Last updated 2025-02-13, ThJ <yellobyte@bluewin.ch>
 */
 
 #include <Arduino.h>
@@ -21,8 +21,6 @@
 //#define RADIO_STREAM "http://www.radioeins.de/frankfurt/livemp3"
 //#define RADIO_STREAM "http://vis.media-ice.musicradio.com/CapitalMP3"
 //#define RADIO_STREAM "http://stream.laut.fm/oldies"
-
-#define LED_STATUS 47
 
 const char ssid[] = "MySSID";
 const char pass[] = "MyPassword"; 
@@ -40,8 +38,8 @@ void audio_id3data(const char *info) {  // id3 metadata
 
 void setup()
 {
-  digitalWrite(LED_STATUS, LOW);
-  pinMode(LED_STATUS, OUTPUT);
+  digitalWrite(LED_BUILTIN, LOW);
+  pinMode(LED_BUILTIN, OUTPUT);
 
   Serial.begin(115200);
   Serial.println();
@@ -54,8 +52,8 @@ void setup()
     Serial.print(".");
     delay(2000);
   }
-  Serial.printf("\nconnected successfully to \"%s\". IP address: %s\n", ssid, WiFi.localIP().toString());
-  digitalWrite(LED_STATUS, HIGH);      // status LED On
+  Serial.printf("\nconnected successfully to \"%s\". IP address: %s\n", ssid, WiFi.localIP().toString().c_str());
+  digitalWrite(LED_BUILTIN, HIGH);      // status LED On
   
   audio.setPinout(I2S_BCLK, I2S_LRCLK, I2S_DOUT);
   audio.setVolume(10);                 // 0...21(max)
