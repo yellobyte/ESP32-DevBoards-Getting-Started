@@ -8,13 +8,14 @@
 */
 
 #include <Arduino.h>
-#include <Ethernet.h>
+#include <EthernetESP32.h>
 #include <WiFi.h>
 
 #define SERVER_PORT      23                        // Telnet port
 
 // Ethernet settings
 byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED };
+W5500Driver driver(W5500_SS);
 EthernetServer ethServer(SERVER_PORT);
 EthernetClient ethClient, ethClientTmp;
 
@@ -54,7 +55,7 @@ void setup() {
 
   // connect to local network via Ethernet
   Serial.print("Initializing Ethernet...");
-  Ethernet.init(W5500_SS);
+  Ethernet.init(driver);
   while (true) {
     if (Ethernet.begin(mac)) {
       Serial.println("DHCP on Ethernet ok.");
