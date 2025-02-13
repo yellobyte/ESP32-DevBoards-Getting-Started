@@ -8,10 +8,11 @@
 */
 
 #include <Arduino.h>
-#include <Ethernet.h>
+#include <EthernetESP32.h>
 
 // Ethernet settings
 byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED };
+W5500Driver driver(W5500_SS);
 EthernetServer server(80);
 
 bool ledOn = false;
@@ -31,7 +32,7 @@ void setup() {
 
   Serial.println();
   Serial.print("Initializing Ethernet...");
-  Ethernet.init(W5500_SS);
+  Ethernet.init(driver);
 
   while (true) {
     if (Ethernet.begin(mac)) {
