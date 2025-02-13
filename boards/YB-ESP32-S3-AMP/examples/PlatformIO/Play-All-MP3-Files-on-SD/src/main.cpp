@@ -70,8 +70,8 @@ void audio_eof_mp3(const char *info)  // called at end of each file
 
 void setup()
 {
-  digitalWrite(LED_BUILTIN, LOW);
   pinMode(LED_BUILTIN, OUTPUT);
+  digitalWrite(LED_BUILTIN, LOW);
 
   Serial.begin(115200);
 #if ARDUINO_USB_CDC_ON_BOOT == 1
