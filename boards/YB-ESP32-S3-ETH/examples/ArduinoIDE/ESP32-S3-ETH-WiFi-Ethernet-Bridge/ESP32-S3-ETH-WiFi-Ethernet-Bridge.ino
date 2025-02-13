@@ -4,20 +4,17 @@
   The sketch starts a server listening for a client on telnet port 23 on both Ethernet and WiFi
   and simply forwards all incoming data to the opposite side. Only one client per side allowed.
 
-  Last updated 2023-06-08, ThJ <yellobyte@bluewin.ch>
+  Last updated 2025-02-13, ThJ <yellobyte@bluewin.ch>
 */
 
 #include <Arduino.h>
 #include <Ethernet.h>
 #include <WiFi.h>
 
-#define GPIO_STATUS_LED  47                        // onboard status LED connected to GPIO47
 #define SERVER_PORT      23                        // Telnet port
 
 // Ethernet settings
 byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED };
-#define GPIO_W5500_CS  14                          // W5500 CS chip select pin connected to GPIO14
-#define GPIO_W5500_RST 21                          // W5500 RST reset pin connected to GPIO21
 EthernetServer ethServer(SERVER_PORT);
 EthernetClient ethClient, ethClientTmp;
 
@@ -32,20 +29,20 @@ bool ethClientOn = false, wifiClientOn = false;
 void setup() {                       
 #ifdef W5500_HARD_RESET
   // W5500 hard reset, hardly ever needed
-  pinMode(GPIO_W5500_RST, OUTPUT);
-  digitalWrite(GPIO_W5500_RST, LOW); 
+  pinMode(W5500_RST, OUTPUT);
+  digitalWrite(W5500_RST, LOW); 
   delay(1);
-  digitalWrite(GPIO_W5500_RST, HIGH);
-  pinMode(GPIO_W5500_RST, INPUT);
+  digitalWrite(W5500_RST, HIGH);
+  pinMode(W5500_RST, INPUT);
   delay(10);
 #endif  
 
-  pinMode(GPIO_STATUS_LED, OUTPUT);
-  digitalWrite(GPIO_STATUS_LED, LOW);              // LED off
+  pinMode(LED_BUILTIN, OUTPUT);
+  digitalWrite(LED_BUILTIN, LOW);                  // LED off
   
   Serial.begin(115200);
   // port 'USB' (directly attached to ESP32-S3 chip !) will be gone for a few seconds after resetting the board, 
-  // if you dislike it you better direct serial output to port 'UART' (ARDUINO_USB_CDC_ON_BOOT=0 in platformio.ini)  
+  // if you dislike it you better direct serial output to port 'UART' (ARDUINO_USB_CDC_ON_BOOT=0)  
 #if ARDUINO_USB_CDC_ON_BOOT == 1
   // we continue only when serial port 'USB' becomes available
   while (!Serial);     	
@@ -57,7 +54,7 @@ void setup() {
 
   // connect to local network via Ethernet
   Serial.print("Initializing Ethernet...");
-  Ethernet.init(GPIO_W5500_CS);
+  Ethernet.init(W5500_SS);
   while (true) {
     if (Ethernet.begin(mac)) {
       Serial.println("DHCP on Ethernet ok.");
@@ -80,7 +77,7 @@ void setup() {
   Serial.println(WiFi.localIP());
 
   // connected successfully to both Ethernet and WiFi
-  digitalWrite(GPIO_STATUS_LED, HIGH);         // LED on
+  digitalWrite(LED_BUILTIN, HIGH);             // LED on
 
   // start Ethernet & Wifi server
   ethServer.begin();
@@ -140,7 +137,7 @@ void loop() {
       // get data from Ethernet  client and if connected forward it to the WiFi client
       while (ethClient.available()) {
         char c = ethClient.read();
-        digitalWrite(GPIO_STATUS_LED, !digitalRead(GPIO_STATUS_LED));     // toggle LED
+        digitalWrite(LED_BUILTIN, !digitalRead(LED_BUILTIN));     // toggle LED
         Serial.print(c);
         if (wifiClientOn) {
           // pass data on to WiFi client
@@ -160,7 +157,7 @@ void loop() {
       // get data from WiFi client and if connected forward it to the Ethernet client
       while (wifiClient.available()) {
         char c = wifiClient.read();
-        digitalWrite(GPIO_STATUS_LED, !digitalRead(GPIO_STATUS_LED));     // toggle LED
+        digitalWrite(LED_BUILTIN, !digitalRead(LED_BUILTIN));     // toggle LED
         Serial.print(c);
         if (ethClientOn) {
           // pass data on to Ethernet client
