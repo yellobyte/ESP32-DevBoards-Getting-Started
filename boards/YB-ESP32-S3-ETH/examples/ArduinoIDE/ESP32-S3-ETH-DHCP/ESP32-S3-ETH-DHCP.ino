@@ -6,24 +6,20 @@
                 blink normal    - with Ethernet cable attached to a switch and the link is up
                 blink very slow - local IP has been obtained from DHPC service       
 
-  Last updated 2023-06-06, ThJ <yellobyte@bluewin.ch>
+  Last updated 2025-02-13, ThJ <yellobyte@bluewin.ch>
 */
 
 #include <Arduino.h>
 #include <Ethernet.h>
 
-#define GPIO_STATUS_LED  47                 // onboard status LED connected to GPIO47
-
 // Ethernet settings
 byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED };
-#define GPIO_W5500_CS  14                   // onboard W5500 CS pin is connected to GPIO14
-
 uint32_t tdelay = 100;                      // blink delay in ms
 
 void blinkTask (void *parameter) {
   Serial.println("blinkTask has started.");
   while (true) {
-    digitalWrite(GPIO_STATUS_LED, !digitalRead(GPIO_STATUS_LED));
+    digitalWrite(LED_BUILTIN, !digitalRead(LED_BUILTIN));
     delay(*((uint32_t*)parameter));
   }
   // will never get here
@@ -32,8 +28,8 @@ void blinkTask (void *parameter) {
 }
 
 void setup() {
-  pinMode(GPIO_STATUS_LED, OUTPUT);
-  digitalWrite(GPIO_STATUS_LED, LOW);       // status LED off  
+  pinMode(LED_BUILTIN, OUTPUT);
+  digitalWrite(LED_BUILTIN, LOW);           // status LED off  
 
   Serial.begin(115200);
   // Port 'USB' (directly attached to ESP32-S3 chip !) will be gone for a few seconds after resetting the board, 
@@ -55,7 +51,7 @@ void setup() {
 
   Serial.println();
   Serial.println("Please make sure Ethernet cable is connected between board and switch and DHCP service is available in your LAN.");
-  Ethernet.init(GPIO_W5500_CS);
+  Ethernet.init(W5500_SS);
 }
 
 void loop() {
