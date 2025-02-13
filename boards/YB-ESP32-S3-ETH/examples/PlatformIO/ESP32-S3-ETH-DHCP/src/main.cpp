@@ -6,14 +6,11 @@
                 blink normal    - with Ethernet cable attached to a switch and the link is up
                 blink very slow - local IP has been obtained from DHPC service       
 
-  Last updated 2024-12-29, ThJ <yellobyte@bluewin.ch>
+  Last updated 2025-02-13, ThJ <yellobyte@bluewin.ch>
 */
 
 #include <Arduino.h>
 #include <EthernetESP32.h>
-
-#define W5500_SS 14
-#define GPIO_STATUS_LED  47                 // onboard status LED connected to GPIO47
 
 byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED };
 
@@ -23,7 +20,7 @@ uint32_t tdelay = 100;                      // blink delay in ms
 void blinkTask (void *parameter) {
   Serial.println("blinkTask has started.");
   while (true) {
-    digitalWrite(GPIO_STATUS_LED, !digitalRead(GPIO_STATUS_LED));
+    digitalWrite(LED_BUILTIN, !digitalRead(LED_BUILTIN));
     delay(*((uint32_t*)parameter));
   }
   // will never get here
@@ -32,8 +29,8 @@ void blinkTask (void *parameter) {
 }
 
 void setup() {
-  pinMode(GPIO_STATUS_LED, OUTPUT);
-  digitalWrite(GPIO_STATUS_LED, LOW);       // status LED off  
+  pinMode(LED_BUILTIN, OUTPUT);
+  digitalWrite(LED_BUILTIN, LOW);           // status LED off  
 #ifdef W5500_RESET  
   pinMode(W5500_RST, OUTPUT);
   digitalWrite(W5500_RST, LOW);  
