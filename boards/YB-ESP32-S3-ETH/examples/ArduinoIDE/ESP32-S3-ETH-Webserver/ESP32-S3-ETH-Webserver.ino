@@ -4,28 +4,25 @@
   The sketch lets you switch on/off the status LED via Webserver listening on RJ45 Ethernet port 
   integrated on the YB-ESP32-S3-ETH board. 
 
-  Last updated 2023-06-05, ThJ <yellobyte@bluewin.ch>
+  Last updated 2025-02-13, ThJ <yellobyte@bluewin.ch>
 */
 
 #include <Arduino.h>
 #include <Ethernet.h>
 
-#define GPIO_STATUS_LED  47                        // onboard status LED connected to GPIO47
-
 // Ethernet settings
 byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED };
-#define GPIO_W5500_CS  14                          // onboard W5500 CS chip select pin connected to GPIO14
-
 EthernetServer server(80);
+
 bool ledOn = false;
 
 void setup() {                       
-  pinMode(GPIO_STATUS_LED, OUTPUT);
-  digitalWrite(GPIO_STATUS_LED, LOW);              // LED off
+  pinMode(LED_BUILTIN, OUTPUT);
+  digitalWrite(LED_BUILTIN, LOW);                  // LED off
   
   Serial.begin(115200);
   // port 'USB' (directly attached to ESP32-S3 chip !) will be gone for a few seconds after resetting the board, 
-  // if you dislike it you better direct serial output to port 'UART' (ARDUINO_USB_CDC_ON_BOOT=0 in platformio.ini)  
+  // if you dislike it you better direct serial output to port 'UART' (ARDUINO_USB_CDC_ON_BOOT=0)  
 #if ARDUINO_USB_CDC_ON_BOOT == 1
   // we continue only when serial port becomes available: important when serial output is directed to port 'USB'
   while (!Serial);
@@ -34,13 +31,13 @@ void setup() {
 
   Serial.println();
   Serial.print("Initializing Ethernet...");
-  Ethernet.init(GPIO_W5500_CS);
+  Ethernet.init(W5500_SS);
 
   while (true) {
     if (Ethernet.begin(mac)) {
       Serial.println("DHCP ok.");
-      digitalWrite(GPIO_STATUS_LED, HIGH);         // LED on
-      ledOn = (bool)digitalRead(GPIO_STATUS_LED);
+      digitalWrite(LED_BUILTIN, HIGH);             // LED on
+      ledOn = (bool)digitalRead(LED_BUILTIN);
       break;
     }
     Serial.println("DHCP error, couldn't get IP !");
@@ -80,14 +77,14 @@ void loop(){
             
             // evaluate command & set LED
             if (received.indexOf("GET /ledOn") >= 0) {
-              digitalWrite(GPIO_STATUS_LED, HIGH);
+              digitalWrite(LED_BUILTIN, HIGH);
               Serial.println("LED is now ON");
             } 
             else if (received.indexOf("GET /ledOff") >= 0) {
-              digitalWrite(GPIO_STATUS_LED, LOW);
+              digitalWrite(LED_BUILTIN, LOW);
               Serial.println("LED is now OFF");
             }
-            ledOn = (bool)digitalRead(GPIO_STATUS_LED);
+            ledOn = (bool)digitalRead(LED_BUILTIN);
 
             // send HTML header
             client.println("<!DOCTYPE html><html>");
