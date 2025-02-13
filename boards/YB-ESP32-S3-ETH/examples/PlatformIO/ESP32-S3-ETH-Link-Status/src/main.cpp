@@ -5,21 +5,17 @@
   The status LED should be "ON" when an ethernet cable is properly connected between board and a switch.
 	Getting an IP address via DHCP is not tested.
 
-  Last updated 2024-12-29, ThJ <yellobyte@bluewin.ch>
+  Last updated 2025-02-13, ThJ <yellobyte@bluewin.ch>
 */
 
 #include <Arduino.h>
 #include <EthernetESP32.h>
 
-#define W5500_SS         14                     // W5500 CS chip select pin connected to GPIO14
-#define W5500_RST        21                     // W5500 RST reset pin connected to GPIO21
-#define GPIO_STATUS_LED  47                     // status LED connected to GPIO47
-
 W5500Driver driver(W5500_SS);
 
 void setup() {
-	pinMode(GPIO_STATUS_LED, OUTPUT);
-  digitalWrite(GPIO_STATUS_LED, LOW);           // status LED off  
+	pinMode(LED_BUILTIN, OUTPUT);
+  digitalWrite(LED_BUILTIN, LOW);               // status LED off  
 #ifdef W5500_RESET  
   pinMode(W5500_RST, OUTPUT);
   digitalWrite(W5500_RST, LOW);  
@@ -51,15 +47,15 @@ void loop() {
   switch (status) {
     case Unknown:
       Serial.println("Unknown");
-      digitalWrite(GPIO_STATUS_LED, LOW);       // status LED off  
+      digitalWrite(LED_BUILTIN, LOW);           // status LED off  
       break;
     case LinkON:
       Serial.println("ON");
-      digitalWrite(GPIO_STATUS_LED, HIGH);      // status LED on  
+      digitalWrite(LED_BUILTIN, HIGH);          // status LED on  
       break;
     case LinkOFF:
       Serial.println("OFF");
-      digitalWrite(GPIO_STATUS_LED, LOW);       // status LED off  
+      digitalWrite(LED_BUILTIN, LOW);           // status LED off  
       break;
   }
   delay(1000);
