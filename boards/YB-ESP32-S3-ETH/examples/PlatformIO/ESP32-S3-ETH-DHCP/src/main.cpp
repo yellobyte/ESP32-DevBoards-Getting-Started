@@ -10,11 +10,10 @@
 */
 
 #include <Arduino.h>
-#include <EthernetESP32.h>
+#include <Ethernet.h>
 
+// Ethernet settings
 byte mac[] = { 0xDE, 0xAD, 0xBE, 0xEF, 0xFE, 0xED };
-
-W5500Driver driver(W5500_SS);
 uint32_t tdelay = 100;                      // blink delay in ms
 
 void blinkTask (void *parameter) {
@@ -36,7 +35,7 @@ void setup() {
   digitalWrite(W5500_RST, LOW);  
   delay(500);
   pinMode(W5500_RST, INPUT);
-#endif  
+#endif
 
   Serial.begin(115200);
   // Port 'USB' (directly attached to ESP32-S3 chip !) will be gone for a few seconds after resetting the board, 
@@ -44,7 +43,7 @@ void setup() {
 #if ARDUINO_USB_CDC_ON_BOOT == 1  
   // we continue only when serial port becomes available: important when serial output is directed to port 'USB'
   while (!Serial);                                 
-#endif	  
+#endif    
 
   delay(1000);
   // start the backgound task responsible for letting the status LED blink
@@ -58,12 +57,7 @@ void setup() {
 
   Serial.println();
   Serial.println("Please make sure Ethernet cable is connected between board and switch and DHCP service is available in your LAN.");
-  Ethernet.init(driver);
-  Ethernet.begin(1000);
-  if (Ethernet.hardwareStatus() == EthernetNoHardware) {
-    Serial.println("Error: W5500 not found.");
-    while (true) delay(1);                      // do nothing
-  }
+  Ethernet.init(W5500_SS);
 }
 
 void loop() {
