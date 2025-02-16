@@ -10,15 +10,18 @@
 int modulo(int a, int b); 
 
 class fileFilter {
-    std::vector<const char*> v_ext;
+    std::vector<String> v_ext;
 public:
         fileFilter() { init( {} ); }
         void init(const std::initializer_list<const char*> iLst) {
         v_ext.clear();
         v_ext.reserve(iLst.size());
-        v_ext = iLst; 
+        for ( auto e : iLst) {
+            v_ext.emplace_back(e);
+            if ( v_ext.back().length() > 3 )
+                v_ext.back().setCharAt(3, 0);
+        }
     }
-
     bool operator()(File32& file) const;  
 };
 
@@ -39,8 +42,6 @@ class SdFatPlayList {
         file_t(int di, uint16_t fdi) : dirs_index(di), fat_dir_index(fdi) {}
     #endif
     };
-    
-
     std::vector<dir_t> dirs;
     std::vector<file_t> files;
     
@@ -49,26 +50,10 @@ class SdFatPlayList {
     File32 cur_dirfile;
     String cur_path;
     const char* name(File32& f, bool add_dirslash = false);
-
-      
-    
+  
 public:
     SdFatPlayList() {}
     void setFileFilter(const std::initializer_list<const char*> iLst_ext = { });
     int createPlayList(const char *path, uint8_t levels = 0);
-    const char* getFileAtIdx(size_t idx); 
+    const char* getFilePathAtIdx(size_t idx); 
 };
-
-/*
---- Terminal on COM6 | 115200 8-N-1
---- Available filters and text transformations: colorize, debug, default, direct, esp32_exception_decoder, hexlify, log2file, nocontrol, printable, send_on_enter, time    
---- More details at https://bit.ly/pio-monitor-filters
---- Quit: Ctrl+C | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H
-[   445][I][esp32-hal-psram.c:96] psramInit(): PSRAM enabled
-[  1343][W][main.cpp:56] setup(): read 64 dirs with 1457 files in 872 ms
-info        PSRAM found, inputBufferSize: 638965 bytes
-info        buffers freed, free Heap: 313036 bytes
-info        Reading file: "/123_max raabe - das fräulein gerda.mp3"
-info        MP3Decoder has been initialized, free Heap: 312876 bytes , free stack 6108 DWORDs 
-....
-*/

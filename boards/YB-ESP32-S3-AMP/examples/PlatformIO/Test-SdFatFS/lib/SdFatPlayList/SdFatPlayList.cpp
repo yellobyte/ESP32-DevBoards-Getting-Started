@@ -5,24 +5,23 @@ int modulo(int a, int b) {
 }
 
 bool fileFilter::operator()(File32& file) const {
-    const char *p;
-    char f_ext[13]; 
+    char short_fn[13]; 
+    const char *p;    
     int len;
     if (v_ext.empty()) 
         return true; 
     // the filefilter uses short filenames: only the first 3 characters of file extension will be tested
-    len = file.getSFN(f_ext, sizeof(f_ext));
+    len = file.getSFN(short_fn, sizeof(short_fn));
     while (len)
-        if (f_ext[--len] == '.') {
-        p = f_ext + len + 1;
-        for ( const char *ext : v_ext ) {
-            if ( strcasecmp(p, ext) == 0) 
+        if (short_fn[--len] == '.') {
+        p = short_fn + len + 1;
+        for ( String ext : v_ext ) {
+            if ( strcasecmp(p, ext.c_str()) == 0) 
                 return true;
         }
     }
     return false;
 }
-
 
 void SdFatPlayList::setFileFilter(const std::initializer_list<const char*> iLst_ext) {
     files.clear();
@@ -88,7 +87,7 @@ int SdFatPlayList::createPlayList(const char *path, uint8_t levels) {
     return files.size();
 }
 
-const char* SdFatPlayList::getFileAtIdx(size_t idx) {
+const char* SdFatPlayList::getFilePathAtIdx(size_t idx) {
     log_d("get: file[%d] - dirs[%d]", idx, files[idx].dirs_index);
     if ( idx < files.size()) { 
         cur_path = dirs[files[idx].dirs_index].path;

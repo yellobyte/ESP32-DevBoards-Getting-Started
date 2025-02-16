@@ -1,8 +1,8 @@
 {
   "build": {
     "arduino":{
-      "ldscript": "esp32s3_out.ld",
-      "partitions": "default_8MB.csv"
+      "partitions": "default_8MB.csv",
+      "memory_type": "qio_qspi"
     },
     "core": "esp32",
     "extra_flags": [
@@ -16,9 +16,9 @@
     "f_flash": "80000000L",
     "flash_mode": "qio",
     "hwids": [
-      [ 
-        "0x303A", 
-        "0x1001" 
+      [
+        "0x303A",
+        "0x1001"
       ]
     ],
     "mcu": "esp32s3",
@@ -29,6 +29,7 @@
     "bluetooth"
   ],
   "debug": {
+    "default_tool": "esp-builtin",
     "openocd_target": "esp32s3.cfg"
   },
   "frameworks": [
@@ -41,7 +42,7 @@
     "maximum_ram_size": 327680,
     "maximum_size": 8388608,
     "require_upload_port": true,
-    "speed": 460800
+    "speed": 921600
   },
   "url": "https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/YB-ESP32-S3-AMP",
   "vendor": "YelloByte"
