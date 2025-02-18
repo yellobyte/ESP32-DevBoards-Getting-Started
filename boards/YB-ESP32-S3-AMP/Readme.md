@@ -1,5 +1,5 @@
 ## YB-ESP32-S3-AMP Development Board Overview:
-The **YB-ESP32-S3-AMP** is a general purpose development board based on Espressif's ESP32-S3 MCU. It comes in two different flavours (Rev.2 & Rev.3) and features a **ESP32-S3-WROOM-1-N8R2** module (8MB Flash, 2MB PSRAM, WiFi PCB antenna) and is available on sales platforms [eBay](https://www.ebay.de/sch/i.html?_nkw=yb-esp32-s3) and [Ricardo.ch](https://www.ricardo.ch/en/s/YB-ESP32-S3).
+The **YB-ESP32-S3-AMP** is a general purpose development board based on Espressif's ESP32-S3 MCU. It comes in two different flavours (Rev.2 & Rev.3) and features a **ESP32-S3-WROOM-1-N8R2** module (8MB Flash, 2MB PSRAM, WiFi PCB antenna) and is available on sales platform [eBay](https://www.ebay.de/sch/i.html?_nkw=yb-esp32-s3).
 
 Apart from the **ESP32-S3** it provides a **microSD** card slot, two **MAX98357A I2S PCM Class D Amplifiers** (for left + right audio channels), **USB-C connector** for software upload, serial output and/or feeding power to the board, **two status LEDs** and **GPIO pins** for free use. 
 
