@@ -11,7 +11,7 @@
   GPIO47 (onboard LED IO47) with the amps SD_MODE pin. Setting GPIO47 to LOW (LED off) will shut down (mute) the amps
   and setting GPIO47 to HIGH (LED on) will activate the amps.
 
-  Last updated 2024-12-12, ThJ <yellobyte@bluewin.ch>
+  Last updated 2025-03-01, ThJ <yellobyte@bluewin.ch>
 */
 
 #include <Arduino.h>
@@ -19,8 +19,6 @@
 #include <SD.h>
 #include <SPI.h>
 #include "Audio.h"
-
-#define LED_STATUS 47
 
 SPIClass *spi_onboardSD = new SPIClass(FSPI);
 Audio     audio;
@@ -72,8 +70,8 @@ void audio_eof_mp3(const char *info)  // called at end of each file
 
 void setup()
 {
-  digitalWrite(LED_STATUS, LOW);
-  pinMode(LED_STATUS, OUTPUT);
+  pinMode(LED_BUILTIN, OUTPUT);
+  digitalWrite(LED_BUILTIN, LOW);
 
   Serial.begin(115200);
   Serial.println();
@@ -87,7 +85,7 @@ void setup()
     Serial.println("error mounting microSD");
     return;
   }
-  digitalWrite(LED_STATUS, HIGH);      // status LED On
+  digitalWrite(LED_BUILTIN, HIGH);     // status LED On
 
   audio.setPinout(I2S_BCLK, I2S_LRCLK, I2S_DOUT);
   audio.setVolume(6);                  // 0...21(max)
