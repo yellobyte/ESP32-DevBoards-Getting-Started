@@ -10,7 +10,7 @@
   3) When almost no memory is left then even serial output gets affected.
   4) Finally all allocated memory is released.
 
-  Last updated 2025-01-12, ThJ <yellobyte@bluewin.ch>
+  Last updated 2025-03-02, ThJ <yellobyte@bluewin.ch>
 */
 
 #include <Arduino.h>
@@ -103,11 +103,11 @@ uint8_t *allocRAM(size_t size)
 void setup() {
   Serial.begin(115200);
 #if ARDUINO_USB_CDC_ON_BOOT == 1
-  // we continue only when serial port becomes available: only needed for board revision 3.x
-  while (!Serial);     	
+  // we only continue when serial port becomes available, uncomment if needed
+  //while (!Serial) delay(1);      	
 #endif	
 
-  delay(1000);
+  delay(3000);
   Serial.println();
   Serial.println("--> Sketch started: Testing RAM/PSRAM on YB-ESP32-S3-XXX dev board:\n"); 
   Serial.print("ESP32 SDK: ");        Serial.println(ESP.getSdkVersion());
