@@ -77,11 +77,13 @@ For the **-N4** board (4MB Flash/no PSRAM) the following settings apply:
 - PSRAM: *Disabled*.
 
 ### PlatformIO:
-Building with **PlatformIO** is easy as well. Each of the provided software examples for PlatformIO comes with a subdirectory *'boards'*. There lie the specific board definition files (*.json) which provide the proper board definitions & settings. If necessary, those settings can finally be overridden with resp. settings in the project file platformio.ini.
+Building with **PlatformIO** is easy as well. Starting with Arduino ESP32 Core v3.1.1 the VSCode/PlatformIO IDE provides all the necessary board definition files. These *.json files provide the correct board definitions & settings.  
 
-Going a step further and putting the *.json files to your development platforms *core_dir/platforms/espressif32/boards* global directory (on my PC it's  *C:\Users\name\\.platformio\platforms\espressif32\boards*) means you can create a new project in PlatformIO and simply select this board from the pull-down list.  
+Just create a new project and give it a name, then go to board selection, enter "yb-" and choose your YB-ESP32-S3-*** board from the list thats popping up.
 
  ![](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-ETH/doc/YB-ESP32-S3-ETH_PlatformIO_board_selection.jpg)
+
+Examples that need to be build with an older framework still come with a folder "boards" which keeps the necessary *.json board definition files. 
 
 ### Using the two USB ports:
 
