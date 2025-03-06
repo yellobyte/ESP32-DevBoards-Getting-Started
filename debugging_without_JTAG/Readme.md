@@ -161,7 +161,7 @@ If the problem in code is still not quite clear you have to dig deeper.
 #### 3) Find out which directory holds the used toolchain programs
 For this particular project on my PC it is "C:/Users/tj/.platformio/packages/toolchain-xtensa-esp32s3/bin".  
 Two easy ways to get this info:  
-**a)** Within the project directory go to .vscode, open file *lauch.json* and look for the line starting with "toolchainBinDir":...  
+**a)** Within the project directory go to .vscode, open file *launch.json* and look for the line starting with "toolchainBinDir":...  
 **b)** Start Sysinternal's tool Procmon and see where the toolchain programs run from
 
 #### 4) Open a command terminal from within the project directory
