@@ -3,7 +3,7 @@ The **YB-ESP32-S3-AMP** is a general purpose development board based on Espressi
 
 Apart from the **ESP32-S3** it provides a **microSD** card slot, two **MAX98357A I2S PCM Class D Amplifiers** (for left + right audio channels), **USB-C connector** for software upload, serial output and/or feeding power to the board, **two status LEDs** and **GPIO pins** for free use. 
 
-Revision 2 features an USB bridge chip CH340 between USB-C and ESP32-S3. On boards with revision 3 the USB-C is connected directly to the ESP32-S3. Both solutions have their own advantages so you can select the model you like better.
+Revision 2 features an USB bridge chip CH340 between USB-C and ESP32-S3. On boards with revision 3 the USB-C is connected directly to the ESP32-S3. Both solutions have their own advantages so you can select the model you prefer.
 
 <p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-AMP/doc/YB-ESP32-S3-AMP_Rev2_top_with_screw_terminals.jpg" height="160"/><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-AMP/doc/YB-ESP32-S3-AMP_Rev3_top_with_screw_terminals.jpg" height="160"/></p>  
 
