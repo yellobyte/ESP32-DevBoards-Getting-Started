@@ -98,5 +98,6 @@ void loop() {
   if (!playing) {
     searchAudioFiles();
   }
-  audio.loop(); // play mp3 audio file
+  audio.loop();  // play mp3 audio file
+  vTaskDelay(1); // needed !
 }
