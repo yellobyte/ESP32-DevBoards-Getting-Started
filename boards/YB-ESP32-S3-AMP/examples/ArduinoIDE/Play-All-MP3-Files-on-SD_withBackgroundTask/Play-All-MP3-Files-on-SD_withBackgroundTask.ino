@@ -1,5 +1,5 @@
 /*
-  Play-All-MP3-Files-on-SD
+  Play-All-MP3-Files-on-SD_withBackgroundTask
 
   This example plays all mp3-files from the microSD card over the two integrated MAX98357A I2S amplifiers 
   (left + right audio channels).
@@ -75,7 +75,7 @@ void setup()
 
   Serial.begin(115200);
   Serial.println();
-  Serial.println("running example \"Play-All-MP3-Files-on-SD\":");
+  Serial.println("running example \"Play-All-MP3-Files-on-SD_withBackgroundTask\":");
 
   // Arduino FSPI default definitions for SS, MOSI, SCK & MISO are 10, 11, 12 & 13
   // and by default match the boards wiring, so no parameters given
