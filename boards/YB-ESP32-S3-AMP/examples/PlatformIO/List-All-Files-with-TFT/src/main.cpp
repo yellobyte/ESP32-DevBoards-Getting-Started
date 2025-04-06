@@ -106,14 +106,15 @@ void setup()
 {
   Serial.begin(115200);
 #if ARDUINO_USB_CDC_ON_BOOT == 1
-  // we continue only when serial port becomes available: only needed for board revision 3.x
-  while (!Serial);     	
+  // we continue only when serial port becomes available (board revision 3.x), uncomment if needed
+  //while (!Serial);
+  //delay(3000);  	
 #endif    
   Serial.println();
   Serial.println("Running example \"List-All-Files-with-TFT\":");
 
-  // FSPI default definitions for SS, MOSI, SCK & MISO are 10, 11, 12 & 13 
-  // (see pins_arduino.h for more info) and match the boards wiring
+  // Arduino FSPI default definitions for SS, MOSI, SCK & MISO are 10, 11, 12 & 13
+  // and by default match the boards wiring, so no parameters given
   spi_onboardSD->begin();
 
   // HSPI will work on any available GPIO (routed through GPIO matrix)

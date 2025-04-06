@@ -75,10 +75,10 @@ void setup()
 
   Serial.begin(115200);
 #if ARDUINO_USB_CDC_ON_BOOT == 1
-  // we continue only when serial port becomes available, uncomment if needed
-  //while (!Serial) delay(1);   
+  // we continue only when serial port becomes available (board revision 3.x), uncomment if needed
+  //while (!Serial);
+  //delay(3000);	
 #endif	
-  delay(5000);  	
   Serial.println();
   Serial.println("running example \"Play-All-MP3-Files-on-SD\":");
 
