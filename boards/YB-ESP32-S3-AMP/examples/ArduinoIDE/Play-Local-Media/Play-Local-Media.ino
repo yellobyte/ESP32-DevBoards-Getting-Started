@@ -9,7 +9,7 @@
   GPIO47 (onboard LED IO47) with the amps SD_MODE pin. Setting GPIO47 to LOW (LED off) will then shut down (mute) both
   amps and setting GPIO47 to HIGH (LED on) will activate them.
 
-  Last updated 2024-12-12, ThJ <yellobyte@bluewin.ch>
+  Last updated 2025-04-06, ThJ <yellobyte@bluewin.ch>
 */
 
 #include <Arduino.h>
