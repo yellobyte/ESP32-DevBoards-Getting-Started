@@ -114,4 +114,5 @@ void setup()
 void loop()
 {
   audio.loop();                        // play audio stream
+  vTaskDelay(1);                       // needed !
 }
