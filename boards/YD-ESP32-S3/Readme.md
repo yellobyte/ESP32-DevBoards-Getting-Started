@@ -1,9 +1,14 @@
-The development board "YD-ESP32-S3-N8R2 is a  ESP32-S3-DevKitC-1 clone and features two USB-C sockets, 8MB Flash, 2MB PSRAM, abundant GPIO pins, one WS2812B RGB-LED and WiFi/BT5LE.  
+## YD-ESP32-S3 Development Board Overview:
+The development board "YD-ESP32-S3-N8R2 is an ESP32-S3-DevKitC-1 clone and features two USB-C sockets, 8MB Flash, 2MB PSRAM, abundant GPIO pins, one WS2812B RGB-LED and WiFi/BT5LE.  
+
 Other variants e.g. with 16MB Flash/8MB PSRAM (-N16R8), 8MB Flash/8MB PSRAM (-N8R8) and many [more](doc/YD-ESP32-S3_DevBoard_Variants.JPG) are available as well.
 
 ![](doc/YD-ESP32-S3_DevBoard2.jpg)
 
-**Important:**  
+## Board Pin Layout:
+ ![](doc/YD-ESP32-S3_DevBoard_PinLayout.jpg)
+
+## Important:
 The USB2 socket is connected directly to the ESP32-S3 chip. Therefore when resetting the board a PC/Laptop connected to USB2 might temporarily lose connection (the associated COM port can disappear for a second or two). This might confuse some terminal programs.  
 
 With both USB ports connected simultaneously you will see 2 COM ports and a usb device "USB JTAG/serial debug unit".  
