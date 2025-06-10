@@ -3,7 +3,7 @@ The **YB-ESP32-S3-DRV** is a development board based on Espressif's ESP32-S3 MCU
 
 Apart from the Espressif **ESP32-S3** MCU it provides a modern driver IC [Toshiba TBD62083A](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-DRV/doc/TBD62083A_datasheet.pdf) **8-channel sink type DMOS transistor array**  similar to an ULN2003/ULN2803 (7/8-channel Darlington array) but with 8 MOSFET output stages, **USB-C connector** for software upload, serial output and/or feeding power to the board, **two status LEDs** and **GPIO pins** for free use. The USB-C is connected directly to the ESP32-S3 to allow for serial output and JTAG debugging. 
 
-<p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-DRV/doc/YB-ESP32-S3-DRV_board_top.jpg" height="160"/></p>
+<p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-DRV/doc/YB-ESP32-S3-DRV_board_top.jpg" height="170"/></p>
 
 There are plenty of GPIOs available so you can connect additional hardware to the board, e.g. TFT displays, buttons, switches, sensors, modules that communicate via I2C/SPI, etc. Please have a look at the provided [examples](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/YB-ESP32-S3-DRV/examples) for PlatformIO resp. ArduinoIDE. 
 
