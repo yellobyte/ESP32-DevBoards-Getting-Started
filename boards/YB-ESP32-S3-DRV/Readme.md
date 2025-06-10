@@ -23,6 +23,8 @@ In addition, the board features **eight LEDs** (4 per connector) that indicate [
 
 ![](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-DRV/doc/YB-ESP32-S3-DRV_board_with_two_5V-steppers.jpg)
 
+**Please note:**  The USB cable connected to the board in the pic above is only for data communication with a PC! The power for the two 5V stepper motors and the dev board in this case is provided by the breadboard power supply visible on the right hand side.
+
 ## YB-ESP32-S3-DRV board features in detail:
  - **ESP32-S3-WROOM-1-N8R2** module with 8MB Flash, 2MB PSRAM, WiFi PCB antenna
  - **Toshiba TBD62083A** driver IC, an 8-channel sink type DMOS transistor array with integrated suppression diodes for inductive load driving. Each channel is rated at 500mA max. output current resp. 50V max. output voltage. Outputs can be paralleled for higher current. This driver chip is similar to the commonly used ULN2803 but offers reduced forward voltage Vf at each output (when on) by using a DMOS MOSFET transistor instead of darlingtons. The chip is connected to the ESP32-S3 as follows:
