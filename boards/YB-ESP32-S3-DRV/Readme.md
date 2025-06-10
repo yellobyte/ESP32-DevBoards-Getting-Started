@@ -28,8 +28,8 @@ In addition, the board features **eight LEDs** (4 per connector) that indicate [
 ## YB-ESP32-S3-DRV board features in detail:
  - **ESP32-S3-WROOM-1-N8R2** module with 8MB Flash, 2MB PSRAM, WiFi PCB antenna
  - **Toshiba TBD62083A** driver IC, an 8-channel sink type DMOS transistor array with integrated suppression diodes for inductive load driving. Each channel is rated at 500mA max. output current resp. 50V max. output voltage. Outputs can be paralleled for higher current. This driver chip is similar to the commonly used ULN2803 but offers reduced forward voltage Vf at each output (when on) by using a DMOS MOSFET transistor instead of darlingtons. The chip is connected to the ESP32-S3 as follows:
-   - *GPIO35...GPIO38* - for driving the 4-channel 'X' socket (X1...X4)
-   - *GPIO4...GPIO7* - for driving the 4-channel 'Y' socket (Y1...Y4)
+   - *GPIO35...GPIO38* - for driving pins X1...X4 (additionally available at 'X' socket)
+   - *GPIO4...GPIO7* - for driving pins Y1...Y4 (additionally available at  'Y' socket)
 
     Please note: The maximal power dissipation Pd of the chip must not exceed 0.96W at any time. If needed, a heat sink can be mounted on the chip. Folder [doc](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/YB-ESP32-S3-DRV/doc) holds the driver IC's spec sheet.
  - **2 x JST XH connector** with 4 output channels each. They match exactly the 5-wire connector of a common 28BYJ-48 stepper motor.
