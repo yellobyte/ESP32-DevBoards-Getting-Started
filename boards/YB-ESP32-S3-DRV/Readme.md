@@ -19,7 +19,7 @@ This board features the **modern 8-channel Toshiba driver chip** with MOSFET out
 
 Furthermore the board provides **two JST connectors** that match exactly the 5-wire connector of a common 5V/12V [**28BYJ-48 stepper motor**](doc/28BYJ-48-Stepper-Motor-Spec.pdf). This lets you easily plug two such motors into the board without the need for any extra wiring between board and steppers.
 
-In addition, the board features **eight LEDs** (4 per connector) that indicate [channel activity](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-DRV/doc/YB-ESP32-S3-DRV_board_with_two_5V-steppers.mp4) and therefore provides a clear visual feedback as motors step or solenoids and other connected devices get activated. However, the LEDs stay dark when solder bridges LEDX/LEDY are opened.
+In addition, the board features **eight channel LEDs** (connected to X1...X4 and Y1...Y4) that indicate [channel activity](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-DRV/doc/YB-ESP32-S3-DRV_board_with_two_5V-steppers.mp4) and therefore provides a clear visual feedback as motors step or solenoids and other connected devices get activated. If you prefer them to stay dark then solder bridges LEDX/LEDY must be opened.
 
 ![](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-DRV/doc/YB-ESP32-S3-DRV_board_with_two_5V-steppers.jpg)
 
@@ -32,9 +32,9 @@ In addition, the board features **eight LEDs** (4 per connector) that indicate [
    - *GPIO4...GPIO7* - for driving pins Y1...Y4 (additionally available at 'Y' socket)
 
     Please note: The maximal power dissipation Pd of the chip must not exceed 0.96W at any time. If needed, a heat sink can be mounted on the chip. Folder [doc](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/YB-ESP32-S3-DRV/doc) holds the driver IC's spec sheet.
- - **2 x JST XH connector** with 4 output channels each. They match exactly the 5-wire connector of a common 28BYJ-48 stepper motor.
+ - **2 x JST XH connector** with 4 output channels each (connected to pins X1...X4, resp. Y1...Y4). They match exactly the 5-wire connector of a common 28BYJ-48 stepper motor.
  - **control LEDs**. One LED labeled 'P' is connected to the 3.3V rail to indicate board power and the other LED labeled 'IO47' is connected to GPIO47 which can be used as status LED.  
- - **USB-C** port connected directly to the ESP32-S3 for serial output, software upload (e.g. via ArduinoIDE, VSCode/PlatformIO etc) or JTAG debugging. Can also be used to power the onboard ESP32-S3 modul.
+ - **USB-C** port connected directly to the ESP32-S3 for serial output, software upload (e.g. via ArduinoIDE, VSCode/PlatformIO etc) or JTAG debugging. Can also be used to power the onboard ESP32-S3 module.
 
  - **Two pushbuttons**. One is labeled 'R' and resets the ESP32-S3 (shorts EN pin to ground) and the other one is labeled 'B' and shorts GPIO0 to ground when pressed. The latter is sometimes needed to force the board into boot mode.
  - **lots of available GPIOs**, useful for connecting LEDs, buttons, additional modules via SPI or I2C, e.g displays, rotary encoders, bluetooth, etc.
