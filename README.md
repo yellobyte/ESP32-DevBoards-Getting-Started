@@ -27,6 +27,9 @@ Right now examples are provided for the following boards:
 - [**YB-ESP32-S3-ETH** with Ethernet (W5500), WiFi, two USB ports and optional PSRAM](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/YB-ESP32-S3-ETH)
 <p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-ETH/doc/YB-ESP32-S3-ETH_board_top.jpg" height="160"/></p>  
 
+- [**YB-ESP32-S3-DRV** with PSRAM, 8-channel driver IC, 8 channel LEDs, WiFi and USB-C port](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/YB-ESP32-S3-DRV)
+<p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-DRV/doc/YB-ESP32-S3-DRV_board_top.jpg" height="160"/></p>  
+
 - [**ESP32-CAM**, **ESP32-CAM-USB**, **ESP32-CAM-MB** with OV2640 camera, microSD and Flash LED](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/ESP32-CAM)
 <p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/ESP32-CAM/doc/ESP32-CAM.jpg" height="160"/><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/ESP32-CAM/doc/ESP32-CAM-USB.jpg" height="150"/><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/ESP32-CAM/doc/ESP32-CAM-MB.jpg" height="160"/></p>
 
