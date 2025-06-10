@@ -13,9 +13,11 @@ The densly populated YB-ESP32-S3-DRV board is still highly [breadboard compatibl
 
 The boards driver IC is especially suited for driving inductive loads, e.g. **solenoids** or **stepper motors**. Since a common microcontroller can only drive a few 10mA and low voltages it is commonly paired with a driver IC that can handle higher current and/or voltage levels, e.g. the very popular ULN2003/ULN2803. Such chip can drive up to 500mA current and contains suppression (flyback/freewheeling) diodes. A major disadvantage of the ULN are the darlington transistors at the output which cause a high forward voltage when switched on and therefore a considerable waste of energy. To make matters worse, the high forward voltage (Vf) of about 1.5-2V notably reduces the working voltage of a connected device.  
 
+This board features the **modern 8-channel Toshiba driver chip** with MOSFET outputs (~0.5Vf) and suppression diodes on each channel. 
+
 ![](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-DRV/doc/Driver-ICs_compared.jpg)
 
-This board features the **modern 8-channel Toshiba driver chip** with MOSFET outputs (~0.5Vf) and suppression diodes on each channel. Furthermore the board provides **two JST connectors** that match exactly the 5-wire connector of a common [**28BYJ-48 stepper motor**](doc/28BYJ-48-Stepper-Motor-Spec.pdf). This lets you easily plug two such motors into the board without the need for any extra wiring.
+Furthermore the board provides **two JST connectors** that match exactly the 5-wire connector of a common [**28BYJ-48 stepper motor**](doc/28BYJ-48-Stepper-Motor-Spec.pdf). This lets you easily plug two such motors into the board without the need for any extra wiring.
 
 In addition, the board features **eight LEDs** (4 per connector) that indicate [channel activity](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-DRV/doc/YB-ESP32-S3-DRV_board_with_two_5V-steppers.mp4) and therefore provides a clear visual feedback as motors step or solenoids and other connected devices get activated. However, the LEDs stay dark when solder bridges LEDX/LEDY are opened.
 
