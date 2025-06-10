@@ -23,7 +23,7 @@ In addition, the board features **eight LEDs** (4 per connector) that indicate [
 
 ![](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-DRV/doc/YB-ESP32-S3-DRV_board_with_two_5V-steppers.jpg)
 
-**Please note:**  The USB cable connected to the board in the pic above is only for data communication with a PC! The power for the two 5V stepper motors and the dev board in this case is provided by the breadboard power supply visible on the right hand side.
+**Please note:**  The USB cable connected to the board in the pic above in this scenario is only for data communication with a PC! The power for the two 5V stepper motors and the dev board here is provided by the breadboard power supply visible on the right hand side.
 
 ## YB-ESP32-S3-DRV board features in detail:
  - **ESP32-S3-WROOM-1-N8R2** module with 8MB Flash, 2MB PSRAM, WiFi PCB antenna
