@@ -17,7 +17,7 @@ This board features the **modern 8-channel Toshiba driver chip** with MOSFET out
 
 ![](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-DRV/doc/Driver-ICs_compared.jpg)
 
-Furthermore the board provides **two JST connectors** that match exactly the 5-wire connector of a common [**28BYJ-48 stepper motor**](doc/28BYJ-48-Stepper-Motor-Spec.pdf). This lets you easily plug two such motors into the board without the need for any extra wiring.
+Furthermore the board provides **two JST connectors** that match exactly the 5-wire connector of a common 5V/12V [**28BYJ-48 stepper motor**](doc/28BYJ-48-Stepper-Motor-Spec.pdf). This lets you easily plug two such motors into the board without the need for any extra wiring between board and steppers.
 
 In addition, the board features **eight LEDs** (4 per connector) that indicate [channel activity](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-DRV/doc/YB-ESP32-S3-DRV_board_with_two_5V-steppers.mp4) and therefore provides a clear visual feedback as motors step or solenoids and other connected devices get activated. However, the LEDs stay dark when solder bridges LEDX/LEDY are opened.
 
