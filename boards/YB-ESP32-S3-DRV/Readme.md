@@ -57,7 +57,7 @@ There are different ways to provide power to the onboard ESP32-S3 module:
 The board uses a LDO to drop the external supply voltage to 3.3Volt needed by the ESP32-S3. 
 
 ### Driver section:
-Board pins labeled *+V* are intended to provide power to external devices. They are connected to pin 5 of each XH connector. Since all components on this +V rail (C1, C6...C9, IC1) are rated for 50Vmax you might go even higher than 12VDC if necessary.  
+Board pins labeled *+V* are intended to provide power to external devices only. They are connected to pin 5 of each XH connector. Since all components on this +V rail (C1, C6...C9, IC1) are rated for 50Vmax you might go even higher than 12VDC if necessary.  
 
 **Important:**  
 You must make sure your project never exceeds the electrical and thermal limits of the driver chip IC1.
