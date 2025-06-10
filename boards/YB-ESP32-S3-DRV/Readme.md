@@ -59,9 +59,10 @@ The board uses a LDO to drop the external supply voltage to 3.3Volt needed by th
 ### Driver section:
 Board pins labeled *+V* are intended to provide power to external devices. They are connected to pin 5 of each XH connector. Since all components on this +V rail (C1, C6...C9, IC1) are rated for 50Vmax you might go even higher than 12VDC if necessary.  
 
-**Important:** you must make sure your project never exceeds the electrical and thermal limits of the driver chip IC1.
+**Important:**  
+You must make sure your project never exceeds the electrical and thermal limits of the driver chip IC1.
 
-### Recommended wiring for greater loads:
+**Recommended wiring for greater loads:**  
 When the driver chip is supposed to carry more then just a few 10mA on each output channel than it is recommended to use a capable power supply on the +V rail and preferably an additional capacitor of 220uF or greater value across the +V/GND pins of the board as shown below:  
 
 ![](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-DRV/doc/YB-ESP32-S3-DRV_recommended_wiring.jpg)  
