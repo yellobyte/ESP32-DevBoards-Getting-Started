@@ -26,16 +26,16 @@ void setup()
   Serial.println();
   Serial.println("running example \"AccelStepper-1\"");
 
-	stepperX.setMaxSpeed(1000.0);
-	stepperX.setAcceleration(100.0);
-	stepperX.setSpeed(100);
-	stepperX.moveTo(1024);
+  stepperX.setMaxSpeed(1000.0);
+  stepperX.setAcceleration(100.0);
+  stepperX.setSpeed(100);
+  stepperX.moveTo(1024);
 }
 
 void loop()
 {
   // change direction when motor reaches target position
-	if (stepperX.distanceToGo() == 0) {
+  if (stepperX.distanceToGo() == 0) {
     digitalWrite(LED_BUILTIN, !digitalRead(LED_BUILTIN));
     Serial.println("dist=0, change of direction...");
     stepperX.moveTo(-stepperX.currentPosition());
