@@ -6,21 +6,28 @@
   Detailed infos about ESP32 Flash partition tables, types, sizes, custum partition tables, etc:
   "https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-guides/partition-tables.html?highlight=partitions".
 
-  Last updated 2020-04-17, ThJ <yellobyte@bluewin.ch>
+  Last updated 2025-07-10, ThJ <yellobyte@bluewin.ch>
 */
 
 #include <Arduino.h>
 #include <esp_ota_ops.h>
+// Arduino ESP32 core 3.x
+#include "esp_flash.h"
 
 void setup() {
   // read partition table entries from flash
   esp_partition_iterator_t partitionIterator;
   const esp_partition_t *part;
-  size_t size;
-
+  
   Serial.begin(115200);
+  
+  // Arduino ESP32 core 2.x
+  // size_t size = spi_flash_get_chip_size(); 
 
-  size = spi_flash_get_chip_size(); 
+  // Arduino ESP32 core 3.x
+  uint32_t size;
+  esp_flash_get_size(NULL, &size);
+
   Serial.print("Flash chip size: "); 
   Serial.println(size);
 
