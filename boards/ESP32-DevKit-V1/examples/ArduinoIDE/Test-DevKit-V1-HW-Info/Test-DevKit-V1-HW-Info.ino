@@ -6,7 +6,7 @@
   PlatformIO's docu page about the ESP32-DEVKIT-V1 board:
   "https://docs.platformio.org/en/latest/boards/espressif32/esp32doit-devkit-v1.html".
 
-  Last updated 2020-07-21, ThJ <yellobyte@bluewin.ch>
+  Last updated 2025-07-10, ThJ <yellobyte@bluewin.ch>
 */
 
 #include <Arduino.h>
@@ -25,12 +25,13 @@ uint8_t *buf;
 void logRam(bool showRam = true, bool showPsram = true) 
 {
   if (showRam) {
-    Serial.printf("\nESP32 RAM Size: %d Byte, Used: %d Byte, Free: %d, max alloc: %d Byte (largest free block)", 
+    Serial.printf("\nESP32 RAM Size: %lu Byte, Used: %lu Byte, Free: %lu, max alloc: %lu Byte (largest free block)", 
                   ESP.getHeapSize(), ESP.getHeapSize() - ESP.getFreeHeap(), ESP.getFreeHeap(), ESP.getMaxAllocHeap());
   }
   if (showPsram) {
     if (psramFound())
-      Serial.printf("\nESP32 PSRAM Size: %d Byte, Used: %d Byte, Free: %d Byte", ESP.getPsramSize(), ESP.getPsramSize() - ESP.getFreePsram(), ESP.getFreePsram());
+      Serial.printf("\nESP32 PSRAM Size: %lu Byte, Used: %lu Byte, Free: %lu Byte", 
+                    ESP.getPsramSize(), ESP.getPsramSize() - ESP.getFreePsram(), ESP.getFreePsram());
     //else
     //  Serial.print("\nESP32 PSRAM not found !");    
   }
@@ -54,7 +55,7 @@ bool allocRAM(size_t size)
       }
     }
     if (i == size) {
-      Serial.printf("success, buf = 0x%x (RAM starts from 0x3FFxxxxx, PSRAM starts from 0x3F8xxxxx)\n", buf);
+      Serial.printf("success, buf = 0x%x (RAM starts from 0x3FFxxxxx, PSRAM starts from 0x3F8xxxxx)\n", (unsigned int)buf);
       return true;
     }	
   } 
@@ -67,7 +68,7 @@ bool allocRAM(size_t size)
 void freeBuf()
 {
   if (buf != NULL) {
-    Serial.printf("-> free(buf = 0x%x)\n", buf); 
+    Serial.printf("-> free(buf = 0x%x)\n", (unsigned int)buf); 
     free(buf);
   }
 }
