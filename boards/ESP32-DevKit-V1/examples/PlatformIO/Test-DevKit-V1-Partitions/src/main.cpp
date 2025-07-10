@@ -40,9 +40,9 @@ void setup() {
     Serial.println("App Partition table:");
     do {
       part = esp_partition_get(partitionIterator);
-      Serial.printf("Type: %02x SubType %02x Address 0x%06X Size 0x%06X Encryption %i Label %s\r\n", 
+      Serial.printf("Type: %02x SubType %02x Address 0x%06lX Size 0x%06lX Encryption %i Label %s\r\n", 
                     part->type, part->subtype, part->address, part->size, part->encrypted, part->label);
-    } while (partitionIterator = esp_partition_next(partitionIterator));
+    } while ((partitionIterator = esp_partition_next(partitionIterator)));
   }
   esp_partition_iterator_release(partitionIterator);
 
@@ -53,9 +53,9 @@ void setup() {
     Serial.println("Data Partition table:");
     do {
       part = esp_partition_get(partitionIterator);
-      Serial.printf("Type: %02x SubType %02x Address 0x%06X Size 0x%06X Encryption %i Label %s\r\n", 
+      Serial.printf("Type: %02x SubType %02x Address 0x%06lX Size 0x%06lX Encryption %i Label %s\r\n", 
                     part->type, part->subtype, part->address, part->size, part->encrypted, part->label);
-    } while (partitionIterator = esp_partition_next(partitionIterator));
+    } while ((partitionIterator = esp_partition_next(partitionIterator)));
   }
   esp_partition_iterator_release(partitionIterator);
 }
