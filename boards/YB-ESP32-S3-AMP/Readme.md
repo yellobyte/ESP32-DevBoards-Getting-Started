@@ -7,7 +7,7 @@ Apart from the **ESP32-S3** they provides a **microSD** card slot, two **MAX9835
 
 **Which version V2 or V3 fits your purposes best ?**
 
-If you are keen on using the ESP32-S3 built-in JTAG circuitry e.g. with the integrated debugger the VSCode/PlatformIO IDE provides then V3 is your board. However, since the ESP32-S3 is attached directly to the USB-Port your PC will lose the COM port for a few seconds when you reset them. That can disturb some dev environments and sometimes can be a bit unnerving especially for ESP32-S3 novices. And since it lacks the CH340 bridge chip and with it the little reset/boot circuitry (explained [here](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/reset_and_software_upload)) you need to press the buttons for uploading new software.  
+If you are keen on using the ESP32-S3 built-in JTAG circuitry e.g. with the integrated debugger the VSCode/PlatformIO IDE provides then V3 is your board. However, since the ESP32-S3 is attached directly to the USB-Port your PC will lose the COM port for a few seconds when you reset the board. That can disturb some dev environments and sometimes can be a bit unnerving especially for ESP32-S3 novices. And since it lacks the CH340 bridge chip and with it the little reset/boot circuitry (explained [here](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/reset_and_software_upload)) you need to press the buttons for uploading new software.  
 
 If you don't need the integrated JTAG debugging feature then you are better off with the V2 board because your PC will not lose the COM port during reset and the onboard boot/reset logic makes uploading a bit easier since no buttons need to be pressed.
 
