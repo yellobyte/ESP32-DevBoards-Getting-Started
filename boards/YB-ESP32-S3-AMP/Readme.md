@@ -1,9 +1,15 @@
 ## YB-ESP32-S3-AMP Development Board Overview:
-The **YB-ESP32-S3-AMP** is a general purpose development board based on Espressif's ESP32-S3 MCU. It comes in two different flavours (Rev.2 & Rev.3) and features a **ESP32-S3-WROOM-1-N8R2** module (8MB Flash, 2MB PSRAM, WiFi PCB antenna) and is available on sales platforms [eBay](https://www.ebay.de/sch/i.html?_nkw=yb-esp32-s3) and [Ricardo.ch](https://www.ricardo.ch/en/s/YB-ESP32-S3).
+The **YB-ESP32-S3-AMP** is a general purpose development board based on Espressif's ESP32-S3 MCU. They are sold in two different flavours (**Rev.2** & **Rev.3**). Both versions feature an **ESP32-S3-WROOM-1-N8R2** module (8MB Flash, 2MB PSRAM, WiFi PCB antenna) and are available on sales platforms [eBay](https://www.ebay.de/sch/i.html?_nkw=yb-esp32-s3) and [Ricardo.ch](https://www.ricardo.ch/en/s/YB-ESP32-S3).
 
-Apart from the **ESP32-S3** it provides a **microSD** card slot, two **MAX98357A I2S PCM Class D Amplifiers** (for left + right audio channels), **USB-C connector** for software upload, serial output and/or feeding power to the board, **two status LEDs** and **GPIO pins** for free use. 
+Apart from the **ESP32-S3** they provides a **microSD** card slot, two **MAX98357A I2S PCM Class D Amplifiers** (for left + right audio channels), **USB-C connector** for software upload, serial output and/or feeding power to the board, **two status LEDs** and lots of **GPIO pins** for free usage.  
 
-Revision 2 features an USB bridge chip CH340 between USB-C and ESP32-S3. On boards with revision 3 the USB-C is connected directly to the ESP32-S3. Both solutions have their own advantages so you can select the model you prefer.
+**Revision 2** features an USB bridge chip CH340 between USB-C and ESP32-S3 whereas **Revision 3** has the USB-C port connected directly to the ESP32-S3. 
+
+**Which version V2 or V3 fits your purposes best ?**
+
+If you are keen on using the ESP32-S3 built-in JTAG circuitry e.g. with the integrated debugger the VSCode/PlatformIO IDE provides then V3 is your board. However, since the ESP32-S3 is attached directly to the USB-Port your PC will lose the COM port for a few seconds when you reset them. That can disturb some dev environments and sometimes can be a bit unnerving especially for ESP32-S3 novices. And since it lacks the CH340 bridge chip and with it the little reset/boot circuitry (explained [here](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/reset_and_software_upload)) you need to press the buttons for uploading new software.  
+
+If you don't need the integrated JTAG debugging feature then you are better off with the V2 board because your PC will not lose the COM port during reset and the onboard boot/reset logic makes uploading a bit easier since no buttons need to be pressed.
 
 <p align="center"><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-AMP/doc/YB-ESP32-S3-AMP_Rev2_top_with_screw_terminals.jpg" height="160"/><img src="https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/boards/YB-ESP32-S3-AMP/doc/YB-ESP32-S3-AMP_Rev3_top_with_screw_terminals.jpg" height="160"/></p>  
 
