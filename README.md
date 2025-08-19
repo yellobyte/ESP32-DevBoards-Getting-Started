@@ -78,7 +78,7 @@ Alternatively you could install the extension *Serial Monitor* from Microsoft an
  ![](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/reset_and_software_upload/Serial_Monitor-automatic_reconnection.jpg)  
  
 Only disadvantage:  
-Before uploading a new firmware to a board the monitoring needs to be stopped manually. Otherwise the COM port stays in use and is not available for uploads. When the upload is finished you need to start monitoring again manually. 
+Before uploading new firmware to a board the monitoring needs to be stopped manually. Otherwise the COM port stays in use and is not available for uploads. When the upload is finished you need to start monitoring again manually. 
 
 ### :zap: Useful settings in platformio.ini:
 
