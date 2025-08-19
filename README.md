@@ -56,22 +56,31 @@ VSCode/PlatformIO provides some major advantages over the Arduino IDE:
   - integrated debugging functionality (additional external hardware required)
   - integrated source control (github)
   - etc.
-
-### :heavy_exclamation_mark: Application notes for PlatformIO  
-#### 1) Unknown/missing board:
+## :pencil: General application notes
+### :mag: Unknown/missing board:
 If your particular board is not (yet) on the board list and you want to start programming it anyway then select another, already known board from the list which preferably is similar in features to your new board and you should be good to go.  
 
-However, in some cases you might not be able to fully utilize every board feature and build logs might report incorrect port numbers, memory sizes, etc. Provided example [**Test-ESP32-S3-1.9inch_RAM-PSRAM**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/ESP32-S3-1.9-Display-DevBoard/examples/Test-ESP32-S3-1.9inch_RAM-PSRAM) demonstrates how to reveal the true memory sizes of an ESP32 development board. Have a look at this example's files _Build.log_ & _Serial_Output.log_ to see above mentioned discrepancies.
-#### 2) Serial monitor: 
-The serial monitor might lose connection upon resetting certain boards and unfortunately does not reconnect automatically. In this case you probably would delete the old monitor and start a new one.  
-There is a quicker solution though: make sure the monitor has the input focus, then press any keyboard key and the serial monitor will reconnect, showing below message:
+However, in some cases you might not be able to fully utilize every board feature and build logs might report incorrect port numbers, memory sizes, etc. Provided example [**Test-ESP32-S3-1.9inch_RAM-PSRAM**](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/tree/main/boards/ESP32-S3-1.9-Display-DevBoard/examples/Test-ESP32-S3-1.9inch_RAM-PSRAM) demonstrates how to reveal the true memory sizes of an ESP32 development board. Have a look at this example's files _Build.log_ & _Serial_Output.log_ to see above mentioned discrepancies.  
+
+## :pencil2: Application notes for PlatformIO  
+
+### :tv: Serial monitor I:
+The PlatformIO integrated serial monitor (simple terminal application, started e.g. with 'pio device monitor') might lose connection upon resetting certain boards and unfortunately does not reconnect automatically. In this case you probably would delete the old monitor and start a new one. There is a **quicker solution** though: make sure the monitor has the input focus, then press any keyboard key and the serial monitor will reconnect instantaneously, showing below message:
 ```
 Disconnected (ClearCommError failed (PermissionError(13, 'The device does not recognize the command.', None, 22)))
 Reconnecting to COM5 .... Connected!
 ```
 Thanks to [anp59](https://github.com/anp59) for this hint.
 
-### :zap: Useful settings in platformio.ini
+### :tv: Serial monitor II:
+Alternatively you could install the extension *Serial Monitor* from Microsoft and set the auto-reconnect to 'on' as shown below:  
+
+ ![](https://github.com/yellobyte/ESP32-DevBoards-Getting-Started/raw/main/reset_and_software_upload/Serial_Monitor-automatic_reconnection.jpg)  
+ 
+Only disadvantage:  
+Before uploading a new firmware to a board the monitoring needs to be stopped manually. Otherwise the COM port stays in use and is not available for uploads. When the upload is finished you need to start monitoring again manually. 
+
+### :zap: Useful settings in platformio.ini:
 
 The project configuration file has sections (each denoted by a [header]) and one or multiple key/value pairs within the sections. Lines beginning with ";" are ignored and may be used to provide comments. The file platformio.ini is explained in more detail [**here**](https://docs.platformio.org/en/stable/projectconf/index.html). 
 
