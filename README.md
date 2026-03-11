@@ -24,6 +24,9 @@ Right now examples are provided for the following boards:
 - [**YB-ESP32-S3-AMP (Rev.2 & Rev.3)** with PSRAM, microSD, 2 x MAX98357A Audio Amplifier, WiFi, USB-C](https://github.com/yellobyte/YB-ESP32-S3-AMP)
 <p align="center"><img src="https://github.com/yellobyte/YB-ESP32-S3-AMP/raw/main/doc/YB-ESP32-S3-AMP_Rev2_top_with_screw_terminals.jpg" height="150"/><img src="https://github.com/yellobyte/YB-ESP32-S3-AMP/raw/main/doc/YB-ESP32-S3-AMP_Rev3_top_with_screw_terminals.jpg" height="150"/></p>  
 
+- [**YB-ESP32-S3-DAC** with PSRAM, microSD, TLV320DAC3101 Stereo Audio DAC, WiFi, USB-C, 3.5mm audio jack](https://github.com/yellobyte/YB-ESP32-S3-DAC)
+<p align="center"><img src="https://github.com/yellobyte/YB-ESP32-S3-DAC/raw/main/doc/YB-ESP32-S3-DAC_top.jpg" height="175"/></p>  
+
 - [**YB-ESP32-S3-ETH** with Ethernet (W5500), WiFi, USB-C port and PSRAM](https://github.com/yellobyte/YB-ESP32-S3-ETH)
 <p align="center"><img src="https://github.com/yellobyte/YB-ESP32-S3-ETH/raw/main/doc/YB-ESP32-S3-ETH_board_top.jpg" height="160"/></p>  
 
