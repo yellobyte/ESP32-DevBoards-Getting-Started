@@ -27,7 +27,7 @@ Right now examples are provided for the following boards:
 - [**YB-ESP32-S3-DAC** with PSRAM, microSD, TLV320DAC3101 Stereo Audio DAC, WiFi, USB-C, USB hub chip, 3.5mm audio jack](https://github.com/yellobyte/YB-ESP32-S3-DAC)
 <p align="center"><img src="https://github.com/yellobyte/YB-ESP32-S3-DAC/raw/main/doc/YB-ESP32-S3-DAC_top.jpg" height="180"/></p>  
 
-- [**YB-ESP32-S3-ETH** with Ethernet (W5500), WiFi, USB-C, USB hub chip and PSRAM](https://github.com/yellobyte/YB-ESP32-S3-ETH)
+- [**YB-ESP32-S3-ETH** with PSRAM, Ethernet (W5500), WiFi, USB-C and USB hub chip](https://github.com/yellobyte/YB-ESP32-S3-ETH)
 <p align="center"><img src="https://github.com/yellobyte/YB-ESP32-S3-ETH/raw/main/doc/YB-ESP32-S3-ETH_board_top.jpg" height="160"/></p>  
 
 - [**YB-ESP32-S3-DRV** with PSRAM, 8-channel driver IC, 8 channel LEDs, WiFi and USB-C port](https://github.com/yellobyte/YB-ESP32-S3-DRV)
