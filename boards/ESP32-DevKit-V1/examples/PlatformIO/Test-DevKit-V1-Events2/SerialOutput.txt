@@ -1,0 +1,36 @@
+--- Terminal on COM8 | 115200 8-N-1
+--- Available filters and text transformations: debug, default, direct, esp32_exception_decoder, hexlify, log2file, nocontrol, printable, send_on_enter, time
+--- More details at https://bit.ly/pio-monitor-filters
+--- Quit: Ctrl+C | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H
+18:14:11.211 > ESP32-Events-2 example running...
+18:14:11.215 > Task 1: Event 3
+18:14:11.216 > Task 2: Event 3
+18:14:14.576 > Task 1: Event 1
+18:14:15.335 > Task 2: Event 1
+18:14:16.889 > Task 2: Event 1
+18:14:16.944 > Task 1: Event 1
+18:14:17.577 > Task 2: Event 2
+18:14:21.563 > Task 1: Event 3
+18:14:22.088 > Task 2: Event 2
+18:14:23.094 > Task 1: Event 3
+18:14:23.280 > Task 2: Event 1
+18:14:24.039 > Task 1: Event 1
+18:14:27.193 > Task 1: Event 1
+18:14:27.518 > Task 2: Event 1
+18:14:28.297 > Task 2: Event 1
+18:14:29.852 > Task 2: Event 1
+18:14:30.708 > Task 1: Event 3
+18:14:33.905 > Task 2: Event 1
+18:14:34.356 > Task 1: Event 3
+18:14:38.332 > Task 2: Event 3
+18:14:38.884 > Task 1: Event 3
+18:14:39.173 > Task 2: Event 3
+18:14:43.181 > Task 1: Event 2
+18:14:43.490 > Task 2: Event 2
+18:14:46.879 > Task 1: Event 2
+18:14:48.422 > Task 2: Event 2
+18:14:50.503 > Task 1: Event 3
+18:14:52.890 > Task 2: Event 1
+18:14:53.391 > Task 1: Event 3
+18:14:54.422 > Task 2: Event 2
+...
