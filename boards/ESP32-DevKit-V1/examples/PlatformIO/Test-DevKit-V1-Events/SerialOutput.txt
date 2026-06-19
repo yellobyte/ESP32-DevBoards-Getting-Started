@@ -2,42 +2,25 @@
 --- Available filters and text transformations: debug, default, direct, esp32_exception_decoder, hexlify, log2file, nocontrol, printable, send_on_enter, time
 --- More details at https://bit.ly/pio-monitor-filters
 --- Quit: Ctrl+C | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H
-22:17:08.345 > s JunEvent example running...
-22:17:08.417 > Task 1: Event 2
-22:17:08.419 > Task 2: Event 1
-22:17:08.965 > Task 1: Event 3
-22:17:11.359 > Task 2: Event 1
-22:17:12.022 > Task 1: Event 2
-22:17:13.673 > Task 2: Event 2
-22:17:14.978 > Task 2: Event 1
-22:17:15.673 > Task 1: Event 3
-22:17:16.462 > Task 1: Event 1
-22:17:18.407 > Task 1: Event 1
-22:17:19.026 > Task 1: Event 3
-22:17:19.340 > Task 2: Event 2
-22:17:20.582 > Task 1: Event 1
-22:17:22.398 > Task 2: Event 3
-22:17:23.138 > Task 1: Event 1
-22:17:24.601 > Task 2: Event 1
-22:17:24.900 > Task 1: Event 3
-22:17:26.186 > Task 2: Event 2
-22:17:27.974 > Task 2: Event 2
-22:17:29.652 > Task 1: Event 2
-22:17:30.633 > Task 2: Event 1
-22:17:32.197 > Task 2: Event 2
-22:17:33.066 > Task 1: Event 1
-22:17:35.256 > Task 1: Event 2
-22:17:35.729 > Task 2: Event 2
-22:17:36.692 > Task 2: Event 3
-22:17:37.581 > Task 2: Event 2
-22:17:39.127 > Task 2: Event 2
-22:17:40.201 > Task 1: Event 3
-22:17:40.980 > Task 1: Event 1
-22:17:42.082 > Task 2: Event 1
-22:17:43.682 > Task 2: Event 1
-22:17:44.118 > Task 1: Event 3
-22:17:45.130 > Task 1: Event 2
-22:17:46.359 > Task 2: Event 3
-22:17:49.156 > Task 1: Event 1
-22:17:49.520 > Task 2: Event 1
-22:17:51.115 > Task 1: Event 3
+22:57:41.624 > ESP32-Event example running...
+22:57:41.628 > MyTask: Event 1
+22:57:42.727 > WiFi: WIFI_EVENT_AP_START
+22:57:44.720 > MyTask: Event 1
+22:57:47.878 > MyTask: Event 1
+22:57:51.554 > MyTask: Event 3
+22:57:52.282 > MyTask: Event 1
+22:57:55.072 > MyTask: Event 2
+22:57:56.035 > MyTask: Event 2
+22:57:58.481 > MyTask: Event 1
+22:58:01.768 > MyTask: Event 2
+22:58:05.160 > WiFi: WIFI_EVENT_AP_STACONNECTED
+22:58:06.698 > MyTask: Event 1
+22:58:08.147 > MyTask: Event 3
+22:58:12.664 > MyTask: Event 2
+22:58:14.875 > MyTask: Event 1
+22:58:15.252 > WiFi: WIFI_EVENT_AP_STADISCONNECTED
+22:58:16.741 > MyTask: Event 3
+22:58:18.796 > MyTask: Event 3
+22:58:21.682 > MyTask: Event 3
+22:58:24.525 > MyTask: Event 2
+...

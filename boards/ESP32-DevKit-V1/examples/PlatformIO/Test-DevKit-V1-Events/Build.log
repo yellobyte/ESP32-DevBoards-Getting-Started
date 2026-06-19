@@ -19,7 +19,8 @@ LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
 LDF Modes: Finder ~ chain, Compatibility ~ soft
 Found 43 compatible libraries
 Scanning dependencies...
-No dependencies
+Dependency Graph
+|-- WiFi @ 3.3.9
 Building in release mode
 Compiling .pio\build\esp32dev\src\main.cpp.o
 Linking .pio\build\esp32dev\firmware.elf
@@ -27,8 +28,8 @@ Firmware metrics can not be shown. Set the terminal codepage to "utf-8" or "cp65
 Retrieving maximum program size .pio\build\esp32dev\firmware.elf
 Checking size .pio\build\esp32dev\firmware.elf
 Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
-RAM:   [=         ]   6.8% (used 22188 bytes from 327680 bytes)
-Flash: [==        ]  22.4% (used 294083 bytes from 1310720 bytes)
+RAM:   [=         ]  13.8% (used 45352 bytes from 327680 bytes)
+Flash: [=======   ]  69.5% (used 911391 bytes from 1310720 bytes)
 Building .pio\build\esp32dev\firmware.bin
 esptool v5.3.0
 Creating ESP32 image...
@@ -41,5 +42,4 @@ Creating binary "firmware.factory.bin" with:
  -  0xe000   | boot_app0.bin
  -  0x10000  | firmware.bin
 Successfully created combined binary image.
-================================================ [SUCCESS] Took 8.55 seconds ================================================
- *  Terminal will be reused by tasks, press any key to close it. 
+================================================ [SUCCESS] Took 11.81 seconds ================================================
