@@ -6,7 +6,7 @@
   This allows a component to attach desired behavior to changes in the state of
   another component, e.g. a program can react to another task, BT/Wifi or Ethernet events etc.
 
-  Contrary to example "ESP32-Events" here we use our own event loop instead of the
+  Contrary to example "ESP32-Events-1" here we use our own event loop instead of the
   default system one.
 
   Last updated 2026-06-19, ThJ <yellobyte@bluewin.ch>
