@@ -6,7 +6,7 @@
 22:23:08.999 > Running example "Test NVS Partition - Preferences"
 22:23:09.003 > [    16][E][Preferences.cpp:47] begin(): nvs_open failed: NOT_FOUND
 22:23:09.009 > Opening NVS namespace TEST123 was unsuccessful
-22:23:09.013 > Creating NVS namespace TEST123 was successful
+22:23:09.013 > Creating NVS namespace TEST123 was successful. Free entries: 629
 22:23:09.017 > Writing key-value pairs to NVS namespace TEST123
 22:23:09.036 > Reading key-value pairs from NVS namespace TEST123
 22:23:09.041 > MyKey_00 = MyValue_00
@@ -45,7 +45,7 @@
 ---
 22:23:48.381 > 
 22:23:48.382 > Running example "Test NVS Partition - Preferences"
-22:23:48.387 > Opening NVS namespace TEST123 was successful
+22:23:48.387 > Opening NVS namespace TEST123 was successful. Free entries: 569
 22:23:48.391 > Reading key-value pairs from NVS namespace TEST123
 22:23:48.395 > MyKey_00 = MyValue_00
 22:23:48.397 > MyKey_01 = MyValue_01

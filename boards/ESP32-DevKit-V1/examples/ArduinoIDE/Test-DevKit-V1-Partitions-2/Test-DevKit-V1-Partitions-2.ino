@@ -46,7 +46,8 @@ void setup()
       Serial.printf("Creating NVS namespace %s was unsuccessful\n", MY_NAMESPACE);
       while(true);
     }
-    Serial.printf("Creating NVS namespace %s was successful\n", MY_NAMESPACE);
+    Serial.printf("Creating NVS namespace %s was successful. Free entries: %lu\n", 
+                  MY_NAMESPACE, (unsigned long)nvs.freeEntries());
 
     // not necessary:
     //Serial.printf("clearing NVS namespace %s\n", MY_NAMESPACE);
@@ -63,7 +64,8 @@ void setup()
     nvs.begin(MY_NAMESPACE, true) ;          // (re-)open readonly
   }
   else {
-    Serial.printf("Opening NVS namespace %s was successful\n", MY_NAMESPACE);    
+    Serial.printf("Opening NVS namespace %s was successful. Free entries: %lu\n", 
+                  MY_NAMESPACE, (unsigned long)nvs.freeEntries());    
   }
   
   //
