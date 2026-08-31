@@ -1,12 +1,12 @@
 /*
-  Test Partitions
+  Test Show Partitions
 
   Show actual partitions in ESP32 Flash.
 
   Detailed infos about ESP32 Flash partition tables, types, sizes, custum partition tables, etc:
-  "https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-guides/partition-tables.html?highlight=partitions".
+  "https://docs.espressif.com/projects/esp-idf/en/latest/esp32/api-guides/partition-tables.html".
 
-  Last updated 2025-07-10, ThJ <yellobyte@bluewin.ch>
+  Last updated 2026-08-31, ThJ <yellobyte@bluewin.ch>
 */
 
 #include <Arduino.h>
@@ -20,7 +20,9 @@ void setup() {
   const esp_partition_t *part;
   
   Serial.begin(115200);
-  
+  Serial.println();
+  Serial.println("Running example \"Show Partitions\"");  
+
   // Arduino ESP32 core 2.x
   // size_t size = spi_flash_get_chip_size(); 
 

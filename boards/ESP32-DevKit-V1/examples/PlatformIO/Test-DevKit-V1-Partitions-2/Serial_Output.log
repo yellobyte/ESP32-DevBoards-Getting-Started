@@ -1,0 +1,80 @@
+--- Terminal on COM7 | 115200 8-N-1
+--- Available filters and text transformations: debug, default, direct, esp32_exception_decoder, hexlify, log2file, nocontrol, printable, send_on_enter, time
+--- More details at https://bit.ly/pio-monitor-filters
+--- Quit: Ctrl+C | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H
+22:23:08.998 > 
+22:23:08.999 > Running example "Test NVS Partition - Preferences"
+22:23:09.003 > [    16][E][Preferences.cpp:47] begin(): nvs_open failed: NOT_FOUND
+22:23:09.009 > Opening NVS namespace TEST123 was unsuccessful
+22:23:09.013 > Creating NVS namespace TEST123 was successful
+22:23:09.017 > Writing key-value pairs to NVS namespace TEST123
+22:23:09.036 > Reading key-value pairs from NVS namespace TEST123
+22:23:09.041 > MyKey_00 = MyValue_00
+22:23:09.043 > MyKey_01 = MyValue_01
+22:23:09.045 > MyKey_02 = MyValue_02
+22:23:09.047 > MyKey_03 = MyValue_03
+22:23:09.049 > MyKey_04 = MyValue_04
+22:23:09.051 > MyKey_05 = MyValue_05
+22:23:09.053 > MyKey_06 = MyValue_06
+22:23:09.055 > MyKey_07 = MyValue_07
+22:23:09.057 > MyKey_08 = MyValue_08
+22:23:09.059 > MyKey_09 = MyValue_09
+22:23:09.061 > MyKey_10 = MyValue_10
+22:23:09.062 > MyKey_11 = MyValue_11
+22:23:09.064 > MyKey_12 = MyValue_12
+22:23:09.066 > MyKey_13 = MyValue_13
+22:23:09.068 > MyKey_14 = MyValue_14
+22:23:09.070 > MyKey_15 = MyValue_15
+22:23:09.072 > MyKey_16 = MyValue_16
+22:23:09.074 > MyKey_17 = MyValue_17
+22:23:09.076 > MyKey_18 = MyValue_18
+22:23:09.078 > MyKey_19 = MyValue_19
+22:23:09.079 > MyKey_20 = MyValue_20
+22:23:09.082 > MyKey_21 = MyValue_21
+22:23:09.084 > MyKey_22 = MyValue_22
+22:23:09.085 > MyKey_23 = MyValue_23
+22:23:09.087 > MyKey_24 = MyValue_24
+22:23:09.089 > MyKey_25 = MyValue_25
+22:23:09.091 > MyKey_26 = MyValue_26
+22:23:09.093 > MyKey_27 = MyValue_27
+22:23:09.095 > MyKey_28 = MyValue_28
+22:23:09.097 > MyKey_29 = MyValue_29
+22:23:09.099 > All done.
+---
+----- After Board Power off/on ----->
+---
+22:23:48.381 > 
+22:23:48.382 > Running example "Test NVS Partition - Preferences"
+22:23:48.387 > Opening NVS namespace TEST123 was successful
+22:23:48.391 > Reading key-value pairs from NVS namespace TEST123
+22:23:48.395 > MyKey_00 = MyValue_00
+22:23:48.397 > MyKey_01 = MyValue_01
+22:23:48.399 > MyKey_02 = MyValue_02
+22:23:48.401 > MyKey_03 = MyValue_03
+22:23:48.403 > MyKey_04 = MyValue_04
+22:23:48.404 > MyKey_05 = MyValue_05
+22:23:48.406 > MyKey_06 = MyValue_06
+22:23:48.408 > MyKey_07 = MyValue_07
+22:23:48.410 > MyKey_08 = MyValue_08
+22:23:48.412 > MyKey_09 = MyValue_09
+22:23:48.414 > MyKey_10 = MyValue_10
+22:23:48.416 > MyKey_11 = MyValue_11
+22:23:48.418 > MyKey_12 = MyValue_12
+22:23:48.420 > MyKey_13 = MyValue_13
+22:23:48.422 > MyKey_14 = MyValue_14
+22:23:48.423 > MyKey_15 = MyValue_15
+22:23:48.425 > MyKey_16 = MyValue_16
+22:23:48.427 > MyKey_17 = MyValue_17
+22:23:48.429 > MyKey_18 = MyValue_18
+22:23:48.431 > MyKey_19 = MyValue_19
+22:23:48.433 > MyKey_20 = MyValue_20
+22:23:48.435 > MyKey_21 = MyValue_21
+22:23:48.437 > MyKey_22 = MyValue_22
+22:23:48.439 > MyKey_23 = MyValue_23
+22:23:48.441 > MyKey_24 = MyValue_24
+22:23:48.442 > MyKey_25 = MyValue_25
+22:23:48.444 > MyKey_26 = MyValue_26
+22:23:48.446 > MyKey_27 = MyValue_27
+22:23:48.448 > MyKey_28 = MyValue_28
+22:23:48.450 > MyKey_29 = MyValue_29
+22:23:48.452 > All done.
