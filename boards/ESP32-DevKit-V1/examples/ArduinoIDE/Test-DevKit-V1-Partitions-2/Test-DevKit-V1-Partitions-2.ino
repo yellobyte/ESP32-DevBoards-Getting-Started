@@ -27,7 +27,7 @@
 
 #define MY_NAMESPACE "TEST123"  // namespace definition (max. 15 chars)
 #define NKEY 30                 // number of keys to test
-Preferences nvs ;
+Preferences nvs;
 
 void setup()
 {
