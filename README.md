@@ -93,9 +93,9 @@ A small selection of some very useful project settings (for more experienced pro
 1) Forces builds to use alternative/older/additional platform packages/frameworks. Not all combinations will  build successfully though.
 ```
 ;platform = espressif32
-platform = espressif32@^6.9.0
+;platform = espressif32@^6.9.0
 ;platform = espressif32@4.2.0
-;platform = https://github.com/pioarduino/platform-espressif32/releases/download/stable/platform-espressif32.zip
+platform = https://github.com/pioarduino/platform-espressif32/releases/download/stable/platform-espressif32.zip
 ;platform = https://github.com/pioarduino/platform-espressif32/releases/download/51.03.07/platform-espressif32.zip
 ;
 platform_packages =
