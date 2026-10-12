@@ -1,18 +1,20 @@
 /*
   Example "factory"
 
-  Each distributed T-QT ESP32-S3 DevBoard with 0.85" Display (Manufactorer LILYGO) is pre-programmed with software. 
-  The original code is available on "https://github.com/Xinyuan-LilyGO/T-QT/tree/main/example/". The program simply 
-  connects to WLAN, fetches the valid time from an internet time server and displays it in station clock style.
-  
-  This example uses above code with only minor modifications and adjustments for PlatformIO & latest ESP32 frameworks.
+  Each distributed T-QT ESP32-S3 DevBoard with 0.85" Display (Manufactorer LILYGO) is pre-programmed with
+  software. The original code is available on "https://github.com/Xinyuan-LilyGO/T-QT/tree/main/example/". 
+  The program simply connects to WLAN, fetches the valid time from an internet time server and displays it 
+  in station clock style.
 
-  Last updated 2022-11-05, ThJ <yellobyte@bluewin.ch>
+  This example uses above code with minor modifications and adjustments for PlatformIO & latest 
+  ESP32 frameworks, as of today: Arduino ESP32 Core v3.3.12. Have a look at file Build.log.
+
+  Last updated 2026-10-12, ThJ <yellobyte@bluewin.ch>
 */
 
 #include <Arduino.h>
 #include <WiFi.h>
-#include <sntp.h>
+#include <esp_sntp.h>
 #include <tft.h>
 #include <tft_driver.h>
 #include <time.h>
@@ -24,6 +26,13 @@
 
 #define WIFI_SSID          "MySSID"
 #define WIFI_PASSWORLD     "MyPassword"
+
+#define SCREEN_WIDTH 128
+#define NTP_SERVER1 "pool.ntp.org"
+#define NTP_SERVER2 "ptbtime1.ptb.de"
+#define TIMEZONE "MEZ-1MESZ-2,M3.5.0/02:00:00,M10.5.0/03:00:00" // Middle European Time Zone
+#define GMT_OFFSET_SEC 3600
+#define DAY_LIGHT_OFFSET_SEC 3600
 
 static lv_disp_draw_buf_t draw_buf;
 static lv_color_t buf[SCREEN_WIDTH * SCREEN_WIDTH];
@@ -175,7 +184,7 @@ void setup() {
   analogReadResolution(12);
   lcd_init();
   lcd_setRotation(2);
-  lcd_PushColors(0, 0, 128, 128, (uint16_t *)gImage_image_logo, 128 * 128);
+  lcd_PushColors(0, 0, SCREEN_WIDTH, SCREEN_WIDTH, (uint16_t *)gImage_image_logo, SCREEN_WIDTH * SCREEN_WIDTH);
   digitalWrite(PIN_LCD_BL, LOW);
   delay(2000);
   btn_left.attachClick(switch_gui);
@@ -187,7 +196,6 @@ void setup() {
   /*Initialize the display*/
   static lv_disp_drv_t disp_drv;
   lv_disp_drv_init(&disp_drv);
-  /*Change the following line to your display resolution*/
   disp_drv.hor_res = SCREEN_WIDTH;
   disp_drv.ver_res = SCREEN_WIDTH;
   disp_drv.flush_cb = disp_flush;
@@ -195,8 +203,9 @@ void setup() {
   lv_disp_drv_register(&disp_drv);
 
   sntp_set_time_sync_notification_cb(timeavailable);
-  sntp_servermode_dhcp(1); // (optional)
-  configTime(GMT_OFFSET_SEC, DAY_LIGHT_OFFSET_SEC, NTP_SERVER1, NTP_SERVER2);
+  //sntp_servermode_dhcp(1); // (optional)
+  //configTime(GMT_OFFSET_SEC, DAY_LIGHT_OFFSET_SEC, NTP_SERVER1, NTP_SERVER2);
+  configTzTime(TIMEZONE, NTP_SERVER1, NTP_SERVER2);
   wifi_test();
 }
 

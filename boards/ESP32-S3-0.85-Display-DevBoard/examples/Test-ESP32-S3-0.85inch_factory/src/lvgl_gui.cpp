@@ -1,3 +1,4 @@
+#include <esp_chip_info.h>
 #include "WiFi.h"
 #include "lvgl.h"
 #include "pin_config.h"
