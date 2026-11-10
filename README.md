@@ -30,6 +30,9 @@ Right now examples are provided for the following boards:
 - [**YB-ESP32-S3-ETH** with PSRAM, Ethernet (W5500), WiFi, USB-C and USB hub chip](https://github.com/yellobyte/YB-ESP32-S3-ETH)
 <p align="center"><img src="https://github.com/yellobyte/YB-ESP32-S3-ETH/raw/main/doc/YB-ESP32-S3-ETH_board_top.jpg" height="160"/></p>  
 
+- [**YB-ESP32-S3-RS485** with RS-485 transceiver, PSRAM, WiFi, USB-C and USB hub chip](https://github.com/yellobyte/YB-ESP32-S3-RS485)
+<p align="center"><img src="https://github.com/yellobyte/YB-ESP32-S3-RS485/raw/main/doc/YB-ESP32-S3-RS485_top.jpg" height="160"/></p>  
+
 - [**YB-ESP32-S3-DRV** with PSRAM, 8-channel driver IC, 8 channel LEDs, WiFi and USB-C port](https://github.com/yellobyte/YB-ESP32-S3-DRV)
 <p align="center"><img src="https://github.com/yellobyte/YB-ESP32-S3-DRV/raw/main/doc/YB-ESP32-S3-DRV_board_top.jpg" height="160"/></p>  
 
